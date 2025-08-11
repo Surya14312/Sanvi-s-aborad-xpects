@@ -1,81 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { useLocation } from "react-router-dom";
 
 const ScholarshipAssistanceForm = () => {
   const { state } = useLocation();
   const selectedCountry = state?.country || "";
-
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    preferredCourse: "",
-    preferredCountry: selectedCountry,
-    message: "",
-  });
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitMessage, setSubmitMessage] = useState("");
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const {
-      firstName,
-      lastName,
-      email,
-      phone,
-      preferredCourse,
-      preferredCountry,
-      message,
-    } = formData;
-
-    if (!firstName || !lastName || !email || !phone) {
-      setSubmitMessage("⚠️ Please fill in all required fields.");
-      return;
-    }
-
-    setIsSubmitting(true);
-    setSubmitMessage("");
-
-    try {
-      const emailData = {
-        to: "thesanvisacademy@gmail.com",
-        subject: "New Scholarship Assistance Application",
-        body: `Name: ${firstName} ${lastName}\nEmail: ${email}\nPhone: ${phone}\nCourse: ${
-          preferredCourse || "N/A"
-        }\nCountry: ${preferredCountry || "N/A"}\nMessage: ${
-          message || "No message"
-        }`,
-      };
-
-      await new Promise((res) => setTimeout(res, 1500));
-      console.log("Simulated email sent:", emailData);
-
-      setSubmitMessage("✅ Application submitted successfully!");
-      setFormData({
-        firstName: "",
-        lastName: "",
-        email: "",
-        phone: "",
-        preferredCourse: "",
-        preferredCountry: selectedCountry,
-        message: "",
-      });
-
-      setTimeout(() => setSubmitMessage(""), 4000);
-    } catch (err) {
-      console.error("Submission error:", err);
-      setSubmitMessage("❌ Submission failed. Please try again.");
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
 
   return (
     <div
@@ -132,113 +60,16 @@ const ScholarshipAssistanceForm = () => {
         Xperts!
       </p>
 
-      <form onSubmit={handleSubmit} style={{ marginTop: "2rem" }}>
-        {[
-          "firstName",
-          "lastName",
-          "email",
-          "phone",
-          "preferredCourse",
-          "preferredCountry",
-        ].map((field) => (
-          <div key={field} style={{ marginBottom: "1.2rem" }}>
-            <label
-              style={{
-                display: "block",
-                fontWeight: "bold",
-                marginBottom: "5px",
-              }}
-            >
-              {field
-                .replace(/([A-Z])/g, " $1")
-                .replace(/^./, (s) => s.toUpperCase())}{" "}
-              {["firstName", "lastName", "email", "phone"].includes(field)
-                ? "*"
-                : ""}
-            </label>
-            <input
-              type="text"
-              name={field}
-              value={formData[field]}
-              onChange={handleChange}
-              required={["firstName", "lastName", "email", "phone"].includes(
-                field
-              )}
-              style={{
-                width: "100%",
-                padding: "10px",
-                borderRadius: "8px",
-                border: "1px solid #ccc",
-                outline: "none",
-                transition: "all 0.3s",
-              }}
-              onFocus={(e) => (e.target.style.borderColor = "#b91c1c")}
-              onBlur={(e) => (e.target.style.borderColor = "#ccc")}
-            />
-          </div>
-        ))}
-
-        <div style={{ marginBottom: "1.5rem" }}>
-          <label
-            style={{
-              display: "block",
-              fontWeight: "bold",
-              marginBottom: "5px",
-            }}
-          >
-            Message
-          </label>
-          <textarea
-            name="message"
-            rows="4"
-            value={formData.message}
-            onChange={handleChange}
-            style={{
-              width: "100%",
-              padding: "10px",
-              borderRadius: "8px",
-              border: "1px solid #ccc",
-              outline: "none",
-              transition: "all 0.3s",
-            }}
-            onFocus={(e) => (e.target.style.borderColor = "#b91c1c")}
-            onBlur={(e) => (e.target.style.borderColor = "#ccc")}
-          ></textarea>
-        </div>
-
-        <button
-          type="submit"
-          disabled={isSubmitting}
-          style={{
-            width: "100%",
-            padding: "12px",
-            backgroundColor: "#b91c1c",
-            color: "#fff",
-            border: "none",
-            borderRadius: "8px",
-            fontWeight: "bold",
-            fontSize: "1rem",
-            cursor: "pointer",
-            transition: "background-color 0.3s ease",
-          }}
-          onMouseOver={(e) => (e.target.style.backgroundColor = "#a21c1c")}
-          onMouseOut={(e) => (e.target.style.backgroundColor = "#b91c1c")}
-        >
-          {isSubmitting ? "Submitting..." : "Submit"}
-        </button>
-
-        {submitMessage && (
-          <p
-            style={{
-              marginTop: "1.5rem",
-              fontWeight: "bold",
-              textAlign: "center",
-            }}
-          >
-            {submitMessage}
-          </p>
-        )}
-      </form>
+      <p
+        style={{
+          fontStyle: "italic",
+          color: "#555",
+          marginTop: "2rem",
+          textAlign: "center",
+        }}
+      >
+        Selected Country: <strong>{selectedCountry || "Not selected"}</strong>
+      </p>
     </div>
   );
 };

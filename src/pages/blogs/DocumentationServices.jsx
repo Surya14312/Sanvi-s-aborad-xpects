@@ -1,67 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Documentation = () => {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitMessage, setSubmitMessage] = useState("");
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    message: "",
-  });
-
-  const handleChange = (e) =>
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-
-  const sendForm = async () => {
-    if (isSubmitting) return;
-    const { firstName, lastName, email, phone, message } = formData;
-
-    if (!firstName || !lastName || !email || !phone) {
-      setSubmitMessage("⚠️ Please fill in all required fields.");
-      return;
-    }
-
-    setIsSubmitting(true);
-    setSubmitMessage("");
-
-    try {
-      const emailData = {
-        to: "thesanvisacademy@gmail.com",
-        subject: "New Documentation Service Request",
-        body: `
-        📋 New Documentation Request
-
-        👤 Name: ${firstName} ${lastName}
-        📧 Email: ${email}
-        📞 Phone: ${phone}
-        📝 Message: ${message || "No message provided."}
-        `,
-      };
-
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      console.log("Data sent to email:", emailData);
-
-      setSubmitMessage("✅ Submitted successfully! We’ll contact you soon.");
-      setTimeout(() => {
-        setFormData({
-          firstName: "",
-          lastName: "",
-          email: "",
-          phone: "",
-          message: "",
-        });
-        setSubmitMessage("");
-      }, 3000);
-    } catch (err) {
-      console.error("Error sending form:", err);
-      setSubmitMessage("❌ Submission failed. Try again.");
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
   return (
     <div className="career-container">
       {/* Hero Section */}
@@ -142,90 +82,31 @@ const Documentation = () => {
         </p>
       </section>
 
-      {/* Form Section */}
-      <section className="career-form-section">
-        <h2>Request Documentation Support</h2>
-        <p>Fill out the form below and our team will reach out to you soon.</p>
-        <form
-          className="contact-form"
-          onSubmit={(e) => {
-            e.preventDefault();
-            sendForm();
+      {/* Call to Action Section */}
+      <section className="call-to-action" style={{ marginTop: "40px", textAlign: "center" }}>
+        <button
+          className="apply-button"
+          onClick={() => window.location.href = "/apply"}
+          style={{
+            padding: "12px 28px",
+            backgroundColor: "#c91432",
+            color: "#fff",
+            border: "none",
+            borderRadius: "6px",
+            cursor: "pointer",
+            fontSize: "18px",
+            marginRight: "20px",
           }}
         >
-          <div className="form-group">
-            <input
-              type="text"
-              name="firstName"
-              placeholder="First Name"
-              value={formData.firstName}
-              onChange={handleChange}
-              required
-            />
-            <input
-              type="text"
-              name="lastName"
-              placeholder="Last Name"
-              value={formData.lastName}
-              onChange={handleChange}
-              required
-            />
-          </div>
+          Apply Now
+        </button>
 
-          <div className="form-group">
-            <input
-              type="email"
-              name="email"
-              placeholder="Email Address"
-              value={formData.email}
-              onChange={handleChange}
-              required
-            />
-            <input
-              type="tel"
-              name="phone"
-              placeholder="Phone Number"
-              value={formData.phone}
-              onChange={handleChange}
-              required
-            />
-          </div>
-
-          <div className="form-group">
-            <textarea
-              name="message"
-              rows="4"
-              placeholder="Your Message (Optional)"
-              value={formData.message}
-              onChange={handleChange}
-            />
-          </div>
-
-          <button
-            type="submit"
-            className="apply-button"
-            disabled={isSubmitting}
-          >
-            {isSubmitting ? "⏳ Sending..." : "Submit"}
-          </button>
-
-          {submitMessage && (
-            <div
-              className="feedback-box"
-              style={{
-                border: submitMessage.includes("✅")
-                  ? "2px solid #4CAF50"
-                  : "2px solid #f44336",
-                backgroundColor: submitMessage.includes("✅")
-                  ? "#e8f5e8"
-                  : "#fdeaea",
-                color: submitMessage.includes("✅") ? "#2e7d32" : "#c62828",
-              }}
-            >
-              {submitMessage}
-            </div>
-          )}
-        </form>
+        <span style={{ fontSize: "18px" }}>
+          Need help?{" "}
+          <Link to="/contact" style={{ color: "#c91432", fontWeight: "600" }}>
+            Contact Us
+          </Link>
+        </span>
       </section>
     </div>
   );

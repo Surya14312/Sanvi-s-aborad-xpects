@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import EnrollSection from "../components/EnrollSection";
 function Malaysia() {
   return (
     <div className="malaysia-container">
@@ -118,7 +118,7 @@ function Malaysia() {
             {
               name: "Mass Communication",
               img: "/assets/malaysia-universities/communication.jpg",
-            }     ,
+            },
           ].map((course, i) => (
             <div className="course-card" key={i}>
               <img src={course.img} alt={course.name} />
@@ -205,6 +205,7 @@ function Malaysia() {
           alt="Student Life in Malaysia"
         />
       </section>
+      <EnrollSection country="Malaysia" />
 
       {/* ✅ FAQs */}
       <section className="malaysia-faq">

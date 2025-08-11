@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import EnrollSection from "../components/EnrollSection";
 
 function Canada() {
   return (
@@ -209,6 +210,8 @@ function Canada() {
         />
       </section>
 
+      <EnrollSection country="Canada" />
+
       {/* ✅ FAQ Section */}
       <section className="canada-faq">
         <h2>FAQs About Studying in Canada</h2>
@@ -233,7 +236,6 @@ function Canada() {
             Canada for up to 3 years after graduation.
           </p>
         </div>
-        
       </section>
     </div>
   );

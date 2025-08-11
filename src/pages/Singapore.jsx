@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import EnrollSection from "../components/EnrollSection";
 function Singapore() {
   return (
     <div className="singapore-container">
@@ -132,8 +132,9 @@ function Singapore() {
       <section className="singapore-equipment">
         <h2>Our Equipment & Infrastructure</h2>
         <p>
-          Singaporean universities boast modern infrastructure, smart classrooms,
-          research centers, and industry partnerships for hands-on learning.
+          Singaporean universities boast modern infrastructure, smart
+          classrooms, research centers, and industry partnerships for hands-on
+          learning.
         </p>
       </section>
 
@@ -163,8 +164,8 @@ function Singapore() {
         <h2>Career Prospects in Singapore</h2>
         <p>
           Singapore is a financial and tech hub with jobs in banking, IT,
-          logistics, life sciences, and hospitality. Graduates benefit from strong
-          placement support and international exposure.
+          logistics, life sciences, and hospitality. Graduates benefit from
+          strong placement support and international exposure.
         </p>
       </section>
 
@@ -201,14 +202,16 @@ function Singapore() {
         />
       </section>
 
+      <EnrollSection country="Singapore" />
+
       {/* ✅ FAQs */}
       <section className="singapore-faq">
         <h2>FAQs About Studying in Singapore</h2>
         <div className="faq-item">
           <h4>Can I work while studying?</h4>
           <p>
-            Yes, students can work up to 16 hours per week during term and full-time
-            during vacations, depending on the institution.
+            Yes, students can work up to 16 hours per week during term and
+            full-time during vacations, depending on the institution.
           </p>
         </div>
         <div className="faq-item">
@@ -220,8 +223,8 @@ function Singapore() {
         <div className="faq-item">
           <h4>Is English the medium of instruction?</h4>
           <p>
-            Yes, all major institutions in Singapore use English as the language of
-            instruction.
+            Yes, all major institutions in Singapore use English as the language
+            of instruction.
           </p>
         </div>
       </section>

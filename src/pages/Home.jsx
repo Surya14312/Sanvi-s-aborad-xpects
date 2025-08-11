@@ -164,7 +164,11 @@ function Home() {
       {/* Hero Section */}
       <section className="intro-section">
         <div className="intro-content">
-          <h1>Achieve Your Global Education Dreams with Sanvi's Abroad</h1>
+          <h1>
+            Achieve Your Global Education Dreams with
+            <span className="highlight-name"> The Sanvi's Abroad Xperts</span>
+          </h1>
+
           <p>
             Explore world-class universities and gain international exposure to
             boost your career. Our expert counselors guide you at every step —

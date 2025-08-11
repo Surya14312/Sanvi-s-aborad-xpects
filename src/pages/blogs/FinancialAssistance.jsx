@@ -1,71 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
 const FinancialAssistance = () => {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitMessage, setSubmitMessage] = useState("");
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    message: "",
-  });
-
-  const handleChange = (e) =>
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-
-  const sendFinancialForm = async () => {
-    if (isSubmitting) return;
-
-    const { firstName, lastName, email, phone, message } = formData;
-
-    if (!firstName || !lastName || !email || !phone) {
-      setSubmitMessage("⚠️ Please fill in all required fields.");
-      return;
-    }
-
-    setIsSubmitting(true);
-    setSubmitMessage("");
-
-    try {
-      const emailData = {
-        to: "thesanvisacademy@gmail.com",
-        subject: "New Financial Assistance Request",
-        body: `
-        📋 New Financial Assistance Submission
-
-        👤 Name: ${firstName} ${lastName}
-        📧 Email: ${email}
-        📞 Phone: ${phone}
-        📝 Message: ${message || "No message provided."}
-        `,
-      };
-
-      // Simulate sending delay
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      console.log("Email data sent:", emailData);
-
-      setSubmitMessage(
-        "✅ Submitted successfully! We'll get back to you soon."
-      );
-      setTimeout(() => {
-        setFormData({
-          firstName: "",
-          lastName: "",
-          email: "",
-          phone: "",
-          message: "",
-        });
-        setSubmitMessage("");
-      }, 3000);
-    } catch (err) {
-      console.error("Form submission error:", err);
-      setSubmitMessage("❌ Submission failed. Please try again.");
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
   return (
     <div className="financial-container">
       {/* Hero Section */}
@@ -140,58 +75,20 @@ const FinancialAssistance = () => {
         </ul>
       </section>
 
-      {/* Financial Assistance Form Section */}
+      {/* Call to Action without Form */}
       <section className="financial-cta">
         <h2>Need Help with Financial Planning?</h2>
         <p>
           Our expert counselors will assist you with scholarships, loans, and
           work options tailored to your destination and goals.
         </p>
-
-        <div className="financial-form">
-          <input
-            type="text"
-            name="firstName"
-            placeholder="First Name"
-            value={formData.firstName}
-            onChange={handleChange}
-          />
-          <input
-            type="text"
-            name="lastName"
-            placeholder="Last Name"
-            value={formData.lastName}
-            onChange={handleChange}
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="Email Address"
-            value={formData.email}
-            onChange={handleChange}
-          />
-          <input
-            type="tel"
-            name="phone"
-            placeholder="Phone Number"
-            value={formData.phone}
-            onChange={handleChange}
-          />
-          <textarea
-            name="message"
-            placeholder="Message (Optional)"
-            value={formData.message}
-            onChange={handleChange}
-          />
-          <button
-            className="cta-button"
-            onClick={sendFinancialForm}
-            disabled={isSubmitting}
-          >
-            {isSubmitting ? "Submitting..." : "Book Free Consultation"}
-          </button>
-          {submitMessage && <p className="submit-message">{submitMessage}</p>}
-        </div>
+        <p>
+          Please{" "}
+          <a href="/contact" className="contact-link">
+            contact us
+          </a>{" "}
+          to schedule a free consultation.
+        </p>
       </section>
     </div>
   );

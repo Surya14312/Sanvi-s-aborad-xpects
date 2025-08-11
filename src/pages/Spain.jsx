@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import EnrollSection from "../components/EnrollSection";
 
 function Spain() {
   return (
@@ -9,10 +10,11 @@ function Spain() {
         <div className="spain-hero-content">
           <h1>Study in Spain</h1>
           <p>
-            Spain is a top destination for international students, offering high-quality
-            education, affordable tuition, vibrant culture, and a sunny Mediterranean lifestyle.
-            With world-renowned universities and English-taught programs, Spain provides
-            both academic excellence and unforgettable experiences.
+            Spain is a top destination for international students, offering
+            high-quality education, affordable tuition, vibrant culture, and a
+            sunny Mediterranean lifestyle. With world-renowned universities and
+            English-taught programs, Spain provides both academic excellence and
+            unforgettable experiences.
           </p>
           <Link to="/contact" className="apply-btn">
             Apply Now
@@ -131,8 +133,9 @@ function Spain() {
       <section className="spain-equipment">
         <h2>Our Equipment & Infrastructure</h2>
         <p>
-          Spanish universities offer modern classrooms, research facilities, digital libraries,
-          and vibrant student campuses with excellent academic and social support services.
+          Spanish universities offer modern classrooms, research facilities,
+          digital libraries, and vibrant student campuses with excellent
+          academic and social support services.
         </p>
       </section>
 
@@ -140,8 +143,9 @@ function Spain() {
       <section className="spain-cost">
         <h2>Cost of Studying in Spain</h2>
         <p>
-          Public university tuition ranges from €1,000 to €5,000 per year. Living expenses
-          range from €7,000 to €10,000 per year, depending on location and lifestyle.
+          Public university tuition ranges from €1,000 to €5,000 per year.
+          Living expenses range from €7,000 to €10,000 per year, depending on
+          location and lifestyle.
         </p>
         <h3>Scholarships in Spain</h3>
         <ul>
@@ -161,9 +165,9 @@ function Spain() {
       <section className="spain-career">
         <h2>Career Prospects in Spain</h2>
         <p>
-          Spain offers strong job opportunities in tourism, education, tech, and business.
-          International students can stay back for a year to seek employment in Spanish or
-          multinational companies.
+          Spain offers strong job opportunities in tourism, education, tech, and
+          business. International students can stay back for a year to seek
+          employment in Spanish or multinational companies.
         </p>
       </section>
 
@@ -181,8 +185,9 @@ function Spain() {
 
         <h2>Spain Student Visa</h2>
         <p>
-          Apply for a Type D visa through the Spanish consulate. The process includes
-          proof of admission, financial means, medical insurance, and accommodation documents.
+          Apply for a Type D visa through the Spanish consulate. The process
+          includes proof of admission, financial means, medical insurance, and
+          accommodation documents.
         </p>
       </section>
 
@@ -190,15 +195,16 @@ function Spain() {
       <section className="spain-life">
         <h2>Student Life in Spain</h2>
         <p>
-          Spain offers a lively student atmosphere with rich culture, diverse cuisine,
-          music festivals, football matches, and access to the rest of Europe through the
-          Schengen visa.
+          Spain offers a lively student atmosphere with rich culture, diverse
+          cuisine, music festivals, football matches, and access to the rest of
+          Europe through the Schengen visa.
         </p>
         <img
           src="/assets/spain-universities/student-life.jpg"
           alt="Student Life in Spain"
         />
       </section>
+      <EnrollSection country="Spain" />
 
       {/* ✅ FAQs */}
       <section className="spain-faq">
@@ -206,21 +212,22 @@ function Spain() {
         <div className="faq-item">
           <h4>Can I study in English in Spain?</h4>
           <p>
-            Yes, many universities in Spain offer Bachelor's and Master's programs in English,
-            especially in business and engineering fields.
+            Yes, many universities in Spain offer Bachelor's and Master's
+            programs in English, especially in business and engineering fields.
           </p>
         </div>
         <div className="faq-item">
           <h4>Can I work while studying in Spain?</h4>
           <p>
-            Yes, international students can work part-time up to 20 hours per week while studying.
+            Yes, international students can work part-time up to 20 hours per
+            week while studying.
           </p>
         </div>
         <div className="faq-item">
           <h4>Is Spain affordable for students?</h4>
           <p>
-            Yes, compared to other European countries, Spain offers low tuition fees and affordable
-            living costs.
+            Yes, compared to other European countries, Spain offers low tuition
+            fees and affordable living costs.
           </p>
         </div>
       </section>

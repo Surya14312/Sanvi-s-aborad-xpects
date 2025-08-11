@@ -37,6 +37,8 @@ function Navbar() {
     { name: "Scholarship Assistance", path: "/scholarship-assistance" },
     { name: "Visa Assistance", path: "/visa-assistance" },
     { name: "Test Preparations", path: "/test-preparation" },
+    { name: "PreDeparture", path: "/pre-departure-orientation" },
+    { name: "Continuous Communication", path: "/continuous-communication" },
   ];
 
   const whatWeDoItems = [

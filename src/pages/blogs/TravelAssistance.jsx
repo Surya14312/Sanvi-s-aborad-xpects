@@ -1,79 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
 const TravelAssistance = () => {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitMessage, setSubmitMessage] = useState("");
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    travelNeeds: "",
-    message: "",
-  });
-
-  const handleChange = (e) =>
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-
-  const sendTravelForm = async () => {
-    if (isSubmitting) return;
-
-    const { firstName, lastName, email, phone, travelNeeds, message } =
-      formData;
-
-    if (!firstName || !lastName || !email || !phone || !travelNeeds) {
-      setSubmitMessage("⚠️ Please fill in all required fields.");
-      return;
-    }
-
-    setIsSubmitting(true);
-    setSubmitMessage("");
-
-    try {
-      const emailData = {
-        to: "thesanvisacademy@gmail.com",
-        subject: "New Travel Assistance Request",
-        body: `
-        ✈️ New Travel Assistance Submission
-
-        👤 Name: ${firstName} ${lastName}
-        📧 Email: ${email}
-        📞 Phone: ${phone}
-        🌍 Travel Needs: ${travelNeeds}
-        📝 Message: ${message || "No message provided."}
-        `,
-      };
-
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      console.log("Email data sent:", emailData);
-
-      setSubmitMessage(
-        "✅ Submitted successfully! We'll get back to you soon."
-      );
-      setTimeout(() => {
-        setFormData({
-          firstName: "",
-          lastName: "",
-          email: "",
-          phone: "",
-          travelNeeds: "",
-          message: "",
-        });
-        setSubmitMessage("");
-      }, 3000);
-    } catch (err) {
-      console.error("Form submission error:", err);
-      setSubmitMessage("❌ Submission failed. Please try again.");
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    sendTravelForm();
-  };
-
   return (
     <div className="travel-container">
       {/* Hero Section */}
@@ -136,64 +63,16 @@ const TravelAssistance = () => {
         </ul>
       </div>
 
-      {/* Call to Action Form Section */}
+      {/* Call to Action */}
       <div className="travel-cta">
         <h2>Need Travel Help?</h2>
-        <p>Fill out the form and we’ll assist you with your travel needs.</p>
-        <form className="travel-form" onSubmit={handleSubmit}>
-          <input
-            type="text"
-            name="firstName"
-            placeholder="First Name"
-            value={formData.firstName}
-            onChange={handleChange}
-            required
-          />
-          <input
-            type="text"
-            name="lastName"
-            placeholder="Last Name"
-            value={formData.lastName}
-            onChange={handleChange}
-            required
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="Email ID"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-          <input
-            type="tel"
-            name="phone"
-            placeholder="Phone Number"
-            value={formData.phone}
-            onChange={handleChange}
-            required
-          />
-          <input
-            type="text"
-            name="travelNeeds"
-            placeholder="Travel Destination / Assistance Type"
-            value={formData.travelNeeds}
-            onChange={handleChange}
-            required
-          />
-          <textarea
-            name="message"
-            rows="4"
-            placeholder="Your Message"
-            value={formData.message}
-            onChange={handleChange}
-          ></textarea>
-
-          <button className="cta-button" type="submit" disabled={isSubmitting}>
-            {isSubmitting ? "Submitting..." : "Submit"}
-          </button>
-          {submitMessage && <p className="submit-message">{submitMessage}</p>}
-        </form>
+        <p>
+          Please{" "}
+          <a href="/contact" className="contact-link">
+            contact us
+          </a>{" "}
+          to discuss your travel needs and get personalized assistance.
+        </p>
       </div>
     </div>
   );

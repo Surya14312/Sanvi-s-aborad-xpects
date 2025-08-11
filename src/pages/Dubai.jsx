@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import EnrollSection from "../components/EnrollSection";
 
 function Dubai() {
   return (
@@ -9,10 +10,11 @@ function Dubai() {
         <div className="dubai-hero-content">
           <h1>Study in Dubai</h1>
           <p>
-            Dubai is an emerging global education hub offering internationally accredited
-            programs, top foreign universities, and a multicultural environment. Known for
-            innovation, safety, and modern infrastructure, Dubai provides a dynamic study
-            experience with access to global job markets.
+            Dubai is an emerging global education hub offering internationally
+            accredited programs, top foreign universities, and a multicultural
+            environment. Known for innovation, safety, and modern
+            infrastructure, Dubai provides a dynamic study experience with
+            access to global job markets.
           </p>
           <Link to="/contact" className="apply-btn">
             Apply Now
@@ -131,9 +133,9 @@ function Dubai() {
       <section className="dubai-equipment">
         <h2>Our Equipment & Infrastructure</h2>
         <p>
-          Dubai universities feature high-tech campuses, digital labs, innovation hubs,
-          business incubators, and industry-linked learning centers that foster creativity
-          and practical skills.
+          Dubai universities feature high-tech campuses, digital labs,
+          innovation hubs, business incubators, and industry-linked learning
+          centers that foster creativity and practical skills.
         </p>
       </section>
 
@@ -141,8 +143,9 @@ function Dubai() {
       <section className="dubai-cost">
         <h2>Cost of Studying in Dubai</h2>
         <p>
-          Tuition fees range from AED 30,000 to AED 90,000 per year, depending on
-          the university and program. Living costs average AED 30,000–AED 50,000 annually.
+          Tuition fees range from AED 30,000 to AED 90,000 per year, depending
+          on the university and program. Living costs average AED 30,000–AED
+          50,000 annually.
         </p>
         <h3>Scholarships in Dubai</h3>
         <ul>
@@ -162,9 +165,9 @@ function Dubai() {
       <section className="dubai-career">
         <h2>Career Prospects in Dubai</h2>
         <p>
-          Dubai is a business and innovation hub with ample opportunities in IT, finance,
-          logistics, tourism, and media. Students benefit from a 1-year stay-back visa
-          and internship pathways with multinational companies.
+          Dubai is a business and innovation hub with ample opportunities in IT,
+          finance, logistics, tourism, and media. Students benefit from a 1-year
+          stay-back visa and internship pathways with multinational companies.
         </p>
       </section>
 
@@ -182,9 +185,9 @@ function Dubai() {
 
         <h2>Dubai Student Visa</h2>
         <p>
-          Apply for a UAE Student Visa through the admitting university. Requirements
-          include admission proof, medical test, Emirates ID, financial documents, and
-          visa sponsorship from the institution.
+          Apply for a UAE Student Visa through the admitting university.
+          Requirements include admission proof, medical test, Emirates ID,
+          financial documents, and visa sponsorship from the institution.
         </p>
       </section>
 
@@ -192,8 +195,9 @@ function Dubai() {
       <section className="dubai-life">
         <h2>Student Life in Dubai</h2>
         <p>
-          Students in Dubai enjoy a modern lifestyle, world-class amenities, desert safaris,
-          international cuisine, festivals, shopping, and easy access to global travel.
+          Students in Dubai enjoy a modern lifestyle, world-class amenities,
+          desert safaris, international cuisine, festivals, shopping, and easy
+          access to global travel.
         </p>
         <img
           src="/assets/dubai-universities/student-life.jpg"
@@ -201,28 +205,30 @@ function Dubai() {
         />
       </section>
 
+      <EnrollSection country="Dubai" />
+
       {/* ✅ FAQs */}
       <section className="dubai-faq">
         <h2>FAQs About Studying in Dubai</h2>
         <div className="faq-item">
           <h4>Can I study in English in Dubai?</h4>
           <p>
-            Yes, all major universities in Dubai offer programs in English, especially
-            for international students.
+            Yes, all major universities in Dubai offer programs in English,
+            especially for international students.
           </p>
         </div>
         <div className="faq-item">
           <h4>Can I work while studying in Dubai?</h4>
           <p>
-            Students can work part-time with university approval and in compliance with
-            UAE labor laws.
+            Students can work part-time with university approval and in
+            compliance with UAE labor laws.
           </p>
         </div>
         <div className="faq-item">
           <h4>Is a Dubai degree recognized internationally?</h4>
           <p>
-            Yes, degrees from licensed international campuses and accredited UAE institutions
-            are widely recognized across the globe.
+            Yes, degrees from licensed international campuses and accredited UAE
+            institutions are widely recognized across the globe.
           </p>
         </div>
       </section>

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import EnrollSection from "../components/EnrollSection";
 
 function France() {
   return (
@@ -23,10 +24,8 @@ function France() {
           src="/assets/france-universities/france-banner.jpg"
           alt="Study in France"
           className="hero-img"
-          
         />
       </section>
-
       {/* ✅ Quick Stats */}
       <section className="france-highlights">
         <h2>France Education at a Glance</h2>
@@ -37,7 +36,6 @@ function France() {
           <div className="highlight-card">2-Year Post-Study Visa</div>
         </div>
       </section>
-
       {/* ✅ Why Study in France */}
       <section className="france-why">
         <h2>Why Choose France?</h2>
@@ -50,7 +48,6 @@ function France() {
           <li>Strong International Student Support</li>
         </ul>
       </section>
-
       {/* ✅ Top Universities */}
       <section className="france-universities">
         <h2>Top Universities in France</h2>
@@ -90,7 +87,6 @@ function France() {
           </div>
         </div>
       </section>
-
       {/* ✅ Popular Courses */}
       <section className="france-courses">
         <h2>Popular Courses in France</h2>
@@ -128,7 +124,6 @@ function France() {
           ))}
         </div>
       </section>
-
       {/* ✅ Equipment & Infrastructure */}
       <section className="france-equipment">
         <h2>Our Equipment & Infrastructure</h2>
@@ -138,7 +133,6 @@ function France() {
           and hands-on learning.
         </p>
       </section>
-
       {/* ✅ Cost & Scholarships */}
       <section className="france-cost">
         <h2>Cost of Studying in France</h2>
@@ -159,7 +153,6 @@ function France() {
           className="scholarship-img"
         />
       </section>
-
       {/* ✅ Career Prospects */}
       <section className="france-career">
         <h2>Career Prospects in France</h2>
@@ -169,7 +162,6 @@ function France() {
           visa and internship opportunities in top global companies.
         </p>
       </section>
-
       {/* ✅ Documents & Visa Process */}
       <section className="france-documents">
         <h2>Documents Required</h2>
@@ -189,7 +181,6 @@ function France() {
           supporting documents.
         </p>
       </section>
-
       {/* ✅ Student Life */}
       <section className="france-life">
         <h2>Student Life in France</h2>
@@ -203,7 +194,7 @@ function France() {
           alt="Student Life in France"
         />
       </section>
-
+      France → <EnrollSection country="France" />
       {/* ✅ FAQs */}
       <section className="france-faq">
         <h2>FAQs About Studying in France</h2>

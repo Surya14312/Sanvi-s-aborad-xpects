@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import EnrollSection from "../components/EnrollSection";
 
 function Ireland() {
   return (
@@ -199,6 +200,8 @@ function Ireland() {
           alt="Student Life in Ireland"
         />
       </section>
+
+      <EnrollSection country="Ireland" />
 
       {/* ✅ FAQs */}
       <section className="ireland-faq">

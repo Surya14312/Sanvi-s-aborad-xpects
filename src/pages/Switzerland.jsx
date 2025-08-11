@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import EnrollSection from "../components/EnrollSection";
 
 function Switzerland() {
   return (
@@ -9,10 +10,10 @@ function Switzerland() {
         <div className="switzerland-hero-content">
           <h1>Study in Switzerland</h1>
           <p>
-            Switzerland is a global education hub known for excellence in hospitality,
-            business, science, and research. With its high quality of life, multicultural
-            environment, and world-class universities, Switzerland offers a unique
-            and enriching study experience.
+            Switzerland is a global education hub known for excellence in
+            hospitality, business, science, and research. With its high quality
+            of life, multicultural environment, and world-class universities,
+            Switzerland offers a unique and enriching study experience.
           </p>
           <Link to="/contact" className="apply-btn">
             Apply Now
@@ -131,9 +132,9 @@ function Switzerland() {
       <section className="switzerland-equipment">
         <h2>Our Equipment & Infrastructure</h2>
         <p>
-          Swiss institutions offer cutting-edge facilities including modern labs,
-          innovation centers, research institutes, and close ties with multinational
-          corporations.
+          Swiss institutions offer cutting-edge facilities including modern
+          labs, innovation centers, research institutes, and close ties with
+          multinational corporations.
         </p>
       </section>
 
@@ -141,8 +142,8 @@ function Switzerland() {
       <section className="switzerland-cost">
         <h2>Cost of Studying in Switzerland</h2>
         <p>
-          Public university tuition ranges from CHF 1,000 to CHF 16,000 per year.
-          Living expenses range from CHF 15,000 to CHF 20,000 annually.
+          Public university tuition ranges from CHF 1,000 to CHF 16,000 per
+          year. Living expenses range from CHF 15,000 to CHF 20,000 annually.
         </p>
         <h3>Scholarships in Switzerland</h3>
         <ul>
@@ -162,9 +163,9 @@ function Switzerland() {
       <section className="switzerland-career">
         <h2>Career Prospects in Switzerland</h2>
         <p>
-          Switzerland is home to many global companies in banking, pharmaceuticals,
-          hospitality, and research. International students can stay 6–12 months after
-          graduation to seek employment.
+          Switzerland is home to many global companies in banking,
+          pharmaceuticals, hospitality, and research. International students can
+          stay 6–12 months after graduation to seek employment.
         </p>
       </section>
 
@@ -182,9 +183,9 @@ function Switzerland() {
 
         <h2>Switzerland Student Visa</h2>
         <p>
-          Apply for a long-term student visa (Type D). The process includes submitting
-          documents to the Swiss embassy, proof of finances, accommodation details,
-          and health insurance coverage.
+          Apply for a long-term student visa (Type D). The process includes
+          submitting documents to the Swiss embassy, proof of finances,
+          accommodation details, and health insurance coverage.
         </p>
       </section>
 
@@ -192,14 +193,16 @@ function Switzerland() {
       <section className="switzerland-life">
         <h2>Student Life in Switzerland</h2>
         <p>
-          Students in Switzerland enjoy a high standard of living, scenic landscapes,
-          outdoor adventures, multilingual society, and easy travel throughout Europe.
+          Students in Switzerland enjoy a high standard of living, scenic
+          landscapes, outdoor adventures, multilingual society, and easy travel
+          throughout Europe.
         </p>
         <img
           src="/assets/switzerland-universities/student-life.jpg"
           alt="Student Life in Switzerland"
         />
       </section>
+      <EnrollSection country="Switzerland" />
 
       {/* ✅ FAQs */}
       <section className="switzerland-faq">
@@ -207,22 +210,22 @@ function Switzerland() {
         <div className="faq-item">
           <h4>Can I study in English in Switzerland?</h4>
           <p>
-            Yes, many programs—especially at Master's level—are taught in English,
-            although some universities require basic French or German.
+            Yes, many programs—especially at Master's level—are taught in
+            English, although some universities require basic French or German.
           </p>
         </div>
         <div className="faq-item">
           <h4>Is Switzerland expensive for students?</h4>
           <p>
-            Living costs are high but manageable with budgeting. Scholarships and part-time
-            work can help reduce expenses.
+            Living costs are high but manageable with budgeting. Scholarships
+            and part-time work can help reduce expenses.
           </p>
         </div>
         <div className="faq-item">
           <h4>Can I work while studying in Switzerland?</h4>
           <p>
-            Yes, international students can work up to 15 hours per week during the semester
-            and full-time during holidays.
+            Yes, international students can work up to 15 hours per week during
+            the semester and full-time during holidays.
           </p>
         </div>
       </section>
