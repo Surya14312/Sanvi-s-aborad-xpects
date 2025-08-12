@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 function Navbar() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [studyOpen, setStudyOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [whatWeDoOpen, setWhatWeDoOpen] = useState(false);
@@ -47,85 +48,129 @@ function Navbar() {
     { name: "Work With Us", path: "/work-with-us" },
   ];
 
+  // Close mobile menu & dropdowns when a link is clicked (optional)
+  const closeAllMenus = () => {
+    setMobileMenuOpen(false);
+    setStudyOpen(false);
+    setServicesOpen(false);
+    setWhatWeDoOpen(false);
+  };
+
   return (
     <nav className="navbar">
       {/* Logo */}
       <div className="logo">
-        <Link to="/">
+        <Link to="/" onClick={closeAllMenus}>
           <img src="/assets/logo.png" alt="Logo" />
         </Link>
       </div>
 
+      {/* Hamburger Menu Icon */}
+      <div
+        className="hamburger"
+        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        style={{ cursor: "pointer", fontSize: "24px", userSelect: "none" }}
+        aria-label="Toggle menu"
+      >
+        ☰
+      </div>
+
       {/* Navigation Links */}
-      <ul className="nav-links">
+      <ul className={`nav-links ${mobileMenuOpen ? "active" : ""}`}>
         {/* Study Abroad Dropdown */}
         <li
           className="dropdown"
-          onMouseEnter={() => setStudyOpen(true)}
-          onMouseLeave={() => setStudyOpen(false)}
+          onMouseEnter={() => window.innerWidth > 768 && setStudyOpen(true)}
+          onMouseLeave={() => window.innerWidth > 768 && setStudyOpen(false)}
         >
-          <span>Study Abroad ▾</span>
-          {studyOpen && (
-            <ul className="dropdown-menu">
-              {countries.map((country, i) => (
-                <li key={i}>
-                  <Link to={`/study-in/${country.toLowerCase()}`}>
-                    {country}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          )}
+          <span
+            onClick={() => setStudyOpen(!studyOpen)}
+            style={{ cursor: "pointer" }}
+            aria-expanded={studyOpen}
+            aria-haspopup="true"
+          >
+            Study Abroad ▾
+          </span>
+          <ul className={`dropdown-menu ${studyOpen ? "active" : ""}`}>
+            {countries.map((country, i) => (
+              <li key={i}>
+                <Link
+                  to={`/study-in/${country.toLowerCase()}`}
+                  onClick={closeAllMenus}
+                >
+                  {country}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </li>
 
         {/* Student Services Dropdown */}
         <li
           className="dropdown"
-          onMouseEnter={() => setServicesOpen(true)}
-          onMouseLeave={() => setServicesOpen(false)}
+          onMouseEnter={() => window.innerWidth > 768 && setServicesOpen(true)}
+          onMouseLeave={() => window.innerWidth > 768 && setServicesOpen(false)}
         >
-          <span>Student Services ▾</span>
-          {servicesOpen && (
-            <ul className="dropdown-menu">
-              {studentServices.map((service, i) => (
-                <li key={i}>
-                  <Link to={service.path}>{service.name}</Link>
-                </li>
-              ))}
-            </ul>
-          )}
+          <span
+            onClick={() => setServicesOpen(!servicesOpen)}
+            style={{ cursor: "pointer" }}
+            aria-expanded={servicesOpen}
+            aria-haspopup="true"
+          >
+            Student Services ▾
+          </span>
+          <ul className={`dropdown-menu ${servicesOpen ? "active" : ""}`}>
+            {studentServices.map((service, i) => (
+              <li key={i}>
+                <Link to={service.path} onClick={closeAllMenus}>
+                  {service.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </li>
 
         {/* What We Do Dropdown */}
         <li
           className="dropdown"
-          onMouseEnter={() => setWhatWeDoOpen(true)}
-          onMouseLeave={() => setWhatWeDoOpen(false)}
+          onMouseEnter={() => window.innerWidth > 768 && setWhatWeDoOpen(true)}
+          onMouseLeave={() => window.innerWidth > 768 && setWhatWeDoOpen(false)}
         >
-          <span>What We Do ▾</span>
-          {whatWeDoOpen && (
-            <ul className="dropdown-menu">
-              {whatWeDoItems.map((item, i) => (
-                <li key={i}>
-                  <Link to={item.path}>{item.name}</Link>
-                </li>
-              ))}
-            </ul>
-          )}
+          <span
+            onClick={() => setWhatWeDoOpen(!whatWeDoOpen)}
+            style={{ cursor: "pointer" }}
+            aria-expanded={whatWeDoOpen}
+            aria-haspopup="true"
+          >
+            What We Do ▾
+          </span>
+          <ul className={`dropdown-menu ${whatWeDoOpen ? "active" : ""}`}>
+            {whatWeDoItems.map((item, i) => (
+              <li key={i}>
+                <Link to={item.path} onClick={closeAllMenus}>
+                  {item.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </li>
 
         {/* Static Links */}
         <li>
-          <Link to="/events">Events</Link>
+          <Link to="/events" onClick={closeAllMenus}>
+            Events
+          </Link>
         </li>
         <li>
-          <Link to="/resources">Resources</Link>
+          <Link to="/resources" onClick={closeAllMenus}>
+            Resources
+          </Link>
         </li>
       </ul>
 
       {/* Contact Button */}
       <div className="contact-btn">
-        <Link to="/contact">
+        <Link to="/contact" onClick={closeAllMenus}>
           <button>Contact Us</button>
         </Link>
       </div>

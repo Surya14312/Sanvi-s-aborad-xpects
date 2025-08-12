@@ -63,7 +63,7 @@ function Contact() {
 
     try {
       const emailData = {
-        to: "thesanvisacademy@gmail.com",
+        to: "thesanvis.aboardxperts@gmail.com",
         subject: "New Admission Enquiry",
         body: `📚 New Admission Enquiry\n\n👤 Name: ${name}\n🎂 Age: ${age}\n🎓 Course: ${course}\n📘 Education Level: ${education}\n🌍 Country Interested: ${country}\n🗓️ Start Date: ${startDate}\n🗓️ End Date: ${endDate}\n🏠 Address: ${address}\n📞 Phone No: ${phone}\n📱 WhatsApp No: ${whatsapp}`,
       };
@@ -132,7 +132,7 @@ function Contact() {
           <p>
             📧 Email:{" "}
             <a href="mailto:thesanvisacademy@gmail.com">
-              thesanvisacademy@gmail.com
+              thesanvis.aboardxperts@gmail.com
             </a>
           </p>
           <p>

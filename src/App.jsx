@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 import ScrollToTop from "./components/ScrollToTop";
 import Footer from "./components/Footer";
 import ErrorBoundary from "./components/ErrorBoundary";
+import ContactForm from "./components/ContactForm";
 
 // Pages
 import About from "./pages/About";
@@ -39,6 +40,7 @@ import PreDepartureOrientation from "./pages/blogs/PreDepartureOrientation";
 import ContinuousCommunication from "./pages/blogs/ContinuousCommunication";
 
 import Destinations from "./components/Destinations";
+
 import CountryPage from "./pages/CountryPage";
 
 import UniversitySelection from "./pages/UniversitySelection";
@@ -100,6 +102,7 @@ function App() {
         />
         <Route path="/career-counseling" element={<CareerCounseling />} />
         <Route path="/course-selection" element={<CourseSelection />} />
+        <Route path="/apply" element={<ContactForm />} />
         <Route
           path="/documentation-services"
           element={<DocumentationService />}

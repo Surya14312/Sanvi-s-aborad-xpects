@@ -25,8 +25,10 @@ function Footer() {
 
           <div className="contact-item">
             <FaEnvelope className="icon" />
-            <a href="mailto:thesanvisacademy@gmail.com">
-              thesanvisacademy@gmail.com
+            <a href="mailto:thesanvis.abroadxperts@gmail.com
+">
+             thesanvis.abroadxperts@gmail.com
+
             </a>
           </div>
 
