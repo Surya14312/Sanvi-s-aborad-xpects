@@ -11,6 +11,7 @@ function Footer() {
         <div className="logo">
           <Link to="/">
             <img src="/assets/logo.png" alt="Logo" />
+            <p className="footer-tagline">Empowering Success Globally.</p>
           </Link>
         </div>
 

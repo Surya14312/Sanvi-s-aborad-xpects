@@ -86,7 +86,7 @@ const Documentation = () => {
       <section className="call-to-action" style={{ marginTop: "40px", textAlign: "center" }}>
         <button
           className="apply-button"
-          onClick={() => window.location.href = "/apply"}
+          onClick={() => window.location.href = "/contact"}
           style={{
             padding: "12px 28px",
             backgroundColor: "#c91432",

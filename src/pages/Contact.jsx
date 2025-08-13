@@ -13,7 +13,7 @@ function Contact() {
   const [formData, setFormData] = useState({
     name: "",
     age: "",
-    course: "",
+    courseType: "",
     education: "",
     country: "",
     startDate: "",
@@ -32,7 +32,7 @@ function Contact() {
     const {
       name,
       age,
-      course,
+      courseType,
       education,
       country,
       startDate,
@@ -45,7 +45,7 @@ function Contact() {
     if (
       !name ||
       !age ||
-      !course ||
+      !courseType ||
       !education ||
       !country ||
       !startDate ||
@@ -65,7 +65,7 @@ function Contact() {
       const emailData = {
         to: "thesanvis.aboardxperts@gmail.com",
         subject: "New Admission Enquiry",
-        body: `📚 New Admission Enquiry\n\n👤 Name: ${name}\n🎂 Age: ${age}\n🎓 Course: ${course}\n📘 Education Level: ${education}\n🌍 Country Interested: ${country}\n🗓️ Start Date: ${startDate}\n🗓️ End Date: ${endDate}\n🏠 Address: ${address}\n📞 Phone No: ${phone}\n📱 WhatsApp No: ${whatsapp}`,
+        body: `📚 New Admission Enquiry\n\n👤 Name: ${name}\n🎂 Age: ${age}\n🎓 Course Type: ${courseType}\n📘 Education Level: ${education}\n🌍 Country Interested: ${country}\n🗓️ Start Date: ${startDate}\n🗓️ End Date: ${endDate}\n🏠 Address: ${address}\n📞 Phone No: ${phone}\n📱 WhatsApp No: ${whatsapp}`,
       };
 
       await new Promise((resolve) => setTimeout(resolve, 1500));
@@ -79,7 +79,7 @@ function Contact() {
         setFormData({
           name: "",
           age: "",
-          course: "",
+          courseType: "",
           education: "",
           country: "",
           startDate: "",
@@ -101,13 +101,9 @@ function Contact() {
   return (
     <div className="contact">
       <div className="contact-container">
-        {/* Centered Heading */}
-        <div
-          className="heading-wrapper"
-          style={{ textAlign: "center", marginBottom: "40px" }}
-        >
+        {/* Heading */}
+        <div style={{ textAlign: "center", marginBottom: "40px" }}>
           <h1
-            className="page-heading"
             style={{
               fontSize: "2.8rem",
               fontWeight: 700,
@@ -131,7 +127,7 @@ function Contact() {
           </p>
           <p>
             📧 Email:{" "}
-            <a href="mailto:thesanvisacademy@gmail.com">
+            <a href="mailto:thesanvis.aboardxperts@gmail.com">
               thesanvis.aboardxperts@gmail.com
             </a>
           </p>
@@ -179,7 +175,7 @@ function Contact() {
         </div>
 
         {/* Contact Form */}
-        <h3 class="contact-subheading">📝 Send Your Details</h3>
+        <h3 className="contact-subheading">📝 Send Your Details</h3>
         <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
           <input
             type="text"
@@ -216,20 +212,21 @@ function Contact() {
             required
           />
 
+          {/* Updated Course Type Dropdown */}
           <select
-            name="course"
-            value={formData.course}
+            name="courseType"
+            value={formData.courseType}
             onChange={handleChange}
             required
           >
-            <option value="">🎓 -- Select Course --</option>
-            <option value="IELTS">IELTS</option>
-            <option value="TOEFL">TOEFL</option>
-            <option value="PTE">PTE</option>
-            <option value="GMAT">GMAT</option>
-            <option value="GRE">GRE</option>
-            <option value="French">French</option>
-            <option value="German">German</option>
+            <option value="">🎓 -- Select Course Type --</option>
+            <option value="Undergraduate">Undergraduate (UG)</option>
+            <option value="Postgraduate">Postgraduate (PG)</option>
+            <option value="Masters">Masters</option>
+            <option value="PhD">PhD</option>
+            <option value="Diploma">Diploma</option>
+            <option value="Certificate">Certificate Program</option>
+            <option value="Foundation">Foundation / Pathway Program</option>
           </select>
 
           <select
@@ -327,8 +324,7 @@ function Contact() {
               {submitMessage}
             </div>
           )}
-
-          <div
+           <div
             style={{
               marginTop: "15px",
               padding: "10px",
@@ -341,7 +337,7 @@ function Contact() {
             }}
           >
             📩 The submitted information will be forwarded to:{" "}
-            <strong>thesanvisacademy@gmail.com</strong>
+            <strong> thesanvis.aboardxperts@gmail.com</strong>
           </div>
         </form>
       </div>

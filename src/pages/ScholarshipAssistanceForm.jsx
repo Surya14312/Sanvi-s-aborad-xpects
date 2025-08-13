@@ -8,8 +8,8 @@ const ScholarshipAssistanceForm = () => {
   return (
     <div
       style={{
-        maxWidth: "700px",
-        margin: "2rem auto",
+       
+      
         padding: "2rem",
         backgroundColor: "#fff",
         boxShadow: "0 8px 20px rgba(0,0,0,0.1)",

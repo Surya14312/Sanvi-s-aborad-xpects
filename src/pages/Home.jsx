@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import TrendingCourses from "../components/TrendingCourses";
+import TrendingCourses from "../components/TrendingCourses.jsx";
 import TrendingBlogs from "../components/TrendingBlogs";
 
 function Home() {
