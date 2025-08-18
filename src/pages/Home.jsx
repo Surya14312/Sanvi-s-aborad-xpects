@@ -20,78 +20,24 @@ function Home() {
   const [submitMessage, setSubmitMessage] = useState("");
 
   const destinations = [
-    {
-      name: "United Kingdom",
-      image: "/assets/uk.jpg",
-      description: "Top universities and diverse culture await you.",
-    },
-    {
-      name: "Canada",
-      image: "/assets/canada.jpg",
-      description: "Study in Canada and experience world-class education.",
-    },
-    {
-      name: "Singapore",
-      image: "/assets/singapore.jpg",
-      description: "Experience high-quality education in Asia’s hub.",
-    },
-    {
-      name: "Ireland",
-      image: "/assets/ireland.jpg",
-      description: "Study in Ireland with its rich culture and innovation.",
-    },
-    {
-      name: "France",
-      image: "/assets/france.jpg",
-      description:
-        "France offers great education in arts, fashion, and business.",
-    },
-    {
-      name: "Germany",
-      image: "/assets/germany.jpg",
-      description: "Low-cost tuition and top research facilities.",
-    },
-    {
-      name: "Switzerland",
-      image: "/assets/switzerland.jpg",
-      description: "Famous for hospitality and business education.",
-    },
-    {
-      name: "Dubai",
-      image: "/assets/dubai.jpg",
-      description: "Study in a fast-growing global city.",
-    },
-    {
-      name: "Spain",
-      image: "/assets/spain.jpg",
-      description: "Great climate, culture, and academic opportunities.",
-    },
-    {
-      name: "Malaysia",
-      image: "/assets/malaysia.jpg",
-      description: "Affordable, quality education in Asia.",
-    },
-    {
-      name: "Mauritius",
-      image: "/assets/mauritius.jpg",
-      description: "Tropical paradise with excellent study options.",
-    },
-    {
-      name: "India",
-      image: "/assets/india.jpg",
-      description: "Diverse culture and top-ranked institutions.",
-    },
-    {
-      name: "Netherlands",
-      image: "/assets/netherlands.jpg",
-      description: "Hub for tech, design, and business.",
-    },
-    {
-      name: "Italy",
-      image: "/assets/italy.jpg",
-      description: "Experience art, culture, and top universities.",
-    },
+    { name: "United Kingdom", image: "/assets/uk.jpg", description: "Top universities and diverse culture await you." },
+    { name: "Canada", image: "/assets/canada.jpg", description: "Study in Canada and experience world-class education." },
+    { name: "Singapore", image: "/assets/singapore.jpg", description: "Experience high-quality education in Asia’s hub." },
+    { name: "Ireland", image: "/assets/ireland.jpg", description: "Study in Ireland with its rich culture and innovation." },
+    { name: "France", image: "/assets/france.jpg", description: "France offers great education in arts, fashion, and business." },
+    { name: "Germany", image: "/assets/germany.jpg", description: "Low-cost tuition and top research facilities." },
+    { name: "Switzerland", image: "/assets/switzerland.jpg", description: "Famous for hospitality and business education." },
+    { name: "Dubai", image: "/assets/dubai.jpg", description: "Study in a fast-growing global city." },
+    { name: "Spain", image: "/assets/spain.jpg", description: "Great climate, culture, and academic opportunities." },
+    { name: "Malaysia", image: "/assets/malaysia.jpg", description: "Affordable, quality education in Asia." },
+    { name: "Mauritius", image: "/assets/mauritius.jpg", description: "Tropical paradise with excellent study options." },
+    { name: "India", image: "/assets/india.jpg", description: "Diverse culture and top-ranked institutions." },
+    { name: "Netherlands", image: "/assets/netherlands.jpg", description: "Hub for tech, design, and business." },
+    { name: "Italy", image: "/assets/italy.jpg", description: "Experience art, culture, and top universities." },
   ];
+
+  // Generate years dynamically: 2026 → 2036
+  const years = Array.from({ length: 11 }, (_, i) => 2026 + i);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -101,7 +47,7 @@ function Home() {
     });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     if (isSubmitting) return;
 
@@ -115,38 +61,26 @@ function Home() {
     setSubmitMessage("");
 
     try {
-      const emailData = {
-        to: "thesanvisacademy@gmail.com",
-        subject: "New Study Abroad Enquiry",
-        body: `
-        📋 New Enquiry Form Submission
+      // Build WhatsApp message
+      const whatsappMessage = `
+📋 New Study Abroad Enquiry
 
-        👤 Name: ${firstName} ${lastName}
-        📧 Email: ${email}
-        📞 Mobile: ${mobile}
-        🌍 Destination: ${destination}
-        📅 Preferred Year: ${year}
-        ✅ Consent: ${formData.consent ? "Yes" : "No"}
-        `,
-      };
+👤 Name: ${firstName} ${lastName}
+📧 Email: ${email}
+📞 Mobile: ${mobile}
+🌍 Destination: ${destination}
+📅 Preferred Year: ${year}
+✅ Consent: ${formData.consent ? "Yes" : "No"}
+      `;
 
-      // Simulated sending delay
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      console.log("Data sent to email:", emailData);
+      const whatsappUrl = `https://wa.me/919966428787?text=${encodeURIComponent(
+        whatsappMessage
+      )}`;
 
-      setSubmitMessage("✅ Submitted successfully! We’ll contact you soon.");
-      setTimeout(() => {
-        setFormData({
-          firstName: "",
-          lastName: "",
-          email: "",
-          mobile: "",
-          destination: "",
-          year: "",
-          consent: false,
-        });
-        setSubmitMessage("");
-      }, 3000);
+      // Redirect to WhatsApp
+      window.open(whatsappUrl, "_blank");
+
+      setSubmitMessage("✅ Opening WhatsApp...");
     } catch (err) {
       console.error("Error sending form:", err);
       setSubmitMessage("❌ Submission failed. Try again.");
@@ -253,11 +187,11 @@ function Home() {
               required
             >
               <option value="">Preferred Year</option>
-              <option value="2027">2027</option>
-              <option value="2026">2026</option>
-              <option value="2025">2025</option>
-              <option value="2024">2024</option>
-              <option value="2023">2023</option>
+              {years.map((yr) => (
+                <option key={yr} value={yr}>
+                  {yr}
+                </option>
+              ))}
             </select>
           </div>
 

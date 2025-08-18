@@ -1,3 +1,4 @@
+// src/App.jsx
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -7,11 +8,21 @@ import ScrollToTop from "./components/ScrollToTop";
 import Footer from "./components/Footer";
 import ErrorBoundary from "./components/ErrorBoundary";
 import ContactForm from "./components/ContactForm";
+import Destinations from "./components/Destinations";
+import ApplicationForm from "./components/ApplicationForm";
+import CourseDetails from "./components/CourseDetails";
+import ServiceDetail from "./components/ServiceDetail";
 
 // Pages
+import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import Home from "./pages/Home";
+import Countries from "./pages/Countries";
+import CountryDetails from "./pages/CountryDetails";
+import GlobalCourses from "./pages/GlobalCourses";
+import GlobalCourseDetail from "./pages/GlobalCourseDetail";
+
+// Study Abroad Pages
 import UKPage from "./pages/UK";
 import CanadaPage from "./pages/Canada";
 import SingaporePage from "./pages/Singapore";
@@ -27,6 +38,15 @@ import IndiaPage from "./pages/India";
 import NetherlandsPage from "./pages/Netherlands";
 import ItalyPage from "./pages/Italy";
 
+// Blogs & Trending Insights
+import TrendingBlogs from "./components/TrendingBlogs";
+import BlogDetail from "./pages/BlogDetail";
+
+// Special Programs
+import SpecialPathwayPrograms from "./pages/SpecialPathwayPrograms";
+import ProgramDetails from "./pages/ProgramDetails";
+
+// Blog & Services Pages
 import AdmissionGuidance from "./pages/blogs/AdmissionGuidance";
 import CareerCounseling from "./pages/blogs/CareerCounseling";
 import CourseSelection from "./pages/blogs/CourseSelection";
@@ -38,13 +58,7 @@ import PostArrivalSupport from "./pages/blogs/PostArrivalSupport";
 import CountrySelection from "./pages/blogs/CountrySelection";
 import PreDepartureOrientation from "./pages/blogs/PreDepartureOrientation";
 import ContinuousCommunication from "./pages/blogs/ContinuousCommunication";
-
-import Destinations from "./components/Destinations";
-
-import CountryPage from "./pages/CountryPage";
-
 import UniversitySelection from "./pages/UniversitySelection";
-import ApplicationForm from "./components/ApplicationForm";
 import ScholarshipAssistanceForm from "./pages/ScholarshipAssistanceForm";
 import VisaAssistance from "./pages/VisaAssistance";
 import TestPreparation from "./pages/TestPreparation";
@@ -56,11 +70,7 @@ import SAT from "./pages/SAT";
 import Duolingo from "./pages/Duolingo";
 import French from "./pages/French";
 import German from "./pages/German";
-
-import CourseDetails from "./components/CourseDetails";
-import BlogDetails from "./components/BlogDetails";
 import WhatWeDo from "./pages/WhatWeDo";
-import ServiceDetail from "./components/ServiceDetail";
 import WorkWithUs from "./pages/WorkWithUs";
 import Events from "./pages/Events";
 import Resources from "./pages/Resources";
@@ -77,7 +87,6 @@ function App() {
 
         {/* Destinations */}
         <Route path="/destinations" element={<Destinations />} />
-        <Route path="/country/:countryName" element={<CountryPage />} />
 
         {/* Study Abroad Pages */}
         <Route path="/study-in/uk" element={<UKPage />} />
@@ -95,42 +104,25 @@ function App() {
         <Route path="/study-in/netherlands" element={<NetherlandsPage />} />
         <Route path="/study-in/italy" element={<ItalyPage />} />
 
-        {/* Blog & Services */}
-        <Route
-          path="/blog/admission-guidance"
-          element={<AdmissionGuidance />}
-        />
+        {/* Blogs & Services */}
+        <Route path="/blogs" element={<TrendingBlogs />} />
+        <Route path="/blog/:slug" element={<BlogDetail />} />
+        <Route path="/blog/admission-guidance" element={<AdmissionGuidance />} />
         <Route path="/career-counseling" element={<CareerCounseling />} />
         <Route path="/course-selection" element={<CourseSelection />} />
-        <Route path="/apply" element={<ContactForm />} />
-        <Route
-          path="/documentation-services"
-          element={<DocumentationService />}
-        />
-        <Route
-          path="/application-procedure"
-          element={<ApplicationProcedure />}
-        />
+        <Route path="/documentation-services" element={<DocumentationService />} />
+        <Route path="/application-procedure" element={<ApplicationProcedure />} />
         <Route path="/financial-assistance" element={<FinancialAssistance />} />
         <Route path="/travel-assistance" element={<TravelAssistance />} />
         <Route path="/post-arrival-support" element={<PostArrivalSupport />} />
         <Route path="/country-selection" element={<CountrySelection />} />
         <Route path="/university-selection" element={<UniversitySelection />} />
-        <Route
-          path="/pre-departure-orientation"
-          element={<PreDepartureOrientation />}
-        />
-        <Route
-          path="/continuous-communication"
-          element={<ContinuousCommunication />}
-        />
+        <Route path="/pre-departure-orientation" element={<PreDepartureOrientation />} />
+        <Route path="/continuous-communication" element={<ContinuousCommunication />} />
 
-        {/* Forms and Assistance */}
+        {/* Forms & Assistance */}
         <Route path="/apply" element={<ApplicationForm />} />
-        <Route
-          path="/scholarship-assistance"
-          element={<ScholarshipAssistanceForm />}
-        />
+        <Route path="/scholarship-assistance" element={<ScholarshipAssistanceForm />} />
         <Route path="/visa-assistance" element={<VisaAssistance />} />
 
         {/* Test Preparation */}
@@ -146,19 +138,11 @@ function App() {
         <Route path="/french" element={<French />} />
         <Route path="/german" element={<German />} />
 
-        {/* Other Pages */}
-        <Route path="/work-with-us" element={<WorkWithUs />} />
-        <Route path="/events" element={<Events />} />
-        <Route path="/resources" element={<Resources />} />
+        {/* Special Programs */}
+        <Route path="/special-pathway-programs" element={<SpecialPathwayPrograms />} />
+        <Route path="/special-pathway/:programTitle" element={<ProgramDetails />} />
 
-        {/* Dynamic course & blog */}
-        <Route
-          path="/courses/:country/:courseTitle"
-          element={<CourseDetails />}
-        />
-        <Route path="/blog/:slug" element={<BlogDetails />} />
-
-        {/* What We Do & Service Detail with Error Boundary */}
+        {/* What We Do & Service Detail */}
         <Route path="/what-we-do" element={<WhatWeDo />} />
         <Route
           path="/service/:id"
@@ -169,12 +153,24 @@ function App() {
           }
         />
 
-        {/* About & Contact */}
+        {/* Global Courses */}
+        <Route path="/courses" element={<GlobalCourses />} />
+        <Route path="/courses/:courseName" element={<GlobalCourseDetail />} />
+
+        {/* Dynamic course & country detail (if needed) */}
+        <Route path="/courses/:country/:courseTitle" element={<CourseDetails />} />
+        <Route path="/countries" element={<Countries />} />
+        <Route path="/countries/:slug" element={<CountryDetails />} />
+
+        {/* Other Pages */}
+        <Route path="/work-with-us" element={<WorkWithUs />} />
+        <Route path="/events" element={<Events />} />
+        <Route path="/resources" element={<Resources />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
 
-        {/* 404 Not Found */}
-        <Route path="*" element={<h1>404 Page Not Found</h1>} />
+        {/* 404 Page */}
+        <Route path="*" element={<h1 style={{ textAlign: "center", marginTop: "50px" }}>404 - Page Not Found</h1>} />
       </Routes>
 
       <Footer />

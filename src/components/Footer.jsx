@@ -1,7 +1,6 @@
 import React from "react";
-import { FaPhoneAlt, FaEnvelope, FaLinkedin } from "react-icons/fa";
+import { FaPhoneAlt, FaEnvelope, FaLinkedin, FaMapMarkerAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { FaMapMarkerAlt } from "react-icons/fa";
 
 function Footer() {
   return (
@@ -10,7 +9,11 @@ function Footer() {
         {/* Brand Section */}
         <div className="logo">
           <Link to="/">
-            <img src="/assets/logo.png" alt="Logo" />
+            <img
+              src="/assets/logo.png"
+              alt="Logo"
+              style={{ width: "180px", marginBottom: "8px" }} // Increased size
+            />
             <p className="footer-tagline">Empowering Success Globally.</p>
           </Link>
         </div>
@@ -26,10 +29,8 @@ function Footer() {
 
           <div className="contact-item">
             <FaEnvelope className="icon" />
-            <a href="mailto:thesanvis.abroadxperts@gmail.com
-">
-             thesanvis.abroadxperts@gmail.com
-
+            <a href="mailto:thesanvis.abroadxperts@gmail.com">
+              thesanvis.abroadxperts@gmail.com
             </a>
           </div>
 
@@ -75,8 +76,11 @@ function Footer() {
         <div className="footer-links">
           <h4>Quick Links</h4>
           <Link to="/">🏠 Home</Link>
-          <Link to="/about">📘 About Us</Link>
-
+          <Link to="/what-we-do">💼 What We Do</Link>
+          <Link to="/countries">🌍 Countries</Link>
+          <Link to="/courses">📚 Trending Courses</Link>
+          <Link to="/special-pathway-programs">🎯 Special Pathway Programs</Link>
+          <Link to="/blogs">📝 Blogs</Link>
           <Link to="/contact">📩 Contact</Link>
         </div>
 
@@ -106,7 +110,7 @@ function Footer() {
       >
         &copy; {new Date().getFullYear()}{" "}
         <span style={{ color: "#c62828", fontWeight: "bold" }}>
-          The Sanvi’s Aboard xperts
+          The Sanvi’s Abroad Xperts
         </span>
         . All rights reserved.
       </p>

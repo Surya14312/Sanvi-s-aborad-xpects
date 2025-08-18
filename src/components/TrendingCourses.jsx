@@ -1,67 +1,87 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-
 function TrendingCourses() {
   const [activeTab, setActiveTab] = useState("UK");
   const [columns, setColumns] = useState(3);
   const navigate = useNavigate();
 
-const coursesData = {
-  UK: [
-    { title: "MBA", image: "/assets/courses/mba.jpg", description: "Master of Business Administration in top UK universities." },
-    { title: "Data Science", image: "/assets/courses/data-science.jpg", description: "Learn cutting-edge Data Science skills and AI tools." },
-    { title: "Artificial Intelligence", image: "/assets/courses/ai.jpg", description: "Advance your career in AI & machine learning." },
-    { title: "Law", image: "/assets/courses/law.jpg", description: "Study law in the UK for global legal expertise." },
-   
-   
-  ],
-  USA: [
-    { title: "Computer Science", image: "/assets/courses/computer-science.jpg", description: "Pursue CS in leading US tech universities." },
-    { title: "Engineering", image: "/assets/courses/engineering.jpg", description: "Explore various engineering specializations in USA." },
-    { title: "Finance", image: "/assets/courses/finance.jpg", description: "Top-ranked finance programs for a global career." },
-    { title: "Healthcare", image: "/assets/courses/healthcare.jpg", description: "Medical and healthcare programs with global demand." },
-   
-  ],
-  Canada: [
-    { title: "Business Analytics", image: "/assets/courses/business-analytics.jpg", description: "Excel in business analytics with Canadian universities." },
-    { title: "Cybersecurity", image: "/assets/courses/cybersecurity.jpg", description: "Learn advanced cybersecurity tools and techniques." },
-    { title: "Nursing", image: "/assets/courses/nursing.jpg", description: "Build a career in nursing and healthcare." },
-    { title: "Marketing", image: "/assets/courses/marketing.jpg", description: "Master digital and traditional marketing strategies." },
-  ],
-  Europe: [
-    { title: "Environmental Science", image: "/assets/courses/environment.jpg", description: "Study sustainability and environmental sciences." },
-    { title: "Accounting", image: "/assets/courses/accounting.jpg", description: "Build your career in global accounting practices." },
-    { title: "Medicine", image: "/assets/courses/medicine.jpg", description: "Medical programs with world-class facilities." },
-    { title: "Information Technology", image: "/assets/courses/it.jpg", description: "Advance in IT fields with Australian universities." },
-  ],
-  Japan: [
-    { title: "Robotics Engineering", image: "/assets/courses/robotics.jpg", description: "Master robotics in one of the world’s tech leaders." },
-    { title: "Game Development", image: "/assets/courses/game-dev.jpg", description: "Learn advanced game design and development in Japan." },
-    { title: "Business Management", image: "/assets/courses/business-management.jpg", description: "Explore innovative Japanese business strategies." },
-    { title: "Cultural Studies", image: "/assets/courses/culture.jpg", description: "Immerse in Japanese culture, language, and traditions." },
-  ],
-  China: [
-     { title: "Cybersecurity", image: "/assets/courses/cybersecurity.jpg", description: "Learn advanced cybersecurity tools and techniques." },
-    { title: "Engineering", image: "/assets/courses/engineering.jpg", description: "Study engineering in China's top universities." },
-    { title: "Artificial Intelligence", image: "/assets/courses/ai.jpg", description: "Specialize in AI and big data in China’s tech hubs." },
-     { title: "Marketing", image: "/assets/courses/marketing.jpg", description: "Master digital and traditional marketing strategies." },
-  ],
-  Dubai: [
-    { title: "Hospitality Management", image: "/assets/courses/hospitality.jpg", description: "Excel in luxury hospitality in Dubai’s tourism hub." },
-    { title: "Architecture", image: "/assets/courses/architecture.jpg", description: "Study modern and Islamic architecture in Dubai." },
-     { title: "Business Analytics", image: "/assets/courses/business-analytics.jpg", description: "Excel in business analytics with US institutions." },
-    { title: "Information Technology", image: "/assets/courses/it.jpg", description: "Advance in IT fields with innovative US universities." },
-  ],
-};
-
-
-  const tabs = Object.keys(coursesData);
-
-  const handleLearnMore = (country, courseTitle) => {
-    navigate(`/courses/${country}/${encodeURIComponent(courseTitle)}`);
+  // ✅ Centralized course images (unique for each course, no duplicates)
+  const images = {
+    mba: "/assets/courses/mba.jpg",
+    dataScience: "/assets/courses/data-science.jpg",
+    ai: "/assets/courses/ai.jpg",
+    law: "/assets/courses/law.jpg",
+    cybersecurity: "/assets/courses/cybersecurity.jpg",
+    marketing: "/assets/courses/marketing.jpg",
+    engineering: "/assets/courses/engineering.jpg",
+    healthcare: "/assets/courses/healthcare.jpg",
+    businessAnalytics: "/assets/courses/business-analytics.jpg",
+    nursing: "/assets/courses/nursing.jpg",
+    environment: "/assets/courses/environment.jpg",
+    accounting: "/assets/courses/accounting.jpg",
+    medicine: "/assets/courses/medicine.jpg",
+    it: "/assets/courses/it.jpg",
+    robotics: "/assets/courses/robotics.jpg",
+    gameDev: "/assets/courses/game-dev.jpg",
+    businessManagement: "/assets/courses/business-management.jpg",
+    culture: "/assets/courses/culture.jpg",
+    hospitality: "/assets/courses/hospitality.jpg",
+    architecture: "/assets/courses/architecture.jpg",
   };
 
+  // ✅ Courses data
+  const coursesData = {
+    UK: [
+      { title: "MBA", image: images.mba, description: "Master of Business Administration in top UK universities." },
+      { title: "Data Science", image: images.dataScience, description: "Learn cutting-edge Data Science skills and AI tools." },
+      { title: "Artificial Intelligence", image: images.ai, description: "Advance your career in AI & machine learning." },
+      { title: "Law", image: images.law, description: "Study law in the UK for global legal expertise." },
+    ],
+    Europe: [
+      { title: "Environmental Science", image: images.environment, description: "Study sustainability and environmental sciences." },
+      { title: "Accounting", image: images.accounting, description: "Build your career in global accounting practices." },
+      { title: "Medicine", image: images.medicine, description: "Medical programs with world-class facilities." },
+      { title: "Information Technology", image: images.it, description: "Advance in IT fields with European universities." },
+    ],
+    Dubai: [
+      { title: "Hospitality Management", image: images.hospitality, description: "Excel in luxury hospitality in Dubai’s tourism hub." },
+      { title: "Architecture", image: images.architecture, description: "Study modern and Islamic architecture in Dubai." },
+      { title: "Business Analytics", image: images.businessAnalytics, description: "Excel in business analytics with Dubai institutions." },
+      { title: "Information Technology", image: images.it, description: "Advance in IT fields with innovative Dubai universities." },
+    ],
+    Singapore: [
+      { title: "Business Analytics", image: images.businessAnalytics, description: "Excel in business analytics in Singapore’s tech hub." },
+      { title: "Cybersecurity", image: images.cybersecurity, description: "Learn advanced cybersecurity tools and techniques." },
+      { title: "Marketing", image: images.marketing, description: "Master digital and traditional marketing strategies." },
+      { title: "Finance", image: images.accounting, description: "Top-ranked finance programs in Singapore universities." },
+    ],
+    "Special Pathway Programs": [
+      { title: "2+2 (China + Japan)", image: images.robotics, description: "Study 2 years in China + 2 years in Japan." },
+      { title: "India + UK", image: images.mba, description: "Start in India and transfer to a UK university." },
+      { title: "India + USA", image: images.dataScience, description: "Begin in India and complete your program in the USA." },
+    ],
+  };
+
+  // ✅ Only required filters
+  const tabs = ["UK", "Europe", "Dubai", "Singapore", "Special Pathway Programs"];
+
+  // ✅ Navigate with details
+  const handleLearnMore = (country, courseTitle) => {
+    navigate(`/courses/${country}/${encodeURIComponent(courseTitle)}`, {
+      state: {
+        country,
+        course: courseTitle,
+        details: {
+          whyCountry: `Why ${country}`,
+          whyCourse: `Why ${courseTitle} in ${country}`,
+          benefits: `Benefits for Indians to study ${courseTitle} in ${country}`,
+        },
+      },
+    });
+  };
+
+  // ✅ Responsive layout
   useEffect(() => {
     const updateLayout = () => {
       if (window.innerWidth < 480) setColumns(1);
@@ -83,6 +103,7 @@ const coursesData = {
         </h2>
       </div>
 
+      {/* ✅ Filter Tabs */}
       <ul className="trending-tabs">
         {tabs.map((tab) => (
           <li
@@ -95,6 +116,7 @@ const coursesData = {
         ))}
       </ul>
 
+      {/* ✅ Course Cards */}
       <div className="trending-grid" style={{ gridTemplateColumns: `repeat(${columns}, 1fr)` }}>
         {coursesData[activeTab].map((course, index) => (
           <div key={index} className="trending-card">
