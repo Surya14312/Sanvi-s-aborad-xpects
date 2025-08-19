@@ -27,15 +27,84 @@ function Canada() {
       </section>
 
       {/* ✅ Quick Stats */}
-      <section className="canada-highlights">
-        <h2>Canada Education at a Glance</h2>
-        <div className="highlight-cards">
-          <div className="highlight-card">100+ Public Universities</div>
-          <div className="highlight-card">CAD 15K - CAD 35K Tuition Fees</div>
-          <div className="highlight-card">800K+ International Students</div>
-          <div className="highlight-card">Post-Graduate Work Permit (PGWP)</div>
-        </div>
-      </section>
+      <section
+  style={{
+    padding: "80px 20px",
+    textAlign: "center",
+    maxWidth: "1200px",
+    margin: "0 auto",
+    position: "relative",
+    fontFamily: "'Poppins', sans-serif",
+  }}
+>
+  <h2
+    style={{
+      fontSize: "clamp(2rem, 4vw, 3rem)",
+      fontWeight: "800",
+      marginBottom: "40px",
+      background: "linear-gradient(135deg, #dc2626, #7f1d1d)", // 🇨🇦 red gradient for Canada
+      WebkitBackgroundClip: "text",
+      WebkitTextFillColor: "transparent",
+      letterSpacing: "1.2px",
+      transition: "transform 0.3s ease",
+      cursor: "default",
+    }}
+    onMouseEnter={(e) => (e.target.style.transform = "translateY(-3px) scale(1.02)")}
+    onMouseLeave={(e) => (e.target.style.transform = "translateY(0) scale(1)")}
+  >
+    Canada Education at a Glance
+  </h2>
+
+  <div
+    style={{
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+      gap: "2rem",
+      justifyItems: "center",
+      transition: "all 0.4s ease",
+    }}
+  >
+    {[
+      "100+ Public Universities",
+      "CAD 15K – CAD 35K Tuition Fees",
+      "800K+ International Students",
+      "Post-Graduate Work Permit (up to 3 Years)",
+    ].map((text, index) => (
+      <div
+        key={index}
+        style={{
+          background: "rgba(255, 255, 255, 0.1)",
+          backdropFilter: "blur(16px) saturate(180%)",
+          WebkitBackdropFilter: "blur(16px) saturate(180%)",
+          borderRadius: "16px",
+          boxShadow: "0 8px 25px rgba(0,0,0,0.15)",
+          transition: "transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease",
+          padding: "28px 20px",
+          fontSize: "1.05rem",
+          fontWeight: "600",
+          color: "#1f2937",
+          textAlign: "center",
+          cursor: "default",
+          position: "relative",
+          overflow: "hidden",
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.transform = "translateY(-6px) scale(1.05)";
+          e.currentTarget.style.boxShadow = "0 12px 30px rgba(0,0,0,0.2)";
+          e.currentTarget.style.background = "rgba(255,255,255,0.2)";
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.transform = "translateY(0) scale(1)";
+          e.currentTarget.style.boxShadow = "0 8px 25px rgba(0,0,0,0.15)";
+          e.currentTarget.style.background = "rgba(255,255,255,0.1)";
+        }}
+      >
+        {text}
+      </div>
+    ))}
+  </div>
+</section>
+
 
       {/* ✅ Why Study in Canada */}
       <section className="canada-why">

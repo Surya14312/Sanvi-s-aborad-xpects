@@ -9,7 +9,7 @@ export default function ContactForm() {
   useEffect(() => {
     const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
     if (publicKey) {
-      emailjs.init(publicKey); 
+      emailjs.init(publicKey);
     } else {
       console.warn("⚠️ EmailJS public key missing. Check .env file.");
     }
@@ -33,15 +33,12 @@ export default function ContactForm() {
 
     try {
       // ✅ Send via EmailJS
-      const res = await emailjs.sendForm(
+      await emailjs.sendForm(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         form.current,
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       );
-
-      console.log("✅ EmailJS success:", res.status, res.text);
-      setStatus("success");
 
       // ✅ Extract form data
       const formData = new FormData(form.current);
@@ -61,9 +58,10 @@ export default function ContactForm() {
       const whatsappUrl = `https://wa.me/919966428787?text=${whatsappMsg}`;
       window.open(whatsappUrl, "_blank");
 
+      setStatus("success");
       form.current.reset();
     } catch (err) {
-      console.error("❌ EmailJS error:", err);
+      console.error("❌ Error sending email or WhatsApp:", err);
       setStatus("error");
     }
   };
@@ -92,7 +90,9 @@ export default function ContactForm() {
         <select name="year" required>
           <option value="">Select Preferred Year</option>
           {Array.from({ length: 12 }, (_, i) => 2025 + i).map((yr) => (
-            <option key={yr} value={yr}>{yr}</option>
+            <option key={yr} value={yr}>
+              {yr}
+            </option>
           ))}
         </select>
 

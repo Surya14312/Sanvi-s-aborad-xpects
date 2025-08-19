@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import SmartLink from "./SmartLink"; // ✅ Use this instead of Link/NavLink
 
 function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -50,9 +50,9 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="logo">
-        <Link to="/" onClick={closeAllMenus}>
+        <SmartLink to="/" onClick={closeAllMenus}>
           <img src="/assets/logo.png" alt="Logo" />
-        </Link>
+        </SmartLink>
       </div>
 
       <div
@@ -71,9 +71,9 @@ function Navbar() {
           <ul className={`dropdown-menu ${dropdownOpen.study ? "active" : ""}`}>
             {countries.map((c, i) => (
               <li key={i}>
-                <NavLink to={`/study-in/${c.toLowerCase()}`} onClick={closeAllMenus}>
+                <SmartLink to={`/study-in/${c.toLowerCase()}`} onClick={closeAllMenus}>
                   {c}
-                </NavLink>
+                </SmartLink>
               </li>
             ))}
           </ul>
@@ -87,7 +87,7 @@ function Navbar() {
           <ul className={`dropdown-menu ${dropdownOpen.services ? "active" : ""}`}>
             {studentServices.map((s, i) => (
               <li key={i}>
-                <NavLink to={s.path} onClick={closeAllMenus}>{s.name}</NavLink>
+                <SmartLink to={s.path} onClick={closeAllMenus}>{s.name}</SmartLink>
               </li>
             ))}
           </ul>
@@ -101,20 +101,20 @@ function Navbar() {
           <ul className={`dropdown-menu ${dropdownOpen.whatWeDo ? "active" : ""}`}>
             {whatWeDoItems.map((item, i) => (
               <li key={i}>
-                <NavLink to={item.path} onClick={closeAllMenus}>{item.name}</NavLink>
+                <SmartLink to={item.path} onClick={closeAllMenus}>{item.name}</SmartLink>
               </li>
             ))}
           </ul>
         </li>
 
-        <li><NavLink to="/events" onClick={closeAllMenus}>Events</NavLink></li>
-        <li><NavLink to="/resources" onClick={closeAllMenus}>Resources</NavLink></li>
+        <li><SmartLink to="/events" onClick={closeAllMenus}>Events</SmartLink></li>
+        <li><SmartLink to="/resources" onClick={closeAllMenus}>Resources</SmartLink></li>
       </ul>
 
       <div className="contact-btn">
-        <NavLink to="/contact" onClick={closeAllMenus}>
+        <SmartLink to="/contact" onClick={closeAllMenus}>
           <button>Contact Us</button>
-        </NavLink>
+        </SmartLink>
       </div>
     </nav>
   );

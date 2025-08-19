@@ -26,16 +26,84 @@ function Singapore() {
         />
       </section>
 
-      {/* ✅ Quick Stats */}
-      <section className="singapore-highlights">
-        <h2>Singapore Education at a Glance</h2>
-        <div className="highlight-cards">
-          <div className="highlight-card">6 Public Universities</div>
-          <div className="highlight-card">SGD 10K - SGD 30K Tuition Fees</div>
-          <div className="highlight-card">80K+ International Students</div>
-          <div className="highlight-card">Work While Studying</div>
-        </div>
-      </section>
+  <section
+  style={{
+    padding: "80px 20px",
+    textAlign: "center",
+    maxWidth: "1200px",
+    margin: "0 auto",
+    position: "relative",
+    fontFamily: "'Poppins', sans-serif",
+  }}
+>
+  <h2
+    style={{
+      fontSize: "clamp(2rem, 4vw, 3rem)",
+      fontWeight: "800",
+      marginBottom: "40px",
+      background: "linear-gradient(135deg, #ef4444, #991b1b)", // 🇸🇬 Singapore red gradient
+      WebkitBackgroundClip: "text",
+      WebkitTextFillColor: "transparent",
+      letterSpacing: "1.2px",
+      transition: "transform 0.3s ease",
+      cursor: "default",
+    }}
+    onMouseEnter={(e) => (e.target.style.transform = "translateY(-3px) scale(1.02)")}
+    onMouseLeave={(e) => (e.target.style.transform = "translateY(0) scale(1)")}
+  >
+    Singapore Education at a Glance
+  </h2>
+
+  <div
+    style={{
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+      gap: "2rem",
+      justifyItems: "center",
+      transition: "all 0.4s ease",
+    }}
+  >
+    {[
+      "30+ Universities & Institutes of Higher Learning",
+      "SGD 12K – SGD 20K Tuition Fees",
+      "80K+ International Students",
+      "Stay-Back Options via Work Pass Schemes",
+    ].map((text, index) => (
+      <div
+        key={index}
+        style={{
+          background: "rgba(255, 255, 255, 0.1)",
+          backdropFilter: "blur(16px) saturate(180%)",
+          WebkitBackdropFilter: "blur(16px) saturate(180%)",
+          borderRadius: "16px",
+          boxShadow: "0 8px 25px rgba(0,0,0,0.15)",
+          transition: "transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease",
+          padding: "28px 20px",
+          fontSize: "1.05rem",
+          fontWeight: "600",
+          color: "#1f2937",
+          textAlign: "center",
+          cursor: "default",
+          position: "relative",
+          overflow: "hidden",
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.transform = "translateY(-6px) scale(1.05)";
+          e.currentTarget.style.boxShadow = "0 12px 30px rgba(0,0,0,0.2)";
+          e.currentTarget.style.background = "rgba(255,255,255,0.2)";
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.transform = "translateY(0) scale(1)";
+          e.currentTarget.style.boxShadow = "0 8px 25px rgba(0,0,0,0.15)";
+          e.currentTarget.style.background = "rgba(255,255,255,0.1)";
+        }}
+      >
+        {text}
+      </div>
+    ))}
+  </div>
+</section>
+
 
       {/* ✅ Why Study in Singapore */}
       <section className="singapore-why">

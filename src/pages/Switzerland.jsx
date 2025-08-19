@@ -27,15 +27,89 @@ function Switzerland() {
       </section>
 
       {/* ✅ Quick Stats */}
-      <section className="switzerland-highlights">
-        <h2>Switzerland Education at a Glance</h2>
-        <div className="highlight-cards">
-          <div className="highlight-card">12 Public Universities</div>
-          <div className="highlight-card">CHF 1K - CHF 16K Tuition Fees</div>
-          <div className="highlight-card">50K+ International Students</div>
-          <div className="highlight-card">6–12 Months Stay-Back Visa</div>
-        </div>
-      </section>
+      <section
+  style={{
+    padding: "80px 20px",
+    textAlign: "center",
+    maxWidth: "1200px",
+    margin: "0 auto",
+    position: "relative",
+    fontFamily: "'Poppins', sans-serif",
+  }}
+>
+  <h2
+    style={{
+      fontSize: "clamp(2rem, 4vw, 3rem)",
+      fontWeight: "800",
+      marginBottom: "40px",
+      background: "linear-gradient(135deg, #dc2626, #ffffff)", // 🇨🇭 Switzerland red-white gradient
+      WebkitBackgroundClip: "text",
+      WebkitTextFillColor: "transparent",
+      letterSpacing: "1.2px",
+      transition: "transform 0.3s ease",
+      cursor: "default",
+    }}
+    onMouseEnter={(e) =>
+      (e.target.style.transform = "translateY(-3px) scale(1.02)")
+    }
+    onMouseLeave={(e) =>
+      (e.target.style.transform = "translateY(0) scale(1)")
+    }
+  >
+    Switzerland Education at a Glance
+  </h2>
+
+  <div
+    style={{
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+      gap: "2rem",
+      justifyItems: "center",
+      transition: "all 0.4s ease",
+    }}
+  >
+    {[
+      "40+ Universities & Institutions",
+      "CHF 15K – CHF 40K Tuition Fees",
+      "50K+ International Students",
+      "Post-Study Work Opportunities",
+    ].map((text, index) => (
+      <div
+        key={index}
+        style={{
+          background: "rgba(255, 255, 255, 0.1)",
+          backdropFilter: "blur(16px) saturate(180%)",
+          WebkitBackdropFilter: "blur(16px) saturate(180%)",
+          borderRadius: "16px",
+          boxShadow: "0 8px 25px rgba(0,0,0,0.15)",
+          transition:
+            "transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease",
+          padding: "28px 20px",
+          fontSize: "1.05rem",
+          fontWeight: "600",
+          color: "#1f2937",
+          textAlign: "center",
+          cursor: "default",
+          position: "relative",
+          overflow: "hidden",
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.transform = "translateY(-6px) scale(1.05)";
+          e.currentTarget.style.boxShadow = "0 12px 30px rgba(0,0,0,0.2)";
+          e.currentTarget.style.background = "rgba(255,255,255,0.2)";
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.transform = "translateY(0) scale(1)";
+          e.currentTarget.style.boxShadow = "0 8px 25px rgba(0,0,0,0.15)";
+          e.currentTarget.style.background = "rgba(255,255,255,0.1)";
+        }}
+      >
+        {text}
+      </div>
+    ))}
+  </div>
+</section>
+
 
       {/* ✅ Why Study in Switzerland */}
       <section className="switzerland-why">

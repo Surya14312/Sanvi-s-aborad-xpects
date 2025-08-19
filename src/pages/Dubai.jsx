@@ -28,15 +28,89 @@ function Dubai() {
       </section>
 
       {/* ✅ Quick Stats */}
-      <section className="dubai-highlights">
-        <h2>Dubai Education at a Glance</h2>
-        <div className="highlight-cards">
-          <div className="highlight-card">30+ International Universities</div>
-          <div className="highlight-card">AED 30K–AED 90K Tuition Fees</div>
-          <div className="highlight-card">60K+ International Students</div>
-          <div className="highlight-card">1-Year Stay-Back Visa</div>
-        </div>
-      </section>
+     <section
+  style={{
+    padding: "80px 20px",
+    textAlign: "center",
+    maxWidth: "1200px",
+    margin: "0 auto",
+    position: "relative",
+    fontFamily: "'Poppins', sans-serif",
+  }}
+>
+  <h2
+    style={{
+      fontSize: "clamp(2rem, 4vw, 3rem)",
+      fontWeight: "800",
+      marginBottom: "40px",
+      background: "linear-gradient(135deg, #16a34a, #dc2626)", // 🇦🇪 Dubai UAE green-red gradient
+      WebkitBackgroundClip: "text",
+      WebkitTextFillColor: "transparent",
+      letterSpacing: "1.2px",
+      transition: "transform 0.3s ease",
+      cursor: "default",
+    }}
+    onMouseEnter={(e) =>
+      (e.target.style.transform = "translateY(-3px) scale(1.02)")
+    }
+    onMouseLeave={(e) =>
+      (e.target.style.transform = "translateY(0) scale(1)")
+    }
+  >
+    Dubai Education at a Glance
+  </h2>
+
+  <div
+    style={{
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+      gap: "2rem",
+      justifyItems: "center",
+      transition: "all 0.4s ease",
+    }}
+  >
+    {[
+      "60+ International Universities & Colleges",
+      "AED 40K – AED 100K Tuition Fees",
+      "70K+ International Students",
+      "Post-Study Work & Internship Opportunities",
+    ].map((text, index) => (
+      <div
+        key={index}
+        style={{
+          background: "rgba(255, 255, 255, 0.1)",
+          backdropFilter: "blur(16px) saturate(180%)",
+          WebkitBackdropFilter: "blur(16px) saturate(180%)",
+          borderRadius: "16px",
+          boxShadow: "0 8px 25px rgba(0,0,0,0.15)",
+          transition:
+            "transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease",
+          padding: "28px 20px",
+          fontSize: "1.05rem",
+          fontWeight: "600",
+          color: "#1f2937",
+          textAlign: "center",
+          cursor: "default",
+          position: "relative",
+          overflow: "hidden",
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.transform = "translateY(-6px) scale(1.05)";
+          e.currentTarget.style.boxShadow = "0 12px 30px rgba(0,0,0,0.2)";
+          e.currentTarget.style.background = "rgba(255,255,255,0.2)";
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.transform = "translateY(0) scale(1)";
+          e.currentTarget.style.boxShadow = "0 8px 25px rgba(0,0,0,0.15)";
+          e.currentTarget.style.background = "rgba(255,255,255,0.1)";
+        }}
+      >
+        {text}
+      </div>
+    ))}
+  </div>
+</section>
+
 
       {/* ✅ Why Study in Dubai */}
       <section className="dubai-why">

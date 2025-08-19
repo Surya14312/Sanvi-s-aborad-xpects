@@ -1,54 +1,83 @@
+// src/pages/CourseDetails.jsx
 import React from "react";
 import { useParams, Link } from "react-router-dom";
 
 function CourseDetails() {
   const { country, courseTitle } = useParams();
 
-  const coursesData = {
+const coursesData = {
   UK: [
     {
       title: "MBA",
       duration: "1-2 years",
       fees: "£20,000 - £45,000 per year",
-      eligibility: "Bachelor’s degree, IELTS 6.5+",
+      eligibility: "Bachelor’s degree (any discipline), IELTS 6.5+",
       description:
         "An MBA in the UK equips students with leadership, management, and strategic thinking skills, preparing them for global business challenges.",
-      careers: [
-        "Business Manager",
-        "Consultant",
-        "Entrepreneur",
-        "Marketing Director",
+      specializations: ["Finance", "Marketing", "HR", "International Business"],
+      topUniversities: ["Oxford", "Cambridge", "London Business School"],
+      benefits: [
+        "1-year accelerated MBA available",
+        "Strong alumni networks",
+        "High employability in global firms",
       ],
+      internships: [
+        "Consulting Firms (PwC, Deloitte, EY)",
+        "Financial Institutions (HSBC, Barclays)",
+        "Global Tech Companies (Google, Amazon, Microsoft UK)",
+      ],
+      careers: ["Business Manager", "Consultant", "Entrepreneur", "Marketing Director"],
+      averageSalary: "£45,000 - £90,000",
     },
     {
       title: "Data Science",
       duration: "1 year",
       fees: "£18,000 - £35,000 per year",
-      eligibility: "Bachelor’s in relevant field, IELTS 6.5+",
+      eligibility: "Bachelor’s in Computer Science, Statistics, or related field, IELTS 6.5+",
       description:
         "Data Science in the UK focuses on statistics, AI, and big data analytics to prepare students for the future of technology.",
+      specializations: ["Big Data", "Machine Learning", "AI"],
+      topUniversities: ["Imperial College London", "UCL", "University of Edinburgh"],
+      benefits: [
+        "Hands-on training with real-world data",
+        "Access to Europe’s tech hub (London, Manchester)",
+        "Strong demand across industries",
+      ],
       careers: ["Data Analyst", "Machine Learning Engineer", "AI Specialist"],
+      averageSalary: "£40,000 - £70,000",
     },
     {
       title: "Artificial Intelligence",
       duration: "1 year",
       fees: "£20,000 - £40,000 per year",
-      eligibility: "Bachelor’s in Computer Science or related, IELTS 6.5+",
+      eligibility: "Bachelor’s in Computer Science, Engineering, or related, IELTS 6.5+",
       description:
         "UK AI programs focus on machine learning, robotics, and intelligent systems for industries of the future.",
       careers: ["AI Engineer", "Data Scientist", "Robotics Engineer"],
+      universities: ["University of Cambridge", "University of Oxford", "Imperial College London"],
+      benefits: [
+        "UK is a leader in robotics and AI ethics",
+        "Opportunities in healthcare AI, fintech, and defense",
+      ],
+      averageSalary: "£45,000 - £80,000",
     },
     {
       title: "Law",
       duration: "3 years (LLB) / 1 year (LLM)",
       fees: "£15,000 - £30,000 per year",
-      eligibility:
-        "High school diploma (LLB) or Bachelor’s (LLM), IELTS 6.5+",
+      eligibility: "High school diploma (LLB) or Bachelor’s degree (LLM), IELTS 6.5+",
       description:
         "UK Law degrees are globally recognized and prepare students for careers in legal practice, policy-making, and corporate law.",
       careers: ["Solicitor", "Barrister", "Legal Advisor"],
+      topUniversities: ["King’s College London", "University of Edinburgh", "Durham University"],
+      benefits: [
+        "Law graduates eligible for SQE (Solicitor exams)",
+        "International recognition of UK law degrees",
+      ],
+      averageSalary: "£35,000 - £70,000",
     },
   ],
+
   USA: [
     {
       title: "Computer Science",
@@ -57,7 +86,15 @@ function CourseDetails() {
       eligibility: "Bachelor’s in relevant field, TOEFL 80+ or IELTS 6.5+",
       description:
         "Computer Science programs in the USA emphasize software engineering, AI, cybersecurity, and advanced computing technologies.",
+      specializations: ["Artificial Intelligence", "Cybersecurity", "Cloud Computing"],
+      topUniversities: ["MIT", "Stanford", "Carnegie Mellon"],
+      benefits: [
+        "Access to Silicon Valley and top tech firms",
+        "STEM-designated programs (3-year OPT work visa)",
+      ],
+      internships: ["Google", "Microsoft", "Amazon", "Meta"],
       careers: ["Software Engineer", "AI Engineer", "Cybersecurity Analyst"],
+      averageSalary: "USD 80,000 - 120,000",
     },
     {
       title: "Engineering",
@@ -66,20 +103,28 @@ function CourseDetails() {
       eligibility: "High school diploma or Bachelor’s, IELTS/TOEFL",
       description:
         "Engineering programs in the USA cover mechanical, civil, electrical, and aerospace engineering with a focus on innovation.",
+      specializations: ["Mechanical", "Civil", "Electrical", "Aerospace"],
+      topUniversities: ["MIT", "Georgia Tech", "UC Berkeley"],
+      benefits: ["World’s best research facilities", "Strong job demand in US infrastructure projects"],
       careers: ["Mechanical Engineer", "Civil Engineer", "Project Manager"],
+      averageSalary: "USD 70,000 - 110,000",
     },
     {
       title: "Finance",
-      duration: "1-2 years",
+      duration: "1-2 years (Master’s) / 3-4 years (Bachelor’s)",
       fees: "USD 30,000 - USD 50,000 per year",
-      eligibility: "Bachelor’s in related field, IELTS/TOEFL",
+      eligibility: "Bachelor’s in related field (Economics, Business, Accounting, Commerce), IELTS 6.5+ or TOEFL 80+",
       description:
         "Finance courses in the USA provide skills in investment, banking, and corporate finance for global markets.",
-      careers: [
-        "Financial Analyst",
-        "Investment Banker",
-        "Portfolio Manager",
+      specializations: ["Corporate Finance", "Investment Banking", "Risk Management", "Fintech"],
+      topUniversities: ["Harvard", "Wharton (UPenn)", "Stanford", "NYU Stern"],
+      benefits: [
+        "Wall Street exposure",
+        "High ROI with global career opportunities",
       ],
+      internships: ["Goldman Sachs", "JP Morgan", "Deloitte"],
+      careers: ["Financial Analyst", "Investment Banker", "Portfolio Manager"],
+      averageSalary: "USD 70,000 - 120,000",
     },
     {
       title: "Healthcare",
@@ -88,217 +133,60 @@ function CourseDetails() {
       eligibility: "High school diploma or Bachelor’s, IELTS/TOEFL",
       description:
         "Healthcare programs prepare students for roles in nursing, healthcare management, and public health.",
-      careers: [
-        "Nurse Practitioner",
-        "Healthcare Manager",
-        "Public Health Officer",
-      ],
+      specializations: ["Nursing", "Public Health", "Healthcare Administration"],
+      topUniversities: ["Johns Hopkins", "Harvard", "UCSF"],
+      benefits: ["High demand in US healthcare industry", "Strong immigration support for nurses"],
+      careers: ["Nurse Practitioner", "Healthcare Manager", "Public Health Officer"],
+      averageSalary: "USD 60,000 - 90,000",
     },
   ],
-  Canada: [
+
+  // ✅ Special Pathway Programs
+  "Special Pathway Programs": [
     {
-      title: "Business Analytics",
-      duration: "1 year",
-      fees: "CAD 20,000 - CAD 35,000 per year",
-      eligibility: "Bachelor’s degree, IELTS 6.5+",
-      description:
-        "Business Analytics in Canada combines data science and business strategy, enabling students to make data-driven decisions.",
-      careers: ["Business Analyst", "Operations Manager", "Data Strategist"],
-    },
-    {
-      title: "Cybersecurity",
-      duration: "1-2 years",
-      fees: "CAD 18,000 - CAD 32,000 per year",
-      eligibility: "Bachelor’s in relevant field, IELTS 6.5+",
-      description:
-        "Cybersecurity programs in Canada focus on protecting digital assets and combating cyber threats.",
-      careers: [
-        "Cybersecurity Analyst",
-        "Information Security Manager",
-        "Penetration Tester",
+      title: "2+2 (China + Japan)",
+      duration: "4 years total (2+2 split)",
+      fees: "Affordable compared to Western countries",
+      eligibility: "High school diploma or equivalent",
+      description: "Study 2 years in China + 2 years in Japan and gain international exposure.",
+      benefits: [
+        "Dual country exposure in Asia’s top tech hubs",
+        "Strong focus on AI, Robotics, and Engineering",
+        "Affordable tuition compared to Western countries",
       ],
+      universities: ["Tsinghua University (China)", "Tokyo University (Japan)"],
+      careers: ["Robotics Engineer", "AI Developer", "Automation Specialist"],
+      futureScope: "Graduates can pursue global roles in robotics, electronics, and AI-driven industries.",
     },
     {
-      title: "Nursing",
-      duration: "2-4 years",
-      fees: "CAD 15,000 - CAD 30,000 per year",
-      eligibility: "High school diploma or Bachelor’s, IELTS 6.5+",
-      description:
-        "Nursing programs in Canada prepare students for healthcare roles with practical training in hospitals and clinics.",
-      careers: [
-        "Registered Nurse",
-        "Healthcare Administrator",
-        "Medical Researcher",
+      title: "India + UK",
+      duration: "1-2 years in India + 2 years in UK",
+      fees: "Lower tuition for initial years in India",
+      eligibility: "Bachelor’s degree (transfer options available)",
+      description: "Start your program in India and transfer to a top UK university.",
+      benefits: [
+        "Lower tuition for initial years",
+        "Opportunity to earn a UK degree",
+        "Save on living costs while studying in India",
       ],
+      universities: ["Delhi University (India)", "University of Manchester (UK)"],
+      careers: ["Business Analyst", "Consultant", "Marketing Director"],
+      futureScope: "Ideal for students seeking cost-effective UK education with international exposure.",
     },
     {
-      title: "Marketing",
-      duration: "1-2 years",
-      fees: "CAD 15,000 - CAD 28,000 per year",
-      eligibility: "Bachelor’s degree, IELTS 6.5+",
-      description:
-        "Marketing courses in Canada cover branding, digital marketing, and consumer behavior for the global market.",
-      careers: ["Marketing Manager", "Brand Strategist", "Digital Marketer"],
-    },
-  ],
-  Europe: [
-    {
-      title: "Environmental Science",
-      duration: "3 years",
-      fees: "EUR 10,000 - EUR 25,000 per year",
-      eligibility: "High school diploma, IELTS 6.0+",
-      description:
-        "Environmental Science in Europe focuses on sustainability, climate change, and natural resource management.",
-      careers: [
-        "Environmental Consultant",
-        "Wildlife Manager",
-        "Climate Analyst",
+      title: "India + USA",
+      duration: "2 years in India + 2 years in USA",
+      fees: "Save on first two years in India",
+      eligibility: "Bachelor’s degree (transfer eligibility required)",
+      description: "Begin your studies in India and complete your program in the USA.",
+      benefits: [
+        "Strong foundation in India before transfer",
+        "Pathway to top US universities",
+        "Opportunities for OPT and H1B visas",
       ],
-    },
-    {
-      title: "Accounting",
-      duration: "3 years",
-      fees: "EUR 8,000 - EUR 20,000 per year",
-      eligibility: "High school diploma, IELTS 6.0+",
-      description:
-        "Accounting programs prepare students for roles in auditing, taxation, and financial analysis.",
-      careers: ["Accountant", "Auditor", "Financial Advisor"],
-    },
-    {
-      title: "Medicine",
-      duration: "5-6 years",
-      fees: "EUR 15,000 - EUR 45,000 per year",
-      eligibility: "High school diploma with science subjects, IELTS 6.5+",
-      description:
-        "Medicine degrees in Europe combine academic study with clinical training to prepare students for medical practice.",
-      careers: ["Doctor", "Surgeon", "Medical Researcher"],
-    },
-    {
-      title: "Information Technology",
-      duration: "3 years",
-      fees: "EUR 8,000 - EUR 25,000 per year",
-      eligibility: "High school diploma, IELTS 6.0+",
-      description:
-        "IT programs in Europe focus on software development, networking, and cybersecurity skills.",
-      careers: ["IT Consultant", "Software Developer", "Systems Analyst"],
-    },
-  ],
-  Japan: [
-    {
-      title: "Robotics Engineering",
-      duration: "4 years",
-      fees: "JPY 800,000 - JPY 1,500,000 per year",
-      eligibility: "High school diploma, JLPT N2 or IELTS 6.0+",
-      description:
-        "Robotics Engineering in Japan covers automation, AI integration, and hardware design in a global tech hub.",
-      careers: ["Robotics Engineer", "Automation Specialist", "AI Developer"],
-    },
-    {
-      title: "Game Development",
-      duration: "3-4 years",
-      fees: "JPY 700,000 - JPY 1,200,000 per year",
-      eligibility: "High school diploma, JLPT N2 or IELTS 6.0+",
-      description:
-        "Game Development in Japan offers expertise in design, animation, and programming for global gaming markets.",
-      careers: ["Game Developer", "Game Designer", "3D Artist"],
-    },
-    {
-      title: "Business Management",
-      duration: "2 years (Master’s) / 4 years (Bachelor’s)",
-      fees: "JPY 900,000 - JPY 1,500,000 per year",
-      eligibility: "Bachelor’s degree, JLPT N2 or IELTS 6.0+",
-      description:
-        "Business Management in Japan focuses on innovation, leadership, and global market strategies.",
-      careers: ["Business Analyst", "Operations Manager", "Marketing Director"],
-    },
-    {
-      title: "Cultural Studies",
-      duration: "3 years",
-      fees: "JPY 600,000 - JPY 1,000,000 per year",
-      eligibility: "High school diploma, JLPT N2 or IELTS 6.0+",
-      description:
-        "Cultural Studies in Japan explores language, arts, traditions, and history in an immersive environment.",
-      careers: ["Cultural Advisor", "Interpreter", "Tourism Specialist"],
-    },
-  ],
-  China: [
-    {
-      title: "Cybersecurity",
-      duration: "1-2 years",
-      fees: "CNY 50,000 - CNY 90,000 per year",
-      eligibility: "Bachelor’s in relevant field, IELTS 6.0+",
-      description:
-        "Cybersecurity programs in China focus on protecting digital assets and combating cyber threats.",
-      careers: [
-        "Cybersecurity Analyst",
-        "Penetration Tester",
-        "Security Engineer",
-      ],
-    },
-    {
-      title: "Engineering",
-      duration: "4 years",
-      fees: "CNY 40,000 - CNY 80,000 per year",
-      eligibility: "High school diploma, IELTS 6.0+",
-      description:
-        "Engineering programs in China offer a range of disciplines from civil to aerospace engineering.",
-      careers: ["Mechanical Engineer", "Civil Engineer", "Project Manager"],
-    },
-    {
-      title: "Artificial Intelligence",
-      duration: "2 years",
-      fees: "CNY 60,000 - CNY 100,000 per year",
-      eligibility: "Bachelor’s in Computer Science or related, IELTS 6.0+",
-      description:
-        "AI programs in China focus on deep learning, data analytics, and intelligent systems.",
-      careers: ["AI Engineer", "Data Scientist", "Robotics Engineer"],
-    },
-    {
-      title: "Marketing",
-      duration: "1-2 years",
-      fees: "CNY 40,000 - CNY 70,000 per year",
-      eligibility: "Bachelor’s degree, IELTS 6.0+",
-      description:
-        "Marketing courses in China prepare students for international business and digital campaigns.",
-      careers: ["Marketing Manager", "Brand Strategist", "Digital Marketer"],
-    },
-  ],
-  Dubai: [
-    {
-      title: "Hospitality Management",
-      duration: "3-4 years",
-      fees: "AED 40,000 - AED 70,000 per year",
-      eligibility: "High school diploma, IELTS 6.0+",
-      description:
-        "Hospitality Management in Dubai offers training in luxury tourism, hotel operations, and event management.",
-      careers: ["Hotel Manager", "Event Coordinator", "Tourism Director"],
-    },
-    {
-      title: "Architecture",
-      duration: "4-5 years",
-      fees: "AED 50,000 - AED 80,000 per year",
-      eligibility: "High school diploma, IELTS 6.0+",
-      description:
-        "Architecture programs in Dubai blend modern design with Islamic architectural heritage.",
-      careers: ["Architect", "Urban Planner", "Interior Designer"],
-    },
-    {
-      title: "Business Analytics",
-      duration: "1-2 years",
-      fees: "AED 45,000 - AED 70,000 per year",
-      eligibility: "Bachelor’s degree, IELTS 6.0+",
-      description:
-        "Business Analytics in Dubai equips students with skills to analyze market data for strategic decisions.",
-      careers: ["Business Analyst", "Data Strategist", "Operations Manager"],
-    },
-    {
-      title: "Information Technology",
-      duration: "3 years",
-      fees: "AED 40,000 - AED 65,000 per year",
-      eligibility: "High school diploma, IELTS 6.0+",
-      description:
-        "IT programs in Dubai cover software development, networking, and cybersecurity.",
-      careers: ["IT Consultant", "Software Developer", "Systems Analyst"],
+      universities: ["IIT (India)", "MIT (USA)", "Stanford University (USA)"],
+      careers: ["Software Engineer", "AI Engineer", "Data Scientist"],
+      futureScope: "Leads to excellent career opportunities in US tech & business industries.",
     },
   ],
 };
@@ -320,7 +208,11 @@ function CourseDetails() {
   return (
     <div className="course-details">
       <h1>{course.title}</h1>
-      <h3>Country: {country}</h3>
+      <h3>
+        {country === "SpecialPathwayPrograms"
+          ? "Special Pathway Program"
+          : `Country: ${country}`}
+      </h3>
       <p className="course-description">{course.description}</p>
 
       <div className="course-info">

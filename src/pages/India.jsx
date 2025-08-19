@@ -28,15 +28,89 @@ function India() {
       </section>
 
       {/* ✅ Quick Stats */}
-      <section className="india-highlights">
-        <h2>India Education at a Glance</h2>
-        <div className="highlight-cards">
-          <div className="highlight-card">1000+ Universities</div>
-          <div className="highlight-card">INR 50K–INR 3L Tuition Fees</div>
-          <div className="highlight-card">47K+ International Students</div>
-          <div className="highlight-card">Up to 1-Year Stay-Back Option</div>
-        </div>
-      </section>
+    <section
+  style={{
+    padding: "80px 20px",
+    textAlign: "center",
+    maxWidth: "1200px",
+    margin: "0 auto",
+    position: "relative",
+    fontFamily: "'Poppins', sans-serif",
+  }}
+>
+  <h2
+    style={{
+      fontSize: "clamp(2rem, 4vw, 3rem)",
+      fontWeight: "800",
+      marginBottom: "40px",
+      background:
+        "linear-gradient(135deg, #f97316, #ffffff, #16a34a, #1e3a8a)", // 🇮🇳 India saffron-white-green-navy gradient
+      WebkitBackgroundClip: "text",
+      WebkitTextFillColor: "transparent",
+      letterSpacing: "1.2px",
+      transition: "transform 0.3s ease",
+      cursor: "default",
+    }}
+    onMouseEnter={(e) =>
+      (e.target.style.transform = "translateY(-3px) scale(1.02)")
+    }
+    onMouseLeave={(e) =>
+      (e.target.style.transform = "translateY(0) scale(1)")
+    }
+  >
+    India Education at a Glance
+  </h2>
+
+  <div
+    style={{
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+      gap: "2rem",
+      justifyItems: "center",
+      transition: "all 0.4s ease",
+    }}
+  >
+    {[
+      "1,000+ Universities & 40K+ Colleges",
+      "₹50K – ₹5L Tuition Fees per Year",
+      "1M+ International Students",
+      "Diverse Post-Study Work & Research Opportunities",
+    ].map((text, index) => (
+      <div
+        key={index}
+        style={{
+          background: "rgba(255, 255, 255, 0.1)",
+          backdropFilter: "blur(16px) saturate(180%)",
+          WebkitBackdropFilter: "blur(16px) saturate(180%)",
+          borderRadius: "16px",
+          boxShadow: "0 8px 25px rgba(0,0,0,0.15)",
+          transition:
+            "transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease",
+          padding: "28px 20px",
+          fontSize: "1.05rem",
+          fontWeight: "600",
+          color: "#1f2937",
+          textAlign: "center",
+          cursor: "default",
+          position: "relative",
+          overflow: "hidden",
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.transform = "translateY(-6px) scale(1.05)";
+          e.currentTarget.style.boxShadow = "0 12px 30px rgba(0,0,0,0.2)";
+          e.currentTarget.style.background = "rgba(255,255,255,0.2)";
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.transform = "translateY(0) scale(1)";
+          e.currentTarget.style.boxShadow = "0 8px 25px rgba(0,0,0,0.15)";
+          e.currentTarget.style.background = "rgba(255,255,255,0.1)";
+        }}
+      >
+        {text}
+      </div>
+    ))}
+  </div>
+</section>
 
       {/* ✅ Why Study in India */}
       <section className="india-why">

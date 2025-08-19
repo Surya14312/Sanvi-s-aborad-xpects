@@ -1,6 +1,6 @@
 import React from "react";
 import { FaPhoneAlt, FaEnvelope, FaLinkedin, FaMapMarkerAlt } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import SmartLink from "./SmartLink"; // ✅ Import your SmartLink
 
 function Footer() {
   return (
@@ -8,14 +8,14 @@ function Footer() {
       <div className="footer-container">
         {/* Brand Section */}
         <div className="logo">
-          <Link to="/">
+          <SmartLink to="/">
             <img
               src="/assets/logo.png"
               alt="Logo"
-              style={{ width: "180px", marginBottom: "8px" }} // Increased size
+              style={{ width: "180px", marginBottom: "8px" }}
             />
             <p className="footer-tagline">Empowering Success Globally.</p>
-          </Link>
+          </SmartLink>
         </div>
 
         {/* Contact Info */}
@@ -36,13 +36,12 @@ function Footer() {
 
           <div className="contact-item">
             <FaLinkedin className="icon" />
-            <a
-              href="http://www.linkedin.com/in/sanvi-infolink-system"
-              target="_blank"
-              rel="noopener noreferrer"
+            <SmartLink
+              to="http://www.linkedin.com/in/sanvi-infolink-system"
+              newTab
             >
               LinkedIn Profile
-            </a>
+            </SmartLink>
           </div>
 
           {/* Address with map icon */}
@@ -75,13 +74,13 @@ function Footer() {
         {/* Quick Links */}
         <div className="footer-links">
           <h4>Quick Links</h4>
-          <Link to="/">🏠 Home</Link>
-          <Link to="/what-we-do">💼 What We Do</Link>
-          <Link to="/countries">🌍 Countries</Link>
-          <Link to="/courses">📚 Trending Courses</Link>
-          <Link to="/special-pathway-programs">🎯 Special Pathway Programs</Link>
-          <Link to="/blogs">📝 Blogs</Link>
-          <Link to="/contact">📩 Contact</Link>
+          <SmartLink to="/">🏠 Home</SmartLink>
+          <SmartLink to="/what-we-do">💼 What We Do</SmartLink>
+          <SmartLink to="/countries">🌍 Countries</SmartLink>
+          <SmartLink to="/courses">📚 Trending Courses</SmartLink>
+          <SmartLink to="/special-pathway-programs">🎯 Special Pathway Programs</SmartLink>
+          <SmartLink to="/blogs">📝 Blogs</SmartLink>
+          <SmartLink to="/contact">📩 Contact</SmartLink>
         </div>
 
         {/* Google Map */}

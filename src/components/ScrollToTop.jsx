@@ -1,7 +1,7 @@
 // src/components/ScrollToTop.jsx
 import React, { useEffect, useState, useRef } from "react";
 import { useLocation, useNavigationType } from "react-router-dom";
-import { ChevronUp } from "lucide-react"; // Optional icon
+import { ChevronUp } from "lucide-react";
 
 export default function ScrollToTop() {
   const { pathname } = useLocation();
@@ -21,7 +21,7 @@ export default function ScrollToTop() {
     const targetY =
       navigationType === "POP" ? positions.current[pathname] || 0 : 0;
 
-    const scrollDuration = 300; // Faster but smooth
+    const scrollDuration = 500; // a bit smoother
     const startY = window.scrollY;
     const distance = targetY - startY;
     let startTime;
@@ -29,7 +29,13 @@ export default function ScrollToTop() {
     const animateScroll = (timestamp) => {
       if (!startTime) startTime = timestamp;
       const progress = Math.min((timestamp - startTime) / scrollDuration, 1);
-      const ease = 1 - Math.pow(1 - progress, 3); // cubic ease-out
+
+      // spring-like easing
+      const ease =
+        progress < 0.5
+          ? 4 * progress * progress * progress
+          : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+
       window.scrollTo(0, startY + distance * ease);
 
       if (progress < 1) requestAnimationFrame(animateScroll);
@@ -52,7 +58,7 @@ export default function ScrollToTop() {
 
   // Manual scroll to top
   const handleScrollTop = () => {
-    const scrollDuration = 300;
+    const scrollDuration = 500;
     const startY = window.scrollY;
     const distance = -startY;
     let startTime;
@@ -60,7 +66,12 @@ export default function ScrollToTop() {
     const animateScroll = (timestamp) => {
       if (!startTime) startTime = timestamp;
       const progress = Math.min((timestamp - startTime) / scrollDuration, 1);
-      const ease = 1 - Math.pow(1 - progress, 3);
+
+      const ease =
+        progress < 0.5
+          ? 4 * progress * progress * progress
+          : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+
       window.scrollTo(0, startY + distance * ease);
 
       if (progress < 1) requestAnimationFrame(animateScroll);
@@ -77,7 +88,7 @@ export default function ScrollToTop() {
           className="scroll-to-top-btn"
           aria-label="Scroll to top"
         >
-          <ChevronUp size={22} />
+          <ChevronUp size={24} />
         </button>
       )}
     </>

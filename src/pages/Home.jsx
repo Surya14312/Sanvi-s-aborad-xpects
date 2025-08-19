@@ -34,6 +34,13 @@ function Home() {
     { name: "India", image: "/assets/india.jpg", description: "Diverse culture and top-ranked institutions." },
     { name: "Netherlands", image: "/assets/netherlands.jpg", description: "Hub for tech, design, and business." },
     { name: "Italy", image: "/assets/italy.jpg", description: "Experience art, culture, and top universities." },
+    { name: "Portugal", image: "/assets/portugal.jpg", description: "Study in Portugal with rich culture and history." },
+  { name: "Lithuania", image: "/assets/lithuania.jpg", description: "Affordable European education with vibrant student life." },
+  { name: "Belarus", image: "/assets/belarus.jpg", description: "Modern universities with quality programs." },
+  { name: "Philippines", image: "/assets/philippines.jpg", description: "English-taught programs and tropical living." },
+  { name: "China", image: "/assets/china.jpg", description: "World-class universities and cultural immersion." },
+  { name: "Georgia", image: "/assets/georgia.jpg", description: "Affordable education with growing opportunities." },
+  { name: "Vietnam", image: "/assets/vietnam.jpg", description: "Emerging education hub with diverse programs." },
   ];
 
   // Generate years dynamically: 2026 → 2036
@@ -98,10 +105,34 @@ function Home() {
       {/* Hero Section */}
       <section className="intro-section">
         <div className="intro-content">
-          <h1>
-            Achieve Your Global Education Dreams with
-            <span className="highlight-name"> The Sanvi's Abroad Xperts</span>
-          </h1>
+ <h1
+  style={{
+    fontSize: "clamp(1.2rem, 3.5vw, 2rem)", // ✅ smaller scaling for mobiles
+    lineHeight: "1.3",
+    fontWeight: "600",
+    textAlign: "center",
+  }}
+>
+  Achieve Your Global Education Dreams with{" "}
+  <span
+    style={{
+      background: "linear-gradient(90deg, #e60000, #ff3333)",
+      WebkitBackgroundClip: "text",
+      WebkitTextFillColor: "transparent",
+      fontWeight: "900",
+      textShadow: "2px 2px 6px rgba(0,0,0,0.4)",
+      padding: "0 4px",
+      borderRadius: "4px",
+      whiteSpace: "nowrap", // ✅ keeps it in one line
+      display: "inline-block",
+      fontSize: "clamp(1.3rem, 4vw, 2.2rem)", // ✅ independent scaling for name
+    }}
+  >
+    The Sanvis Abroad Xperts
+  </span>
+</h1>
+
+
 
           <p>
             Explore world-class universities and gain international exposure to

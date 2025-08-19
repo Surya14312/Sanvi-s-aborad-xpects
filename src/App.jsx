@@ -1,17 +1,18 @@
 // src/App.jsx
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import { AnimatePresence, motion } from "framer-motion";
 
 // Components
 import Navbar from "./components/Navbar";
 import ScrollToTop from "./components/ScrollToTop";
 import Footer from "./components/Footer";
 import ErrorBoundary from "./components/ErrorBoundary";
-import ContactForm from "./components/ContactForm";
 import Destinations from "./components/Destinations";
 import ApplicationForm from "./components/ApplicationForm";
 import CourseDetails from "./components/CourseDetails";
 import ServiceDetail from "./components/ServiceDetail";
+import SmartLink from "./components/SmartLink";
 
 // Pages
 import Home from "./pages/Home";
@@ -75,104 +76,133 @@ import WorkWithUs from "./pages/WorkWithUs";
 import Events from "./pages/Events";
 import Resources from "./pages/Resources";
 
+// Page transition wrapper
+
+const PageWrapper = ({ children }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 40, scale: 0.98 }}
+    animate={{ opacity: 1, y: 0, scale: 1 }}
+    exit={{ opacity: 0, y: -40, scale: 0.98 }}
+    transition={{
+      type: "spring",
+      stiffness: 220, // faster spring
+      damping: 25,    // smooth damping
+      mass: 0.8,
+    }}
+    style={{
+      perspective: 1200,   // adds subtle depth
+      overflow: "hidden",
+      borderRadius: "6px", // soft edges for modern look
+      boxShadow: "0 8px 25px rgba(0,0,0,0.05)", // subtle glow/shadow
+    }}
+  >
+    {children}
+  </motion.div>
+);
+
+function AnimatedRoutes() {
+  const location = useLocation();
+
+  return (
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
+        {/* Home */}
+        <Route path="/" element={<PageWrapper><Home /></PageWrapper>} />
+
+        {/* Destinations */}
+        <Route path="/destinations" element={<PageWrapper><Destinations /></PageWrapper>} />
+
+        {/* Study Abroad Pages */}
+        <Route path="/study-in/uk" element={<PageWrapper><UKPage /></PageWrapper>} />
+        <Route path="/study-in/canada" element={<PageWrapper><CanadaPage /></PageWrapper>} />
+        <Route path="/study-in/singapore" element={<PageWrapper><SingaporePage /></PageWrapper>} />
+        <Route path="/study-in/ireland" element={<PageWrapper><IrelandPage /></PageWrapper>} />
+        <Route path="/study-in/france" element={<PageWrapper><FrancePage /></PageWrapper>} />
+        <Route path="/study-in/germany" element={<PageWrapper><GermanyPage /></PageWrapper>} />
+        <Route path="/study-in/switzerland" element={<PageWrapper><SwitzerlandPage /></PageWrapper>} />
+        <Route path="/study-in/dubai" element={<PageWrapper><DubaiPage /></PageWrapper>} />
+        <Route path="/study-in/spain" element={<PageWrapper><SpainPage /></PageWrapper>} />
+        <Route path="/study-in/malaysia" element={<PageWrapper><MalaysiaPage /></PageWrapper>} />
+        <Route path="/study-in/mauritius" element={<PageWrapper><MauritiusPage /></PageWrapper>} />
+        <Route path="/study-in/india" element={<PageWrapper><IndiaPage /></PageWrapper>} />
+        <Route path="/study-in/netherlands" element={<PageWrapper><NetherlandsPage /></PageWrapper>} />
+        <Route path="/study-in/italy" element={<PageWrapper><ItalyPage /></PageWrapper>} />
+
+        {/* Blogs & Services */}
+        <Route path="/blogs" element={<PageWrapper><TrendingBlogs /></PageWrapper>} />
+        <Route path="/blog/:slug" element={<PageWrapper><BlogDetail /></PageWrapper>} />
+        <Route path="/blog/admission-guidance" element={<PageWrapper><AdmissionGuidance /></PageWrapper>} />
+        <Route path="/career-counseling" element={<PageWrapper><CareerCounseling /></PageWrapper>} />
+        <Route path="/course-selection" element={<PageWrapper><CourseSelection /></PageWrapper>} />
+        <Route path="/documentation-services" element={<PageWrapper><DocumentationService /></PageWrapper>} />
+        <Route path="/application-procedure" element={<PageWrapper><ApplicationProcedure /></PageWrapper>} />
+        <Route path="/financial-assistance" element={<PageWrapper><FinancialAssistance /></PageWrapper>} />
+        <Route path="/travel-assistance" element={<PageWrapper><TravelAssistance /></PageWrapper>} />
+        <Route path="/post-arrival-support" element={<PageWrapper><PostArrivalSupport /></PageWrapper>} />
+        <Route path="/country-selection" element={<PageWrapper><CountrySelection /></PageWrapper>} />
+        <Route path="/university-selection" element={<PageWrapper><UniversitySelection /></PageWrapper>} />
+        <Route path="/pre-departure-orientation" element={<PageWrapper><PreDepartureOrientation /></PageWrapper>} />
+        <Route path="/continuous-communication" element={<PageWrapper><ContinuousCommunication /></PageWrapper>} />
+
+        {/* Forms & Assistance */}
+        <Route path="/apply" element={<PageWrapper><ApplicationForm /></PageWrapper>} />
+        <Route path="/scholarship-assistance" element={<PageWrapper><ScholarshipAssistanceForm /></PageWrapper>} />
+        <Route path="/visa-assistance" element={<PageWrapper><VisaAssistance /></PageWrapper>} />
+
+        {/* Test Preparation */}
+        <Route path="/test-preparation" element={<PageWrapper><TestPreparation /></PageWrapper>} />
+        <Route path="/ielts" element={<PageWrapper><IELTS /></PageWrapper>} />
+        <Route path="/toefl" element={<PageWrapper><TOEFL /></PageWrapper>} />
+        <Route path="/pte" element={<PageWrapper><PTE /></PageWrapper>} />
+        <Route path="/gre" element={<PageWrapper><GRE /></PageWrapper>} />
+        <Route path="/sat" element={<PageWrapper><SAT /></PageWrapper>} />
+        <Route path="/duolingo" element={<PageWrapper><Duolingo /></PageWrapper>} />
+
+        {/* Language Courses */}
+        <Route path="/french" element={<PageWrapper><French /></PageWrapper>} />
+        <Route path="/german" element={<PageWrapper><German /></PageWrapper>} />
+
+        {/* Special Programs */}
+        <Route path="/special-pathway-programs" element={<PageWrapper><SpecialPathwayPrograms /></PageWrapper>} />
+        <Route path="/special-pathway/:programTitle" element={<PageWrapper><ProgramDetails /></PageWrapper>} />
+
+        {/* What We Do & Services */}
+        <Route path="/what-we-do" element={<PageWrapper><WhatWeDo /></PageWrapper>} />
+        <Route path="/service/:id" element={<PageWrapper><ErrorBoundary><ServiceDetail /></ErrorBoundary></PageWrapper>} />
+
+        {/* Global Courses */}
+        <Route path="/courses" element={<PageWrapper><GlobalCourses /></PageWrapper>} />
+        <Route path="/courses/:courseName" element={<PageWrapper><GlobalCourseDetail /></PageWrapper>} />
+        <Route path="/courses/:country/:courseTitle" element={<PageWrapper><CourseDetails /></PageWrapper>} />
+
+        {/* Countries */}
+        <Route path="/countries" element={<PageWrapper><Countries /></PageWrapper>} />
+        <Route path="/countries/:slug" element={<PageWrapper><CountryDetails /></PageWrapper>} />
+
+        {/* Other Pages */}
+        <Route path="/work-with-us" element={<PageWrapper><WorkWithUs /></PageWrapper>} />
+        <Route path="/events" element={<PageWrapper><Events /></PageWrapper>} />
+        <Route path="/resources" element={<PageWrapper><Resources /></PageWrapper>} />
+        <Route path="/about" element={<PageWrapper><About /></PageWrapper>} />
+        <Route path="/contact" element={<PageWrapper><Contact /></PageWrapper>} />
+
+        {/* SmartLink */}
+        <Route path="/smart-link" element={<PageWrapper><SmartLink /></PageWrapper>} />
+        <Route path="/smart/:id" element={<PageWrapper><SmartLink /></PageWrapper>} />
+
+        {/* 404 */}
+        <Route path="*" element={<PageWrapper><h1 style={{ textAlign: "center", marginTop: "50px" }}>404 - Page Not Found</h1></PageWrapper>} />
+      </Routes>
+    </AnimatePresence>
+  );
+}
+
 function App() {
   return (
     <Router>
       <ScrollToTop />
       <Navbar />
-
-      <Routes>
-        {/* Home */}
-        <Route path="/" element={<Home />} />
-
-        {/* Destinations */}
-        <Route path="/destinations" element={<Destinations />} />
-
-        {/* Study Abroad Pages */}
-        <Route path="/study-in/uk" element={<UKPage />} />
-        <Route path="/study-in/canada" element={<CanadaPage />} />
-        <Route path="/study-in/singapore" element={<SingaporePage />} />
-        <Route path="/study-in/ireland" element={<IrelandPage />} />
-        <Route path="/study-in/france" element={<FrancePage />} />
-        <Route path="/study-in/germany" element={<GermanyPage />} />
-        <Route path="/study-in/switzerland" element={<SwitzerlandPage />} />
-        <Route path="/study-in/dubai" element={<DubaiPage />} />
-        <Route path="/study-in/spain" element={<SpainPage />} />
-        <Route path="/study-in/malaysia" element={<MalaysiaPage />} />
-        <Route path="/study-in/mauritius" element={<MauritiusPage />} />
-        <Route path="/study-in/india" element={<IndiaPage />} />
-        <Route path="/study-in/netherlands" element={<NetherlandsPage />} />
-        <Route path="/study-in/italy" element={<ItalyPage />} />
-
-        {/* Blogs & Services */}
-        <Route path="/blogs" element={<TrendingBlogs />} />
-        <Route path="/blog/:slug" element={<BlogDetail />} />
-        <Route path="/blog/admission-guidance" element={<AdmissionGuidance />} />
-        <Route path="/career-counseling" element={<CareerCounseling />} />
-        <Route path="/course-selection" element={<CourseSelection />} />
-        <Route path="/documentation-services" element={<DocumentationService />} />
-        <Route path="/application-procedure" element={<ApplicationProcedure />} />
-        <Route path="/financial-assistance" element={<FinancialAssistance />} />
-        <Route path="/travel-assistance" element={<TravelAssistance />} />
-        <Route path="/post-arrival-support" element={<PostArrivalSupport />} />
-        <Route path="/country-selection" element={<CountrySelection />} />
-        <Route path="/university-selection" element={<UniversitySelection />} />
-        <Route path="/pre-departure-orientation" element={<PreDepartureOrientation />} />
-        <Route path="/continuous-communication" element={<ContinuousCommunication />} />
-
-        {/* Forms & Assistance */}
-        <Route path="/apply" element={<ApplicationForm />} />
-        <Route path="/scholarship-assistance" element={<ScholarshipAssistanceForm />} />
-        <Route path="/visa-assistance" element={<VisaAssistance />} />
-
-        {/* Test Preparation */}
-        <Route path="/test-preparation" element={<TestPreparation />} />
-        <Route path="/ielts" element={<IELTS />} />
-        <Route path="/toefl" element={<TOEFL />} />
-        <Route path="/pte" element={<PTE />} />
-        <Route path="/gre" element={<GRE />} />
-        <Route path="/sat" element={<SAT />} />
-        <Route path="/duolingo" element={<Duolingo />} />
-
-        {/* Language Courses */}
-        <Route path="/french" element={<French />} />
-        <Route path="/german" element={<German />} />
-
-        {/* Special Programs */}
-        <Route path="/special-pathway-programs" element={<SpecialPathwayPrograms />} />
-        <Route path="/special-pathway/:programTitle" element={<ProgramDetails />} />
-
-        {/* What We Do & Service Detail */}
-        <Route path="/what-we-do" element={<WhatWeDo />} />
-        <Route
-          path="/service/:id"
-          element={
-            <ErrorBoundary>
-              <ServiceDetail />
-            </ErrorBoundary>
-          }
-        />
-
-        {/* Global Courses */}
-        <Route path="/courses" element={<GlobalCourses />} />
-        <Route path="/courses/:courseName" element={<GlobalCourseDetail />} />
-
-        {/* Dynamic course & country detail (if needed) */}
-        <Route path="/courses/:country/:courseTitle" element={<CourseDetails />} />
-        <Route path="/countries" element={<Countries />} />
-        <Route path="/countries/:slug" element={<CountryDetails />} />
-
-        {/* Other Pages */}
-        <Route path="/work-with-us" element={<WorkWithUs />} />
-        <Route path="/events" element={<Events />} />
-        <Route path="/resources" element={<Resources />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-
-        {/* 404 Page */}
-        <Route path="*" element={<h1 style={{ textAlign: "center", marginTop: "50px" }}>404 - Page Not Found</h1>} />
-      </Routes>
-
+      <AnimatedRoutes />
       <Footer />
     </Router>
   );
