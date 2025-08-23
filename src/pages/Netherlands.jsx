@@ -213,72 +213,90 @@ function Netherlands() {
         </p>
       </section>
 
-      {/* ✅ Cost & Scholarships */}
-      <section className="netherlands-cost">
-        <h2>Cost of Studying in Netherlands</h2>
-        <p>
-          Tuition fees range from €6,000 to €15,000 annually for international
-          students. Living expenses are approximately €10,000–€12,000 per year
-          including accommodation, food, and transport.
-        </p>
-        <h3>Scholarships in Netherlands</h3>
-        <ul>
-          <li>Holland Scholarship</li>
-          <li>Orange Tulip Scholarship (OTS)</li>
-          <li>Erasmus+ Exchange Scholarships</li>
-          <li>University-Specific & Merit-Based Grants</li>
-        </ul>
-        <img
-          src="/assets/netherlands-universities/netherlands-scholarship.jpg"
-          alt="Scholarships in Netherlands"
-          className="scholarship-img"
-        />
-      </section>
+   {/* Cost of Study & Scholarships */}
+<section className="netherlands-cost" style={{ maxWidth: "1100px", margin: "60px auto", padding: "0 20px" }}>
+  <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "40px" }}>
 
-      {/* ✅ Career Prospects */}
-      <section className="netherlands-career">
-        <h2>Career Prospects in Netherlands</h2>
-        <p>
-          The Netherlands is home to major international companies and startups
-          in tech, logistics, sustainability, and design. Graduates can apply
-          for a 1-year orientation visa (zoekjaar) to work and gain experience
-          after graduation.
-        </p>
-      </section>
+    {/* Text Column */}
+    <div style={{ flex: "1 1 500px" }}>
+      <h2>Cost of Studying in the Netherlands</h2>
+      <p>
+        Tuition fees range from €8,000 - €20,000 per year depending on the program and university. Living costs vary by city, averaging €10,000 - €15,000 per year.
+      </p>
+      <h3>Scholarships in the Netherlands</h3>
+      <ul>
+        <li>Holland Scholarship</li>
+        <li>Orange Tulip Scholarship</li>
+        <li>University-Specific Scholarships</li>
+        <li>International Student Financial Aid Programs</li>
+      </ul>
+    </div>
 
-      {/* ✅ Documents & Visa Process */}
-      <section className="netherlands-documents">
-        <h2>Documents Required</h2>
-        <ul>
-          <li>Valid Passport</li>
-          <li>Academic Transcripts & Degree</li>
-          <li>Proof of English Proficiency (IELTS/TOEFL)</li>
-          <li>Motivation Letter & CV</li>
-          <li>Proof of Sufficient Financial Means</li>
-          <li>University Admission Letter</li>
-        </ul>
+    {/* Image Column */}
+    <div style={{ flex: "1 1 400px" }}>
+      <img
+        src="/assets/netherlands-universities/netherlands-scholarship.jpg"
+        alt="Scholarships in the Netherlands"
+        className="scholarship-img"
+        style={{ width: "100%", borderRadius: "16px", boxShadow: "0 10px 25px rgba(0,0,0,0.15)", transition: "transform 0.3s ease" }}
+        onMouseEnter={e => e.currentTarget.style.transform = "scale(1.03)"}
+        onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}
+      />
+    </div>
+  </div>
+</section>
 
-        <h2>Netherlands Student Visa</h2>
-        <p>
-          Students need to apply for a residence permit (MVV + VVR) via the
-          university. The process includes submitting documents, paying visa
-          fees, and receiving the IND approval.
-        </p>
-      </section>
+{/* Career Prospects */}
+<section className="netherlands-career" style={{ maxWidth: "900px", margin: "60px auto", padding: "0 20px" }}>
+  <h2>Career Prospects in the Netherlands</h2>
+  <p>
+    The Netherlands offers opportunities in Technology, Finance, Engineering, Logistics, and Healthcare. International students can work part-time during studies and may apply for a “search year” residence permit after graduation to find employment.
+  </p>
+</section>
 
-      {/* ✅ Student Life */}
-      <section className="netherlands-life">
-        <h2>Student Life in Netherlands</h2>
-        <p>
-          Experience an inclusive, bike-friendly, and vibrant student life.
-          Enjoy cultural festivals, cafes, travel across Europe, and strong
-          student communities while studying in the Netherlands.
-        </p>
-        <img
-          src="/assets/netherlands-universities/student-life.jpg"
-          alt="Student Life in Netherlands"
-        />
-      </section>
+{/* Documents & Visa Process */}
+<section className="netherlands-documents" style={{ maxWidth: "900px", margin: "60px auto", padding: "0 20px" }}>
+  <h2>Documents Required</h2>
+  <ul>
+    <li>Valid Passport</li>
+    <li>Academic Transcripts & Certificates</li>
+    <li>English Proficiency Test (IELTS/TOEFL)</li>
+    <li>Proof of Funds</li>
+    <li>Offer Letter from a Dutch University</li>
+  </ul>
+
+  <h2>Netherlands Student Visa</h2>
+  <p>
+    Apply for a residence permit for study via the Dutch Immigration and Naturalisation Service (IND) using the university acceptance letter, proof of funds, health insurance, and required documents.
+  </p>
+</section>
+
+{/* Student Life */}
+<section className="netherlands-life" style={{ maxWidth: "1100px", margin: "60px auto", padding: "0 20px" }}>
+  <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "40px" }}>
+
+    {/* Image Column */}
+    <div style={{ flex: "1 1 400px" }}>
+      <img
+        src="/assets/netherlands-universities/student-life.jpg"
+        alt="Student Life in the Netherlands"
+        style={{ width: "100%", borderRadius: "16px", boxShadow: "0 10px 25px rgba(0,0,0,0.15)", transition: "transform 0.3s ease" }}
+        onMouseEnter={e => e.currentTarget.style.transform = "scale(1.03)"}
+        onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}
+      />
+    </div>
+
+    {/* Text Column */}
+    <div style={{ flex: "1 1 500px" }}>
+      <h2>Student Life in the Netherlands</h2>
+      <p>
+        The Netherlands offers a multicultural and student-friendly environment with modern campuses, historic cities, and vibrant cultural activities. Students can enjoy festivals, internships, networking opportunities, and part-time jobs.
+      </p>
+    </div>
+
+  </div>
+</section>
+
       <EnrollSection country="Netherlands" />
 
       {/* ✅ FAQs */}

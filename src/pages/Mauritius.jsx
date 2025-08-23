@@ -213,72 +213,90 @@ function Mauritius() {
         </p>
       </section>
 
-      {/* ✅ Cost & Scholarships */}
-      <section className="mauritius-cost">
-        <h2>Cost of Studying in Mauritius</h2>
-        <p>
-          Tuition fees range from MUR 90,000 to MUR 160,000 per year. Living
-          expenses are affordable, ranging from MUR 100,000 to MUR 150,000
-          annually depending on location and lifestyle.
-        </p>
-        <h3>Scholarships in Mauritius</h3>
-        <ul>
-          <li>Mauritius-Africa Scholarship Scheme</li>
-          <li>University-Based Merit Scholarships</li>
-          <li>Government Financial Aid Schemes</li>
-          <li>Partner Institution Discounts</li>
-        </ul>
-        <img
-          src="/assets/mauritius-universities/mauritius-scholarship.jpg"
-          alt="Scholarships in Mauritius"
-          className="scholarship-img"
-        />
-      </section>
+     {/* Cost of Study & Scholarships */}
+<section className="mauritius-cost" style={{ maxWidth: "1100px", margin: "60px auto", padding: "0 20px" }}>
+  <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "40px" }}>
 
-      {/* ✅ Career Prospects */}
-      <section className="mauritius-career">
-        <h2>Career Prospects in Mauritius</h2>
-        <p>
-          Students in Mauritius benefit from growing sectors such as IT,
-          finance, tourism, and education. Graduates can apply for a stay-back
-          visa for up to 1 year to find employment in local or international
-          firms.
-        </p>
-      </section>
+    {/* Text Column */}
+    <div style={{ flex: "1 1 500px" }}>
+      <h2>Cost of Studying in Mauritius</h2>
+      <p>
+        Tuition fees range from MUR 100,000 - MUR 300,000 per year depending on the program and university. Living costs vary by lifestyle, averaging MUR 80,000 - MUR 150,000 per year.
+      </p>
+      <h3>Scholarships in Mauritius</h3>
+      <ul>
+        <li>Mauritius Government Scholarships</li>
+        <li>University-Specific Scholarships</li>
+        <li>International Student Financial Aid Programs</li>
+        <li>Merit-Based and Need-Based Scholarships</li>
+      </ul>
+    </div>
 
-      {/* ✅ Documents & Visa Process */}
-      <section className="mauritius-documents">
-        <h2>Documents Required</h2>
-        <ul>
-          <li>Valid Passport</li>
-          <li>Academic Certificates & Transcripts</li>
-          <li>Proof of English Proficiency (IELTS/TOEFL)</li>
-          <li>CV and Statement of Purpose</li>
-          <li>Bank Statement or Financial Proof</li>
-          <li>University Admission Letter</li>
-        </ul>
+    {/* Image Column */}
+    <div style={{ flex: "1 1 400px" }}>
+      <img
+        src="/assets/mauritius-universities/mauritius-scholarship.jpg"
+        alt="Scholarships in Mauritius"
+        className="scholarship-img"
+        style={{ width: "100%", borderRadius: "16px", boxShadow: "0 10px 25px rgba(0,0,0,0.15)", transition: "transform 0.3s ease" }}
+        onMouseEnter={e => e.currentTarget.style.transform = "scale(1.03)"}
+        onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}
+      />
+    </div>
+  </div>
+</section>
 
-        <h2>Mauritius Student Visa</h2>
-        <p>
-          The visa process involves securing admission, submitting financial and
-          medical documents, and applying through the university to the
-          Mauritius Passport and Immigration Office.
-        </p>
-      </section>
+{/* Career Prospects */}
+<section className="mauritius-career" style={{ maxWidth: "900px", margin: "60px auto", padding: "0 20px" }}>
+  <h2>Career Prospects in Mauritius</h2>
+  <p>
+    Mauritius offers opportunities in Tourism, Finance, IT, Education, and Manufacturing sectors. International students can explore part-time work options during studies and may pursue post-graduation employment through work permits.
+  </p>
+</section>
 
-      {/* ✅ Student Life */}
-      <section className="mauritius-life">
-        <h2>Student Life in Mauritius</h2>
-        <p>
-          Enjoy the island lifestyle with white sandy beaches, tropical climate,
-          cultural diversity, festivals, and a welcoming atmosphere that makes
-          student life fun and memorable in Mauritius.
-        </p>
-        <img
-          src="/assets/mauritius-universities/student-life.jpg"
-          alt="Student Life in Mauritius"
-        />
-      </section>
+{/* Documents & Visa Process */}
+<section className="mauritius-documents" style={{ maxWidth: "900px", margin: "60px auto", padding: "0 20px" }}>
+  <h2>Documents Required</h2>
+  <ul>
+    <li>Valid Passport</li>
+    <li>Academic Transcripts & Certificates</li>
+    <li>English Proficiency Test (IELTS/TOEFL)</li>
+    <li>Proof of Funds</li>
+    <li>Offer Letter from a Mauritian University</li>
+  </ul>
+
+  <h2>Mauritius Student Visa</h2>
+  <p>
+    Apply for a student visa via the Mauritius Passport and Immigration Office using the university acceptance letter, proof of funds, medical report, and required documents.
+  </p>
+</section>
+
+{/* Student Life */}
+<section className="mauritius-life" style={{ maxWidth: "1100px", margin: "60px auto", padding: "0 20px" }}>
+  <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "40px" }}>
+
+    {/* Image Column */}
+    <div style={{ flex: "1 1 400px" }}>
+      <img
+        src="/assets/mauritius-universities/student-life.jpg"
+        alt="Student Life in Mauritius"
+        style={{ width: "100%", borderRadius: "16px", boxShadow: "0 10px 25px rgba(0,0,0,0.15)", transition: "transform 0.3s ease" }}
+        onMouseEnter={e => e.currentTarget.style.transform = "scale(1.03)"}
+        onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}
+      />
+    </div>
+
+    {/* Text Column */}
+    <div style={{ flex: "1 1 500px" }}>
+      <h2>Student Life in Mauritius</h2>
+      <p>
+        Mauritius offers a multicultural and vibrant student experience with modern campuses, coastal lifestyle, and diverse cultural events. Students can enjoy internships, extracurricular activities, and networking opportunities.
+      </p>
+    </div>
+
+  </div>
+</section>
+
       <EnrollSection country="Mauritius" />
 
       {/* ✅ FAQs */}

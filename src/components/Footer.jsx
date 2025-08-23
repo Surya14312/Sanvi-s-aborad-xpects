@@ -79,7 +79,7 @@ function Footer() {
           <SmartLink to="/countries">🌍 Countries</SmartLink>
           <SmartLink to="/courses">📚 Trending Courses</SmartLink>
           <SmartLink to="/special-pathway-programs">🎯 Special Pathway Programs</SmartLink>
-          <SmartLink to="/blogs">📝 Blogs</SmartLink>
+          <SmartLink to="/trending-blogs">📝 Blogs</SmartLink>
           <SmartLink to="/contact">📩 Contact</SmartLink>
         </div>
 

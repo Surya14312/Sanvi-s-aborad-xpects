@@ -207,68 +207,91 @@ function France() {
           and hands-on learning.
         </p>
       </section>
-      {/* ✅ Cost & Scholarships */}
-      <section className="france-cost">
-        <h2>Cost of Studying in France</h2>
-        <p>
-          Tuition at public universities ranges from €3,000 – €15,000 per year.
-          Living expenses average €8,000 – €12,000 depending on the city.
-        </p>
-        <h3>Scholarships in France</h3>
-        <ul>
-          <li>EIFFEL Excellence Scholarship Program</li>
-          <li>Charpak Scholarships (for Indian Students)</li>
-          <li>Campus France Scholarships</li>
-          <li>University-Specific Merit Aid</li>
-        </ul>
-        <img
-          src="/assets/france-universities/france-scholarship.jpg"
-          alt="Scholarships in France"
-          className="scholarship-img"
-        />
-      </section>
-      {/* ✅ Career Prospects */}
-      <section className="france-career">
-        <h2>Career Prospects in France</h2>
-        <p>
-          France is a hub for fashion, luxury, aerospace, technology, and
-          finance. International graduates benefit from a 2-year post-study work
-          visa and internship opportunities in top global companies.
-        </p>
-      </section>
-      {/* ✅ Documents & Visa Process */}
-      <section className="france-documents">
-        <h2>Documents Required</h2>
-        <ul>
-          <li>Valid Passport</li>
-          <li>Academic Transcripts & Certificates</li>
-          <li>Language Proficiency Proof (English/French)</li>
-          <li>CV and Statement of Purpose</li>
-          <li>Proof of Funds & Accommodation</li>
-          <li>Admission Letter</li>
-        </ul>
+  {/* Cost of Study & Scholarships */}
+<section className="france-cost" style={{ maxWidth: "1100px", margin: "60px auto", padding: "0 20px" }}>
+  <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "40px" }}>
 
-        <h2>France Student Visa</h2>
-        <p>
-          Apply for a Long Stay Student Visa (VLS-TS). The process includes an
-          online application, Campus France interview, and submission of
-          supporting documents.
-        </p>
-      </section>
-      {/* ✅ Student Life */}
-      <section className="france-life">
-        <h2>Student Life in France</h2>
-        <p>
-          Students in France enjoy vibrant campus life, cultural activities,
-          festivals, scenic travel, and access to Europe through the Schengen
-          Visa.
-        </p>
-        <img
-          src="/assets/france-universities/student-life.jpg"
-          alt="Student Life in France"
-        />
-      </section>
-      France → <EnrollSection country="France" />
+    {/* Text Column */}
+    <div style={{ flex: "1 1 500px" }}>
+      <h2>Cost of Studying in France</h2>
+      <p>
+        Tuition fees range from €3,000 - €20,000 annually depending on the program and university. Living costs vary by city, averaging €10,000 - €15,000 per year in Paris and less in smaller cities.
+      </p>
+      <h3>Scholarships in France</h3>
+      <ul>
+        <li>Eiffel Excellence Scholarships</li>
+        <li>French Government Scholarships</li>
+        <li>University-Specific Scholarships</li>
+        <li>International Student Financial Aid Programs</li>
+      </ul>
+    </div>
+
+    {/* Image Column */}
+    <div style={{ flex: "1 1 400px" }}>
+      <img
+        src="/assets/france-universities/france-scholarship.jpg"
+        alt="Scholarships in France"
+        className="scholarship-img"
+        style={{ width: "100%", borderRadius: "16px", boxShadow: "0 10px 25px rgba(0,0,0,0.15)", transition: "transform 0.3s ease" }}
+        onMouseEnter={e => e.currentTarget.style.transform = "scale(1.03)"}
+        onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}
+      />
+    </div>
+  </div>
+</section>
+
+{/* Career Prospects */}
+<section className="france-career" style={{ maxWidth: "900px", margin: "60px auto", padding: "0 20px" }}>
+  <h2>Career Prospects in France</h2>
+  <p>
+    France offers strong job opportunities in Engineering, Technology, Finance, Luxury & Fashion, and Healthcare. International students can work part-time during studies and may apply for the “Autorisation Provisoire de Travail” after graduation to gain work experience.
+  </p>
+</section>
+
+{/* Documents & Visa Process */}
+<section className="france-documents" style={{ maxWidth: "900px", margin: "60px auto", padding: "0 20px" }}>
+  <h2>Documents Required</h2>
+  <ul>
+    <li>Valid Passport</li>
+    <li>Academic Transcripts & Certificates</li>
+    <li>French or English Proficiency Test (DELF/DALF/IELTS/TOEFL)</li>
+    <li>Proof of Funds</li>
+    <li>Offer Letter from a French University</li>
+  </ul>
+
+  <h2>France Student Visa</h2>
+  <p>
+    Apply for a long-stay student visa (VLS-TS) via the French consulate or Campus France portal using the university acceptance letter, proof of funds, and required documents.
+  </p>
+</section>
+
+{/* Student Life */}
+<section className="france-life" style={{ maxWidth: "1100px", margin: "60px auto", padding: "0 20px" }}>
+  <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "40px" }}>
+
+    {/* Image Column */}
+    <div style={{ flex: "1 1 400px" }}>
+      <img
+        src="/assets/france-universities/student-life.jpg"
+        alt="Student Life in France"
+        style={{ width: "100%", borderRadius: "16px", boxShadow: "0 10px 25px rgba(0,0,0,0.15)", transition: "transform 0.3s ease" }}
+        onMouseEnter={e => e.currentTarget.style.transform = "scale(1.03)"}
+        onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}
+      />
+    </div>
+
+    {/* Text Column */}
+    <div style={{ flex: "1 1 500px" }}>
+      <h2>Student Life in France</h2>
+      <p>
+        France offers a dynamic and culturally rich student environment with historic campuses, vibrant cities, and diverse cultural experiences. Students can enjoy local festivals, internships, language learning, and extensive networking opportunities.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+       <EnrollSection country="France" />
       {/* ✅ FAQs */}
       <section className="france-faq">
         <h2>FAQs About Studying in France</h2>

@@ -170,6 +170,58 @@ const countryData = {
       "Post-study work options",
     ],
   },
+  belarus: {
+  name: "Belarus",
+  image: "/assets/belarus.jpg",
+  description: "Belarus offers affordable education with a strong emphasis on science and engineering.",
+  brochure: "/assets/brochures/belarus.pdf",
+  features: [
+    "Affordable tuition fees",
+    "Focus on technical education",
+    "Safe and student-friendly cities",
+    "Growing international community",
+  ],
+},
+  philippines: {
+    name: "Philippines",
+    image: "/assets/philippines.jpg",
+    description:
+      "The Philippines is known for its quality education in healthcare, IT, and business at affordable costs.",
+    brochure: "/assets/brochures/philippines.pdf",
+    features: [
+      "Affordable tuition and living costs",
+      "English as a medium of instruction",
+      "Strong programs in healthcare and IT",
+      "Warm and welcoming culture",
+    ],
+  },
+  china: {
+    name: "China",
+    image: "/assets/china.jpg",
+    description:
+      "China is a global education hub with top universities in technology, business, and medicine.",
+    brochure: "/assets/brochures/china.pdf",
+    features: [
+      "Rapidly growing education sector",
+      "Top universities like Tsinghua and Peking University",
+      "Diverse programs in English",
+      "Opportunities to learn Mandarin",
+    ],
+  },
+  georgia: {
+    name: "Georgia",
+    image: "/assets/georgia.jpg",
+    description:
+      "Georgia offers affordable education with a focus on medicine, engineering, and business studies.",
+    brochure: "/assets/brochures/georgia.pdf",
+    features: [
+      "Low tuition fees and living costs",
+      "English-taught medical programs",
+      "Rich cultural heritage",
+      "Safe and student-friendly environment",
+    ],
+  },
+  
   italy: {
     name: "Italy",
     image: "/assets/italy.jpg",

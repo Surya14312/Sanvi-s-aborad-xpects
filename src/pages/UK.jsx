@@ -199,71 +199,98 @@ function UK() {
       </section>
 
       {/* Cost of Study & Scholarships */}
-      <section className="uk-cost">
-        <h2>Cost of Studying in the UK</h2>
-        <p>
-          Tuition fees range between €11,000 - €35,000 annually. Living costs
-          vary by city, averaging €10,000 - €12,000 per year in London and less
-          in other cities.
-        </p>
-        <h3>Scholarships in the UK</h3>
-        <ul>
-          <li>Chevening Scholarships</li>
-          <li>Commonwealth Scholarships</li>
-          <li>GREAT Scholarships</li>
-          <li>University-Specific Grants</li>
-        </ul>
-        <img
-          src="/assets/uk-universities/uk-scholarship.jpg"
-          alt="Scholarships in the UK"
-          className="scholarship-img"
-        />
-      </section>
+<section className="uk-cost" style={{ maxWidth: "1100px", margin: "60px auto", padding: "0 20px" }}>
+  <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "40px" }}>
+    
+    {/* Text Column */}
+    <div style={{ flex: "1 1 500px" }}>
+      <h2>Cost of Studying in the UK</h2>
+      <p>
+        Tuition fees range between €11,000 - €35,000 annually. Living costs
+        vary by city, averaging €10,000 - €12,000 per year in London and less
+        in other cities.
+      </p>
+      <h3>Scholarships in the UK</h3>
+      <ul>
+        <li>Chevening Scholarships</li>
+        <li>Commonwealth Scholarships</li>
+        <li>GREAT Scholarships</li>
+        <li>University-Specific Grants</li>
+      </ul>
+    </div>
 
-      {/* Career Prospects */}
-      <section className="uk-career">
-        <h2>Career Prospects in the UK</h2>
-        <p>
-          The UK offers excellent job opportunities for graduates, particularly
-          in fields like Finance, Technology, Healthcare, and Engineering. The
-          2-Year Graduate Immigration Route allows students to gain work
-          experience after studies.
-        </p>
-      </section>
+    {/* Image Column */}
+    <div style={{ flex: "1 1 400px" }}>
+      <img
+        src="/assets/uk-universities/uk-scholarship.jpg"
+        alt="Scholarships in the UK"
+        className="scholarship-img"
+        style={{ width: "100%", borderRadius: "16px", boxShadow: "0 10px 25px rgba(0,0,0,0.15)", transition: "transform 0.3s ease" }}
+        onMouseEnter={e => e.currentTarget.style.transform = "scale(1.03)"}
+        onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}
+      />
+    </div>
+  </div>
+</section>
 
-      {/* Documents & Visa Process */}
-      <section className="uk-documents">
-        <h2>Documents Required</h2>
-        <ul>
-          <li>Valid Passport</li>
-          <li>Academic Transcripts & Certificates</li>
-          <li>English Proficiency Test (IELTS/TOEFL)</li>
-          <li>Proof of Funds</li>
-          <li>Offer Letter from a UK University</li>
-        </ul>
+{/* Career Prospects */}
+<section className="uk-career" style={{ maxWidth: "900px", margin: "60px auto", padding: "0 20px" }}>
+  <h2>Career Prospects in the UK</h2>
+  <p>
+    The UK offers excellent job opportunities for graduates, particularly
+    in fields like Finance, Technology, Healthcare, and Engineering. The
+    2-Year Graduate Immigration Route allows students to gain work
+    experience after studies.
+  </p>
+</section>
 
-        <h2>UK Student Visa</h2>
-        <p>
-          Apply for the Tier 4 (General) Student Visa. The process requires a
-          Confirmation of Acceptance for Studies (CAS), financial documents, and
-          health surcharge payment.
-        </p>
-      </section>
+{/* Documents & Visa Process */}
+<section className="uk-documents" style={{ maxWidth: "900px", margin: "60px auto", padding: "0 20px" }}>
+  <h2>Documents Required</h2>
+  <ul>
+    <li>Valid Passport</li>
+    <li>Academic Transcripts & Certificates</li>
+    <li>English Proficiency Test (IELTS/TOEFL)</li>
+    <li>Proof of Funds</li>
+    <li>Offer Letter from a UK University</li>
+  </ul>
 
-      {/* Student Life */}
-      <section className="uk-life">
-        <h2>Student Life in the UK</h2>
-        <p>
-          The UK offers a multicultural environment with vibrant cities,
-          historic landmarks, and excellent student facilities. Students enjoy
-          discounts on travel, cultural events, and more.
-        </p>
-        <img
-          src="/assets/uk-universities/student-life.jpg"
-          alt="Student Life in UK"
-        />
-      </section>
-      <EnrollSection country="UK" />
+  <h2>UK Student Visa</h2>
+  <p>
+    Apply for the Tier 4 (General) Student Visa. The process requires a
+    Confirmation of Acceptance for Studies (CAS), financial documents, and
+    health surcharge payment.
+  </p>
+</section>
+
+{/* Student Life */}
+<section className="uk-life" style={{ maxWidth: "1100px", margin: "60px auto", padding: "0 20px" }}>
+  <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "40px" }}>
+
+    {/* Image Column */}
+    <div style={{ flex: "1 1 400px" }}>
+      <img
+        src="/assets/uk-universities/student-life.jpg"
+        alt="Student Life in UK"
+        style={{ width: "100%", borderRadius: "16px", boxShadow: "0 10px 25px rgba(0,0,0,0.15)", transition: "transform 0.3s ease" }}
+        onMouseEnter={e => e.currentTarget.style.transform = "scale(1.03)"}
+        onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}
+      />
+    </div>
+
+    {/* Text Column */}
+    <div style={{ flex: "1 1 500px" }}>
+      <h2>Student Life in the UK</h2>
+      <p>
+        The UK offers a multicultural environment with vibrant cities,
+        historic landmarks, and excellent student facilities. Students enjoy
+        discounts on travel, cultural events, and more.
+      </p>
+    </div>
+
+  </div>
+</section>
+<EnrollSection country="UK" />
 
       {/* FAQ Section */}
       <section className="uk-faq">

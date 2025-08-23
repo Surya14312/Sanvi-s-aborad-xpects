@@ -212,73 +212,90 @@ function Malaysia() {
           practical learning.
         </p>
       </section>
+{/* Cost of Study & Scholarships */}
+<section className="malaysia-cost" style={{ maxWidth: "1100px", margin: "60px auto", padding: "0 20px" }}>
+  <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "40px" }}>
 
-      {/* ✅ Cost & Scholarships */}
-      <section className="malaysia-cost">
-        <h2>Cost of Studying in Malaysia</h2>
-        <p>
-          Tuition fees range from MYR 10,000 to MYR 40,000 per year. Living
-          expenses are approximately MYR 12,000 to MYR 18,000 per year, making
-          Malaysia one of the most affordable destinations for quality
-          education.
-        </p>
-        <h3>Scholarships in Malaysia</h3>
-        <ul>
-          <li>Malaysia International Scholarship (MIS)</li>
-          <li>University Merit-Based Scholarships</li>
-          <li>Private & Corporate Scholarships</li>
-          <li>Early Bird & Need-Based Grants</li>
-        </ul>
-        <img
-          src="/assets/malaysia-universities/malaysia-scholarship.jpg"
-          alt="Scholarships in Malaysia"
-          className="scholarship-img"
-        />
-      </section>
+    {/* Text Column */}
+    <div style={{ flex: "1 1 500px" }}>
+      <h2>Cost of Studying in Malaysia</h2>
+      <p>
+        Tuition fees range from MYR 20,000 - MYR 60,000 per year depending on the program and university. Living costs vary by city, averaging MYR 15,000 - MYR 25,000 per year.
+      </p>
+      <h3>Scholarships in Malaysia</h3>
+      <ul>
+        <li>Malaysia International Scholarships (MIS)</li>
+        <li>University-Specific Scholarships</li>
+        <li>Government Merit-Based Scholarships</li>
+        <li>International Student Financial Aid Programs</li>
+      </ul>
+    </div>
 
-      {/* ✅ Career Prospects */}
-      <section className="malaysia-career">
-        <h2>Career Prospects in Malaysia</h2>
-        <p>
-          Malaysia’s growing economy provides job opportunities in IT,
-          engineering, business, and hospitality. Students can apply for a
-          1-year stay-back visa to gain employment after graduation.
-        </p>
-      </section>
+    {/* Image Column */}
+    <div style={{ flex: "1 1 400px" }}>
+      <img
+        src="/assets/malaysia-universities/malaysia-scholarship.jpg"
+        alt="Scholarships in Malaysia"
+        className="scholarship-img"
+        style={{ width: "100%", borderRadius: "16px", boxShadow: "0 10px 25px rgba(0,0,0,0.15)", transition: "transform 0.3s ease" }}
+        onMouseEnter={e => e.currentTarget.style.transform = "scale(1.03)"}
+        onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}
+      />
+    </div>
+  </div>
+</section>
 
-      {/* ✅ Documents & Visa Process */}
-      <section className="malaysia-documents">
-        <h2>Documents Required</h2>
-        <ul>
-          <li>Valid Passport</li>
-          <li>Academic Transcripts & Certificates</li>
-          <li>English Language Proficiency (IELTS/TOEFL)</li>
-          <li>CV and Statement of Purpose</li>
-          <li>Proof of Funds</li>
-          <li>Offer Letter from Malaysian Institution</li>
-        </ul>
+{/* Career Prospects */}
+<section className="malaysia-career" style={{ maxWidth: "900px", margin: "60px auto", padding: "0 20px" }}>
+  <h2>Career Prospects in Malaysia</h2>
+  <p>
+    Malaysia offers job opportunities in Technology, Finance, Education, Engineering, and Healthcare. International students can work part-time during studies and may apply for post-graduation employment opportunities through relevant work visas.
+  </p>
+</section>
 
-        <h2>Malaysia Student Visa</h2>
-        <p>
-          Students must apply through the EMGS (Education Malaysia Global
-          Services) portal. The process includes uploading documents, health
-          screening, visa approval letter (VAL), and entry visa issuance.
-        </p>
-      </section>
+{/* Documents & Visa Process */}
+<section className="malaysia-documents" style={{ maxWidth: "900px", margin: "60px auto", padding: "0 20px" }}>
+  <h2>Documents Required</h2>
+  <ul>
+    <li>Valid Passport</li>
+    <li>Academic Transcripts & Certificates</li>
+    <li>English Proficiency Test (IELTS/TOEFL)</li>
+    <li>Proof of Funds</li>
+    <li>Offer Letter from a Malaysian University</li>
+  </ul>
 
-      {/* ✅ Student Life */}
-      <section className="malaysia-life">
-        <h2>Student Life in Malaysia</h2>
-        <p>
-          Malaysia offers a vibrant student life with diverse food, cultural
-          festivals, affordable lifestyle, tropical weather, and opportunities
-          for weekend travel to beaches, mountains, and neighboring countries.
-        </p>
-        <img
-          src="/assets/malaysia-universities/student-life.jpg"
-          alt="Student Life in Malaysia"
-        />
-      </section>
+  <h2>Malaysia Student Visa</h2>
+  <p>
+    Apply for a student pass via the Malaysian Immigration Department using the university acceptance letter, proof of funds, medical report, and required documents.
+  </p>
+</section>
+
+{/* Student Life */}
+<section className="malaysia-life" style={{ maxWidth: "1100px", margin: "60px auto", padding: "0 20px" }}>
+  <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "40px" }}>
+
+    {/* Image Column */}
+    <div style={{ flex: "1 1 400px" }}>
+      <img
+        src="/assets/malaysia-universities/student-life.jpg"
+        alt="Student Life in Malaysia"
+        style={{ width: "100%", borderRadius: "16px", boxShadow: "0 10px 25px rgba(0,0,0,0.15)", transition: "transform 0.3s ease" }}
+        onMouseEnter={e => e.currentTarget.style.transform = "scale(1.03)"}
+        onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}
+      />
+    </div>
+
+    {/* Text Column */}
+    <div style={{ flex: "1 1 500px" }}>
+      <h2>Student Life in Malaysia</h2>
+      <p>
+        Malaysia offers a multicultural and affordable student experience with modern campuses, diverse communities, and vibrant city life. Students can enjoy cultural events, internships, networking opportunities, and extracurricular activities.
+      </p>
+    </div>
+
+  </div>
+</section>
+
       <EnrollSection country="Malaysia" />
 
       {/* ✅ FAQs */}

@@ -34,13 +34,7 @@ function Home() {
     { name: "India", image: "/assets/india.jpg", description: "Diverse culture and top-ranked institutions." },
     { name: "Netherlands", image: "/assets/netherlands.jpg", description: "Hub for tech, design, and business." },
     { name: "Italy", image: "/assets/italy.jpg", description: "Experience art, culture, and top universities." },
-    { name: "Portugal", image: "/assets/portugal.jpg", description: "Study in Portugal with rich culture and history." },
-  { name: "Lithuania", image: "/assets/lithuania.jpg", description: "Affordable European education with vibrant student life." },
-  { name: "Belarus", image: "/assets/belarus.jpg", description: "Modern universities with quality programs." },
-  { name: "Philippines", image: "/assets/philippines.jpg", description: "English-taught programs and tropical living." },
-  { name: "China", image: "/assets/china.jpg", description: "World-class universities and cultural immersion." },
-  { name: "Georgia", image: "/assets/georgia.jpg", description: "Affordable education with growing opportunities." },
-  { name: "Vietnam", image: "/assets/vietnam.jpg", description: "Emerging education hub with diverse programs." },
+
   ];
 
   // Generate years dynamically: 2026 → 2036

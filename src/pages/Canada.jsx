@@ -215,69 +215,92 @@ function Canada() {
         </p>
       </section>
 
-      {/* ✅ Cost of Study & Scholarships */}
-      <section className="canada-cost">
-        <h2>Cost of Studying in Canada</h2>
-        <p>
-          Tuition fees in Canada range from CAD 15,000 - CAD 35,000 per year.
-          Living expenses vary by province, averaging CAD 10,000 - CAD 15,000
-          annually.
-        </p>
-        <h3>Scholarships in Canada</h3>
-        <ul>
-          <li>Vanier Canada Graduate Scholarships</li>
-          <li>Lester B. Pearson Scholarships</li>
-          <li>Canadian Commonwealth Scholarship</li>
-          <li>University-Specific Financial Aid</li>
-        </ul>
-        <img
-          src="/assets/canada-universities/canada-scholarship.jpg"
-          alt="Scholarships in Canada"
-          className="scholarship-img"
-        />
-      </section>
+{/* Cost of Study & Scholarships */}
+<section className="canada-cost" style={{ maxWidth: "1100px", margin: "60px auto", padding: "0 20px" }}>
+  <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "40px" }}>
+    
+    {/* Text Column */}
+    <div style={{ flex: "1 1 500px" }}>
+      <h2>Cost of Studying in Canada</h2>
+      <p>
+        Tuition fees range between CAD 15,000 - CAD 35,000 annually depending
+        on the program and university. Living costs vary by city, averaging
+        CAD 12,000 - CAD 18,000 per year.
+      </p>
+      <h3>Scholarships in Canada</h3>
+      <ul>
+        <li>Vanier Canada Graduate Scholarships</li>
+        <li>Canadian Commonwealth Scholarships</li>
+        <li>University-Specific Grants</li>
+        <li>International Student Financial Aid Programs</li>
+      </ul>
+    </div>
 
-      {/* ✅ Career Prospects */}
-      <section className="canada-career">
-        <h2>Career Prospects in Canada</h2>
-        <p>
-          Canada has a strong job market in IT, healthcare, engineering,
-          business, and skilled trades. International graduates are eligible for
-          PGWP, leading to potential permanent residency pathways.
-        </p>
-      </section>
+    {/* Image Column */}
+    <div style={{ flex: "1 1 400px" }}>
+      <img
+        src="/assets/canada-universities/canada-scholarship.jpg"
+        alt="Scholarships in Canada"
+        className="scholarship-img"
+        style={{ width: "100%", borderRadius: "16px", boxShadow: "0 10px 25px rgba(0,0,0,0.15)", transition: "transform 0.3s ease" }}
+        onMouseEnter={e => e.currentTarget.style.transform = "scale(1.03)"}
+        onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}
+      />
+    </div>
+  </div>
+</section>
 
-      {/* ✅ Documents & Visa Process */}
-      <section className="canada-documents">
-        <h2>Documents Required</h2>
-        <ul>
-          <li>Valid Passport</li>
-          <li>Academic Records & Transcripts</li>
-          <li>English/French Proficiency Test (IELTS/TOEFL)</li>
-          <li>Proof of Funds</li>
-          <li>Letter of Acceptance from DLI</li>
-        </ul>
+{/* Career Prospects */}
+<section className="canada-career" style={{ maxWidth: "900px", margin: "60px auto", padding: "0 20px" }}>
+  <h2>Career Prospects in Canada</h2>
+  <p>
+    Canada offers strong job opportunities for graduates, especially in IT, Engineering, Healthcare, Finance, and Research. The Post-Graduation Work Permit (PGWP) allows international students to gain work experience after studies.
+  </p>
+</section>
 
-        <h2>Canada Study Permit</h2>
-        <p>
-          Apply for a Canadian Study Permit via IRCC. You'll need a letter of
-          acceptance, financial proof, biometrics, and sometimes a medical exam.
-        </p>
-      </section>
+{/* Documents & Visa Process */}
+<section className="canada-documents" style={{ maxWidth: "900px", margin: "60px auto", padding: "0 20px" }}>
+  <h2>Documents Required</h2>
+  <ul>
+    <li>Valid Passport</li>
+    <li>Academic Transcripts & Certificates</li>
+    <li>English/French Proficiency Test (IELTS/TOEFL/TEF)</li>
+    <li>Proof of Funds</li>
+    <li>Offer Letter from a Canadian University</li>
+  </ul>
 
-      {/* ✅ Student Life */}
-      <section className="canada-life">
-        <h2>Student Life in Canada</h2>
-        <p>
-          Canada provides a friendly and inclusive campus experience with clubs,
-          co-ops, research groups, and beautiful natural surroundings for
-          students to enjoy.
-        </p>
-        <img
-          src="/assets/canada-universities/student-life.jpg"
-          alt="Student Life in Canada"
-        />
-      </section>
+  <h2>Canada Student Visa</h2>
+  <p>
+    Apply for a Study Permit. The process requires a university acceptance letter, proof of funds, medical exam (if required), and biometrics.
+  </p>
+</section>
+
+{/* Student Life */}
+<section className="canada-life" style={{ maxWidth: "1100px", margin: "60px auto", padding: "0 20px" }}>
+  <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "40px" }}>
+
+    {/* Image Column */}
+    <div style={{ flex: "1 1 400px" }}>
+      <img
+        src="/assets/canada-universities/student-life.jpg"
+        alt="Student Life in Canada"
+        style={{ width: "100%", borderRadius: "16px", boxShadow: "0 10px 25px rgba(0,0,0,0.15)", transition: "transform 0.3s ease" }}
+        onMouseEnter={e => e.currentTarget.style.transform = "scale(1.03)"}
+        onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}
+      />
+    </div>
+
+    {/* Text Column */}
+    <div style={{ flex: "1 1 500px" }}>
+      <h2>Student Life in Canada</h2>
+      <p>
+        Canada offers a multicultural and welcoming environment with vibrant campuses, outdoor activities, and excellent student support. Students can enjoy cultural events, internships, and various networking opportunities.
+      </p>
+    </div>
+
+  </div>
+</section>
+
 
       <EnrollSection country="Canada" />
 

@@ -211,69 +211,92 @@ function Ireland() {
         </p>
       </section>
 
-      {/* ✅ Cost & Scholarships */}
-      <section className="ireland-cost">
-        <h2>Cost of Studying in Ireland</h2>
-        <p>
-          Tuition fees range from €10,000 to €25,000 annually. Living costs vary
-          between €7,000 and €12,000 per year depending on city and lifestyle.
-        </p>
-        <h3>Scholarships in Ireland</h3>
-        <ul>
-          <li>Government of Ireland Scholarships</li>
-          <li>University-Specific Scholarships</li>
-          <li>HEA International Education Scholarships</li>
-          <li>Merit-Based & Need-Based Aid</li>
-        </ul>
-        <img
-          src="/assets/ireland-universities/ireland-scholarship.jpg"
-          alt="Scholarships in Ireland"
-          className="scholarship-img"
-        />
-      </section>
+{/* Cost of Study & Scholarships */}
+<section className="ireland-cost" style={{ maxWidth: "1100px", margin: "60px auto", padding: "0 20px" }}>
+  <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "40px" }}>
 
-      {/* ✅ Career Prospects */}
-      <section className="ireland-career">
-        <h2>Career Prospects in Ireland</h2>
-        <p>
-          Ireland is a European tech and pharma hub with job openings in IT,
-          biotech, finance, and more. International students benefit from a
-          2-year post-study work visa and career services support.
-        </p>
-      </section>
+    {/* Text Column */}
+    <div style={{ flex: "1 1 500px" }}>
+      <h2>Cost of Studying in Ireland</h2>
+      <p>
+        Tuition fees range from €9,000 - €30,000 annually depending on
+        the program and university. Living costs vary by city, averaging
+        €10,000 - €14,000 per year.
+      </p>
+      <h3>Scholarships in Ireland</h3>
+      <ul>
+        <li>Government of Ireland Scholarships</li>
+        <li>University-Specific Scholarships</li>
+        <li>International Student Financial Aid Programs</li>
+        <li>Science Foundation Ireland (SFI) Scholarships</li>
+      </ul>
+    </div>
 
-      {/* ✅ Documents & Visa Process */}
-      <section className="ireland-documents">
-        <h2>Documents Required</h2>
-        <ul>
-          <li>Valid Passport</li>
-          <li>Academic Transcripts</li>
-          <li>Proof of English Proficiency (IELTS/TOEFL)</li>
-          <li>Statement of Purpose</li>
-          <li>Proof of Financial Means</li>
-          <li>University Admission Letter</li>
-        </ul>
+    {/* Image Column */}
+    <div style={{ flex: "1 1 400px" }}>
+      <img
+        src="/assets/ireland-universities/ireland-scholarship.jpg"
+        alt="Scholarships in Ireland"
+        className="scholarship-img"
+        style={{ width: "100%", borderRadius: "16px", boxShadow: "0 10px 25px rgba(0,0,0,0.15)", transition: "transform 0.3s ease" }}
+        onMouseEnter={e => e.currentTarget.style.transform = "scale(1.03)"}
+        onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}
+      />
+    </div>
+  </div>
+</section>
 
-        <h2>Student Visa Process</h2>
-        <p>
-          Apply for a “D” Study Visa. Submit academic and financial documents,
-          acceptance letter, passport, and attend an interview if required.
-        </p>
-      </section>
+{/* Career Prospects */}
+<section className="ireland-career" style={{ maxWidth: "900px", margin: "60px auto", padding: "0 20px" }}>
+  <h2>Career Prospects in Ireland</h2>
+  <p>
+    Ireland offers strong job opportunities for graduates, especially in Technology, Pharmaceuticals, Finance, and Engineering. The Third Level Graduate Scheme allows international students to stay and work in Ireland after graduation.
+  </p>
+</section>
 
-      {/* ✅ Student Life */}
-      <section className="ireland-life">
-        <h2>Student Life in Ireland</h2>
-        <p>
-          Ireland offers a vibrant student life with music, sports, culture,
-          travel, and friendly locals. Universities encourage clubs and
-          community activities.
-        </p>
-        <img
-          src="/assets/ireland-universities/student-life.jpg"
-          alt="Student Life in Ireland"
-        />
-      </section>
+{/* Documents & Visa Process */}
+<section className="ireland-documents" style={{ maxWidth: "900px", margin: "60px auto", padding: "0 20px" }}>
+  <h2>Documents Required</h2>
+  <ul>
+    <li>Valid Passport</li>
+    <li>Academic Transcripts & Certificates</li>
+    <li>English Proficiency Test (IELTS/TOEFL)</li>
+    <li>Proof of Funds</li>
+    <li>Offer Letter from an Irish University</li>
+  </ul>
+
+  <h2>Ireland Student Visa</h2>
+  <p>
+    Apply for a Study Visa via the Irish Naturalisation and Immigration Service (INIS) using the university acceptance letter, proof of funds, and required documents.
+  </p>
+</section>
+
+{/* Student Life */}
+<section className="ireland-life" style={{ maxWidth: "1100px", margin: "60px auto", padding: "0 20px" }}>
+  <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "40px" }}>
+
+    {/* Image Column */}
+    <div style={{ flex: "1 1 400px" }}>
+      <img
+        src="/assets/ireland-universities/student-life.jpg"
+        alt="Student Life in Ireland"
+        style={{ width: "100%", borderRadius: "16px", boxShadow: "0 10px 25px rgba(0,0,0,0.15)", transition: "transform 0.3s ease" }}
+        onMouseEnter={e => e.currentTarget.style.transform = "scale(1.03)"}
+        onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}
+      />
+    </div>
+
+    {/* Text Column */}
+    <div style={{ flex: "1 1 500px" }}>
+      <h2>Student Life in Ireland</h2>
+      <p>
+        Ireland offers a welcoming and multicultural student environment with historic campuses, vibrant cities, and rich cultural experiences. Students can enjoy festivals, networking events, and internships while studying.
+      </p>
+    </div>
+
+  </div>
+</section>
+
 
       <EnrollSection country="Ireland" />
 

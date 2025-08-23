@@ -213,71 +213,90 @@ function Dubai() {
         </p>
       </section>
 
-      {/* ✅ Cost & Scholarships */}
-      <section className="dubai-cost">
-        <h2>Cost of Studying in Dubai</h2>
-        <p>
-          Tuition fees range from AED 30,000 to AED 90,000 per year, depending
-          on the university and program. Living costs average AED 30,000–AED
-          50,000 annually.
-        </p>
-        <h3>Scholarships in Dubai</h3>
-        <ul>
-          <li>Merit-Based Scholarships by Universities</li>
-          <li>Early Application Discounts</li>
-          <li>Need-Based Financial Aid</li>
-          <li>Corporate & Industry Sponsored Awards</li>
-        </ul>
-        <img
-          src="/assets/dubai-universities/dubai-scholarship.jpg"
-          alt="Scholarships in Dubai"
-          className="scholarship-img"
-        />
-      </section>
+   {/* Cost of Study & Scholarships */}
+<section className="dubai-cost" style={{ maxWidth: "1100px", margin: "60px auto", padding: "0 20px" }}>
+  <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "40px" }}>
 
-      {/* ✅ Career Prospects */}
-      <section className="dubai-career">
-        <h2>Career Prospects in Dubai</h2>
-        <p>
-          Dubai is a business and innovation hub with ample opportunities in IT,
-          finance, logistics, tourism, and media. Students benefit from a 1-year
-          stay-back visa and internship pathways with multinational companies.
-        </p>
-      </section>
+    {/* Text Column */}
+    <div style={{ flex: "1 1 500px" }}>
+      <h2>Cost of Studying in Dubai</h2>
+      <p>
+        Tuition fees range from AED 40,000 - AED 120,000 per year depending on the program and university. Living costs vary by lifestyle, averaging AED 30,000 - AED 50,000 per year.
+      </p>
+      <h3>Scholarships in Dubai</h3>
+      <ul>
+        <li>Dubai Government Scholarships</li>
+        <li>University-Specific Scholarships</li>
+        <li>International Student Financial Aid Programs</li>
+        <li>Merit-Based and Need-Based Scholarships</li>
+      </ul>
+    </div>
 
-      {/* ✅ Documents & Visa Process */}
-      <section className="dubai-documents">
-        <h2>Documents Required</h2>
-        <ul>
-          <li>Valid Passport</li>
-          <li>Academic Transcripts & Certificates</li>
-          <li>Language Proficiency (IELTS/TOEFL)</li>
-          <li>CV and Statement of Purpose</li>
-          <li>Proof of Funds & Accommodation</li>
-          <li>University Offer Letter</li>
-        </ul>
+    {/* Image Column */}
+    <div style={{ flex: "1 1 400px" }}>
+      <img
+        src="/assets/dubai-universities/dubai-scholarship.jpg"
+        alt="Scholarships in Dubai"
+        className="scholarship-img"
+        style={{ width: "100%", borderRadius: "16px", boxShadow: "0 10px 25px rgba(0,0,0,0.15)", transition: "transform 0.3s ease" }}
+        onMouseEnter={e => e.currentTarget.style.transform = "scale(1.03)"}
+        onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}
+      />
+    </div>
+  </div>
+</section>
 
-        <h2>Dubai Student Visa</h2>
-        <p>
-          Apply for a UAE Student Visa through the admitting university.
-          Requirements include admission proof, medical test, Emirates ID,
-          financial documents, and visa sponsorship from the institution.
-        </p>
-      </section>
+{/* Career Prospects */}
+<section className="dubai-career" style={{ maxWidth: "900px", margin: "60px auto", padding: "0 20px" }}>
+  <h2>Career Prospects in Dubai</h2>
+  <p>
+    Dubai offers growing job opportunities in Finance, Technology, Tourism, Real Estate, and Healthcare. International students can work part-time during studies and explore post-graduation work opportunities through employment visas.
+  </p>
+</section>
 
-      {/* ✅ Student Life */}
-      <section className="dubai-life">
-        <h2>Student Life in Dubai</h2>
-        <p>
-          Students in Dubai enjoy a modern lifestyle, world-class amenities,
-          desert safaris, international cuisine, festivals, shopping, and easy
-          access to global travel.
-        </p>
-        <img
-          src="/assets/dubai-universities/student-life.jpg"
-          alt="Student Life in Dubai"
-        />
-      </section>
+{/* Documents & Visa Process */}
+<section className="dubai-documents" style={{ maxWidth: "900px", margin: "60px auto", padding: "0 20px" }}>
+  <h2>Documents Required</h2>
+  <ul>
+    <li>Valid Passport</li>
+    <li>Academic Transcripts & Certificates</li>
+    <li>English Proficiency Test (IELTS/TOEFL)</li>
+    <li>Proof of Funds</li>
+    <li>Offer Letter from a Dubai University</li>
+  </ul>
+
+  <h2>Dubai Student Visa</h2>
+  <p>
+    Apply for a student visa via the UAE immigration authorities using the university acceptance letter, proof of funds, medical insurance, and required documents.
+  </p>
+</section>
+
+{/* Student Life */}
+<section className="dubai-life" style={{ maxWidth: "1100px", margin: "60px auto", padding: "0 20px" }}>
+  <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "40px" }}>
+
+    {/* Image Column */}
+    <div style={{ flex: "1 1 400px" }}>
+      <img
+        src="/assets/dubai-universities/student-life.jpg"
+        alt="Student Life in Dubai"
+        style={{ width: "100%", borderRadius: "16px", boxShadow: "0 10px 25px rgba(0,0,0,0.15)", transition: "transform 0.3s ease" }}
+        onMouseEnter={e => e.currentTarget.style.transform = "scale(1.03)"}
+        onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}
+      />
+    </div>
+
+    {/* Text Column */}
+    <div style={{ flex: "1 1 500px" }}>
+      <h2>Student Life in Dubai</h2>
+      <p>
+        Dubai offers a modern and dynamic student environment with world-class campuses, multicultural communities, and numerous recreational and networking opportunities. Students can enjoy city life, cultural events, and internships while studying.
+      </p>
+    </div>
+
+  </div>
+</section>
+
 
       <EnrollSection country="Dubai" />
 

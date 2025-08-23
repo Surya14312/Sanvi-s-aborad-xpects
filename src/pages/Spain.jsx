@@ -212,72 +212,90 @@ function Spain() {
           academic and social support services.
         </p>
       </section>
+{/* Cost of Study & Scholarships */}
+<section className="spain-cost" style={{ maxWidth: "1100px", margin: "60px auto", padding: "0 20px" }}>
+  <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "40px" }}>
 
-      {/* ✅ Cost & Scholarships */}
-      <section className="spain-cost">
-        <h2>Cost of Studying in Spain</h2>
-        <p>
-          Public university tuition ranges from €1,000 to €5,000 per year.
-          Living expenses range from €7,000 to €10,000 per year, depending on
-          location and lifestyle.
-        </p>
-        <h3>Scholarships in Spain</h3>
-        <ul>
-          <li>Spanish Government Scholarships</li>
-          <li>Erasmus+ Program</li>
-          <li>University-Specific Scholarships</li>
-          <li>MAEC-AECID Scholarships</li>
-        </ul>
-        <img
-          src="/assets/spain-universities/spain-scholarship.jpg"
-          alt="Scholarships in Spain"
-          className="scholarship-img"
-        />
-      </section>
+    {/* Text Column */}
+    <div style={{ flex: "1 1 500px" }}>
+      <h2>Cost of Studying in Spain</h2>
+      <p>
+        Tuition fees range from €1,000 - €10,000 per year depending on the program and university. Living costs vary by city, averaging €9,000 - €14,000 per year.
+      </p>
+      <h3>Scholarships in Spain</h3>
+      <ul>
+        <li>Spanish Government Scholarships</li>
+        <li>University-Specific Scholarships</li>
+        <li>International Student Financial Aid Programs</li>
+        <li>MAEC-AECID Scholarships</li>
+      </ul>
+    </div>
 
-      {/* ✅ Career Prospects */}
-      <section className="spain-career">
-        <h2>Career Prospects in Spain</h2>
-        <p>
-          Spain offers strong job opportunities in tourism, education, tech, and
-          business. International students can stay back for a year to seek
-          employment in Spanish or multinational companies.
-        </p>
-      </section>
+    {/* Image Column */}
+    <div style={{ flex: "1 1 400px" }}>
+      <img
+        src="/assets/spain-universities/spain-scholarship.jpg"
+        alt="Scholarships in Spain"
+        className="scholarship-img"
+        style={{ width: "100%", borderRadius: "16px", boxShadow: "0 10px 25px rgba(0,0,0,0.15)", transition: "transform 0.3s ease" }}
+        onMouseEnter={e => e.currentTarget.style.transform = "scale(1.03)"}
+        onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}
+      />
+    </div>
+  </div>
+</section>
 
-      {/* ✅ Documents & Visa Process */}
-      <section className="spain-documents">
-        <h2>Documents Required</h2>
-        <ul>
-          <li>Valid Passport</li>
-          <li>Academic Transcripts & Certificates</li>
-          <li>Proof of Language Proficiency (English/Spanish)</li>
-          <li>CV and Statement of Purpose</li>
-          <li>Proof of Funds</li>
-          <li>University Admission Letter</li>
-        </ul>
+{/* Career Prospects */}
+<section className="spain-career" style={{ maxWidth: "900px", margin: "60px auto", padding: "0 20px" }}>
+  <h2>Career Prospects in Spain</h2>
+  <p>
+    Spain offers job opportunities in Tourism, Engineering, Technology, Business, and Healthcare. International students can work part-time during studies and may apply for work visas after graduation.
+  </p>
+</section>
 
-        <h2>Spain Student Visa</h2>
-        <p>
-          Apply for a Type D visa through the Spanish consulate. The process
-          includes proof of admission, financial means, medical insurance, and
-          accommodation documents.
-        </p>
-      </section>
+{/* Documents & Visa Process */}
+<section className="spain-documents" style={{ maxWidth: "900px", margin: "60px auto", padding: "0 20px" }}>
+  <h2>Documents Required</h2>
+  <ul>
+    <li>Valid Passport</li>
+    <li>Academic Transcripts & Certificates</li>
+    <li>Spanish or English Proficiency Test (DELE/IELTS/TOEFL)</li>
+    <li>Proof of Funds</li>
+    <li>Offer Letter from a Spanish University</li>
+  </ul>
 
-      {/* ✅ Student Life */}
-      <section className="spain-life">
-        <h2>Student Life in Spain</h2>
-        <p>
-          Spain offers a lively student atmosphere with rich culture, diverse
-          cuisine, music festivals, football matches, and access to the rest of
-          Europe through the Schengen visa.
-        </p>
-        <img
-          src="/assets/spain-universities/student-life.jpg"
-          alt="Student Life in Spain"
-        />
-      </section>
+  <h2>Spain Student Visa</h2>
+  <p>
+    Apply for a student visa via the Spanish consulate using the university acceptance letter, proof of funds, health insurance, and required documents.
+  </p>
+</section>
+
+{/* Student Life */}
+<section className="spain-life" style={{ maxWidth: "1100px", margin: "60px auto", padding: "0 20px" }}>
+  <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "40px" }}>
+
+    {/* Image Column */}
+    <div style={{ flex: "1 1 400px" }}>
+      <img
+        src="/assets/spain-universities/student-life.jpg"
+        alt="Student Life in Spain"
+        style={{ width: "100%", borderRadius: "16px", boxShadow: "0 10px 25px rgba(0,0,0,0.15)", transition: "transform 0.3s ease" }}
+        onMouseEnter={e => e.currentTarget.style.transform = "scale(1.03)"}
+        onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}
+      />
+    </div>
+
+    {/* Text Column */}
+    <div style={{ flex: "1 1 500px" }}>
+      <h2>Student Life in Spain</h2>
+      <p>
+        Spain offers a lively and culturally rich student environment with historic campuses, vibrant cities, and diverse cultural experiences. Students can enjoy festivals, internships, language learning, and networking opportunities.
+      </p>
+    </div>
+
+  </div>
+</section>
+
       <EnrollSection country="Spain" />
 
       {/* ✅ FAQs */}

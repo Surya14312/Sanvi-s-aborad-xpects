@@ -213,71 +213,90 @@ function India() {
         </p>
       </section>
 
-      {/* ✅ Cost & Scholarships */}
-      <section className="india-cost">
-        <h2>Cost of Studying in India</h2>
-        <p>
-          Tuition fees range from INR 50,000 to INR 3,00,000 per year depending
-          on the program and institution. Living costs are also low, averaging
-          INR 80,000 to INR 1,50,000 per year.
-        </p>
-        <h3>Scholarships in India</h3>
-        <ul>
-          <li>Study in India Scholarship</li>
-          <li>ICCR Government Scholarships</li>
-          <li>University-Based Scholarships</li>
-          <li>Merit & Need-Based Financial Aid</li>
-        </ul>
-        <img
-          src="/assets/india-universities/india-scholarship.jpg"
-          alt="Scholarships in India"
-          className="scholarship-img"
-        />
-      </section>
+     {/* Cost of Study & Scholarships */}
+<section className="india-cost" style={{ maxWidth: "1100px", margin: "60px auto", padding: "0 20px" }}>
+  <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "40px" }}>
 
-      {/* ✅ Career Prospects */}
-      <section className="india-career">
-        <h2>Career Prospects in India</h2>
-        <p>
-          India’s booming tech, pharma, education, and service sectors provide
-          vast job opportunities. International students can explore internships
-          and apply for work permits through institutions or employers.
-        </p>
-      </section>
+    {/* Text Column */}
+    <div style={{ flex: "1 1 500px" }}>
+      <h2>Cost of Studying in India</h2>
+      <p>
+        Tuition fees range from INR 50,000 - INR 5,00,000 per year depending on the program and university. Living costs vary by city, averaging INR 1,50,000 - INR 3,00,000 per year.
+      </p>
+      <h3>Scholarships in India</h3>
+      <ul>
+        <li>Government of India Scholarships</li>
+        <li>University-Specific Scholarships</li>
+        <li>International Student Financial Aid Programs</li>
+        <li>Merit-Based and Need-Based Scholarships</li>
+      </ul>
+    </div>
 
-      {/* ✅ Documents & Visa Process */}
-      <section className="india-documents">
-        <h2>Documents Required</h2>
-        <ul>
-          <li>Valid Passport</li>
-          <li>Academic Certificates & Transcripts</li>
-          <li>Proof of English Proficiency (if applicable)</li>
-          <li>Statement of Purpose and CV</li>
-          <li>Financial Documents / Bank Statement</li>
-          <li>Admission Letter from Indian University</li>
-        </ul>
+    {/* Image Column */}
+    <div style={{ flex: "1 1 400px" }}>
+      <img
+        src="/assets/india-universities/india-scholarship.jpg"
+        alt="Scholarships in India"
+        className="scholarship-img"
+        style={{ width: "100%", borderRadius: "16px", boxShadow: "0 10px 25px rgba(0,0,0,0.15)", transition: "transform 0.3s ease" }}
+        onMouseEnter={e => e.currentTarget.style.transform = "scale(1.03)"}
+        onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}
+      />
+    </div>
+  </div>
+</section>
 
-        <h2>India Student Visa</h2>
-        <p>
-          Students must apply for an Indian Student Visa (S-Visa) at their
-          nearest Indian embassy. Submit admission proof, passport, financial
-          documents, and meet any specific consular requirements.
-        </p>
-      </section>
+{/* Career Prospects */}
+<section className="india-career" style={{ maxWidth: "900px", margin: "60px auto", padding: "0 20px" }}>
+  <h2>Career Prospects in India</h2>
+  <p>
+    India offers job opportunities in IT, Finance, Engineering, Healthcare, and Education sectors. International students can explore internships, part-time work, and post-graduation employment options through relevant work permits.
+  </p>
+</section>
 
-      {/* ✅ Student Life */}
-      <section className="india-life">
-        <h2>Student Life in India</h2>
-        <p>
-          India offers a vibrant and culturally rich student life — from
-          heritage festivals to street food, traditional arts, and campus
-          activities — students gain both education and experiences.
-        </p>
-        <img
-          src="/assets/india-universities/student-life.jpg"
-          alt="Student Life in India"
-        />
-      </section>
+{/* Documents & Visa Process */}
+<section className="india-documents" style={{ maxWidth: "900px", margin: "60px auto", padding: "0 20px" }}>
+  <h2>Documents Required</h2>
+  <ul>
+    <li>Valid Passport</li>
+    <li>Academic Transcripts & Certificates</li>
+    <li>English Proficiency Test (IELTS/TOEFL) if required</li>
+    <li>Proof of Funds</li>
+    <li>Offer Letter from an Indian University</li>
+  </ul>
+
+  <h2>India Student Visa</h2>
+  <p>
+    Apply for a student visa via the Indian consulate or visa application portal using the university acceptance letter, proof of funds, medical certificate, and required documents.
+  </p>
+</section>
+
+{/* Student Life */}
+<section className="india-life" style={{ maxWidth: "1100px", margin: "60px auto", padding: "0 20px" }}>
+  <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "40px" }}>
+
+    {/* Image Column */}
+    <div style={{ flex: "1 1 400px" }}>
+      <img
+        src="/assets/india-universities/student-life.jpg"
+        alt="Student Life in India"
+        style={{ width: "100%", borderRadius: "16px", boxShadow: "0 10px 25px rgba(0,0,0,0.15)", transition: "transform 0.3s ease" }}
+        onMouseEnter={e => e.currentTarget.style.transform = "scale(1.03)"}
+        onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}
+      />
+    </div>
+
+    {/* Text Column */}
+    <div style={{ flex: "1 1 500px" }}>
+      <h2>Student Life in India</h2>
+      <p>
+        India offers a diverse and culturally rich student environment with historic campuses, vibrant cities, and extensive cultural experiences. Students can enjoy festivals, internships, networking opportunities, and extracurricular activities.
+      </p>
+    </div>
+
+  </div>
+</section>
+
       <EnrollSection country="India" />
 
       {/* ✅ FAQs */}

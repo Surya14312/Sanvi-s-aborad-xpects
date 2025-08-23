@@ -63,7 +63,7 @@ function Contact() {
 
     try {
       const emailData = {
-        to: "thesanvis.aboardxperts@gmail.com",
+        to: "dhineshmanickam01@gmail.com",
         subject: "New Admission Enquiry",
         body: `📚 New Admission Enquiry\n\n👤 Name: ${name}\n🎂 Age: ${age}\n🎓 Course Type: ${courseType}\n📘 Education Level: ${education}\n🌍 Country Interested: ${country}\n🗓️ Start Date: ${startDate}\n🗓️ End Date: ${endDate}\n🏠 Address: ${address}\n📞 Phone No: ${phone}\n📱 WhatsApp No: ${whatsapp}`,
       };
@@ -72,7 +72,7 @@ function Contact() {
       console.log("Email data to send:", emailData);
 
       setSubmitMessage(
-        "✅ Form submitted successfully! Email sent to thesanvisacademy@gmail.com"
+        "✅ Form submitted successfully! Email sent to dhineshmanickam01@gmail.com"
       );
 
       setTimeout(() => {

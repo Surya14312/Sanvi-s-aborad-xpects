@@ -212,70 +212,90 @@ function Switzerland() {
         </p>
       </section>
 
-      {/* ✅ Cost & Scholarships */}
-      <section className="switzerland-cost">
-        <h2>Cost of Studying in Switzerland</h2>
-        <p>
-          Public university tuition ranges from CHF 1,000 to CHF 16,000 per
-          year. Living expenses range from CHF 15,000 to CHF 20,000 annually.
-        </p>
-        <h3>Scholarships in Switzerland</h3>
-        <ul>
-          <li>Swiss Government Excellence Scholarships</li>
-          <li>University-Specific Scholarships</li>
-          <li>Graduate Institute Scholarships</li>
-          <li>Need-Based & Merit-Based Financial Aid</li>
-        </ul>
-        <img
-          src="/assets/switzerland-universities/switzerland-scholarship.jpg"
-          alt="Scholarships in Switzerland"
-          className="scholarship-img"
-        />
-      </section>
+  {/* Cost of Study & Scholarships */}
+<section className="switzerland-cost" style={{ maxWidth: "1100px", margin: "60px auto", padding: "0 20px" }}>
+  <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "40px" }}>
 
-      {/* ✅ Career Prospects */}
-      <section className="switzerland-career">
-        <h2>Career Prospects in Switzerland</h2>
-        <p>
-          Switzerland is home to many global companies in banking,
-          pharmaceuticals, hospitality, and research. International students can
-          stay 6–12 months after graduation to seek employment.
-        </p>
-      </section>
+    {/* Text Column */}
+    <div style={{ flex: "1 1 500px" }}>
+      <h2>Cost of Studying in Switzerland</h2>
+      <p>
+        Tuition fees range from CHF 1,000 - CHF 4,000 per semester for public universities, while private universities can charge CHF 20,000 - CHF 40,000 annually. Living costs vary by city, averaging CHF 18,000 - CHF 25,000 per year.
+      </p>
+      <h3>Scholarships in Switzerland</h3>
+      <ul>
+        <li>ETH Excellence Scholarships</li>
+        <li>Swiss Government Excellence Scholarships</li>
+        <li>University-Specific Scholarships</li>
+        <li>International Student Financial Aid Programs</li>
+      </ul>
+    </div>
 
-      {/* ✅ Documents & Visa Process */}
-      <section className="switzerland-documents">
-        <h2>Documents Required</h2>
-        <ul>
-          <li>Valid Passport</li>
-          <li>Academic Certificates & Transcripts</li>
-          <li>Proof of Language Proficiency (IELTS/TOEFL/DELF)</li>
-          <li>CV and Statement of Purpose</li>
-          <li>Proof of Funds</li>
-          <li>University Admission Letter</li>
-        </ul>
+    {/* Image Column */}
+    <div style={{ flex: "1 1 400px" }}>
+      <img
+        src="/assets/switzerland-universities/switzerland-scholarship.jpg"
+        alt="Scholarships in Switzerland"
+        className="scholarship-img"
+        style={{ width: "100%", borderRadius: "16px", boxShadow: "0 10px 25px rgba(0,0,0,0.15)", transition: "transform 0.3s ease" }}
+        onMouseEnter={e => e.currentTarget.style.transform = "scale(1.03)"}
+        onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}
+      />
+    </div>
+  </div>
+</section>
 
-        <h2>Switzerland Student Visa</h2>
-        <p>
-          Apply for a long-term student visa (Type D). The process includes
-          submitting documents to the Swiss embassy, proof of finances,
-          accommodation details, and health insurance coverage.
-        </p>
-      </section>
+{/* Career Prospects */}
+<section className="switzerland-career" style={{ maxWidth: "900px", margin: "60px auto", padding: "0 20px" }}>
+  <h2>Career Prospects in Switzerland</h2>
+  <p>
+    Switzerland offers strong job opportunities in Finance, Engineering, Technology, Pharmaceuticals, and Research. International students can work part-time during studies and may apply for a post-graduation work permit to gain professional experience.
+  </p>
+</section>
 
-      {/* ✅ Student Life */}
-      <section className="switzerland-life">
-        <h2>Student Life in Switzerland</h2>
-        <p>
-          Students in Switzerland enjoy a high standard of living, scenic
-          landscapes, outdoor adventures, multilingual society, and easy travel
-          throughout Europe.
-        </p>
-        <img
-          src="/assets/switzerland-universities/student-life.jpg"
-          alt="Student Life in Switzerland"
-        />
-      </section>
+{/* Documents & Visa Process */}
+<section className="switzerland-documents" style={{ maxWidth: "900px", margin: "60px auto", padding: "0 20px" }}>
+  <h2>Documents Required</h2>
+  <ul>
+    <li>Valid Passport</li>
+    <li>Academic Transcripts & Certificates</li>
+    <li>English, French, or German Proficiency Test (IELTS/TOEFL/DELF/DSH)</li>
+    <li>Proof of Funds</li>
+    <li>Offer Letter from a Swiss University</li>
+  </ul>
+
+  <h2>Switzerland Student Visa</h2>
+  <p>
+    Apply for a student visa via the Swiss consulate using the university acceptance letter, proof of funds, health insurance, and required documents.
+  </p>
+</section>
+
+{/* Student Life */}
+<section className="switzerland-life" style={{ maxWidth: "1100px", margin: "60px auto", padding: "0 20px" }}>
+  <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "40px" }}>
+
+    {/* Image Column */}
+    <div style={{ flex: "1 1 400px" }}>
+      <img
+        src="/assets/switzerland-universities/student-life.jpg"
+        alt="Student Life in Switzerland"
+        style={{ width: "100%", borderRadius: "16px", boxShadow: "0 10px 25px rgba(0,0,0,0.15)", transition: "transform 0.3s ease" }}
+        onMouseEnter={e => e.currentTarget.style.transform = "scale(1.03)"}
+        onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}
+      />
+    </div>
+
+    {/* Text Column */}
+    <div style={{ flex: "1 1 500px" }}>
+      <h2>Student Life in Switzerland</h2>
+      <p>
+        Switzerland offers a high-quality and multicultural student experience with scenic campuses, vibrant cities, and rich cultural opportunities. Students can enjoy outdoor activities, networking events, festivals, and internships while studying.
+      </p>
+    </div>
+
+  </div>
+</section>
+
       <EnrollSection country="Switzerland" />
 
       {/* ✅ FAQs */}

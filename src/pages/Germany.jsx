@@ -213,72 +213,90 @@ function Germany() {
         </p>
       </section>
 
-      {/* ✅ Cost & Scholarships */}
-      <section className="germany-cost">
-        <h2>Cost of Studying in Germany</h2>
-        <p>
-          Most public universities charge little to no tuition fees. Semester
-          contributions range between €250–€500. Living costs are approximately
-          €8,000–€11,000 per year.
-        </p>
-        <h3>Scholarships in Germany</h3>
-        <ul>
-          <li>DAAD Scholarships</li>
-          <li>Erasmus+ Program</li>
-          <li>Deutschlandstipendium</li>
-          <li>University-Specific Scholarships</li>
-        </ul>
-        <img
-          src="/assets/germany-universities/germany-scholarship.jpg"
-          alt="Scholarships in Germany"
-          className="scholarship-img"
-        />
-      </section>
+   {/* Cost of Study & Scholarships */}
+<section className="germany-cost" style={{ maxWidth: "1100px", margin: "60px auto", padding: "0 20px" }}>
+  <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "40px" }}>
 
-      {/* ✅ Career Prospects */}
-      <section className="germany-career">
-        <h2>Career Prospects in Germany</h2>
-        <p>
-          Germany is Europe’s industrial powerhouse with high demand in
-          engineering, IT, automotive, and renewable energy sectors. Students
-          benefit from internships, strong industry ties, and an 18-month
-          post-study work visa.
-        </p>
-      </section>
+    {/* Text Column */}
+    <div style={{ flex: "1 1 500px" }}>
+      <h2>Cost of Studying in Germany</h2>
+      <p>
+        Tuition fees are generally low, ranging from €0 - €3,500 per year depending on the university and program. Living costs vary by city, averaging €10,000 - €12,000 per year.
+      </p>
+      <h3>Scholarships in Germany</h3>
+      <ul>
+        <li>DAAD Scholarships</li>
+        <li>Deutschlandstipendium</li>
+        <li>University-Specific Scholarships</li>
+        <li>International Student Financial Aid Programs</li>
+      </ul>
+    </div>
 
-      {/* ✅ Documents & Visa Process */}
-      <section className="germany-documents">
-        <h2>Documents Required</h2>
-        <ul>
-          <li>Valid Passport</li>
-          <li>Academic Transcripts & Certificates</li>
-          <li>Language Proficiency (IELTS/TOEFL/TestDaF)</li>
-          <li>CV and Statement of Purpose</li>
-          <li>Proof of Funds (Blocked Account)</li>
-          <li>University Admission Letter</li>
-        </ul>
+    {/* Image Column */}
+    <div style={{ flex: "1 1 400px" }}>
+      <img
+        src="/assets/germany-universities/germany-scholarship.jpg"
+        alt="Scholarships in Germany"
+        className="scholarship-img"
+        style={{ width: "100%", borderRadius: "16px", boxShadow: "0 10px 25px rgba(0,0,0,0.15)", transition: "transform 0.3s ease" }}
+        onMouseEnter={e => e.currentTarget.style.transform = "scale(1.03)"}
+        onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}
+      />
+    </div>
+  </div>
+</section>
 
-        <h2>Germany Student Visa</h2>
-        <p>
-          Apply for a national visa (Type D). Key steps include creating a
-          blocked account, completing the visa form, submitting required
-          documents, and attending a visa interview.
-        </p>
-      </section>
+{/* Career Prospects */}
+<section className="germany-career" style={{ maxWidth: "900px", margin: "60px auto", padding: "0 20px" }}>
+  <h2>Career Prospects in Germany</h2>
+  <p>
+    Germany offers strong job opportunities in Engineering, IT, Automotive, Research, and Healthcare. International students can work part-time during studies and may apply for an 18-month residence permit to seek employment after graduation.
+  </p>
+</section>
 
-      {/* ✅ Student Life */}
-      <section className="germany-life">
-        <h2>Student Life in Germany</h2>
-        <p>
-          Students in Germany enjoy an affordable, safe, and multicultural
-          environment with public transportation, vibrant festivals, and access
-          to travel across Europe via the Schengen Zone.
-        </p>
-        <img
-          src="/assets/germany-universities/student-life.jpg"
-          alt="Student Life in Germany"
-        />
-      </section>
+{/* Documents & Visa Process */}
+<section className="germany-documents" style={{ maxWidth: "900px", margin: "60px auto", padding: "0 20px" }}>
+  <h2>Documents Required</h2>
+  <ul>
+    <li>Valid Passport</li>
+    <li>Academic Transcripts & Certificates</li>
+    <li>German or English Proficiency Test (TestDaF/DSH/IELTS/TOEFL)</li>
+    <li>Proof of Funds</li>
+    <li>Offer Letter from a German University</li>
+  </ul>
+
+  <h2>Germany Student Visa</h2>
+  <p>
+    Apply for a national visa (student visa) via the German consulate using the university acceptance letter, proof of funds (blocked account), and required documents.
+  </p>
+</section>
+
+{/* Student Life */}
+<section className="germany-life" style={{ maxWidth: "1100px", margin: "60px auto", padding: "0 20px" }}>
+  <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "40px" }}>
+
+    {/* Image Column */}
+    <div style={{ flex: "1 1 400px" }}>
+      <img
+        src="/assets/germany-universities/student-life.jpg"
+        alt="Student Life in Germany"
+        style={{ width: "100%", borderRadius: "16px", boxShadow: "0 10px 25px rgba(0,0,0,0.15)", transition: "transform 0.3s ease" }}
+        onMouseEnter={e => e.currentTarget.style.transform = "scale(1.03)"}
+        onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}
+      />
+    </div>
+
+    {/* Text Column */}
+    <div style={{ flex: "1 1 500px" }}>
+      <h2>Student Life in Germany</h2>
+      <p>
+        Germany offers a multicultural and student-friendly environment with vibrant cities, historic campuses, and extensive cultural experiences. Students can enjoy festivals, networking events, internships, and part-time job opportunities.
+      </p>
+    </div>
+
+  </div>
+</section>
+
       <EnrollSection country="Germany" />
 
       {/* ✅ FAQs */}

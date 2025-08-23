@@ -214,71 +214,89 @@ function Italy() {
         </p>
       </section>
 
-      {/* ✅ Cost & Scholarships */}
-      <section className="italy-cost">
-        <h2>Cost of Studying in Italy</h2>
-        <p>
-          Tuition fees in public universities range from €1,000 to €4,000 per
-          year. Living expenses are moderate, averaging €7,000–€12,000 annually
-          including rent, food, transport, and leisure.
-        </p>
-        <h3>Scholarships in Italy</h3>
-        <ul>
-          <li>Invest Your Talent in Italy</li>
-          <li>Italian Government Scholarships</li>
-          <li>University Tuition Fee Waivers</li>
-          <li>Regional & Merit-Based Grants</li>
-        </ul>
-        <img
-          src="/assets/italy-universities/italy-scholarship.jpg"
-          alt="Scholarships in Italy"
-          className="scholarship-img"
-        />
-      </section>
+   {/* Cost of Study & Scholarships */}
+<section className="italy-cost" style={{ maxWidth: "1100px", margin: "60px auto", padding: "0 20px" }}>
+  <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "40px" }}>
 
-      {/* ✅ Career Prospects */}
-      <section className="italy-career">
-        <h2>Career Prospects in Italy</h2>
-        <p>
-          Italy’s industries in fashion, automotive, tourism, and engineering
-          offer great job potential. Graduates can apply for a 1-year stay-back
-          visa to find employment or start internships in top sectors.
-        </p>
-      </section>
+    {/* Text Column */}
+    <div style={{ flex: "1 1 500px" }}>
+      <h2>Cost of Studying in Italy</h2>
+      <p>
+        Tuition fees range from €900 - €4,000 per year for public universities and €6,000 - €20,000 for private institutions. Living costs vary by city, averaging €10,000 - €15,000 per year.
+      </p>
+      <h3>Scholarships in Italy</h3>
+      <ul>
+        <li>Italian Government Scholarships</li>
+        <li>University-Specific Scholarships</li>
+        <li>International Student Financial Aid Programs</li>
+        <li>Invest Your Talent Scholarships</li>
+      </ul>
+    </div>
 
-      {/* ✅ Documents & Visa Process */}
-      <section className="italy-documents">
-        <h2>Documents Required</h2>
-        <ul>
-          <li>Valid Passport</li>
-          <li>Academic Transcripts & Degree Certificate</li>
-          <li>Proof of English or Italian Language Proficiency</li>
-          <li>Motivation Letter & Curriculum Vitae</li>
-          <li>Financial Proof / Bank Statement</li>
-          <li>Admission Letter from Italian University</li>
-        </ul>
+    {/* Image Column */}
+    <div style={{ flex: "1 1 400px" }}>
+      <img
+        src="/assets/italy-universities/italy-scholarship.jpg"
+        alt="Scholarships in Italy"
+        className="scholarship-img"
+        style={{ width: "100%", borderRadius: "16px", boxShadow: "0 10px 25px rgba(0,0,0,0.15)", transition: "transform 0.3s ease" }}
+        onMouseEnter={e => e.currentTarget.style.transform = "scale(1.03)"}
+        onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}
+      />
+    </div>
+  </div>
+</section>
 
-        <h2>Italy Student Visa</h2>
-        <p>
-          International students must apply for a D-type student visa at their
-          nearest Italian consulate. This includes submitting all admission and
-          financial documents and attending a visa interview.
-        </p>
-      </section>
+{/* Career Prospects */}
+<section className="italy-career" style={{ maxWidth: "900px", margin: "60px auto", padding: "0 20px" }}>
+  <h2>Career Prospects in Italy</h2>
+  <p>
+    Italy offers opportunities in Fashion, Design, Engineering, Tourism, and Healthcare. International students can work part-time during studies and may apply for post-graduation work permits to gain professional experience.
+  </p>
+</section>
 
-      {/* ✅ Student Life */}
-      <section className="italy-life">
-        <h2>Student Life in Italy</h2>
-        <p>
-          Student life in Italy is vibrant and culturally enriching — from
-          enjoying Renaissance art and Roman history to indulging in Italian
-          cuisine and student discounts in museums, travel, and more.
-        </p>
-        <img
-          src="/assets/italy-universities/student-life.jpg"
-          alt="Student Life in Italy"
-        />
-      </section>
+{/* Documents & Visa Process */}
+<section className="italy-documents" style={{ maxWidth: "900px", margin: "60px auto", padding: "0 20px" }}>
+  <h2>Documents Required</h2>
+  <ul>
+    <li>Valid Passport</li>
+    <li>Academic Transcripts & Certificates</li>
+    <li>Italian or English Proficiency Test (CILS/IELTS/TOEFL)</li>
+    <li>Proof of Funds</li>
+    <li>Offer Letter from an Italian University</li>
+  </ul>
+
+  <h2>Italy Student Visa</h2>
+  <p>
+    Apply for a student visa via the Italian consulate using the university acceptance letter, proof of funds, health insurance, and required documents.
+  </p>
+</section>
+
+{/* Student Life */}
+<section className="italy-life" style={{ maxWidth: "1100px", margin: "60px auto", padding: "0 20px" }}>
+  <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "40px" }}>
+
+    {/* Image Column */}
+    <div style={{ flex: "1 1 400px" }}>
+      <img
+        src="/assets/italy-universities/student-life.jpg"
+        alt="Student Life in Italy"
+        style={{ width: "100%", borderRadius: "16px", boxShadow: "0 10px 25px rgba(0,0,0,0.15)", transition: "transform 0.3s ease" }}
+        onMouseEnter={e => e.currentTarget.style.transform = "scale(1.03)"}
+        onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}
+      />
+    </div>
+
+    {/* Text Column */}
+    <div style={{ flex: "1 1 500px" }}>
+      <h2>Student Life in Italy</h2>
+      <p>
+        Italy offers a rich cultural and historical student experience with picturesque campuses, vibrant cities, and diverse cultural activities. Students can enjoy festivals, internships, culinary experiences, and networking opportunities.
+      </p>
+    </div>
+
+  </div>
+</section>
 
       <EnrollSection country="Italy" />
 

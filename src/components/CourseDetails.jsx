@@ -2,6 +2,8 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
 
+
+
 function CourseDetails() {
   const { country, courseTitle } = useParams();
 
@@ -20,11 +22,6 @@ const coursesData = {
         "1-year accelerated MBA available",
         "Strong alumni networks",
         "High employability in global firms",
-      ],
-      internships: [
-        "Consulting Firms (PwC, Deloitte, EY)",
-        "Financial Institutions (HSBC, Barclays)",
-        "Global Tech Companies (Google, Amazon, Microsoft UK)",
       ],
       careers: ["Business Manager", "Consultant", "Entrepreneur", "Marketing Director"],
       averageSalary: "£45,000 - £90,000",
@@ -53,8 +50,8 @@ const coursesData = {
       eligibility: "Bachelor’s in Computer Science, Engineering, or related, IELTS 6.5+",
       description:
         "UK AI programs focus on machine learning, robotics, and intelligent systems for industries of the future.",
-      careers: ["AI Engineer", "Data Scientist", "Robotics Engineer"],
       universities: ["University of Cambridge", "University of Oxford", "Imperial College London"],
+      careers: ["AI Engineer", "Data Scientist", "Robotics Engineer"],
       benefits: [
         "UK is a leader in robotics and AI ethics",
         "Opportunities in healthcare AI, fintech, and defense",
@@ -68,8 +65,8 @@ const coursesData = {
       eligibility: "High school diploma (LLB) or Bachelor’s degree (LLM), IELTS 6.5+",
       description:
         "UK Law degrees are globally recognized and prepare students for careers in legal practice, policy-making, and corporate law.",
-      careers: ["Solicitor", "Barrister", "Legal Advisor"],
       topUniversities: ["King’s College London", "University of Edinburgh", "Durham University"],
+      careers: ["Solicitor", "Barrister", "Legal Advisor"],
       benefits: [
         "Law graduates eligible for SQE (Solicitor exams)",
         "International recognition of UK law degrees",
@@ -118,10 +115,7 @@ const coursesData = {
         "Finance courses in the USA provide skills in investment, banking, and corporate finance for global markets.",
       specializations: ["Corporate Finance", "Investment Banking", "Risk Management", "Fintech"],
       topUniversities: ["Harvard", "Wharton (UPenn)", "Stanford", "NYU Stern"],
-      benefits: [
-        "Wall Street exposure",
-        "High ROI with global career opportunities",
-      ],
+      benefits: ["Wall Street exposure", "High ROI with global career opportunities"],
       internships: ["Goldman Sachs", "JP Morgan", "Deloitte"],
       careers: ["Financial Analyst", "Investment Banker", "Portfolio Manager"],
       averageSalary: "USD 70,000 - 120,000",
@@ -141,7 +135,138 @@ const coursesData = {
     },
   ],
 
-  // ✅ Special Pathway Programs
+  Europe: [
+    {
+      title: "Environmental Science",
+      duration: "2 years",
+      fees: "€10,000 - €20,000 per year",
+      eligibility: "Bachelor’s in Science, IELTS 6.0+",
+      description:
+        "Programs in Europe emphasize sustainability, climate change, and conservation practices.",
+      careers: ["Environmental Consultant", "Climate Analyst", "Researcher"],
+    },
+    {
+      title: "Accounting",
+      duration: "3-4 years",
+      fees: "€8,000 - €18,000 per year",
+      eligibility: "High school diploma or Bachelor’s, IELTS 6.0+",
+      description: "Accounting in Europe offers globally accepted qualifications like ACCA and IFRS.",
+      careers: ["Chartered Accountant", "Financial Auditor", "Tax Consultant"],
+    },
+    {
+      title: "Medicine",
+      duration: "5-6 years",
+      fees: "€15,000 - €30,000 per year",
+      eligibility: "High school diploma (Biology, Chemistry), IELTS 6.5+",
+      description: "European medical schools are globally recognized for high-quality education.",
+      careers: ["Doctor", "Surgeon", "Medical Researcher"],
+    },
+    {
+      title: "Information Technology",
+      duration: "3 years (Bachelor’s) / 2 years (Master’s)",
+      fees: "€9,000 - €20,000 per year",
+      eligibility: "Bachelor’s in relevant field, IELTS 6.0+",
+      description:
+        "IT programs cover cybersecurity, cloud computing, and software development in Europe’s tech hubs.",
+      careers: ["Software Engineer", "IT Consultant", "Cybersecurity Specialist"],
+    },
+    
+  
+    {
+      title: "Business Analytics",
+      duration: "1-2 years",
+      fees: "€12,000 - €22,000 per year",
+      eligibility: "Bachelor’s in Business, IT, or related field",
+      description: "Focuses on data-driven business solutions and decision-making.",
+      careers: ["Business Analyst", "Data Consultant", "Strategy Analyst"],
+    },
+  ],
+
+  Dubai: [
+    // {
+    //   title: "Environmental Science",
+    //   duration: "2-3 years",
+    //   fees: "AED 40,000 - AED 70,000 per year",
+    //   eligibility: "Bachelor’s in Science, IELTS 6.0+",
+    //   description:
+    //     "Dubai’s Environmental Science programs emphasize sustainability in desert and urban ecosystems.",
+    //   careers: ["Sustainability Consultant", "Research Scientist"],
+    // },
+      {
+      title: "Architecture",
+      duration: "3-5 years",
+      fees: "€10,000 - €20,000 per year",
+      eligibility: "High school diploma with Math/Art background, IELTS 6.0+",
+      description:
+        "Architecture programs in Europe emphasize design, sustainability, and cultural heritage.",
+      careers: ["Architect", "Urban Planner", "Interior Designer"],
+    },
+   {
+      title: "Hospitality Management",
+      duration: "3-4 years",
+      fees: "€12,000 - €25,000 per year",
+      eligibility: "High school diploma, IELTS 6.0+",
+      description:
+        "Europe is home to some of the best hospitality schools, offering global career opportunities.",
+      careers: ["Hotel Manager", "Event Manager", "Tourism Consultant"],
+    },
+    {
+      title: "Information Technology",
+      duration: "3-4 years",
+      fees: "AED 40,000 - AED 75,000 per year",
+      eligibility: "High school diploma or Bachelor’s",
+      description:
+        "Dubai IT programs cover AI, cloud, and cybersecurity with ties to tech companies in the UAE.",
+      careers: ["Software Developer", "Cybersecurity Specialist", "IT Consultant"],
+    },
+     {
+      title: "Business Analytics",
+      duration: "1-2 years",
+      fees: "SGD 20,000 - SGD 40,000 per year",
+      eligibility: "Bachelor’s in Business, IT, or related field",
+      description: "Programs in Singapore provide practical exposure to analytics and data science.",
+      careers: ["Business Analyst", "Data Consultant"],
+    },
+  ],
+
+  Singapore: [
+    {
+      title: "Business Analytics",
+      duration: "1-2 years",
+      fees: "SGD 20,000 - SGD 40,000 per year",
+      eligibility: "Bachelor’s in Business, IT, or related field",
+      description: "Programs in Singapore provide practical exposure to analytics and data science.",
+      careers: ["Business Analyst", "Data Consultant"],
+    },
+    {
+      title: "Cybersecurity",
+      duration: "1-2 years",
+      fees: "SGD 18,000 - SGD 35,000 per year",
+      eligibility: "Bachelor’s in IT/CS or related, IELTS 6.0+",
+      description:
+        "Singapore cybersecurity programs emphasize digital safety in finance and tech industries.",
+      careers: ["Cybersecurity Analyst", "Security Engineer", "Network Specialist"],
+    },
+    {
+      title: "Marketing",
+      duration: "1-2 years",
+      fees: "SGD 15,000 - SGD 30,000 per year",
+      eligibility: "Bachelor’s in Business/Marketing",
+      description:
+        "Marketing programs focus on digital marketing, branding, and Asia-Pacific markets.",
+      careers: ["Marketing Manager", "Digital Strategist", "Brand Consultant"],
+    },
+    {
+      title: "Finance",
+      duration: "2 years",
+      fees: "SGD 20,000 - SGD 45,000 per year",
+      eligibility: "Bachelor’s in Business/Commerce",
+      description:
+        "Finance programs in Singapore provide exposure to Asia’s financial hub.",
+      careers: ["Financial Analyst", "Banking Specialist", "Wealth Manager"],
+    },
+  ],
+
   "Special Pathway Programs": [
     {
       title: "2+2 (China + Japan)",
@@ -236,7 +361,7 @@ const coursesData = {
         </ul>
       </div>
 
-      <Link className="back-link" to="/">
+      <Link className="back-link" to="/destinations">
         ← Back to Courses
       </Link>
     </div>

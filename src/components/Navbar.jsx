@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import SmartLink from "./SmartLink"; // ✅ Use this instead of Link/NavLink
+import SmartLink from "./SmartLink"; // ✅ Use SmartLink for routing
 
 function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -18,12 +18,14 @@ function Navbar() {
     setDropdownOpen({ study: false, services: false, whatWeDo: false });
   };
 
+  // ✅ Countries for Study Abroad dropdown
   const countries = [
     "UK", "Canada", "Singapore", "Ireland", "France", "Germany",
     "Switzerland", "Dubai", "Spain", "Malaysia", "Mauritius",
     "India", "Netherlands", "Italy",
   ];
 
+  // ✅ Student Services
   const studentServices = [
     { name: "Career Counseling", path: "/career-counseling" },
     { name: "Course Selection", path: "/course-selection" },
@@ -41,6 +43,7 @@ function Navbar() {
     { name: "Continuous Communication", path: "/continuous-communication" },
   ];
 
+  // ✅ What We Do dropdown
   const whatWeDoItems = [
     { name: "What We Do", path: "/what-we-do" },
     { name: "About Us", path: "/about" },
@@ -49,12 +52,14 @@ function Navbar() {
 
   return (
     <nav className="navbar">
+      {/* Logo */}
       <div className="logo">
         <SmartLink to="/" onClick={closeAllMenus}>
           <img src="/assets/logo.png" alt="Logo" />
         </SmartLink>
       </div>
 
+      {/* Mobile Hamburger */}
       <div
         className="hamburger"
         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -62,38 +67,44 @@ function Navbar() {
         ☰
       </div>
 
+      {/* Nav Links */}
       <ul className={`nav-links ${mobileMenuOpen ? "active" : ""}`}>
-        {/* Study Abroad */}
+        {/* Study Abroad Dropdown */}
         <li className="dropdown">
           <span onClick={() => toggleDropdown("study")}>
             Study Abroad ▾
           </span>
           <ul className={`dropdown-menu ${dropdownOpen.study ? "active" : ""}`}>
-            {countries.map((c, i) => (
+            {countries.map((country, i) => (
               <li key={i}>
-                <SmartLink to={`/study-in/${c.toLowerCase()}`} onClick={closeAllMenus}>
-                  {c}
+                <SmartLink
+                  to={`/study-in/${country.toLowerCase()}`}
+                  onClick={closeAllMenus}
+                >
+                  {country}
                 </SmartLink>
               </li>
             ))}
           </ul>
         </li>
 
-        {/* Student Services */}
+        {/* Student Services Dropdown */}
         <li className="dropdown">
           <span onClick={() => toggleDropdown("services")}>
             Student Services ▾
           </span>
           <ul className={`dropdown-menu ${dropdownOpen.services ? "active" : ""}`}>
-            {studentServices.map((s, i) => (
+            {studentServices.map((service, i) => (
               <li key={i}>
-                <SmartLink to={s.path} onClick={closeAllMenus}>{s.name}</SmartLink>
+                <SmartLink to={service.path} onClick={closeAllMenus}>
+                  {service.name}
+                </SmartLink>
               </li>
             ))}
           </ul>
         </li>
 
-        {/* What We Do */}
+        {/* What We Do Dropdown */}
         <li className="dropdown">
           <span onClick={() => toggleDropdown("whatWeDo")}>
             What We Do ▾
@@ -101,16 +112,23 @@ function Navbar() {
           <ul className={`dropdown-menu ${dropdownOpen.whatWeDo ? "active" : ""}`}>
             {whatWeDoItems.map((item, i) => (
               <li key={i}>
-                <SmartLink to={item.path} onClick={closeAllMenus}>{item.name}</SmartLink>
+                <SmartLink to={item.path} onClick={closeAllMenus}>
+                  {item.name}
+                </SmartLink>
               </li>
             ))}
           </ul>
         </li>
 
-        <li><SmartLink to="/events" onClick={closeAllMenus}>Events</SmartLink></li>
-        <li><SmartLink to="/resources" onClick={closeAllMenus}>Resources</SmartLink></li>
+        {/* Blogs Link */}
+        <li>
+          <SmartLink to="/trending-blogs" onClick={closeAllMenus}>
+            Blogs
+          </SmartLink>
+        </li>
       </ul>
 
+      {/* Contact Button */}
       <div className="contact-btn">
         <SmartLink to="/contact" onClick={closeAllMenus}>
           <button>Contact Us</button>

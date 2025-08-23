@@ -9,19 +9,25 @@ export default function ScrollToTop() {
   const positions = useRef({});
   const [isVisible, setIsVisible] = useState(false);
 
-  // Save scroll position before route change
+  // ✅ Save scroll position on route change
   useEffect(() => {
+    const handleBeforeUnload = () => {
+      positions.current[pathname] = window.scrollY;
+    };
+
+    window.addEventListener("beforeunload", handleBeforeUnload);
     return () => {
       positions.current[pathname] = window.scrollY;
+      window.removeEventListener("beforeunload", handleBeforeUnload);
     };
   }, [pathname]);
 
-  // Restore position or scroll to top when route changes
+  // ✅ Restore position (POP) or scroll to top (PUSH/REPLACE)
   useEffect(() => {
     const targetY =
       navigationType === "POP" ? positions.current[pathname] || 0 : 0;
 
-    const scrollDuration = 500; // a bit smoother
+    const scrollDuration = 500;
     const startY = window.scrollY;
     const distance = targetY - startY;
     let startTime;
@@ -30,7 +36,6 @@ export default function ScrollToTop() {
       if (!startTime) startTime = timestamp;
       const progress = Math.min((timestamp - startTime) / scrollDuration, 1);
 
-      // spring-like easing
       const ease =
         progress < 0.5
           ? 4 * progress * progress * progress
@@ -56,7 +61,7 @@ export default function ScrollToTop() {
     };
   }, []);
 
-  // Manual scroll to top
+  // Manual scroll-to-top button
   const handleScrollTop = () => {
     const scrollDuration = 500;
     const startY = window.scrollY;
@@ -94,3 +99,4 @@ export default function ScrollToTop() {
     </>
   );
 }
+              

@@ -206,69 +206,92 @@ function Singapore() {
         </p>
       </section>
 
-      {/* ✅ Cost & Scholarships */}
-      <section className="singapore-cost">
-        <h2>Cost of Studying in Singapore</h2>
-        <p>
-          Tuition fees in Singapore range between SGD 10,000 – SGD 30,000 per
-          year. Living expenses range from SGD 8,000 – SGD 12,000 annually.
-        </p>
-        <h3>Scholarships in Singapore</h3>
-        <ul>
-          <li>SINGA Scholarship</li>
-          <li>MOE Tuition Grant Scheme</li>
-          <li>NUS & NTU Merit Scholarships</li>
-          <li>University-specific Financial Aid</li>
-        </ul>
-        <img
-          src="/assets/singapore-universities/singapore-scholarship.jpg"
-          alt="Scholarships in Singapore"
-          className="scholarship-img"
-        />
-      </section>
+   {/* Cost of Study & Scholarships */}
+<section className="singapore-cost" style={{ maxWidth: "1100px", margin: "60px auto", padding: "0 20px" }}>
+  <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "40px" }}>
 
-      {/* ✅ Career Prospects */}
-      <section className="singapore-career">
-        <h2>Career Prospects in Singapore</h2>
-        <p>
-          Singapore is a financial and tech hub with jobs in banking, IT,
-          logistics, life sciences, and hospitality. Graduates benefit from
-          strong placement support and international exposure.
-        </p>
-      </section>
+    {/* Text Column */}
+    <div style={{ flex: "1 1 500px" }}>
+      <h2>Cost of Studying in Singapore</h2>
+      <p>
+        Tuition fees range from SGD 18,000 - SGD 45,000 annually depending on
+        the program and university. Living costs vary by location, averaging
+        SGD 12,000 - SGD 20,000 per year.
+      </p>
+      <h3>Scholarships in Singapore</h3>
+      <ul>
+        <li>ASEAN Scholarships</li>
+        <li>Singapore Government Scholarships</li>
+        <li>University-Specific Scholarships</li>
+        <li>International Student Financial Aid Programs</li>
+      </ul>
+    </div>
 
-      {/* ✅ Documents & Visa Process */}
-      <section className="singapore-documents">
-        <h2>Documents Required</h2>
-        <ul>
-          <li>Valid Passport</li>
-          <li>Academic Transcripts & Certificates</li>
-          <li>English Language Proficiency Proof</li>
-          <li>Passport-sized Photographs</li>
-          <li>Letter of Offer from University</li>
-        </ul>
+    {/* Image Column */}
+    <div style={{ flex: "1 1 400px" }}>
+      <img
+        src="/assets/singapore-universities/singapore-scholarship.jpg"
+        alt="Scholarships in Singapore"
+        className="scholarship-img"
+        style={{ width: "100%", borderRadius: "16px", boxShadow: "0 10px 25px rgba(0,0,0,0.15)", transition: "transform 0.3s ease" }}
+        onMouseEnter={e => e.currentTarget.style.transform = "scale(1.03)"}
+        onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}
+      />
+    </div>
+  </div>
+</section>
 
-        <h2>Singapore Student Pass</h2>
-        <p>
-          Apply for a Student Pass via ICA. The process includes submitting
-          documents through SOLAR, obtaining a letter of acceptance, and
-          attending an interview if required.
-        </p>
-      </section>
+{/* Career Prospects */}
+<section className="singapore-career" style={{ maxWidth: "900px", margin: "60px auto", padding: "0 20px" }}>
+  <h2>Career Prospects in Singapore</h2>
+  <p>
+    Singapore offers strong job opportunities for graduates, particularly in Finance, Technology, Engineering, Healthcare, and Research. International students can work part-time during studies and benefit from the Employment Pass or S Pass for post-graduation work.
+  </p>
+</section>
 
-      {/* ✅ Student Life */}
-      <section className="singapore-life">
-        <h2>Student Life in Singapore</h2>
-        <p>
-          Student life in Singapore is vibrant, with excellent public transport,
-          food, safety, and community activities. Students enjoy both academic
-          rigor and cultural experiences.
-        </p>
-        <img
-          src="/assets/singapore-universities/student-life.jpg"
-          alt="Student Life in Singapore"
-        />
-      </section>
+{/* Documents & Visa Process */}
+<section className="singapore-documents" style={{ maxWidth: "900px", margin: "60px auto", padding: "0 20px" }}>
+  <h2>Documents Required</h2>
+  <ul>
+    <li>Valid Passport</li>
+    <li>Academic Transcripts & Certificates</li>
+    <li>English Proficiency Test (IELTS/TOEFL)</li>
+    <li>Proof of Funds</li>
+    <li>Offer Letter from a Singapore University</li>
+  </ul>
+
+  <h2>Singapore Student Visa</h2>
+  <p>
+    Apply for a Student Pass via the Immigration & Checkpoints Authority (ICA) using the university acceptance letter, proof of funds, and required documents.
+  </p>
+</section>
+
+{/* Student Life */}
+<section className="singapore-life" style={{ maxWidth: "1100px", margin: "60px auto", padding: "0 20px" }}>
+  <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "40px" }}>
+
+    {/* Image Column */}
+    <div style={{ flex: "1 1 400px" }}>
+      <img
+        src="/assets/singapore-universities/student-life.jpg"
+        alt="Student Life in Singapore"
+        style={{ width: "100%", borderRadius: "16px", boxShadow: "0 10px 25px rgba(0,0,0,0.15)", transition: "transform 0.3s ease" }}
+        onMouseEnter={e => e.currentTarget.style.transform = "scale(1.03)"}
+        onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}
+      />
+    </div>
+
+    {/* Text Column */}
+    <div style={{ flex: "1 1 500px" }}>
+      <h2>Student Life in Singapore</h2>
+      <p>
+        Singapore offers a vibrant, multicultural student environment with modern campuses, extensive networking opportunities, and exciting cultural experiences. Students can enjoy city life, internships, and numerous academic and extracurricular activities.
+      </p>
+    </div>
+
+  </div>
+</section>
+
 
       <EnrollSection country="Singapore" />
 
