@@ -57,6 +57,7 @@ const EnglishTaught = lazy(() => import("./pages/blog/EnglishTaught"));
 const ManagingFinances = lazy(() => import("./pages/blog/ManagingFinances"));
 const Budgeting = lazy(() => import("./pages/blog/Budgeting"));
 const PopularCourses2025 = lazy(() => import("./pages/blog/PopularCourses2025"));
+const ChooseCountry = lazy(() => import("./pages/blog/ChooseCountry"));
 
 // Special Programs
 const SpecialPathwayPrograms = lazy(() => import("./pages/SpecialPathwayPrograms"));
@@ -177,6 +178,7 @@ function AnimatedRoutes() {
           <Route path="/blog/managing-finances" element={<PageWrapper><ManagingFinances /></PageWrapper>} />
           <Route path="/blog/budgeting" element={<PageWrapper><Budgeting /></PageWrapper>} />
           <Route path="/blog/popular-courses-2025" element={<PageWrapper><PopularCourses2025 /></PageWrapper>} />
+          <Route path="/blog/choose-country" element={<PageWrapper><ChooseCountry /></PageWrapper>} />
 
           {/* Services & Other Blogs */}
           <Route path="/blog/admission-guidance" element={<PageWrapper><AdmissionGuidance /></PageWrapper>} />

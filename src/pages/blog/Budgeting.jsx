@@ -1,139 +1,221 @@
-import React from "react";
-
+import React, { useState, useEffect } from "react";
 
 export default function ChooseCountry() {
-  return (
-    <div className="choose-country">
-      <h1 className="heading-primary">
-        How to Choose the Right Country for Your Higher Education
-      </h1>
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
-      <section className="section">
-        <h2 className="heading-secondary">Introduction</h2>
-        <p>
-          Choosing the right country for higher education is one of the most important decisions a student can make. 
-          It affects your academic growth, career opportunities, and personal development. With numerous options like Europe, 
-          North America, Asia, and the Middle East, it’s essential to consider multiple factors to make an informed choice.
-        </p>
-      </section>
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
-      <section className="section">
-        <h2 className="heading-secondary">Key Factors to Consider</h2>
-        <ul className="list">
-          <li>
-            <strong>Academic Programs and Course Availability:</strong> Look for countries that offer programs aligned with your career goals. 
-            Example: Engineering in Germany, Business in UK/France, Data Science in Netherlands/Ireland. Check curriculum, research opportunities, and global recognition.
-          </li>
-          <li>
-            <strong>Tuition Fees and Scholarships:</strong> Europe offers affordable or tuition-free programs in countries like Germany, Poland, and France. 
-            North America offers high-quality education but higher tuition, with scholarship options. Consider scholarships, grants, and financial aid opportunities.
-          </li>
-          <li>
-            <strong>Language and Cultural Environment:</strong> If you’re fluent in English, countries with English-taught programs are easier to adapt to. 
-            For non-English countries (Germany, France, Spain), check English-taught options. Consider cultural fit and adaptability for a comfortable student life.
-          </li>
-          <li>
-            <strong>Post-Study Work Opportunities:</strong> Countries like Germany, Netherlands, Canada, and Ireland offer post-study work visas for 1–3 years. 
-            Work experience abroad can enhance your career prospects and international exposure.
-          </li>
-          <li>
-            <strong>Cost of Living:</strong> Major cities in Europe and North America are expensive, while smaller cities or countries like Poland, Portugal, or Vietnam are more affordable. Include rent, food, transportation, and healthcare in your budget.
-          </li>
-          <li>
-            <strong>Safety and Lifestyle:</strong> Research safety, healthcare, and local regulations for international students. 
-            Student-friendly cities often have efficient public transport, social activities, and support networks.
-          </li>
-        </ul>
-      </section>
+  const styles = {
+    container: {
+      fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+      color: "#333",
+      lineHeight: "1.6",
+      background: "#f9f9f9",
+      padding: isMobile ? "20px 10px" : "40px 20px",
+    },
+    headingPrimary: {
+      textAlign: "center",
+      fontSize: isMobile ? "1.8rem" : "clamp(2rem, 4vw, 2.8rem)",
+      fontWeight: "800",
+      marginBottom: isMobile ? "25px" : "40px",
+      background: "linear-gradient(135deg, #6a11cb, #2575fc)",
+      WebkitBackgroundClip: "text",
+      color: "transparent",
+    },
+    section: {
+      marginBottom: isMobile ? "25px" : "50px",
+      background: "#fff",
+      borderRadius: "12px",
+      padding: isMobile ? "15px 15px" : "25px 30px",
+      boxShadow: "0 8px 20px rgba(0,0,0,0.08)",
+    },
+    headingSecondary: {
+      fontSize: isMobile ? "1.3rem" : "clamp(1.5rem, 3vw, 2rem)",
+      fontWeight: "700",
+      marginBottom: isMobile ? "10px" : "15px",
+      color: "#1a1a1a",
+      borderLeft: "5px solid #2575fc",
+      paddingLeft: "12px",
+    },
+    paragraph: {
+      fontSize: isMobile ? "0.9rem" : "1rem",
+      color: "#555",
+      marginBottom: "10px",
+    },
+    list: {
+      paddingLeft: "20px",
+      color: "#444",
+      fontSize: isMobile ? "0.9rem" : "1rem",
+    },
+    listItem: {
+      marginBottom: "10px",
+    },
+    tableContainer: {
+      overflowX: isMobile ? "auto" : "visible",
+      marginTop: "15px",
+    },
+    table: {
+      width: "100%",
+      borderCollapse: "collapse",
+      borderRadius: "10px",
+      overflow: "hidden",
+      fontSize: isMobile ? "0.8rem" : "1rem",
+      boxShadow: "0 5px 15px rgba(0,0,0,0.1)",
+    },
+    th: {
+      background: "linear-gradient(90deg, #6a11cb, #2575fc)",
+      color: "#fff",
+      padding: "10px 15px",
+      textAlign: "left",
+      fontWeight: "600",
+      whiteSpace: "nowrap",
+    },
+    td: {
+      padding: "10px 15px",
+      borderBottom: "1px solid #ddd",
+      background: "#fff",
+      whiteSpace: "nowrap",
+    },
+    tdAlt: {
+      background: "#f9f9f9",
+    },
+    steps: {
+      paddingLeft: "20px",
+      fontSize: isMobile ? "0.9rem" : "1rem",
+      color: "#444",
+      lineHeight: "1.6",
+    },
+    ctaText: {
+      marginTop: "15px",
+      padding: isMobile ? "10px 12px" : "15px 20px",
+      background: "rgba(37,117,252,0.1)",
+      borderLeft: "4px solid #2575fc",
+      borderRadius: "8px",
+      fontStyle: "italic",
+      color: "#1a1a1a",
+      fontWeight: "500",
+      fontSize: isMobile ? "0.9rem" : "1rem",
+    },
+  };
 
-      <section className="section">
-        <h2 className="heading-secondary">Country-Wise Highlights</h2>
-        <table className="country-table">
+  const renderTable = (data) => {
+    if (isMobile) {
+      // Stacked card view for mobile
+      return data.map((row, idx) => (
+        <div key={idx} style={{ ...styles.section, marginBottom: "15px" }}>
+          <p><strong>Country:</strong> {row.country}</p>
+          <p><strong>Popular Courses:</strong> {row.courses}</p>
+          <p><strong>Key Advantages:</strong> {row.advantages}</p>
+        </div>
+      ));
+    }
+    return (
+      <div style={styles.tableContainer}>
+        <table style={styles.table}>
           <thead>
             <tr>
-              <th>Country</th>
-              <th>Popular Courses</th>
-              <th>Key Advantages</th>
+              <th style={styles.th}>Country</th>
+              <th style={styles.th}>Popular Courses</th>
+              <th style={styles.th}>Key Advantages</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td data-label="Country">Germany</td>
-              <td data-label="Popular Courses">Engineering, Data Science</td>
-              <td data-label="Key Advantages">Affordable, high-quality, post-study work</td>
-            </tr>
-            <tr>
-              <td data-label="Country">UK</td>
-              <td data-label="Popular Courses">Business, Management, Arts</td>
-              <td data-label="Key Advantages">Global recognition, diverse culture</td>
-            </tr>
-            <tr>
-              <td data-label="Country">Netherlands</td>
-              <td data-label="Popular Courses">Data Science, Engineering</td>
-              <td data-label="Key Advantages">English programs, innovative education</td>
-            </tr>
-            <tr>
-              <td data-label="Country">France</td>
-              <td data-label="Popular Courses">Business, Hospitality, Arts</td>
-              <td data-label="Key Advantages">Affordable, scholarships, rich culture</td>
-            </tr>
-            <tr>
-              <td data-label="Country">Canada</td>
-              <td data-label="Popular Courses">Engineering, Business, IT</td>
-              <td data-label="Key Advantages">Safe, post-study work, quality education</td>
-            </tr>
-            <tr>
-              <td data-label="Country">Singapore</td>
-              <td data-label="Popular Courses">Business, Data Science, IT</td>
-              <td data-label="Key Advantages">Global hub, English-taught, strong job market</td>
-            </tr>
-            <tr>
-              <td data-label="Country">Philippines</td>
-              <td data-label="Popular Courses">MBBS</td>
-              <td data-label="Key Advantages">English-taught, NMC-approved, affordable</td>
-            </tr>
+            {data.map((row, idx) => (
+              <tr key={idx}>
+                <td style={styles.td}>{row.country}</td>
+                <td style={styles.td}>{row.courses}</td>
+                <td style={styles.td}>{row.advantages}</td>
+              </tr>
+            ))}
           </tbody>
         </table>
+      </div>
+    );
+  };
+
+  const countryData = [
+    { country: "Germany", courses: "Engineering, Data Science", advantages: "Affordable, high-quality, post-study work" },
+    { country: "UK", courses: "Business, Management, Arts", advantages: "Global recognition, diverse culture" },
+    { country: "Netherlands", courses: "Data Science, Engineering", advantages: "English programs, innovative education" },
+    { country: "France", courses: "Business, Hospitality, Arts", advantages: "Affordable, scholarships, rich culture" },
+    { country: "Canada", courses: "Engineering, Business, IT", advantages: "Safe, post-study work, quality education" },
+    { country: "Singapore", courses: "Business, Data Science, IT", advantages: "Global hub, strong job market" },
+    { country: "Philippines", courses: "MBBS", advantages: "English-taught, NMC-approved, affordable" },
+  ];
+
+  return (
+    <div style={styles.container}>
+      <h1 style={styles.headingPrimary}>How to Choose the Right Country for Your Higher Education</h1>
+
+      {/* Introduction */}
+      <section style={styles.section}>
+        <h2 style={styles.headingSecondary}>Introduction</h2>
+        <p style={styles.paragraph}>
+          Choosing the right country for higher education is one of the most important decisions a student can make.
+        </p>
       </section>
 
-      <section className="section">
-        <h2 className="heading-secondary">Step-by-Step Approach to Choosing the Right Country</h2>
-        <ol className="steps">
-          <li>Identify Your Goals – Shortlist based on your career aspirations and desired field.</li>
-          <li>Research Tuition & Living Costs – Compare programs and total expenses.</li>
-          <li>Check Language Requirements – Look for English-taught programs if needed.</li>
-          <li>Explore Scholarships & Funding – Reduce financial burden with grants.</li>
-          <li>Evaluate Post-Study Work Opportunities – Choose countries with job-friendly policies.</li>
-          <li>Consider Lifestyle & Culture – Ensure you can adapt comfortably.</li>
-          <li>Consult Experts – Seek guidance from study abroad consultants for personalized advice.</li>
+      {/* Key Factors */}
+      <section style={styles.section}>
+        <h2 style={styles.headingSecondary}>Key Factors to Consider</h2>
+        <ul style={styles.list}>
+          <li style={styles.listItem}>Academic Programs and Course Availability</li>
+          <li style={styles.listItem}>Tuition Fees and Scholarships</li>
+          <li style={styles.listItem}>Language and Cultural Environment</li>
+          <li style={styles.listItem}>Post-Study Work Opportunities</li>
+          <li style={styles.listItem}>Cost of Living</li>
+          <li style={styles.listItem}>Safety and Lifestyle</li>
+        </ul>
+      </section>
+
+      {/* Country Highlights */}
+      <section style={styles.section}>
+        <h2 style={styles.headingSecondary}>Country-Wise Highlights</h2>
+        {renderTable(countryData)}
+      </section>
+
+      {/* Steps */}
+      <section style={styles.section}>
+        <h2 style={styles.headingSecondary}>Step-by-Step Approach</h2>
+        <ol style={styles.steps}>
+          <li>Identify Your Goals</li>
+          <li>Research Tuition & Living Costs</li>
+          <li>Check Language Requirements</li>
+          <li>Explore Scholarships & Funding</li>
+          <li>Evaluate Post-Study Work Opportunities</li>
+          <li>Consider Lifestyle & Culture</li>
+          <li>Consult Experts</li>
         </ol>
       </section>
 
-      <section className="section">
-        <h2 className="heading-secondary">FAQs</h2>
-        <ul className="list">
-          <li><strong>Q:</strong> Which country is best for my course? <br /><strong>A:</strong> It depends on your career goals, budget, language preference, and post-study opportunities.</li>
-          <li><strong>Q:</strong> Can I study in a country where English is not the main language? <br /><strong>A:</strong> Yes, many universities offer English-taught programs in Germany, France, Netherlands, and Spain.</li>
-          <li><strong>Q:</strong> Should I choose a country based on rankings? <br /><strong>A:</strong> Rankings are important, but personal fit, course relevance, scholarships, and career prospects matter more.</li>
-          <li><strong>Q:</strong> How can a consultancy help me choose the right country? <br /><strong>A:</strong> Consultants provide personalized guidance, compare options, and help with admissions and scholarships.</li>
+      {/* FAQs */}
+      <section style={styles.section}>
+        <h2 style={styles.headingSecondary}>FAQs</h2>
+        <ul style={styles.list}>
+          <li style={styles.listItem}>Which country is best for my course?</li>
+          <li style={styles.listItem}>Can I study in non-English countries?</li>
+          <li style={styles.listItem}>Should I rely only on rankings?</li>
+          <li style={styles.listItem}>How can a consultancy help?</li>
         </ul>
       </section>
 
-      <section className="section">
-        <h2 className="heading-secondary">Consultancy Support</h2>
-        <ul className="list">
-          <li>Analyze personal goals and career aspirations to select the right country</li>
-          <li>Compare tuition, living costs, and scholarships for different destinations</li>
-          <li>Assist with university selection, applications, and visa processes</li>
-          <li>Provide pre-departure guidance for smooth adaptation</li>
+      {/* Consultancy */}
+      <section style={styles.section}>
+        <h2 style={styles.headingSecondary}>Consultancy Support</h2>
+        <ul style={styles.list}>
+          <li style={styles.listItem}>Analyze personal goals and career aspirations</li>
+          <li style={styles.listItem}>Compare tuition, living costs, and scholarships</li>
+          <li style={styles.listItem}>Assist with applications & visa processes</li>
+          <li style={styles.listItem}>Provide pre-departure guidance</li>
         </ul>
-        <p className="cta-text">
-          “Confused about which country to choose for your higher education? Our experts provide personalized guidance to help you pick the perfect study destination. Book your free consultation today!”
+        <p style={styles.ctaText}>
+          “Confused about which country to choose? Our experts provide personalized guidance to help you pick the perfect study destination. Book your free consultation today!”
         </p>
       </section>
     </div>
   );
 }
-
-
-

@@ -1,14 +1,105 @@
 // src/pages/StudentVisaInterview.jsx
 import React from "react";
 
-
 const StudentVisaInterview = () => {
-  return (
-    <div className="blog-container">
-      <h1>Common Student Visa Interview Questions and How to Prepare</h1>
+  const styles = {
+    page: {
+      fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+      lineHeight: 1.6,
+      color: "#333",
+      backgroundColor: "#f9fafc",
+      padding: "40px 20px",
+      maxWidth: "1000px",
+      margin: "0 auto",
+    },
+    headingPrimary: {
+      fontSize: "2.5rem",
+      fontWeight: "700",
+      color: "#2c3e50",
+      textAlign: "center",
+      marginBottom: "40px",
+    },
+    section: {
+      backgroundColor: "#fff",
+      padding: "30px",
+      marginBottom: "30px",
+      borderRadius: "12px",
+      boxShadow: "0 4px 12px rgba(0,0,0,0.08)",
+    },
+    headingSecondary: {
+      fontSize: "1.75rem",
+      fontWeight: "600",
+      color: "#34495e",
+      marginBottom: "20px",
+      borderLeft: "5px solid #3498db",
+      paddingLeft: "12px",
+    },
+    list: {
+      margin: "0",
+      padding: "0 0 0 20px",
+      color: "#444",
+    },
+    tableWrapper: {
+      overflowX: "auto",
+      marginTop: "15px",
+    },
+    compareTable: {
+      width: "100%",
+      borderCollapse: "collapse",
+      borderRadius: "10px",
+      overflow: "hidden",
+      boxShadow: "0 3px 10px rgba(0,0,0,0.05)",
+      backgroundColor: "#fff",
+      minWidth: "400px", // ensures horizontal scroll on small screens
+    },
+    tableTh: {
+      background: "#3498db",
+      color: "#fff",
+      padding: "12px",
+      textAlign: "left",
+      fontSize: "1rem",
+    },
+    tableTd: {
+      border: "1px solid #eee",
+      padding: "12px",
+      fontSize: "0.95rem",
+    },
+    ctaText: {
+      marginTop: "20px",
+      fontWeight: "600",
+      color: "#2c3e50",
+      fontSize: "1.1rem",
+      background: "#eaf4ff",
+      padding: "15px",
+      borderRadius: "10px",
+      borderLeft: "6px solid #3498db",
+    },
+    strong: {
+      color: "#2c3e50",
+      fontWeight: "600",
+    },
+  };
 
-      <section>
-        <h2>Introduction</h2>
+  const questions = [
+    "Why do you want to study abroad?",
+    "Why did you choose this particular country/university/course?",
+    "What are your future career plans after completing the course?",
+    "How do you plan to fund your education?",
+    "Do you have family or relatives in the country?",
+    "Why not study in your home country?",
+    "Do you intend to return to your home country after studies?",
+    "What is your academic background and achievements?",
+    "How will this course benefit your career?",
+    "Are you aware of the living costs and accommodation in the country?",
+  ];
+
+  return (
+    <div style={styles.page}>
+      <h1 style={styles.headingPrimary}>Common Student Visa Interview Questions and How to Prepare</h1>
+
+      {/* Introduction */}
+      <section style={styles.section}>
+        <h2 style={styles.headingSecondary}>Introduction</h2>
         <p>
           Securing a student visa is a critical step in studying abroad. Visa officers often assess 
           whether a candidate is genuine, prepared, and financially capable. Understanding common 
@@ -16,76 +107,46 @@ const StudentVisaInterview = () => {
         </p>
       </section>
 
-      <section>
-        <h2>Common Student Visa Interview Questions</h2>
-        {/* Responsive table for questions */}
-        <table className="compare-table">
-          <thead>
-            <tr>
-              <th>Question No.</th>
-              <th>Question</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td data-label="Question No.">1</td>
-              <td data-label="Question">Why do you want to study abroad?</td>
-            </tr>
-            <tr>
-              <td data-label="Question No.">2</td>
-              <td data-label="Question">Why did you choose this particular country/university/course?</td>
-            </tr>
-            <tr>
-              <td data-label="Question No.">3</td>
-              <td data-label="Question">What are your future career plans after completing the course?</td>
-            </tr>
-            <tr>
-              <td data-label="Question No.">4</td>
-              <td data-label="Question">How do you plan to fund your education?</td>
-            </tr>
-            <tr>
-              <td data-label="Question No.">5</td>
-              <td data-label="Question">Do you have family or relatives in the country?</td>
-            </tr>
-            <tr>
-              <td data-label="Question No.">6</td>
-              <td data-label="Question">Why not study in your home country?</td>
-            </tr>
-            <tr>
-              <td data-label="Question No.">7</td>
-              <td data-label="Question">Do you intend to return to your home country after studies?</td>
-            </tr>
-            <tr>
-              <td data-label="Question No.">8</td>
-              <td data-label="Question">What is your academic background and achievements?</td>
-            </tr>
-            <tr>
-              <td data-label="Question No.">9</td>
-              <td data-label="Question">How will this course benefit your career?</td>
-            </tr>
-            <tr>
-              <td data-label="Question No.">10</td>
-              <td data-label="Question">Are you aware of the living costs and accommodation in the country?</td>
-            </tr>
-          </tbody>
-        </table>
+      {/* Questions Table */}
+      <section style={styles.section}>
+        <h2 style={styles.headingSecondary}>Common Student Visa Interview Questions</h2>
+        <div style={styles.tableWrapper}>
+          <table style={styles.compareTable}>
+            <thead>
+              <tr>
+                <th style={styles.tableTh}>Question No.</th>
+                <th style={styles.tableTh}>Question</th>
+              </tr>
+            </thead>
+            <tbody>
+              {questions.map((q, idx) => (
+                <tr key={idx}>
+                  <td style={styles.tableTd} data-label="Question No.">{idx + 1}</td>
+                  <td style={styles.tableTd} data-label="Question">{q}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </section>
 
-      <section>
-        <h2>Tips to Prepare for the Interview</h2>
-        <ul>
-          <li><strong>Be Honest and Confident:</strong> Give clear and truthful answers; avoid memorized scripts.</li>
-          <li><strong>Know Your Course and University:</strong> Research curriculum, specializations, and faculty; understand how it aligns with your goals.</li>
-          <li><strong>Prepare Financial Proof:</strong> Keep bank statements, scholarship letters, and financial guarantees ready.</li>
-          <li><strong>Highlight Career Plans:</strong> Explain how the course contributes to long-term goals and show intent to return or gain experience.</li>
-          <li><strong>Practice Common Questions:</strong> Conduct mock interviews with mentors or consultants; focus on clarity, brevity, and confidence.</li>
-          <li><strong>Maintain Proper Documentation:</strong> Carry all original documents and copies neatly organized (transcripts, admission letters, financial proof, passport, ID).</li>
+      {/* Preparation Tips */}
+      <section style={styles.section}>
+        <h2 style={styles.headingSecondary}>Tips to Prepare for the Interview</h2>
+        <ul style={styles.list}>
+          <li><strong style={styles.strong}>Be Honest and Confident:</strong> Give clear and truthful answers; avoid memorized scripts.</li>
+          <li><strong style={styles.strong}>Know Your Course and University:</strong> Research curriculum, specializations, and faculty; understand how it aligns with your goals.</li>
+          <li><strong style={styles.strong}>Prepare Financial Proof:</strong> Keep bank statements, scholarship letters, and financial guarantees ready.</li>
+          <li><strong style={styles.strong}>Highlight Career Plans:</strong> Explain how the course contributes to long-term goals and show intent to return or gain experience.</li>
+          <li><strong style={styles.strong}>Practice Common Questions:</strong> Conduct mock interviews with mentors or consultants; focus on clarity, brevity, and confidence.</li>
+          <li><strong style={styles.strong}>Maintain Proper Documentation:</strong> Carry all original documents and copies neatly organized (transcripts, admission letters, financial proof, passport, ID).</li>
         </ul>
       </section>
 
-      <section>
-        <h2>Common Mistakes to Avoid</h2>
-        <ul>
+      {/* Common Mistakes */}
+      <section style={styles.section}>
+        <h2 style={styles.headingSecondary}>Common Mistakes to Avoid</h2>
+        <ul style={styles.list}>
           <li>Providing vague or generic answers</li>
           <li>Showing uncertainty about your course or university</li>
           <li>Appearing overly nervous or unprepared</li>
@@ -94,19 +155,21 @@ const StudentVisaInterview = () => {
         </ul>
       </section>
 
-      <section>
-        <h2>Country-Specific Tips</h2>
-        <ul>
-          <li><strong>USA/Canada:</strong> Focus on ties to home country and career goals.</li>
-          <li><strong>UK/Ireland:</strong> Be clear about course choice and post-study plans.</li>
-          <li><strong>Europe (Germany, France, Netherlands):</strong> Highlight language readiness and integration plans.</li>
-          <li><strong>Australia/New Zealand:</strong> Emphasize financial stability and genuine student intent.</li>
+      {/* Country Specific */}
+      <section style={styles.section}>
+        <h2 style={styles.headingSecondary}>Country-Specific Tips</h2>
+        <ul style={styles.list}>
+          <li><strong style={styles.strong}>USA/Canada:</strong> Focus on ties to home country and career goals.</li>
+          <li><strong style={styles.strong}>UK/Ireland:</strong> Be clear about course choice and post-study plans.</li>
+          <li><strong style={styles.strong}>Europe (Germany, France, Netherlands):</strong> Highlight language readiness and integration plans.</li>
+          <li><strong style={styles.strong}>Australia/New Zealand:</strong> Emphasize financial stability and genuine student intent.</li>
         </ul>
       </section>
 
-      <section>
-        <h2>FAQs</h2>
-        <ul>
+      {/* FAQs */}
+      <section style={styles.section}>
+        <h2 style={styles.headingSecondary}>FAQs</h2>
+        <ul style={styles.list}>
           <li><strong>Q1:</strong> How long does a student visa interview take?<br/>
               <strong>A:</strong> Typically 10–30 minutes, depending on the country and complexity of your application.</li>
           <li><strong>Q2:</strong> Can I get rejected if I’m nervous?<br/>
@@ -118,17 +181,18 @@ const StudentVisaInterview = () => {
         </ul>
       </section>
 
-      <section>
-        <h2>Consultancy Angle</h2>
+      {/* Consultancy */}
+      <section style={styles.section}>
+        <h2 style={styles.headingSecondary}>Consultancy Angle</h2>
         <p>Our consultancy helps students:</p>
-        <ul>
+        <ul style={styles.list}>
           <li>Conduct mock visa interviews with expert feedback</li>
           <li>Organize and verify all required documentation</li>
           <li>Guide on answering questions effectively and confidently</li>
           <li>Provide country-specific interview preparation to maximize approval chances</li>
         </ul>
-        <p>
-          <strong>“Worried about your student visa interview? Let our experts help you prepare, organize documents, and answer questions confidently to secure your visa. Book your free consultation today!”</strong>
+        <p style={styles.ctaText}>
+          “Worried about your student visa interview? Let our experts help you prepare, organize documents, and answer questions confidently to secure your visa. Book your free consultation today!”
         </p>
       </section>
     </div>

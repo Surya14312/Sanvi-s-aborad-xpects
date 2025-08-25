@@ -1109,6 +1109,49 @@ body {
   box-shadow: 0 12px 35px rgba(0,0,0,0.2);
   margin-top: 30px;
 }
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .uk-hero {
+    padding: 60px 15px 40px;
+  }
+  
+  .uk-hero h1 {
+    font-size: clamp(1.8rem, 6vw, 2.8rem);
+  }
+  
+  .uk-hero p {
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
+  }
+
+  .apply-btn {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+
+  .hero-img {
+    flex: 1 1 100%;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .uk-hero {
+    padding: 50px 10px 30px;
+  }
+
+  .uk-hero h1 {
+    font-size: clamp(1.5rem, 6vw, 2.2rem);
+  }
+
+  .uk-hero p {
+    font-size: clamp(0.85rem, 3vw, 1rem);
+  }
+
+  .apply-btn {
+    padding: 8px 18px;
+    font-size: 0.9rem;
+  }
+}
 
 /* =======================
    Quick Stats
@@ -1236,38 +1279,69 @@ body {
   max-width: 1200px;
   margin: 60px auto;
   padding: 0 20px;
+  font-family: 'Inter', sans-serif;
 }
 
 .course-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  grid-template-rows: repeat(3, 1fr);    /* 3 rows */
+  gap: 25px;
 }
 
 .course-card {
-  background: #fff;
-  border-radius: 16px;
+  background: linear-gradient(145deg, #ffffff, #f3f4f6);
+  border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
   text-align: center;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.course-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #6366f1, #3b82f6);
+  border-radius: 4px;
+  transform: translateX(-50%);
+  transition: width 0.4s ease;
+}
+
+.course-card:hover::after {
+  width: 80%;
 }
 
 .course-card img {
   width: 100%;
-  height: 140px;
+  height: 150px;
   object-fit: cover;
+  border-bottom: 1px solid #e5e7eb;
+  transition: transform 0.4s ease;
+}
+
+.course-card:hover img {
+  transform: scale(1.05);
 }
 
 .course-card p {
   padding: 15px;
-  font-weight: 600;
+  font-weight: 700;
   color: #1e3a8a;
+  font-size: 1rem;
+  transition: color 0.3s ease;
 }
 
-.course-card:hover {
-  transform: translateY(-5px) scale(1.03);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+.course-card:hover p {
+  color: #3b82f6;
 }
 
 /* =======================
@@ -1387,32 +1461,33 @@ body {
 
 /* =======================
    Hero Section
-========================== */
+/* Canada Hero Section */
 .canada-hero {
   position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 100px 20px 80px;
+  padding: 80px 20px 60px;
   background: linear-gradient(135deg, #2563eb, #1e3a8a); /* UK-style gradient */
   color: #fff;
   overflow: hidden;
+  text-align: center;
 }
 
 .canada-hero-content {
-  flex: 1 1 500px;
+  flex: 1 1 300px;
   max-width: 600px;
-  text-align: center;
   z-index: 2;
+  margin: 0 auto;
 }
 
 .canada-hero h1 {
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 800;
   margin-bottom: 20px;
   line-height: 1.2;
-  background: linear-gradient(135deg, #36d1dc, #5b86e5); /* heading gradient like UK */
+  background: linear-gradient(135deg, #36d1dc, #5b86e5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: transform 0.3s ease;
@@ -1423,14 +1498,15 @@ body {
 }
 
 .canada-hero p {
-  font-size: 1.1rem;
+  font-size: clamp(0.95rem, 2.5vw, 1.2rem);
   margin-bottom: 30px;
+  line-height: 1.5;
 }
 
 .apply-btn {
   display: inline-block;
-  padding: 15px 30px;
-  background: linear-gradient(135deg, #6a11cb, #2575fc); /* UK button gradient */
+  padding: 12px 25px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
   color: #fff;
   font-weight: 600;
   border-radius: 50px;
@@ -1444,13 +1520,63 @@ body {
 }
 
 .hero-img {
-  flex: 1 1 500px;
+  flex: 1 1 300px;
   max-width: 600px;
+  width: 100%;
   border-radius: 20px;
   box-shadow: 0 12px 35px rgba(0,0,0,0.2);
   margin-top: 30px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
+.hero-img:hover {
+  transform: scale(1.03);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .canada-hero {
+    padding: 60px 15px 40px;
+  }
+  
+  .canada-hero h1 {
+    font-size: clamp(1.8rem, 6vw, 2.8rem);
+  }
+  
+  .canada-hero p {
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
+  }
+
+  .apply-btn {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+
+  .hero-img {
+    flex: 1 1 100%;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .canada-hero {
+    padding: 50px 10px 30px;
+  }
+
+  .canada-hero h1 {
+    font-size: clamp(1.5rem, 6vw, 2.2rem);
+  }
+
+  .canada-hero p {
+    font-size: clamp(0.85rem, 3vw, 1rem);
+  }
+
+  .apply-btn {
+    padding: 8px 18px;
+    font-size: 0.9rem;
+  }
+}
 /* =======================
    Quick Stats
 ========================== */
@@ -1610,6 +1736,46 @@ body {
   transform: translateY(-5px) scale(1.03);
   box-shadow: 0 12px 30px rgba(0,0,0,0.2);
 }
+.canada-equipment {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #f9fafb, #e0f2fe);
+  border-radius: 20px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.canada-equipment:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+}
+
+.canada-equipment h2 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1.2px;
+}
+
+.canada-equipment p {
+  font-size: 1.1rem;
+  color: #1f2937;
+  line-height: 1.8;
+  max-width: 750px;
+  margin: 0 auto;
+  transition: color 0.3s ease;
+}
+
+.canada-equipment:hover p {
+  color: #2563eb;
+}
+
 
 /* =======================
    Cost & Scholarships
@@ -1729,31 +1895,33 @@ body {
 /* =======================
    Hero Section
 ====================== */
+/* Singapore Hero Section */
 .singapore-hero {
   position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 100px 20px 80px;
+  padding: 80px 20px 60px;
   background: linear-gradient(135deg, #2563eb, #1e3a8a); /* UK-style gradient */
   color: #fff;
   overflow: hidden;
+  text-align: center;
 }
 
 .singapore-hero-content {
-  flex: 1 1 500px;
+  flex: 1 1 300px;
   max-width: 600px;
-  text-align: center;
   z-index: 2;
+  margin: 0 auto;
 }
 
 .singapore-hero h1 {
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 800;
   margin-bottom: 20px;
   line-height: 1.2;
-  background: linear-gradient(135deg, #36d1dc, #5b86e5); /* heading gradient like UK */
+  background: linear-gradient(135deg, #36d1dc, #5b86e5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: transform 0.3s ease;
@@ -1764,14 +1932,15 @@ body {
 }
 
 .singapore-hero p {
-  font-size: 1.1rem;
+  font-size: clamp(0.95rem, 2.5vw, 1.2rem);
   margin-bottom: 30px;
+  line-height: 1.5;
 }
 
 .apply-btn {
   display: inline-block;
-  padding: 15px 30px;
-  background: linear-gradient(135deg, #6a11cb, #2575fc); /* UK-style button */
+  padding: 12px 25px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
   color: #fff;
   font-weight: 600;
   border-radius: 50px;
@@ -1785,11 +1954,62 @@ body {
 }
 
 .hero-img {
-  flex: 1 1 500px;
+  flex: 1 1 300px;
   max-width: 600px;
+  width: 100%;
   border-radius: 20px;
   box-shadow: 0 12px 35px rgba(0,0,0,0.2);
   margin-top: 30px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.hero-img:hover {
+  transform: scale(1.03);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .singapore-hero {
+    padding: 60px 15px 40px;
+  }
+  
+  .singapore-hero h1 {
+    font-size: clamp(1.8rem, 6vw, 2.8rem);
+  }
+  
+  .singapore-hero p {
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
+  }
+
+  .apply-btn {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+
+  .hero-img {
+    flex: 1 1 100%;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .singapore-hero {
+    padding: 50px 10px 30px;
+  }
+
+  .singapore-hero h1 {
+    font-size: clamp(1.5rem, 6vw, 2.2rem);
+  }
+
+  .singapore-hero p {
+    font-size: clamp(0.85rem, 3vw, 1rem);
+  }
+
+  .apply-btn {
+    padding: 8px 18px;
+    font-size: 0.9rem;
+  }
 }
 
 /* =======================
@@ -1946,6 +2166,46 @@ body {
   transform: translateY(-5px) scale(1.03);
   box-shadow: 0 12px 30px rgba(0,0,0,0.2);
 }
+.singapore-equipment {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #f9fafb, #e0f2fe);
+  border-radius: 20px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.singapore-equipment:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+}
+
+.singapore-equipment h2 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1.2px;
+}
+
+.singapore-equipment p {
+  font-size: 1.1rem;
+  color: #1f2937;
+  line-height: 1.8;
+  max-width: 750px;
+  margin: 0 auto;
+  transition: color 0.3s ease;
+}
+
+.singapore-equipment:hover p {
+  color: #2563eb;
+}
+
 
 /* =======================
    Cost & Scholarships
@@ -2066,31 +2326,33 @@ body {
 /* =======================
    Hero Section
 ====================== */
+/* Ireland Hero Section */
 .ireland-hero {
   position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 100px 20px 80px;
+  padding: 80px 20px 60px;
   background: linear-gradient(135deg, #2563eb, #1e3a8a); /* UK-style gradient */
   color: #fff;
   overflow: hidden;
+  text-align: center;
 }
 
 .ireland-hero-content {
-  flex: 1 1 500px;
+  flex: 1 1 300px;
   max-width: 600px;
-  text-align: center;
   z-index: 2;
+  margin: 0 auto;
 }
 
 .ireland-hero h1 {
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 800;
   margin-bottom: 20px;
   line-height: 1.2;
-  background: linear-gradient(135deg, #36d1dc, #5b86e5); /* heading gradient like UK */
+  background: linear-gradient(135deg, #36d1dc, #5b86e5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: transform 0.3s ease;
@@ -2101,14 +2363,15 @@ body {
 }
 
 .ireland-hero p {
-  font-size: 1.1rem;
+  font-size: clamp(0.95rem, 2.5vw, 1.2rem);
   margin-bottom: 30px;
+  line-height: 1.5;
 }
 
 .apply-btn {
   display: inline-block;
-  padding: 15px 30px;
-  background: linear-gradient(135deg, #6a11cb, #2575fc); /* UK-style button */
+  padding: 12px 25px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
   color: #fff;
   font-weight: 600;
   border-radius: 50px;
@@ -2122,11 +2385,62 @@ body {
 }
 
 .hero-img {
-  flex: 1 1 500px;
+  flex: 1 1 300px;
   max-width: 600px;
+  width: 100%;
   border-radius: 20px;
   box-shadow: 0 12px 35px rgba(0,0,0,0.2);
   margin-top: 30px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.hero-img:hover {
+  transform: scale(1.03);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .ireland-hero {
+    padding: 60px 15px 40px;
+  }
+  
+  .ireland-hero h1 {
+    font-size: clamp(1.8rem, 6vw, 2.8rem);
+  }
+  
+  .ireland-hero p {
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
+  }
+
+  .apply-btn {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+
+  .hero-img {
+    flex: 1 1 100%;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ireland-hero {
+    padding: 50px 10px 30px;
+  }
+
+  .ireland-hero h1 {
+    font-size: clamp(1.5rem, 6vw, 2.2rem);
+  }
+
+  .ireland-hero p {
+    font-size: clamp(0.85rem, 3vw, 1rem);
+  }
+
+  .apply-btn {
+    padding: 8px 18px;
+    font-size: 0.9rem;
+  }
 }
 
 /* =======================
@@ -2284,6 +2598,48 @@ body {
   box-shadow: 0 12px 30px rgba(0,0,0,0.2);
 }
 
+
+.ireland-equipment {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #f9fafb, #e0f2fe);
+  border-radius: 20px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ireland-equipment:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+}
+
+.ireland-equipment h2 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1.2px;
+}
+
+.ireland-equipment p {
+  font-size: 1.1rem;
+  color: #1f2937;
+  line-height: 1.8;
+  max-width: 750px;
+  margin: 0 auto;
+  transition: color 0.3s ease;
+}
+
+.ireland-equipment:hover p {
+  color: #2563eb;
+}
+
+
 /* =======================
    Cost & Scholarships
 ====================== */
@@ -2403,31 +2759,33 @@ body {
 /* =======================
    Hero Section
 ====================== */
+/* France Hero Section */
 .france-hero {
   position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 100px 20px 80px;
+  padding: 80px 20px 60px;
   background: linear-gradient(135deg, #2563eb, #1e3a8a); /* UK-style gradient */
   color: #fff;
   overflow: hidden;
+  text-align: center;
 }
 
 .france-hero-content {
-  flex: 1 1 500px;
+  flex: 1 1 300px;
   max-width: 600px;
-  text-align: center;
   z-index: 2;
+  margin: 0 auto;
 }
 
 .france-hero h1 {
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 800;
   margin-bottom: 20px;
   line-height: 1.2;
-  background: linear-gradient(135deg, #36d1dc, #5b86e5); /* heading gradient like UK */
+  background: linear-gradient(135deg, #36d1dc, #5b86e5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: transform 0.3s ease;
@@ -2438,14 +2796,15 @@ body {
 }
 
 .france-hero p {
-  font-size: 1.1rem;
+  font-size: clamp(0.95rem, 2.5vw, 1.2rem);
   margin-bottom: 30px;
+  line-height: 1.5;
 }
 
 .apply-btn {
   display: inline-block;
-  padding: 15px 30px;
-  background: linear-gradient(135deg, #6a11cb, #2575fc); /* UK-style button */
+  padding: 12px 25px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
   color: #fff;
   font-weight: 600;
   border-radius: 50px;
@@ -2459,11 +2818,62 @@ body {
 }
 
 .hero-img {
-  flex: 1 1 500px;
+  flex: 1 1 300px;
   max-width: 600px;
+  width: 100%;
   border-radius: 20px;
   box-shadow: 0 12px 35px rgba(0,0,0,0.2);
   margin-top: 30px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.hero-img:hover {
+  transform: scale(1.03);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .france-hero {
+    padding: 60px 15px 40px;
+  }
+  
+  .france-hero h1 {
+    font-size: clamp(1.8rem, 6vw, 2.8rem);
+  }
+  
+  .france-hero p {
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
+  }
+
+  .apply-btn {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+
+  .hero-img {
+    flex: 1 1 100%;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .france-hero {
+    padding: 50px 10px 30px;
+  }
+
+  .france-hero h1 {
+    font-size: clamp(1.5rem, 6vw, 2.2rem);
+  }
+
+  .france-hero p {
+    font-size: clamp(0.85rem, 3vw, 1rem);
+  }
+
+  .apply-btn {
+    padding: 8px 18px;
+    font-size: 0.9rem;
+  }
 }
 
 /* =======================
@@ -2621,6 +3031,47 @@ body {
   box-shadow: 0 12px 30px rgba(0,0,0,0.2);
 }
 
+.france-equipment {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #f9fafb, #e0f2fe);
+  border-radius: 20px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.france-equipment:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+}
+
+.france-equipment h2 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1.2px;
+}
+
+.france-equipment p {
+  font-size: 1.1rem;
+  color: #1f2937;
+  line-height: 1.8;
+  max-width: 750px;
+  margin: 0 auto;
+  transition: color 0.3s ease;
+}
+
+.france-equipment:hover p {
+  color: #2563eb;
+}
+
+
 /* =======================
    Cost & Scholarships
 ====================== */
@@ -2740,31 +3191,33 @@ body {
 /* =======================
    Hero Section
 ====================== */
+/* Germany Hero Section */
 .germany-hero {
   position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 100px 20px 80px;
+  padding: 80px 20px 60px;
   background: linear-gradient(135deg, #2563eb, #1e3a8a); /* UK-style gradient */
   color: #fff;
   overflow: hidden;
+  text-align: center;
 }
 
 .germany-hero-content {
-  flex: 1 1 500px;
+  flex: 1 1 300px;
   max-width: 600px;
-  text-align: center;
   z-index: 2;
+  margin: 0 auto;
 }
 
 .germany-hero h1 {
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 800;
   margin-bottom: 20px;
   line-height: 1.2;
-  background: linear-gradient(135deg, #36d1dc, #5b86e5); /* heading gradient like UK */
+  background: linear-gradient(135deg, #36d1dc, #5b86e5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: transform 0.3s ease;
@@ -2775,14 +3228,15 @@ body {
 }
 
 .germany-hero p {
-  font-size: 1.1rem;
+  font-size: clamp(0.95rem, 2.5vw, 1.2rem);
   margin-bottom: 30px;
+  line-height: 1.5;
 }
 
 .apply-btn {
   display: inline-block;
-  padding: 15px 30px;
-  background: linear-gradient(135deg, #6a11cb, #2575fc); /* UK-style button */
+  padding: 12px 25px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
   color: #fff;
   font-weight: 600;
   border-radius: 50px;
@@ -2796,11 +3250,62 @@ body {
 }
 
 .hero-img {
-  flex: 1 1 500px;
+  flex: 1 1 300px;
   max-width: 600px;
+  width: 100%;
   border-radius: 20px;
   box-shadow: 0 12px 35px rgba(0,0,0,0.2);
   margin-top: 30px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.hero-img:hover {
+  transform: scale(1.03);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .germany-hero {
+    padding: 60px 15px 40px;
+  }
+  
+  .germany-hero h1 {
+    font-size: clamp(1.8rem, 6vw, 2.8rem);
+  }
+  
+  .germany-hero p {
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
+  }
+
+  .apply-btn {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+
+  .hero-img {
+    flex: 1 1 100%;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .germany-hero {
+    padding: 50px 10px 30px;
+  }
+
+  .germany-hero h1 {
+    font-size: clamp(1.5rem, 6vw, 2.2rem);
+  }
+
+  .germany-hero p {
+    font-size: clamp(0.85rem, 3vw, 1rem);
+  }
+
+  .apply-btn {
+    padding: 8px 18px;
+    font-size: 0.9rem;
+  }
 }
 
 /* =======================
@@ -2957,6 +3462,46 @@ body {
   transform: translateY(-5px) scale(1.03);
   box-shadow: 0 12px 30px rgba(0,0,0,0.2);
 }
+.germany-equipment {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #f9fafb, #e0f2fe);
+  border-radius: 20px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.germany-equipment:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+}
+
+.germany-equipment h2 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1.2px;
+}
+
+.germany-equipment p {
+  font-size: 1.1rem;
+  color: #1f2937;
+  line-height: 1.8;
+  max-width: 750px;
+  margin: 0 auto;
+  transition: color 0.3s ease;
+}
+
+.germany-equipment:hover p {
+  color: #2563eb;
+}
+
 
 /* =======================
    Cost & Scholarships
@@ -3294,6 +3839,47 @@ body {
   box-shadow: 0 12px 30px rgba(0,0,0,0.2);
 }
 
+
+.switzerland-equipment {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #f9fafb, #e0f2fe);
+  border-radius: 20px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.switzerland-equipment:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+}
+
+.switzerland-equipment h2 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1.2px;
+}
+
+.switzerland-equipment p {
+  font-size: 1.1rem;
+  color: #1f2937;
+  line-height: 1.8;
+  max-width: 750px;
+  margin: 0 auto;
+  transition: color 0.3s ease;
+}
+
+.switzerland-equipment:hover p {
+  color: #2563eb;
+}
+
 /* =======================
    Cost & Scholarships
 ====================== */
@@ -3413,31 +3999,33 @@ body {
 /* =======================
    Hero Section
 ====================== */
+/* Dubai Hero Section - UK Style */
 .dubai-hero {
   position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 100px 20px 80px;
+  padding: 80px 20px 60px;
   background: linear-gradient(135deg, #2563eb, #1e3a8a); /* UK-style gradient */
   color: #fff;
   overflow: hidden;
+  text-align: center;
 }
 
 .dubai-hero-content {
-  flex: 1 1 500px;
+  flex: 1 1 300px;
   max-width: 600px;
-  text-align: center;
   z-index: 2;
+  margin: 0 auto;
 }
 
 .dubai-hero h1 {
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 800;
   margin-bottom: 20px;
   line-height: 1.2;
-  background: linear-gradient(135deg, #36d1dc, #5b86e5); /* heading gradient like UK */
+  background: linear-gradient(135deg, #36d1dc, #5b86e5); /* UK-style gradient text */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: transform 0.3s ease;
@@ -3448,14 +4036,15 @@ body {
 }
 
 .dubai-hero p {
-  font-size: 1.1rem;
+  font-size: clamp(0.95rem, 2.5vw, 1.2rem);
   margin-bottom: 30px;
+  line-height: 1.5;
 }
 
 .apply-btn {
   display: inline-block;
-  padding: 15px 30px;
-  background: linear-gradient(135deg, #6a11cb, #2575fc); /* UK-style button */
+  padding: 12px 25px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc); /* UK-style button gradient */
   color: #fff;
   font-weight: 600;
   border-radius: 50px;
@@ -3469,11 +4058,62 @@ body {
 }
 
 .hero-img {
-  flex: 1 1 500px;
+  flex: 1 1 300px;
   max-width: 600px;
+  width: 100%;
   border-radius: 20px;
   box-shadow: 0 12px 35px rgba(0,0,0,0.2);
   margin-top: 30px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.hero-img:hover {
+  transform: scale(1.03);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .dubai-hero {
+    padding: 60px 15px 40px;
+  }
+
+  .dubai-hero h1 {
+    font-size: clamp(1.8rem, 6vw, 2.8rem);
+  }
+
+  .dubai-hero p {
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
+  }
+
+  .apply-btn {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+
+  .hero-img {
+    flex: 1 1 100%;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dubai-hero {
+    padding: 50px 10px 30px;
+  }
+
+  .dubai-hero h1 {
+    font-size: clamp(1.5rem, 6vw, 2.2rem);
+  }
+
+  .dubai-hero p {
+    font-size: clamp(0.85rem, 3vw, 1rem);
+  }
+
+  .apply-btn {
+    padding: 8px 18px;
+    font-size: 0.9rem;
+  }
 }
 
 /* =======================
@@ -3631,6 +4271,48 @@ body {
   box-shadow: 0 12px 30px rgba(0,0,0,0.2);
 }
 
+
+
+.dubai-equipment {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #f9fafb, #e0f2fe);
+  border-radius: 20px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dubai-equipment:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+}
+
+.dubai-equipment h2 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1.2px;
+}
+
+.dubai-equipment p {
+  font-size: 1.1rem;
+  color: #1f2937;
+  line-height: 1.8;
+  max-width: 750px;
+  margin: 0 auto;
+  transition: color 0.3s ease;
+}
+
+.dubai-equipment:hover p {
+  color: #2563eb;
+}
+
 /* =======================
    Cost & Scholarships
 ====================== */
@@ -3749,31 +4431,33 @@ body {
 /* =======================
    Hero Section
 ====================== */
+/* Spain Hero Section - UK Style */
 .spain-hero {
   position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 100px 20px 80px;
+  padding: 80px 20px 60px;
   background: linear-gradient(135deg, #2563eb, #1e3a8a); /* UK-style gradient */
   color: #fff;
   overflow: hidden;
+  text-align: center;
 }
 
 .spain-hero-content {
-  flex: 1 1 500px;
+  flex: 1 1 300px;
   max-width: 600px;
-  text-align: center;
   z-index: 2;
+  margin: 0 auto;
 }
 
 .spain-hero h1 {
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 800;
   margin-bottom: 20px;
   line-height: 1.2;
-  background: linear-gradient(135deg, #36d1dc, #5b86e5); /* heading gradient like UK */
+  background: linear-gradient(135deg, #36d1dc, #5b86e5); /* UK-style gradient text */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: transform 0.3s ease;
@@ -3784,14 +4468,15 @@ body {
 }
 
 .spain-hero p {
-  font-size: 1.1rem;
+  font-size: clamp(0.95rem, 2.5vw, 1.2rem);
   margin-bottom: 30px;
+  line-height: 1.5;
 }
 
 .apply-btn {
   display: inline-block;
-  padding: 15px 30px;
-  background: linear-gradient(135deg, #6a11cb, #2575fc); /* UK-style button */
+  padding: 12px 25px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc); /* UK-style button gradient */
   color: #fff;
   font-weight: 600;
   border-radius: 50px;
@@ -3805,11 +4490,62 @@ body {
 }
 
 .hero-img {
-  flex: 1 1 500px;
+  flex: 1 1 300px;
   max-width: 600px;
+  width: 100%;
   border-radius: 20px;
   box-shadow: 0 12px 35px rgba(0,0,0,0.2);
   margin-top: 30px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.hero-img:hover {
+  transform: scale(1.03);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .spain-hero {
+    padding: 60px 15px 40px;
+  }
+
+  .spain-hero h1 {
+    font-size: clamp(1.8rem, 6vw, 2.8rem);
+  }
+
+  .spain-hero p {
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
+  }
+
+  .apply-btn {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+
+  .hero-img {
+    flex: 1 1 100%;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .spain-hero {
+    padding: 50px 10px 30px;
+  }
+
+  .spain-hero h1 {
+    font-size: clamp(1.5rem, 6vw, 2.2rem);
+  }
+
+  .spain-hero p {
+    font-size: clamp(0.85rem, 3vw, 1rem);
+  }
+
+  .apply-btn {
+    padding: 8px 18px;
+    font-size: 0.9rem;
+  }
 }
 
 /* =======================
@@ -3966,6 +4702,46 @@ body {
   transform: translateY(-5px) scale(1.03);
   box-shadow: 0 12px 30px rgba(0,0,0,0.2);
 }
+.spain-equipment {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #f9fafb, #e0f2fe);
+  border-radius: 20px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.spain-equipment:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+}
+
+.spain-equipment h2 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1.2px;
+}
+
+.spain-equipment p {
+  font-size: 1.1rem;
+  color: #1f2937;
+  line-height: 1.8;
+  max-width: 750px;
+  margin: 0 auto;
+  transition: color 0.3s ease;
+}
+
+.spain-equipment:hover p {
+  color: #2563eb;
+}
+
 
 /* =======================
    Cost & Scholarships
@@ -4084,31 +4860,33 @@ body {
 /* =======================
    Hero Section
 ====================== */
+/* Malaysia Hero Section - UK Style */
 .malaysia-hero {
   position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 100px 20px 80px;
+  padding: 80px 20px 60px;
   background: linear-gradient(135deg, #2563eb, #1e3a8a); /* UK-style gradient */
   color: #fff;
   overflow: hidden;
+  text-align: center;
 }
 
 .malaysia-hero-content {
-  flex: 1 1 500px;
+  flex: 1 1 300px;
   max-width: 600px;
-  text-align: center;
   z-index: 2;
+  margin: 0 auto;
 }
 
 .malaysia-hero h1 {
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 800;
   margin-bottom: 20px;
   line-height: 1.2;
-  background: linear-gradient(135deg, #36d1dc, #5b86e5); /* heading gradient like UK */
+  background: linear-gradient(135deg, #36d1dc, #5b86e5); /* UK-style gradient text */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: transform 0.3s ease;
@@ -4119,14 +4897,15 @@ body {
 }
 
 .malaysia-hero p {
-  font-size: 1.1rem;
+  font-size: clamp(0.95rem, 2.5vw, 1.2rem);
   margin-bottom: 30px;
+  line-height: 1.5;
 }
 
 .apply-btn {
   display: inline-block;
-  padding: 15px 30px;
-  background: linear-gradient(135deg, #6a11cb, #2575fc); /* UK-style button */
+  padding: 12px 25px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc); /* UK-style button gradient */
   color: #fff;
   font-weight: 600;
   border-radius: 50px;
@@ -4140,11 +4919,62 @@ body {
 }
 
 .hero-img {
-  flex: 1 1 500px;
+  flex: 1 1 300px;
   max-width: 600px;
+  width: 100%;
   border-radius: 20px;
   box-shadow: 0 12px 35px rgba(0,0,0,0.2);
   margin-top: 30px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.hero-img:hover {
+  transform: scale(1.03);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .malaysia-hero {
+    padding: 60px 15px 40px;
+  }
+
+  .malaysia-hero h1 {
+    font-size: clamp(1.8rem, 6vw, 2.8rem);
+  }
+
+  .malaysia-hero p {
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
+  }
+
+  .apply-btn {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+
+  .hero-img {
+    flex: 1 1 100%;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .malaysia-hero {
+    padding: 50px 10px 30px;
+  }
+
+  .malaysia-hero h1 {
+    font-size: clamp(1.5rem, 6vw, 2.2rem);
+  }
+
+  .malaysia-hero p {
+    font-size: clamp(0.85rem, 3vw, 1rem);
+  }
+
+  .apply-btn {
+    padding: 8px 18px;
+    font-size: 0.9rem;
+  }
 }
 
 /* =======================
@@ -4302,6 +5132,48 @@ body {
   box-shadow: 0 12px 30px rgba(0,0,0,0.2);
 }
 
+
+.malaysia-equipment {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #f9fafb, #e0f2fe);
+  border-radius: 20px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.malaysia-equipment:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+}
+
+.malaysia-equipment h2 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1.2px;
+}
+
+.malaysia-equipment p {
+  font-size: 1.1rem;
+  color: #1f2937;
+  line-height: 1.8;
+  max-width: 750px;
+  margin: 0 auto;
+  transition: color 0.3s ease;
+}
+
+.malaysia-equipment:hover p {
+  color: #2563eb;
+}
+
+
 /* =======================
    Cost & Scholarships
 ====================== */
@@ -4421,31 +5293,33 @@ body {
 /* =======================
    Hero Section
 ====================== */
+/* Mauritius Hero Section - UK Style */
 .mauritius-hero {
   position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 100px 20px 80px;
+  padding: 80px 20px 60px;
   background: linear-gradient(135deg, #2563eb, #1e3a8a); /* UK-style gradient */
   color: #fff;
   overflow: hidden;
+  text-align: center;
 }
 
 .mauritius-hero-content {
-  flex: 1 1 500px;
+  flex: 1 1 300px;
   max-width: 600px;
-  text-align: center;
   z-index: 2;
+  margin: 0 auto;
 }
 
 .mauritius-hero h1 {
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 800;
   margin-bottom: 20px;
   line-height: 1.2;
-  background: linear-gradient(135deg, #36d1dc, #5b86e5); /* heading gradient like UK */
+  background: linear-gradient(135deg, #36d1dc, #5b86e5); /* UK-style gradient text */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: transform 0.3s ease;
@@ -4456,14 +5330,15 @@ body {
 }
 
 .mauritius-hero p {
-  font-size: 1.1rem;
+  font-size: clamp(0.95rem, 2.5vw, 1.2rem);
   margin-bottom: 30px;
+  line-height: 1.5;
 }
 
 .apply-btn {
   display: inline-block;
-  padding: 15px 30px;
-  background: linear-gradient(135deg, #6a11cb, #2575fc); /* UK-style button */
+  padding: 12px 25px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc); /* UK-style button gradient */
   color: #fff;
   font-weight: 600;
   border-radius: 50px;
@@ -4477,11 +5352,62 @@ body {
 }
 
 .hero-img {
-  flex: 1 1 500px;
+  flex: 1 1 300px;
   max-width: 600px;
+  width: 100%;
   border-radius: 20px;
   box-shadow: 0 12px 35px rgba(0,0,0,0.2);
   margin-top: 30px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.hero-img:hover {
+  transform: scale(1.03);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .mauritius-hero {
+    padding: 60px 15px 40px;
+  }
+
+  .mauritius-hero h1 {
+    font-size: clamp(1.8rem, 6vw, 2.8rem);
+  }
+
+  .mauritius-hero p {
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
+  }
+
+  .apply-btn {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+
+  .hero-img {
+    flex: 1 1 100%;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mauritius-hero {
+    padding: 50px 10px 30px;
+  }
+
+  .mauritius-hero h1 {
+    font-size: clamp(1.5rem, 6vw, 2.2rem);
+  }
+
+  .mauritius-hero p {
+    font-size: clamp(0.85rem, 3vw, 1rem);
+  }
+
+  .apply-btn {
+    padding: 8px 18px;
+    font-size: 0.9rem;
+  }
 }
 
 /* =======================
@@ -4638,6 +5564,47 @@ body {
   transform: translateY(-5px) scale(1.03);
   box-shadow: 0 12px 30px rgba(0,0,0,0.2);
 }
+
+.mauritius-equipment {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #f9fafb, #e0f2fe);
+  border-radius: 20px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mauritius-equipment:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+}
+
+.mauritius-equipment h2 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1.2px;
+}
+
+.mauritius-equipment p {
+  font-size: 1.1rem;
+  color: #1f2937;
+  line-height: 1.8;
+  max-width: 750px;
+  margin: 0 auto;
+  transition: color 0.3s ease;
+}
+
+.mauritius-equipment:hover p {
+  color: #2563eb;
+}
+
 
 /* =======================
    Cost & Scholarships
@@ -4973,6 +5940,45 @@ body {
 .course-card:hover {
   transform: translateY(-5px) scale(1.03);
   box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+.india-equipment {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #f9fafb, #e0f2fe);
+  border-radius: 20px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.india-equipment:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+}
+
+.india-equipment h2 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1.2px;
+}
+
+.india-equipment p {
+  font-size: 1.1rem;
+  color: #1f2937;
+  line-height: 1.8;
+  max-width: 750px;
+  margin: 0 auto;
+  transition: color 0.3s ease;
+}
+
+.india-equipment:hover p {
+  color: #2563eb;
 }
 
 /* =======================
@@ -5312,6 +6318,46 @@ body {
   box-shadow: 0 12px 30px rgba(0,0,0,0.2);
 }
 
+.netherlands-equipment {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #f9fafb, #e0f2fe);
+  border-radius: 20px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.netherlands-equipment:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+}
+
+.netherlands-equipment h2 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1.2px;
+}
+
+.netherlands-equipment p {
+  font-size: 1.1rem;
+  color: #1f2937;
+  line-height: 1.8;
+  max-width: 750px;
+  margin: 0 auto;
+  transition: color 0.3s ease;
+}
+
+.netherlands-equipment:hover p {
+  color: #2563eb;
+}
+
 /* =======================
    Cost & Scholarships
 ====================== */
@@ -5435,21 +6481,22 @@ body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 100px 20px 80px;
+  padding: 80px 20px 60px;
   background: linear-gradient(135deg, #2563eb, #1e3a8a); /* UK-style gradient */
   color: #fff;
   overflow: hidden;
+  text-align: center;
 }
 
 .italy-hero-content {
-  flex: 1 1 500px;
+  flex: 1 1 300px;
   max-width: 600px;
-  text-align: center;
   z-index: 2;
+  margin: 0 auto;
 }
 
 .italy-hero h1 {
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 800;
   margin-bottom: 20px;
   line-height: 1.2;
@@ -5464,13 +6511,14 @@ body {
 }
 
 .italy-hero p {
-  font-size: 1.1rem;
+  font-size: clamp(0.95rem, 2.5vw, 1.2rem);
   margin-bottom: 30px;
+  line-height: 1.5;
 }
 
 .apply-btn {
   display: inline-block;
-  padding: 15px 30px;
+  padding: 12px 25px;
   background: linear-gradient(135deg, #6a11cb, #2575fc);
   color: #fff;
   font-weight: 600;
@@ -5485,13 +6533,63 @@ body {
 }
 
 .hero-img {
-  flex: 1 1 500px;
+  flex: 1 1 300px;
   max-width: 600px;
+  width: 100%;
   border-radius: 20px;
   box-shadow: 0 12px 35px rgba(0,0,0,0.2);
   margin-top: 30px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
+.hero-img:hover {
+  transform: scale(1.03);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .italy-hero {
+    padding: 60px 15px 40px;
+  }
+  
+  .italy-hero h1 {
+    font-size: clamp(1.8rem, 6vw, 2.8rem);
+  }
+  
+  .italy-hero p {
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
+  }
+
+  .apply-btn {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+
+  .hero-img {
+    flex: 1 1 100%;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .italy-hero {
+    padding: 50px 10px 30px;
+  }
+
+  .italy-hero h1 {
+    font-size: clamp(1.5rem, 6vw, 2.2rem);
+  }
+
+  .italy-hero p {
+    font-size: clamp(0.85rem, 3vw, 1rem);
+  }
+
+  .apply-btn {
+    padding: 8px 18px;
+    font-size: 0.9rem;
+  }
+}
 /* =======================
    Quick Stats
 ====================== */
@@ -5646,6 +6744,47 @@ body {
   transform: translateY(-5px) scale(1.03);
   box-shadow: 0 12px 30px rgba(0,0,0,0.2);
 }
+
+.italy-equipment {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #f9fafb, #e0f2fe);
+  border-radius: 20px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.italy-equipment:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+}
+
+.italy-equipment h2 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1.2px;
+}
+
+.italy-equipment p {
+  font-size: 1.1rem;
+  color: #1f2937;
+  line-height: 1.8;
+  max-width: 750px;
+  margin: 0 auto;
+  transition: color 0.3s ease;
+}
+
+.italy-equipment:hover p {
+  color: #2563eb;
+}
+
 
 /* =======================
    Cost & Scholarships
@@ -13888,25 +15027,25 @@ table tbody tr:hover {
    Global & Page Wrapper
 ========================== */
 /* =======================
-   General Wrapper
-======================= */
+   Global & Page Wrapper
+========================== */
 .why-dubai {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #333;
   line-height: 1.6;
-  background: #fefaf6; /* Soft warm background */
+  background: #f9f9f9;
 }
 
 /* =======================
    Hero Section
-======================= */
+========================== */
 .hero {
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   padding: 100px 20px 80px;
-  background: linear-gradient(135deg, #f7971e, #ffd200); /* Gold → Yellow gradient for Dubai vibe */
+  background: linear-gradient(135deg, #f7971e, #ffd200); /* Warm golden desert vibe */
   color: #fff;
   position: relative;
 }
@@ -13930,7 +15069,6 @@ table tbody tr:hover {
   margin: 0 auto 40px;
 }
 
-/* Stats Grid */
 .stats-grid {
   display: flex;
   flex-wrap: wrap;
@@ -13940,36 +15078,33 @@ table tbody tr:hover {
 }
 
 .stat-card {
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(12px);
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
   padding: 20px 30px;
   border-radius: 15px;
   min-width: 160px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .stat-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(255, 215, 0, 0.3);
 }
 
 .stat-value {
   display: block;
   font-size: 1.8rem;
   font-weight: 700;
-  color: #fff;
 }
 
 .stat-label {
   font-size: 0.95rem;
-  color: #fffbe6;
 }
 
 /* =======================
    Content Wrapper & Sections
-======================= */
+========================== */
 .content-wrapper {
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 auto;
   padding: 60px 20px;
 }
@@ -13991,7 +15126,7 @@ table tbody tr:hover {
   display: block;
   width: 60px;
   height: 4px;
-  background: linear-gradient(90deg, #f7971e, #ffd200); /* Dubai gradient underline */
+  background: linear-gradient(90deg, #f7971e, #ffd200);
   margin-top: 8px;
   border-radius: 2px;
 }
@@ -14003,7 +15138,7 @@ table tbody tr:hover {
 
 /* =======================
    Benefits Grid
-======================= */
+========================== */
 .benefits-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -14020,7 +15155,7 @@ table tbody tr:hover {
 
 .benefit-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 15px 35px rgba(255, 193, 7, 0.3); /* warm yellow glow */
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
 }
 
 .benefit-card h3 {
@@ -14035,7 +15170,7 @@ table tbody tr:hover {
 
 /* =======================
    Courses List & Tips
-======================= */
+========================== */
 .courses-list {
   list-style: disc inside;
   margin-top: 15px;
@@ -14043,18 +15178,18 @@ table tbody tr:hover {
 }
 
 .tip-box {
-  background: rgba(255, 215, 0, 0.1); /* Soft gold background */
+  background: rgba(255,215,0,0.1);
   border-left: 4px solid #f7971e;
   padding: 15px 20px;
   margin-top: 20px;
   border-radius: 8px;
   font-style: italic;
-  color: #333;
+  color: #1a1a1a;
 }
 
 /* =======================
    Table Styling
-======================= */
+========================== */
 .table-wrapper {
   overflow-x: auto;
 }
@@ -14079,16 +15214,16 @@ table thead {
 }
 
 table tbody tr:nth-child(even) {
-  background: #fdf7e3;
+  background: #f2f2f2;
 }
 
 table tbody tr:hover {
-  background: #fff5d1;
+  background: #fff6e5;
 }
 
 /* =======================
    FAQs
-======================= */
+========================== */
 .faqs-list details {
   background: #fff;
   padding: 15px 20px;
@@ -14116,7 +15251,7 @@ table tbody tr:hover {
 
 /* =======================
    CTA Buttons
-======================= */
+========================== */
 .cta-buttons {
   display: flex;
   flex-wrap: wrap;
@@ -14158,7 +15293,7 @@ table tbody tr:hover {
 
 /* =======================
    Responsive Adjustments
-======================= */
+========================== */
 @media (max-width: 768px) {
   .hero {
     padding: 60px 15px 50px;

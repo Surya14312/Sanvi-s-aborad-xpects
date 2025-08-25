@@ -7,24 +7,81 @@ function UK() {
     <div className="uk-container">
       {/* Hero Section */}
       <section className="uk-hero">
-        <div className="uk-hero-content">
-          <h1>Study in the UK</h1>
-          <p>
-            The United Kingdom is one of the most popular destinations for
-            international students, offering world-class education, cultural
-            diversity, and excellent career opportunities. With globally
-            recognized universities and vibrant cities, the UK promises a bright
-            future for students.
-          </p>
-          <Link to="/contact" className="apply-btn">
-            Apply Now
-          </Link>
-        </div>
-        <img
-          src="/assets/uk-universities/uk-banner.jpg"
-          alt="Study in UK"
-          className="hero-img"
-        />
+       <section
+  style={{
+    display: "flex",
+    flexWrap: "wrap",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: "20px",
+    marginBottom: "60px",
+  }}
+>
+  {/* Text Content */}
+  <div
+    style={{
+      flex: "1 1 300px", // grows and shrinks
+      minWidth: "280px",
+      maxWidth: "600px",
+    }}
+  >
+    <h1
+      style={{
+        fontSize: "clamp(2rem, 6vw, 3rem)",
+        marginBottom: "20px",
+        lineHeight: "1.2",
+      }}
+    >
+      Study in the UK
+    </h1>
+    <p
+      style={{
+        fontSize: "clamp(0.9rem, 2.5vw, 1.15rem)",
+        lineHeight: "1.6",
+      }}
+    >
+      The United Kingdom is one of the most popular destinations for
+      international students, offering world-class education, cultural
+      diversity, and excellent career opportunities. With globally
+      recognized universities and vibrant cities, the UK promises a bright
+      future for students.
+    </p>
+    <Link
+      to="/contact"
+      style={{
+        display: "inline-block",
+        marginTop: "20px",
+        padding: "12px 25px",
+        backgroundColor: "#2563eb",
+        color: "#fff",
+        borderRadius: "8px",
+        textDecoration: "none",
+        fontWeight: "600",
+        fontSize: "clamp(0.9rem, 2vw, 1rem)",
+      }}
+    >
+      Apply Now
+    </Link>
+  </div>
+
+  {/* Hero Image */}
+  <img
+    src="/assets/uk-universities/uk-banner.jpg"
+    alt="Study in UK"
+    style={{
+      flex: "1 1 300px",
+      minWidth: "280px",
+      width: "100%",
+      maxWidth: "600px",
+      borderRadius: "16px",
+      objectFit: "cover",
+      boxShadow: "0 8px 20px rgba(0,0,0,0.15)",
+      transition: "transform 0.3s ease",
+    }}
+    onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.03)")}
+    onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
+  />
+</section>
       </section>
 
       {/* Quick Stats */}

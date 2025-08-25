@@ -1,148 +1,239 @@
 // src/pages/CompareEducation.jsx
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 export default function CompareEducation() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  // ✅ Detect screen resize for responsiveness
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    handleResize(); // Run on mount
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // ✅ Inline style objects with responsiveness
+  const styles = {
+    container: {
+      maxWidth: "1100px",
+      margin: "0 auto",
+      padding: isMobile ? "20px 10px" : "40px 20px",
+      fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+      lineHeight: "1.7",
+      color: "#333",
+    },
+    heading1: {
+      fontSize: isMobile ? "1.8rem" : "2.5rem",
+      fontWeight: "700",
+      textAlign: "center",
+      marginBottom: isMobile ? "20px" : "30px",
+      color: "#2C3E50",
+    },
+    heading2: {
+      fontSize: isMobile ? "1.3rem" : "1.8rem",
+      margin: isMobile ? "20px 0 10px" : "30px 0 15px",
+      color: "#1A5276",
+      borderBottom: "3px solid #3498DB",
+      display: "inline-block",
+      paddingBottom: "5px",
+    },
+    section: {
+      marginBottom: isMobile ? "25px" : "40px",
+      background: "#fff",
+      padding: isMobile ? "15px" : "25px",
+      borderRadius: "12px",
+      boxShadow: "0 6px 18px rgba(0,0,0,0.08)",
+    },
+    list: {
+      paddingLeft: "20px",
+    },
+    listItem: {
+      marginBottom: "10px",
+      fontSize: isMobile ? "0.9rem" : "1rem",
+    },
+    tableWrapper: {
+      overflowX: "auto", // ✅ Makes table scrollable on mobile
+    },
+    table: {
+      width: "100%",
+      borderCollapse: "collapse",
+      marginTop: "20px",
+      fontSize: isMobile ? "0.85rem" : "0.95rem",
+      minWidth: "600px", // Ensures proper scroll
+    },
+    th: {
+      backgroundColor: "#3498DB",
+      color: "#fff",
+      padding: isMobile ? "8px" : "12px",
+      textAlign: "left",
+    },
+    td: {
+      border: "1px solid #ddd",
+      padding: isMobile ? "8px" : "12px",
+      verticalAlign: "top",
+    },
+    tip: {
+      background: "#EAF6FF",
+      padding: isMobile ? "10px" : "15px",
+      borderRadius: "10px",
+      border: "1px solid #B3D9FF",
+      marginTop: "12px",
+      fontWeight: "500",
+      fontSize: isMobile ? "0.9rem" : "1rem",
+      color: "#2C3E50",
+    },
+    cta: {
+      marginTop: "15px",
+      fontSize: isMobile ? "1rem" : "1.1rem",
+      fontWeight: "600",
+      color: "#2C3E50",
+      background: "#F0F9F4",
+      padding: isMobile ? "12px" : "18px",
+      borderRadius: "10px",
+      border: "1px solid #B2E0C2",
+      textAlign: "center",
+    },
+  };
+
   return (
-    <div className="compare-education">
-      <h1 className="heading-primary">
+    <div style={styles.container}>
+      <h1 style={styles.heading1}>
         Comparing Education Systems – Europe vs. North America vs. Asia
       </h1>
 
-      <section className="section">
-        <h2 className="heading-secondary">Introduction</h2>
+      {/* Introduction */}
+      <section style={styles.section}>
+        <h2 style={styles.heading2}>Introduction</h2>
         <p>
-          Choosing the right country for higher education involves understanding how education systems differ globally. 
-          Europe, North America, and Asia each have distinct approaches to learning, teaching styles, costs, and career opportunities. 
-          Understanding these differences can help students make informed decisions that align with their career goals and budget.
+          Choosing the right country for higher education involves understanding
+          how education systems differ globally. Europe, North America, and Asia
+          each have distinct approaches to learning, teaching styles, costs, and
+          career opportunities. Understanding these differences can help
+          students make informed decisions that align with their career goals
+          and budget.
         </p>
       </section>
 
-      <section className="section">
-        <h2 className="heading-secondary">Education System in Europe</h2>
-        <ul className="list">
-          <li><strong>Structure:</strong> Modular and research-oriented, with a mix of theoretical and practical learning.</li>
-          <li><strong>Degree Duration:</strong> Bachelor’s (3–4 years), Master’s (1–2 years), PhD (3–4 years).</li>
-          <li><strong>Tuition Fees:</strong> Affordable in many countries; some like Germany offer free tuition for public universities.</li>
-          <li><strong>Language:</strong> Many English-taught programs available in non-English countries (Germany, Netherlands, France).</li>
-          <li><strong>Student Life:</strong> Focus on independence, cultural exposure, and travel opportunities.</li>
+      {/* Europe Section */}
+      <section style={styles.section}>
+        <h2 style={styles.heading2}>Education in Europe</h2>
+        <ul style={styles.list}>
+          <li style={styles.listItem}>Tuition fees are often low or subsidized.</li>
+          <li style={styles.listItem}>Focus on research and critical thinking.</li>
+          <li style={styles.listItem}>Wide opportunities for international students.</li>
+          <li style={styles.listItem}>Programs available in multiple languages.</li>
         </ul>
-        <p><strong>Popular Countries:</strong> Germany, Netherlands, France, Italy, Switzerland</p>
+        <div style={styles.tip}>
+          💡 Tip: Germany, France, and the Netherlands are top study
+          destinations in Europe.
+        </div>
       </section>
 
-      <section className="section">
-        <h2 className="heading-secondary">Education System in North America</h2>
-        <ul className="list">
-          <li><strong>Structure:</strong> Flexible, credit-based system with emphasis on broad-based education and skill development.</li>
-          <li><strong>Degree Duration:</strong> Bachelor’s (4 years), Master’s (1–2 years), PhD (4–6 years).</li>
-          <li><strong>Tuition Fees:</strong> Higher than Europe; scholarships and assistantships available.</li>
-          <li><strong>Language:</strong> Primarily English; easy for Indian students to adapt.</li>
-          <li><strong>Student Life:</strong> Vibrant campus culture, internships, and part-time work opportunities.</li>
+      {/* North America Section */}
+      <section style={styles.section}>
+        <h2 style={styles.heading2}>Education in North America</h2>
+        <ul style={styles.list}>
+          <li style={styles.listItem}>High tuition costs, but many scholarships available.</li>
+          <li style={styles.listItem}>Flexible programs with wide subject choice.</li>
+          <li style={styles.listItem}>Practical learning with internships and co-ops.</li>
+          <li style={styles.listItem}>Focus on innovation and entrepreneurship.</li>
         </ul>
-        <p><strong>Popular Countries:</strong> USA, Canada</p>
+        <div style={styles.tip}>
+          💡 Tip: USA and Canada are popular for cutting-edge research
+          facilities.
+        </div>
       </section>
 
-      <section className="section">
-        <h2 className="heading-secondary">Education System in Asia</h2>
-        <ul className="list">
-          <li><strong>Structure:</strong> Focus on rigorous academics, discipline, and technical skills.</li>
-          <li><strong>Degree Duration:</strong> Bachelor’s (3–4 years), Master’s (1–2 years), PhD (3–5 years).</li>
-          <li><strong>Tuition Fees:</strong> Moderate to affordable; countries like China, Philippines, Vietnam, and Georgia are cost-effective.</li>
-          <li><strong>Language:</strong> Some programs in English; local language may be required for certain courses.</li>
-          <li><strong>Student Life:</strong> Opportunities for cultural immersion, internships, and affordable living costs.</li>
+      {/* Asia Section */}
+      <section style={styles.section}>
+        <h2 style={styles.heading2}>Education in Asia</h2>
+        <ul style={styles.list}>
+          <li style={styles.listItem}>Affordable tuition and living costs.</li>
+          <li style={styles.listItem}>Strong emphasis on discipline and academics.</li>
+          <li style={styles.listItem}>Rapidly growing global recognition of degrees.</li>
+          <li style={styles.listItem}>Advanced technology-driven teaching in countries like Japan and South Korea.</li>
         </ul>
-        <p><strong>Popular Countries:</strong> Singapore, Philippines, China, Vietnam, Georgia</p>
+        <div style={styles.tip}>
+          💡 Tip: Singapore, Japan, and South Korea are Asian education hubs.
+        </div>
       </section>
 
-      <section className="section">
-        <h2 className="heading-secondary">Key Comparison: Europe vs. North America vs. Asia</h2>
-        <table className="compare-table">
-          <thead>
-            <tr>
-              <th>Feature</th>
-              <th>Europe</th>
-              <th>North America</th>
-              <th>Asia</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td data-label="Feature">Tuition Fees</td>
-              <td data-label="Europe">Low to moderate</td>
-              <td data-label="North America">High</td>
-              <td data-label="Asia">Moderate to low</td>
-            </tr>
-            <tr>
-              <td data-label="Feature">Duration of Bachelor’s</td>
-              <td data-label="Europe">3–4 years</td>
-              <td data-label="North America">4 years</td>
-              <td data-label="Asia">3–4 years</td>
-            </tr>
-            <tr>
-              <td data-label="Feature">Language</td>
-              <td data-label="Europe">English-taught & local</td>
-              <td data-label="North America">English</td>
-              <td data-label="Asia">English-taught & local</td>
-            </tr>
-            <tr>
-              <td data-label="Feature">Teaching Style</td>
-              <td data-label="Europe">Research + practical</td>
-              <td data-label="North America">Flexible, skill-based</td>
-              <td data-label="Asia">Academics + technical focus</td>
-            </tr>
-            <tr>
-              <td data-label="Feature">Post-Study Work Options</td>
-              <td data-label="Europe">Good (Germany, Netherlands)</td>
-              <td data-label="North America">Excellent (USA, Canada)</td>
-              <td data-label="Asia">Moderate (Singapore, China)</td>
-            </tr>
-            <tr>
-              <td data-label="Feature">Cost of Living</td>
-              <td data-label="Europe">Moderate</td>
-              <td data-label="North America">High</td>
-              <td data-label="Asia">Low to moderate</td>
-            </tr>
-            <tr>
-              <td data-label="Feature">Student Life & Exposure</td>
-              <td data-label="Europe">Cultural & travel opportunities</td>
-              <td data-label="North America">Campus culture & networking</td>
-              <td data-label="Asia">Cultural immersion & affordability</td>
-            </tr>
-          </tbody>
-        </table>
+      {/* Comparison Table */}
+      <section style={styles.section}>
+        <h2 style={styles.heading2}>
+          Key Comparison: Europe vs. North America vs. Asia
+        </h2>
+        <div style={styles.tableWrapper}>
+          <table style={styles.table}>
+            <thead>
+              <tr>
+                <th style={styles.th}>Feature</th>
+                <th style={styles.th}>Europe</th>
+                <th style={styles.th}>North America</th>
+                <th style={styles.th}>Asia</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style={styles.td}>Tuition Fees</td>
+                <td style={styles.td}>Low to moderate</td>
+                <td style={styles.td}>High</td>
+                <td style={styles.td}>Moderate to low</td>
+              </tr>
+              <tr>
+                <td style={styles.td}>Duration of Bachelor’s</td>
+                <td style={styles.td}>3–4 years</td>
+                <td style={styles.td}>4 years</td>
+                <td style={styles.td}>3–4 years</td>
+              </tr>
+              <tr>
+                <td style={styles.td}>Teaching Style</td>
+                <td style={styles.td}>Research and critical thinking</td>
+                <td style={styles.td}>Interactive and practical</td>
+                <td style={styles.td}>Structured and exam-focused</td>
+              </tr>
+              <tr>
+                <td style={styles.td}>Popular Courses</td>
+                <td style={styles.td}>Engineering, Arts, Medicine</td>
+                <td style={styles.td}>Business, Tech, Sciences</td>
+                <td style={styles.td}>Technology, Medicine, Finance</td>
+              </tr>
+              <tr>
+                <td style={styles.td}>Post-study Opportunities</td>
+                <td style={styles.td}>EU work permits</td>
+                <td style={styles.td}>OPT, PGWP options</td>
+                <td style={styles.td}>Strong local job markets</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
 
-      <section className="section">
-        <h2 className="heading-secondary">Choosing the Right Education System for You</h2>
-        <ul className="list">
-          <li><strong>Europe:</strong> Ideal for affordable, high-quality, research-oriented education with global exposure.</li>
-          <li><strong>North America:</strong> Best for students seeking flexible learning, internships, and a strong campus experience.</li>
-          <li><strong>Asia:</strong> Suitable for cost-effective education, technical skills, and diverse cultural exposure.</li>
-        </ul>
-        <p className="tip-text">Tip: Consider budget, course preference, career goals, and lifestyle before choosing the system.</p>
-      </section>
-
-      <section className="section">
-        <h2 className="heading-secondary">FAQs</h2>
-        <ul className="list">
-          <li><strong>Q:</strong> Which education system is best for Indian students? <br /><strong>A:</strong> It depends on career goals, budget, and preferred learning style. Europe is cost-effective, North America offers flexibility, and Asia is affordable with cultural exposure.</li>
-          <li><strong>Q:</strong> Are degrees recognized globally? <br /><strong>A:</strong> Yes, degrees from accredited universities are recognized globally. Check specific country regulations for professional courses.</li>
-          <li><strong>Q:</strong> Can I switch countries during my studies? <br /><strong>A:</strong> Some programs allow exchange semesters, but plan carefully to meet credit requirements.</li>
-          <li><strong>Q:</strong> How can a consultancy help me? <br /><strong>A:</strong> Consultants provide personalized guidance, compare options, and advise on scholarships, admissions, and visas.</li>
+      {/* Choosing Factors */}
+      <section style={styles.section}>
+        <h2 style={styles.heading2}>How to Choose the Right Destination?</h2>
+        <ul style={styles.list}>
+          <li style={styles.listItem}>Budget for tuition and living costs.</li>
+          <li style={styles.listItem}>Career opportunities post-graduation.</li>
+          <li style={styles.listItem}>Preferred teaching style and learning environment.</li>
+          <li style={styles.listItem}>Language of instruction.</li>
         </ul>
       </section>
 
-      <section className="section">
-        <h2 className="heading-secondary">Consultancy Support</h2>
-        <ul className="list">
-          <li>Compare education systems based on courses, costs, and career prospects</li>
-          <li>Shortlist countries and universities matching student goals</li>
-          <li>Assist with admissions, applications, and visa guidance</li>
-          <li>Provide pre-departure and relocation support</li>
-        </ul>
-        <p className="cta-text">
-          “Not sure which education system suits you best? Our experts analyze your goals, budget, and course preferences to guide you toward the perfect study abroad destination. Book your free consultation today!”
-        </p>
+      {/* FAQs */}
+      <section style={styles.section}>
+        <h2 style={styles.heading2}>Frequently Asked Questions</h2>
+        <p><strong>Q:</strong> Which is the most affordable region?</p>
+        <p><strong>A:</strong> Asia and some parts of Europe (like Germany) are generally more affordable.</p>
+
+        <p><strong>Q:</strong> Where can I get the best career opportunities?</p>
+        <p><strong>A:</strong> North America provides vast opportunities, especially in STEM fields.</p>
       </section>
+
+      {/* Consultancy CTA */}
+      <div style={styles.cta}>
+        🚀 Need help choosing? Contact our study abroad consultancy today!
+      </div>
     </div>
   );
 }
