@@ -1,329 +1,231 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import EnrollSection from "../components/EnrollSection";
+
+
 function Netherlands() {
   return (
     <div className="netherlands-container">
-      {/* ✅ Hero Section */}
+      {/* Hero Section */}
       <section className="netherlands-hero">
-        <div className="netherlands-hero-content">
-          <h1>Study in Netherlands</h1>
-          <p>
-            The Netherlands is renowned for its innovative teaching methods,
-            high-quality universities, and strong international reputation. With
-            over 2,000 programs taught in English, affordable tuition, and a
-            welcoming, multicultural society, it’s a top destination for global
-            students.
-          </p>
-          <Link to="/contact" className="apply-btn">
-            Apply Now
-          </Link>
+        <div className="hero-content">
+          <div className="hero-text">
+            <h1>Study in Netherlands</h1>
+            <p>
+              The Netherlands is one of Europe’s top study destinations, known
+              for its innovative teaching style, world-class universities, and
+              multicultural environment. With over 2,000 English-taught
+              programs, affordable tuition, and strong career opportunities, it
+              attracts thousands of international students every year.
+            </p>
+            <Link to="/contact" className="apply-btn">
+              Apply Now
+            </Link>
+          </div>
+          <div className="hero-image">
+            <img
+              src="/assets/netherlands/netherlands-banner.jpg"
+              alt="Study in Netherlands"
+            />
+          </div>
         </div>
-        <img
-          src="/assets/netherlands-universities/netherlands-banner.jpg"
-          alt="Study in Netherlands"
-          className="hero-img"
-        />
       </section>
 
-      {/* ✅ Quick Stats */}
-  <section
-  style={{
-    padding: "80px 20px",
-    textAlign: "center",
-    maxWidth: "1200px",
-    margin: "0 auto",
-    position: "relative",
-    fontFamily: "'Poppins', sans-serif",
-  }}
->
-  <h2
-    style={{
-      fontSize: "clamp(2rem, 4vw, 3rem)",
-      fontWeight: "800",
-      marginBottom: "40px",
-      background:
-        "linear-gradient(135deg, #dc2626, #ffffff, #1e3a8a)", // 🇳🇱 Netherlands red-white-blue gradient
-      WebkitBackgroundClip: "text",
-      WebkitTextFillColor: "transparent",
-      letterSpacing: "1.2px",
-      transition: "transform 0.3s ease",
-      cursor: "default",
-    }}
-    onMouseEnter={(e) =>
-      (e.target.style.transform = "translateY(-3px) scale(1.02)")
-    }
-    onMouseLeave={(e) =>
-      (e.target.style.transform = "translateY(0) scale(1)")
-    }
-  >
-    Netherlands Education at a Glance
-  </h2>
+      {/* Quick Stats */}
+      <section className="netherlands-glance">
+        <h2>Netherlands at a Glance</h2>
+        <div className="glance-grid">
+          {[
+            "50+ Universities & Institutions (13 Research, 36 Applied Sciences)",
+            "Top: University of Amsterdam, TU Delft, Utrecht, Erasmus, Leiden",
+            "Tuition: €6,000 – €20,000/year (~₹5.5–18 lakh)",
+            "Living: €800 – €1,200/month (~₹70K – 1 lakh)",
+            "115,000+ International Students from 160+ countries",
+            "2,000+ English-taught programs",
+            "1-Year Orientation Visa after graduation",
+          ].map((stat, i) => (
+            <div key={i} className="stat-card">{stat}</div>
+          ))}
+        </div>
+      </section>
 
-  <div
-    style={{
-      display: "grid",
-      gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-      gap: "2rem",
-      justifyItems: "center",
-      transition: "all 0.4s ease",
-    }}
-  >
+      {/* Why Study */}
+      <section className="netherlands-why">
+        <h2>Why Choose Netherlands?</h2>
+        <ul>
+          <li>Globally recognized research & applied science universities</li>
+          <li>2,000+ English-taught programs</li>
+          <li>Affordable tuition compared to UK & USA</li>
+          <li>One-year post-study Orientation Visa</li>
+          <li>
+            Strong industries: Engineering, Logistics, Agriculture, Finance, IT
+          </li>
+          <li>Safe, multicultural, inclusive society</li>
+        </ul>
+      </section>
+
+      {/* Benefits for Indian Students */}
+      <section className="netherlands-benefits">
+        <h2>Benefits for Indian Students</h2>
+        <ul>
+          <li>Top-ranked universities with affordable tuition</li>
+          <li>Programs focused on employability & practical training</li>
+          <li>High demand in tech, logistics, finance</li>
+          <li>Easy travel access to other EU countries</li>
+          <li>Scholarship opportunities for Indian students</li>
+        </ul>
+      </section>
+
+     {/* Top Universities */}
+{/* Top Universities in Netherlands */}
+<section className="netherlands-universities">
+  <h2>Top Universities in Netherlands</h2>
+  <div className="universities-grid">
     {[
-      "35+ Research Universities & 75+ Universities of Applied Sciences",
-      "€6,000 – €20,000 Tuition Fees per Year",
-      "115K+ International Students",
-      "Strong Post-Study Work & Career Opportunities",
-    ].map((text, index) => (
-      <div
-        key={index}
-        style={{
-          background: "rgba(255, 255, 255, 0.1)",
-          backdropFilter: "blur(16px) saturate(180%)",
-          WebkitBackdropFilter: "blur(16px) saturate(180%)",
-          borderRadius: "16px",
-          boxShadow: "0 8px 25px rgba(0,0,0,0.15)",
-          transition:
-            "transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease",
-          padding: "28px 20px",
-          fontSize: "1.05rem",
-          fontWeight: "600",
-          color: "#1f2937",
-          textAlign: "center",
-          cursor: "default",
-          position: "relative",
-          overflow: "hidden",
-        }}
-        onMouseEnter={(e) => {
-          e.currentTarget.style.transform = "translateY(-6px) scale(1.05)";
-          e.currentTarget.style.boxShadow = "0 12px 30px rgba(0,0,0,0.2)";
-          e.currentTarget.style.background = "rgba(255,255,255,0.2)";
-        }}
-        onMouseLeave={(e) => {
-          e.currentTarget.style.transform = "translateY(0) scale(1)";
-          e.currentTarget.style.boxShadow = "0 8px 25px rgba(0,0,0,0.15)";
-          e.currentTarget.style.background = "rgba(255,255,255,0.1)";
-        }}
-      >
-        {text}
+      { name: "University of Amsterdam", img: "/assets/netherlands/universities/u1.jpg" },
+      { name: "Delft University of Technology (TU Delft)", img: "/assets/netherlands/universities/u2.jpg" },
+      { name: "Utrecht University", img: "/assets/netherlands/universities/u3.jpg" },
+      { name: "Erasmus University Rotterdam", img: "/assets/netherlands/universities/u4.jpg" },
+      { name: "Leiden University", img: "/assets/netherlands/universities/u5.jpg" },
+      { name: "Vrije Universiteit Amsterdam", img: "/assets/netherlands/universities/u6.jpg" },
+      { name: "Wageningen University & Research", img: "/assets/netherlands/universities/u7.jpg" },
+      { name: "Eindhoven University of Technology", img: "/assets/netherlands/universities/u8.jpg" },
+      { name: "Maastricht University", img: "/assets/netherlands/universities/u9.jpg" }
+    ].map((uni, i) => (
+      <div className="uni-card" key={i}>
+        <img 
+          src={uni.img} 
+          alt={uni.name} 
+          onError={(e) => { e.target.onerror = null; e.target.src = "/assets/destinations/default.jpg"; }}
+        />
+        <p>{uni.name}</p>
       </div>
     ))}
   </div>
 </section>
 
 
-      {/* ✅ Why Study in Netherlands */}
-      <section className="netherlands-why">
-        <h2>Why Choose Netherlands?</h2>
+
+
+     {/* Popular Courses */}
+<section className="netherlands-courses">
+  <h2>Popular Courses in Netherlands</h2>
+  <div className="course-grid">
+    {[
+      { name: "Business Administration & Management", img: "/assets/netherlands/courses/c1.jpg" },
+      { name: "Engineering (Civil, Mechanical, Electrical, Aerospace)", img: "/assets/netherlands/courses/c2.jpg" },
+      { name: "Computer Science & Data Science", img: "/assets/netherlands/courses/c3.jpg" },
+      { name: "Logistics & Supply Chain Management", img: "/assets/netherlands/courses/c4.jpg" },
+      { name: "Environmental Science & Sustainability", img: "/assets/netherlands/courses/c5.jpg" },
+      { name: "Agriculture & Food Technology", img: "/assets/netherlands/courses/c6.jpg" },
+      { name: "Finance & Economics", img: "/assets/netherlands/courses/c7.jpg" },
+      { name: "Artificial Intelligence", img: "/assets/netherlands/courses/c8.jpg" },
+      { name: "Law & International Relations", img: "/assets/netherlands/courses/c9.jpg" },
+    ].map((course, i) => (
+      <div className="course-card" key={i}>
+        <img src={course.img} alt={course.name} />
+        <p>{course.name}</p>
+      </div>
+    ))}
+  </div>
+</section>
+
+      {/* Cost & Scholarships */}
+      <section className="netherlands-cost">
+        <h2>Cost of Studying & Living</h2>
+        <p>
+          <strong>Bachelor’s:</strong> €6,000 – €12,000/year (~₹5.5–11 lakh)
+          <br />
+          <strong>Master’s:</strong> €8,000 – €20,000/year (~₹7.5–18 lakh)
+          <br />
+          <strong>Living:</strong> €800 – €1,200/month (~₹70K – 1 lakh)
+        </p>
+        <h3>Scholarships</h3>
         <ul>
-          <li>Top-Ranked Universities & Research Institutes</li>
-          <li>2,000+ English-Taught Programs</li>
-          <li>Affordable Tuition Compared to Other EU Countries</li>
-          <li>Safe, Welcoming, and Multicultural Environment</li>
-          <li>Excellent Public Transport and Infrastructure</li>
-          <li>Strong Focus on Innovation and Sustainability</li>
+          <li>Holland Scholarship</li>
+          <li>Orange Tulip Scholarship</li>
+          <li>University-specific scholarships</li>
+          <li>International student aid programs</li>
         </ul>
       </section>
 
-      {/* ✅ Top Universities */}
-      <section className="netherlands-universities">
-        <h2>Top Universities in Netherlands</h2>
-        <div className="marquee">
-          <div className="marquee-track">
-            {[
-              {
-                name: "Delft University of Technology (TU Delft)",
-                img: "/assets/netherlands-universities/tudelft.jpg",
-              },
-              {
-                name: "University of Amsterdam",
-                img: "/assets/netherlands-universities/uva.jpg",
-              },
-              {
-                name: "Eindhoven University of Technology",
-                img: "/assets/netherlands-universities/eindhoven.jpg",
-              },
-              {
-                name: "Wageningen University & Research",
-                img: "/assets/netherlands-universities/wur.jpg",
-              },
-              {
-                name: "Leiden University",
-                img: "/assets/netherlands-universities/leiden.jpg",
-              },
-              {
-                name: "Utrecht University",
-                img: "/assets/netherlands-universities/utrecht.jpg",
-              },
-            ].map((uni, i) => (
-              <div className="uni-card" key={i}>
-                <img src={uni.img} alt={uni.name} />
-                <p>{uni.name}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ✅ Popular Courses */}
-      <section className="netherlands-courses">
-        <h2>Popular Courses in Netherlands</h2>
-        <div className="course-grid">
-          {[
-            {
-              name: "Engineering & Technology",
-              img: "/assets/netherlands-universities/engineering.jpg",
-            },
-            {
-              name: "Business & Management",
-              img: "/assets/netherlands-universities/business.jpg",
-            },
-            {
-              name: "Computer Science & AI",
-              img: "/assets/netherlands-universities/computer-science.jpg",
-            },
-            {
-              name: "Agricultural & Environmental Sciences",
-              img: "/assets/netherlands-universities/environment.jpg",
-            },
-            {
-              name: "Life Sciences & Health",
-              img: "/assets/netherlands-universities/health.jpg",
-            },
-            {
-              name: "Social Sciences & Humanities",
-              img: "/assets/netherlands-universities/humanities.jpg",
-            },
-          ].map((course, i) => (
-            <div className="course-card" key={i}>
-              <img src={course.img} alt={course.name} />
-              <p>{course.name}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ✅ Equipment & Infrastructure */}
-      <section className="netherlands-equipment">
-        <h2>Our Equipment & Infrastructure</h2>
+      {/* Career Prospects */}
+      <section className="netherlands-career">
+        <h2>Career Prospects</h2>
         <p>
-          Dutch universities offer modern labs, innovation centers, digital
-          libraries, and advanced research facilities that foster creativity,
-          experimentation, and global innovation.
+          Major industries: Engineering, Logistics, Finance, Agriculture, IT,
+          Renewable Energy. Graduates can apply for a 1-year Orientation Visa to
+          seek jobs. Cities like Amsterdam, Rotterdam, Eindhoven, Utrecht have
+          strong job markets.
         </p>
       </section>
 
-   {/* Cost of Study & Scholarships */}
-<section className="netherlands-cost" style={{ maxWidth: "1100px", margin: "60px auto", padding: "0 20px" }}>
-  <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "40px" }}>
+      {/* Documents & Visa */}
+      <section className="netherlands-documents">
+        <h2>Documents Required</h2>
+        <ul>
+          <li>Academic transcripts (10th, 12th, bachelor’s if applicable)</li>
+          <li>English test scores (IELTS/TOEFL)</li>
+          <li>GRE/GMAT (for some programs)</li>
+          <li>SOP, LORs, CV/Resume, Passport copy</li>
+          <li>Offer letter</li>
+          <li>Proof of funds (~€950/month for living expenses)</li>
+          <li>Health insurance</li>
+        </ul>
+        <h2>Student Visa (MVV & Residence Permit)</h2>
+        <p>
+          Valid for course duration + 1-year Orientation Visa. Processing time:
+          2–3 months. Work rights: Up to 16 hrs/week during term & full-time
+          during summer.
+        </p>
+      </section>
 
-    {/* Text Column */}
-    <div style={{ flex: "1 1 500px" }}>
-      <h2>Cost of Studying in the Netherlands</h2>
-      <p>
-        Tuition fees range from €8,000 - €20,000 per year depending on the program and university. Living costs vary by city, averaging €10,000 - €15,000 per year.
-      </p>
-      <h3>Scholarships in the Netherlands</h3>
-      <ul>
-        <li>Holland Scholarship</li>
-        <li>Orange Tulip Scholarship</li>
-        <li>University-Specific Scholarships</li>
-        <li>International Student Financial Aid Programs</li>
-      </ul>
-    </div>
+      {/* Student Life */}
+     <section className="netherlands-student-life">
+  <h2>Student Life in the Netherlands</h2>
+  <p>
+    The Netherlands offers modern campuses, multicultural cities, vibrant cultural festivals,
+    and excellent travel opportunities across Europe. Students enjoy part-time jobs, internships,
+    and global networking opportunities while experiencing Dutch culture.
+  </p>
 
-    {/* Image Column */}
-    <div style={{ flex: "1 1 400px" }}>
-      <img
-        src="/assets/netherlands-universities/netherlands-scholarship.jpg"
-        alt="Scholarships in the Netherlands"
-        className="scholarship-img"
-        style={{ width: "100%", borderRadius: "16px", boxShadow: "0 10px 25px rgba(0,0,0,0.15)", transition: "transform 0.3s ease" }}
-        onMouseEnter={e => e.currentTarget.style.transform = "scale(1.03)"}
-        onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}
-      />
-    </div>
+  {/* ✅ Single Image */}
+  <div className="student-life-image">
+    <img src="/assets/netherlands/netherlands-student-life.jpg" alt="Student Life in the Netherlands" />
   </div>
 </section>
 
-{/* Career Prospects */}
-<section className="netherlands-career" style={{ maxWidth: "900px", margin: "60px auto", padding: "0 20px" }}>
-  <h2>Career Prospects in the Netherlands</h2>
-  <p>
-    The Netherlands offers opportunities in Technology, Finance, Engineering, Logistics, and Healthcare. International students can work part-time during studies and may apply for a “search year” residence permit after graduation to find employment.
-  </p>
-</section>
 
-{/* Documents & Visa Process */}
-<section className="netherlands-documents" style={{ maxWidth: "900px", margin: "60px auto", padding: "0 20px" }}>
-  <h2>Documents Required</h2>
-  <ul>
-    <li>Valid Passport</li>
-    <li>Academic Transcripts & Certificates</li>
-    <li>English Proficiency Test (IELTS/TOEFL)</li>
-    <li>Proof of Funds</li>
-    <li>Offer Letter from a Dutch University</li>
-  </ul>
-
-  <h2>Netherlands Student Visa</h2>
-  <p>
-    Apply for a residence permit for study via the Dutch Immigration and Naturalisation Service (IND) using the university acceptance letter, proof of funds, health insurance, and required documents.
-  </p>
-</section>
-
-{/* Student Life */}
-<section className="netherlands-life" style={{ maxWidth: "1100px", margin: "60px auto", padding: "0 20px" }}>
-  <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "40px" }}>
-
-    {/* Image Column */}
-    <div style={{ flex: "1 1 400px" }}>
-      <img
-        src="/assets/netherlands-universities/student-life.jpg"
-        alt="Student Life in the Netherlands"
-        style={{ width: "100%", borderRadius: "16px", boxShadow: "0 10px 25px rgba(0,0,0,0.15)", transition: "transform 0.3s ease" }}
-        onMouseEnter={e => e.currentTarget.style.transform = "scale(1.03)"}
-        onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}
-      />
-    </div>
-
-    {/* Text Column */}
-    <div style={{ flex: "1 1 500px" }}>
-      <h2>Student Life in the Netherlands</h2>
-      <p>
-        The Netherlands offers a multicultural and student-friendly environment with modern campuses, historic cities, and vibrant cultural activities. Students can enjoy festivals, internships, networking opportunities, and part-time jobs.
-      </p>
-    </div>
-
-  </div>
-</section>
-
+      {/* Enroll CTA */}
       <EnrollSection country="Netherlands" />
 
-      {/* ✅ FAQs */}
+      {/* FAQs */}
       <section className="netherlands-faq">
-        <h2>FAQs About Studying in Netherlands</h2>
+        <h2>FAQs</h2>
         <div className="faq-item">
-          <h4>Are programs taught in English?</h4>
-          <p>
-            Yes, over 2,000 programs are offered in English across bachelor's,
-            master's, and doctoral levels.
-          </p>
-        </div>
-
-        <div className="faq-item">
-          <h4>Can international students work part-time?</h4>
-          <p>
-            Yes, students from outside the EU/EEA can work up to 16 hours/week
-            or full-time during holidays with a work permit.
-          </p>
+          <h4>Do I need Dutch to study?</h4>
+          <p>No, 2,000+ programs are in English, but Dutch helps for jobs.</p>
         </div>
         <div className="faq-item">
-          <h4>Is the Netherlands safe for international students?</h4>
+          <h4>Can I work while studying?</h4>
+          <p>Yes, up to 16 hrs/week during term & full-time in summer.</p>
+        </div>
+        <div className="faq-item">
+          <h4>What is the Orientation Visa?</h4>
+          <p>A 1-year visa to find jobs after graduation.</p>
+        </div>
+        <div className="faq-item">
+          <h4>Is it expensive?</h4>
+          <p>Cheaper than UK/USA, plus scholarships available.</p>
+        </div>
+        <div className="faq-item">
+          <h4>Can I settle there?</h4>
           <p>
-            Yes, the Netherlands is known for its safety, quality of life, and
-            strong student support services.
+            Yes, many transition from Orientation Visa to work/residence
+            permits.
           </p>
         </div>
+        <p>“Looking to study in the Netherlands? From world-class universities to excellent job prospects, our consultancy helps you with admissions, scholarships, and visa applications.”</p>
       </section>
     </div>
   );

@@ -11,7 +11,7 @@ const CommonApplicationMistakes = () => {
 
   const styles = {
     container: {
-      maxWidth: "1000px",
+    
       margin: "0 auto",
       padding: isMobile ? "20px 15px" : "40px 20px",
       fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",

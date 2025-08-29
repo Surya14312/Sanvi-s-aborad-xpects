@@ -19,7 +19,7 @@ const AffordableCountries = () => {
       borderRadius: "16px",
       boxShadow: "0 12px 35px rgba(0, 0, 0, 0.08)",
       margin: isMobile ? "30px 10px" : "60px auto",
-      maxWidth: "1100px",
+      
       padding: isMobile ? "15px" : "0 25px",
       animation: "fadeInUp 1s ease-in-out"
     },

@@ -10,324 +10,224 @@ function Canada() {
         <div className="canada-hero-content">
           <h1>Study in Canada</h1>
           <p>
-            Canada is a top choice for international students, offering
-            high-quality education, safe cities, and excellent post-graduation
-            opportunities. Its affordable tuition, multicultural environment,
-            and world-class institutions make it ideal for global learners.
+            Canada is a top destination for international students due to its high-quality education,
+            multicultural society, and safe environment. Canadian universities offer globally recognized
+            degrees with strong emphasis on research, innovation, and employability. The country also provides
+            excellent post-study work and immigration opportunities, making it ideal for Indian students planning
+            long-term careers abroad.
           </p>
           <Link to="/contact" className="apply-btn">
             Apply Now
           </Link>
         </div>
         <img
-          src="/assets/canada-universities/canada-banner.jpg"
+          src="/assets/canada/canada-banner.jpg"
           alt="Study in Canada"
           className="hero-img"
         />
       </section>
 
-      {/* ✅ Quick Stats */}
-      <section
-  style={{
-    padding: "80px 20px",
-    textAlign: "center",
-    maxWidth: "1200px",
-    margin: "0 auto",
-    position: "relative",
-    fontFamily: "'Poppins', sans-serif",
-  }}
->
-  <h2
-    style={{
-      fontSize: "clamp(2rem, 4vw, 3rem)",
-      fontWeight: "800",
-      marginBottom: "40px",
-      background: "linear-gradient(135deg, #dc2626, #7f1d1d)", // 🇨🇦 red gradient for Canada
-      WebkitBackgroundClip: "text",
-      WebkitTextFillColor: "transparent",
-      letterSpacing: "1.2px",
-      transition: "transform 0.3s ease",
-      cursor: "default",
-    }}
-    onMouseEnter={(e) => (e.target.style.transform = "translateY(-3px) scale(1.02)")}
-    onMouseLeave={(e) => (e.target.style.transform = "translateY(0) scale(1)")}
-  >
-    Canada Education at a Glance
-  </h2>
+      {/* ✅ Canada at a Glance */}
+      <section className="canada-glance">
+        <h2>Canada at a Glance</h2>
+        <ul>
+          <li>Number of Universities and Institutions: 100+ universities + 200+ colleges</li>
+          <li>Top-ranked Institutions: University of Toronto, University of British Columbia, McGill University, University of Alberta, University of Waterloo</li>
+          <li>Tuition Fees (International Students): CAD 15,000 – CAD 35,000/year (~₹10–28 lakh)</li>
+          <li>Living Costs: CAD 12,000 – CAD 18,000/year (~₹9.5–14 lakh)</li>
+          <li>International Students: 640,000+ from over 180 countries</li>
+          <li>Language of Instruction: English and French</li>
+          <li>Post-Study Work Opportunities: Post-Graduation Work Permit (PGWP) up to 3 years</li>
+        </ul>
+      </section>
 
-  <div
-    style={{
-      display: "grid",
-      gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-      gap: "2rem",
-      justifyItems: "center",
-      transition: "all 0.4s ease",
-    }}
-  >
+      {/* ✅ Why Choose Canada */}
+      <section className="canada-why">
+        <h2>Why Choose Canada?</h2>
+        <ul>
+          <li>Globally recognized degrees with high employability</li>
+          <li>Multicultural and inclusive society</li>
+          <li>Strong industries in IT, Engineering, Healthcare, Finance, and Hospitality</li>
+          <li>Affordable tuition compared to the USA and UK</li>
+          <li>Opportunities for permanent residency through Canadian immigration programs</li>
+          <li>Part-time work allowed during studies and post-study work options</li>
+        </ul>
+      </section>
+
+      {/* ✅ Benefits for Indian Students */}
+      <section className="canada-benefits">
+        <h2>Benefits for Indian Students</h2>
+        <ul>
+          <li>English-medium programs eliminate language barriers</li>
+          <li>Post-Graduation Work Permit (PGWP) allows up to 3 years of work</li>
+          <li>Scholarships and financial aid are available for meritorious students</li>
+          <li>Opportunities to gain Canadian work experience and settle permanently</li>
+          <li>Access to world-class research facilities and industry exposure</li>
+        </ul>
+      </section>
+{/* ✅ Top Universities */}
+<section className="canada-universities">
+  <h2>Top Universities in Canada</h2>
+  <div className="university-grid">
     {[
-      "100+ Public Universities",
-      "CAD 15K – CAD 35K Tuition Fees",
-      "800K+ International Students",
-      "Post-Graduate Work Permit (up to 3 Years)",
-    ].map((text, index) => (
-      <div
-        key={index}
-        style={{
-          background: "rgba(255, 255, 255, 0.1)",
-          backdropFilter: "blur(16px) saturate(180%)",
-          WebkitBackdropFilter: "blur(16px) saturate(180%)",
-          borderRadius: "16px",
-          boxShadow: "0 8px 25px rgba(0,0,0,0.15)",
-          transition: "transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease",
-          padding: "28px 20px",
-          fontSize: "1.05rem",
-          fontWeight: "600",
-          color: "#1f2937",
-          textAlign: "center",
-          cursor: "default",
-          position: "relative",
-          overflow: "hidden",
-        }}
-        onMouseEnter={(e) => {
-          e.currentTarget.style.transform = "translateY(-6px) scale(1.05)";
-          e.currentTarget.style.boxShadow = "0 12px 30px rgba(0,0,0,0.2)";
-          e.currentTarget.style.background = "rgba(255,255,255,0.2)";
-        }}
-        onMouseLeave={(e) => {
-          e.currentTarget.style.transform = "translateY(0) scale(1)";
-          e.currentTarget.style.boxShadow = "0 8px 25px rgba(0,0,0,0.15)";
-          e.currentTarget.style.background = "rgba(255,255,255,0.1)";
-        }}
-      >
-        {text}
+      { name: "University of Toronto", img: "/assets/canada/universities/toronto.jpg" },
+      { name: "University of British Columbia (UBC)", img: "/assets/canada/universities/ubc.jpg" },
+      { name: "McGill University", img: "/assets/canada/universities/mcgill.jpg" },
+      { name: "University of Alberta", img: "/assets/canada/universities/alberta.jpg" },
+      { name: "University of Waterloo", img: "/assets/canada/universities/waterloo.jpg" },
+      { name: "McMaster University", img: "/assets/canada/universities/mcmaster.jpg" },
+      { name: "Queen’s University", img: "/assets/canada/universities/queens.jpg" },
+      { name: "University of Montreal", img: "/assets/canada/universities/montreal.jpg" },
+    ].map((uni, i) => (
+      <div key={i} className="uni-card">
+        <img src={uni.img} alt={uni.name} />
+        <p>{uni.name}</p>
       </div>
     ))}
   </div>
 </section>
 
 
-      {/* ✅ Why Study in Canada */}
-      <section className="canada-why">
-        <h2>Why Choose Canada?</h2>
+     {/* ✅ Popular Courses */}
+<section className="canada-courses">
+  <h2>Popular Courses in Canada</h2>
+  <div className="course-grid">
+    {[
+      { name: "Engineering (Mechanical, Civil, Electrical, Software)", img: "/assets/canada/courses/engineering.jpg" },
+      { name: "Computer Science and Data Science", img: "/assets/canada/courses/computer-science.jpg" },
+      { name: "Business Administration and Management", img: "/assets/canada/courses/business.jpg" },
+      { name: "Finance and Accounting", img: "/assets/canada/courses/finance.jpg" },
+      { name: "Life Sciences and Healthcare", img: "/assets/canada/courses/life-sciences.jpg" },
+      { name: "Hospitality and Tourism Management", img: "/assets/canada/courses/hospitality.jpg" },
+      { name: "Artificial Intelligence and Robotics", img: "/assets/canada/courses/ai-robotics.jpg" },
+      { name: "Law and International Relations", img: "/assets/canada/courses/law.jpg" },
+    ].map((course, i) => (
+      <div className="course-card" key={i}>
+        <img src={course.img} alt={course.name} />
+        <p>{course.name}</p>
+      </div>
+    ))}
+  </div>
+</section>
+
+      {/* ✅ Cost of Studying & Living */}
+      <section className="canada-cost">
+        <h2>Cost of Studying and Living</h2>
         <ul>
-          <li>Affordable Tuition & Living Costs</li>
-          <li>Globally Recognized Degrees</li>
-          <li>Safe, Peaceful & Inclusive Environment</li>
-          <li>Post-Graduate Work Permit up to 3 Years</li>
-          <li>Pathway to Permanent Residency</li>
-          <li>Top-Ranked Research Institutions</li>
+          <li>Undergraduate Tuition Fees: CAD 15,000 – CAD 30,000/year (~₹12–25 lakh)</li>
+          <li>Postgraduate Tuition Fees: CAD 18,000 – CAD 35,000/year (~₹14–28 lakh)</li>
+          <li>Living Expenses: CAD 12,000–18,000/year (~₹9.5–14 lakh) including accommodation, food, and transport</li>
         </ul>
       </section>
 
-      {/* ✅ Top Universities */}
-      <section className="canada-universities">
-        <h2>Top Universities in Canada</h2>
-        <div className="marquee">
-          <div className="marquee-track">
-            {[...Array(6)].map((_, i) => {
-              const universities = [
-                {
-                  name: "University of Toronto",
-                  img: "/assets/canada-universities/toronto.jpg",
-                },
-                {
-                  name: "University of British Columbia",
-                  img: "/assets/canada-universities/ubc.jpg",
-                },
-                {
-                  name: "McGill University",
-                  img: "/assets/canada-universities/mcgill.jpg",
-                },
-                {
-                  name: "University of Alberta",
-                  img: "/assets/canada-universities/alberta.jpg",
-                },
-                {
-                  name: "University of Waterloo",
-                  img: "/assets/canada-universities/waterloo.jpg",
-                },
-                {
-                  name: "Western University",
-                  img: "/assets/canada-universities/western.jpg",
-                },
-              ];
-              const uni = universities[i];
-              return (
-                <div className="uni-card" key={i}>
-                  <img src={uni.img} alt={uni.name} />
-                  <p>{uni.name}</p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
+      {/* ✅ Career Prospects */}
+      <section className="canada-career">
+        <h2>Career Prospects in Canada</h2>
+        <ul>
+          <li>High demand for skilled professionals in IT, Engineering, Healthcare, Finance, and Business sectors</li>
+          <li>PGWP allows international students to gain valuable Canadian work experience</li>
+          <li>Opportunities for permanent residency through programs like Express Entry, Provincial Nominee Program (PNP)</li>
+          <li>Cities like Toronto, Vancouver, Montreal, and Calgary provide strong employment markets</li>
+        </ul>
       </section>
 
-      {/* ✅ Popular Courses */}
-      <section className="canada-courses">
-        <h2>Popular Courses in Canada</h2>
-        <div className="course-grid">
-          {[...Array(6)].map((_, i) => {
-            const courses = [
-              {
-                name: "Computer Science",
-                img: "/assets/canada-universities/computer-science.jpg",
-              },
-              {
-                name: "Business & Finance",
-                img: "/assets/canada-universities/business.jpg",
-              },
-              {
-                name: "Engineering",
-                img: "/assets/canada-universities/engineering.jpg",
-              },
-              {
-                name: "Healthcare & Nursing",
-                img: "/assets/canada-universities/health.jpg",
-              },
-              {
-                name: "Environmental Science",
-                img: "/assets/canada-universities/environment.jpg",
-              },
-              {
-                name: "Hospitality & Tourism",
-                img: "/assets/canada-universities/hospitality.jpg",
-              },
-            ];
-            const course = courses[i];
-            return (
-              <div className="course-card" key={i}>
-                <img src={course.img} alt={course.name} />
-                <p>{course.name}</p>
-              </div>
-            );
-          })}
-        </div>
+      {/* ✅ Documents Required */}
+      <section className="canada-documents">
+        <h2>Documents Required (Indians)</h2>
+        <h3>For University Application</h3>
+        <ul>
+          <li>Academic transcripts (10th, 12th, bachelor’s if applicable)</li>
+          <li>English proficiency test scores (IELTS/TOEFL)</li>
+          <li>Statement of Purpose (SOP)</li>
+          <li>Letters of Recommendation (LORs)</li>
+          <li>CV/Resume</li>
+          <li>Passport copy</li>
+        </ul>
+
+        <h3>For Student Visa Application (Study Permit)</h3>
+        <ul>
+          <li>Acceptance letter from Canadian institution</li>
+          <li>Proof of sufficient funds (~CAD 12,000/year for living expenses)</li>
+          <li>Passport copy</li>
+          <li>Academic transcripts and English test proof</li>
+          <li>Health insurance coverage</li>
+          <li>Completed visa application form with biometric data</li>
+        </ul>
       </section>
 
-      {/* ✅ Equipment & Infrastructure */}
-      <section className="canada-equipment">
-        <h2>Our Equipment & Infrastructure</h2>
-        <p>
-          Canadian institutions are equipped with cutting-edge labs, libraries,
-          and digital learning tools to ensure a productive academic
-          environment.
-        </p>
+      {/* ✅ Student Visa for Canada */}
+      <section className="canada-visa">
+        <h2>Student Visa for Canada</h2>
+        <ul>
+          <li>Type: Study Permit</li>
+          <li>Requirements: Acceptance letter, proof of funds, health insurance, passport</li>
+          <li>Visa Duration: Program duration + 90 days</li>
+          <li>Processing Time: 4–12 weeks</li>
+          <li>Work Rights:
+            <ul>
+              <li>Up to 20 hours/week during term</li>
+              <li>Full-time during holidays</li>
+              <li>Eligible for PGWP post-graduation</li>
+            </ul>
+          </li>
+        </ul>
       </section>
-
-{/* Cost of Study & Scholarships */}
-<section className="canada-cost" style={{ maxWidth: "1100px", margin: "60px auto", padding: "0 20px" }}>
-  <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "40px" }}>
-    
-    {/* Text Column */}
-    <div style={{ flex: "1 1 500px" }}>
-      <h2>Cost of Studying in Canada</h2>
-      <p>
-        Tuition fees range between CAD 15,000 - CAD 35,000 annually depending
-        on the program and university. Living costs vary by city, averaging
-        CAD 12,000 - CAD 18,000 per year.
-      </p>
-      <h3>Scholarships in Canada</h3>
-      <ul>
-        <li>Vanier Canada Graduate Scholarships</li>
-        <li>Canadian Commonwealth Scholarships</li>
-        <li>University-Specific Grants</li>
-        <li>International Student Financial Aid Programs</li>
-      </ul>
-    </div>
-
-    {/* Image Column */}
-    <div style={{ flex: "1 1 400px" }}>
-      <img
-        src="/assets/canada-universities/canada-scholarship.jpg"
-        alt="Scholarships in Canada"
-        className="scholarship-img"
-        style={{ width: "100%", borderRadius: "16px", boxShadow: "0 10px 25px rgba(0,0,0,0.15)", transition: "transform 0.3s ease" }}
-        onMouseEnter={e => e.currentTarget.style.transform = "scale(1.03)"}
-        onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}
-      />
-    </div>
-  </div>
-</section>
-
-{/* Career Prospects */}
-<section className="canada-career" style={{ maxWidth: "900px", margin: "60px auto", padding: "0 20px" }}>
-  <h2>Career Prospects in Canada</h2>
+      <section className="canada-mbbs-student-life">
+  <h2>Student Life in Canada</h2>
   <p>
-    Canada offers strong job opportunities for graduates, especially in IT, Engineering, Healthcare, Finance, and Research. The Post-Graduation Work Permit (PGWP) allows international students to gain work experience after studies.
+    Canada offers a safe, multicultural, and student-friendly environment with world-class campuses, 
+    vibrant cities, and diverse cultural experiences. MBBS students can enjoy internships, networking opportunities, 
+    student clubs, and explore Canada’s natural landscapes and urban attractions.
   </p>
-</section>
 
-{/* Documents & Visa Process */}
-<section className="canada-documents" style={{ maxWidth: "900px", margin: "60px auto", padding: "0 20px" }}>
-  <h2>Documents Required</h2>
-  <ul>
-    <li>Valid Passport</li>
-    <li>Academic Transcripts & Certificates</li>
-    <li>English/French Proficiency Test (IELTS/TOEFL/TEF)</li>
-    <li>Proof of Funds</li>
-    <li>Offer Letter from a Canadian University</li>
-  </ul>
+  {/* ✅ Single Image */}
+  <div className="student-life-image">
+    <img 
+      src="/assets/canada/canada-mbbs-student-life.jpg" 
+      alt="Student Life in Canada" 
 
-  <h2>Canada Student Visa</h2>
-  <p>
-    Apply for a Study Permit. The process requires a university acceptance letter, proof of funds, medical exam (if required), and biometrics.
-  </p>
-</section>
-
-{/* Student Life */}
-<section className="canada-life" style={{ maxWidth: "1100px", margin: "60px auto", padding: "0 20px" }}>
-  <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "40px" }}>
-
-    {/* Image Column */}
-    <div style={{ flex: "1 1 400px" }}>
-      <img
-        src="/assets/canada-universities/student-life.jpg"
-        alt="Student Life in Canada"
-        style={{ width: "100%", borderRadius: "16px", boxShadow: "0 10px 25px rgba(0,0,0,0.15)", transition: "transform 0.3s ease" }}
-        onMouseEnter={e => e.currentTarget.style.transform = "scale(1.03)"}
-        onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}
-      />
-    </div>
-
-    {/* Text Column */}
-    <div style={{ flex: "1 1 500px" }}>
-      <h2>Student Life in Canada</h2>
-      <p>
-        Canada offers a multicultural and welcoming environment with vibrant campuses, outdoor activities, and excellent student support. Students can enjoy cultural events, internships, and various networking opportunities.
-      </p>
-    </div>
-
+    />
   </div>
 </section>
 
 
-      <EnrollSection country="Canada" />
-
-      {/* ✅ FAQ Section */}
+      {/* ✅ FAQs */}
       <section className="canada-faq">
         <h2>FAQs About Studying in Canada</h2>
         <div className="faq-item">
-          <h4>What is the average tuition fee in Canada?</h4>
-          <p>
-            Tuition fees range from CAD 15,000 to CAD 35,000 per year, depending
-            on program and institution.
-          </p>
+          <h4>Can Indian students work while studying?</h4>
+          <p>Yes, up to 20 hours/week during term and full-time during holidays.</p>
         </div>
         <div className="faq-item">
-          <h4>Can I work during studies?</h4>
-          <p>
-            Yes, international students can work up to 20 hours per week during
-            academic sessions and full-time during scheduled breaks.
-          </p>
+          <h4>Are scholarships available?</h4>
+          <p>Yes, many universities offer merit-based and need-based scholarships for international students.</p>
         </div>
         <div className="faq-item">
-          <h4>What is PGWP?</h4>
-          <p>
-            The Post-Graduate Work Permit allows eligible graduates to work in
-            Canada for up to 3 years after graduation.
-          </p>
+          <h4>How much is living in Canada?</h4>
+          <p>CAD 12,000–18,000/year (~₹9.5–14 lakh), including accommodation, food, and transport.</p>
         </div>
+        <div className="faq-item">
+          <h4>Can I stay in Canada after graduation?</h4>
+          <p>Yes, through Post-Graduation Work Permit (PGWP) for 1–3 years depending on your program.</p>
+        </div>
+        <div className="faq-item">
+          <h4>Is permanent residency possible after studying in Canada?</h4>
+          <p>Yes, Canadian work experience can help apply for permanent residency via Express Entry or PNP.</p>
+        </div>
+      </section>
+
+      {/* ✅ Enroll Section */}
+      <EnrollSection country="Canada" />
+
+      {/* ✅ Call to Action */}
+      <section className="canada-cta">
+        <p>
+          Planning to study in Canada? Our consultancy guides Indian students through university selection, 
+          scholarship applications, visa processing, and career planning for a successful study abroad experience.
+        </p>
+        <Link to="/contact" className="apply-btn">
+          Get Expert Guidance
+        </Link>
       </section>
     </div>
   );

@@ -9,8 +9,8 @@ export default function MythsFacts() {
       color: "#333",
       backgroundColor: "#f9fafc",
       padding: "40px 20px",
-      maxWidth: "1100px",
-      margin: "0 auto",
+    
+      
     },
     headingPrimary: {
       fontSize: "2.5rem",

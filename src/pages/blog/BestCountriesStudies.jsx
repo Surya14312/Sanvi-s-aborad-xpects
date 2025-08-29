@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const BestCountriesStudies = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -18,7 +19,7 @@ const BestCountriesStudies = () => {
       borderRadius: "16px",
       boxShadow: "0 12px 35px rgba(0,0,0,0.08)",
       margin: isMobile ? "15px 10px" : "60px auto",
-      maxWidth: "1100px",
+     
       padding: isMobile ? "15px" : "25px",
     },
     h1: {
@@ -96,6 +97,19 @@ const BestCountriesStudies = () => {
       fontWeight: 600,
       marginRight: "5px",
       color: "#36d1dc",
+    },
+    ctaBtn: {
+      display: "inline-block",
+      background: "linear-gradient(90deg, #36d1dc, #5b86e5)",
+      color: "#fff",
+      padding: "12px 24px",
+      borderRadius: "8px",
+      fontSize: "1rem",
+      fontWeight: 600,
+      textDecoration: "none",
+      textAlign: "center",
+      transition: "background 0.3s ease",
+      marginTop: "20px",
     },
   };
 
@@ -241,7 +255,14 @@ const BestCountriesStudies = () => {
           <li style={styles.li}>Provide career guidance and post-study work support</li>
           <li style={styles.li}>Offer pre-departure and relocation assistance</li>
         </ul>
-        <p style={styles.paragraph}><strong>“Want to study in the best country for your chosen field? Our experts guide you in selecting the right country, university, and program for global career success. Book your free consultation today!”</strong></p>
+        <p style={styles.paragraph}>
+          <strong>
+            “Want to study in the best country for your chosen field? Our experts guide you in selecting the right country, university, and program for global career success. Book your free consultation today!”
+          </strong>
+        </p>
+        <Link to="/contact" style={styles.ctaBtn}>
+          Book Free Consultation
+        </Link>
       </section>
     </div>
   );

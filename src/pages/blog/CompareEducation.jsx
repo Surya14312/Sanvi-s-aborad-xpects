@@ -15,7 +15,7 @@ export default function CompareEducation() {
   // ✅ Inline style objects with responsiveness
   const styles = {
     container: {
-      maxWidth: "1100px",
+     
       margin: "0 auto",
       padding: isMobile ? "20px 10px" : "40px 20px",
       fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",

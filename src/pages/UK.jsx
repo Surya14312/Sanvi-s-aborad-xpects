@@ -1,379 +1,199 @@
+// src/pages/UK.jsx
 import React from "react";
 import { Link } from "react-router-dom";
 import EnrollSection from "../components/EnrollSection";
 
+
 function UK() {
   return (
     <div className="uk-container">
+      
       {/* Hero Section */}
       <section className="uk-hero">
-       <section
-  style={{
-    display: "flex",
-    flexWrap: "wrap",
-    alignItems: "center",
-    justifyContent: "center",
-    gap: "20px",
-    marginBottom: "60px",
-  }}
->
-  {/* Text Content */}
-  <div
-    style={{
-      flex: "1 1 300px", // grows and shrinks
-      minWidth: "280px",
-      maxWidth: "600px",
-    }}
-  >
-    <h1
-      style={{
-        fontSize: "clamp(2rem, 6vw, 3rem)",
-        marginBottom: "20px",
-        lineHeight: "1.2",
-      }}
-    >
-      Study in the UK
-    </h1>
-    <p
-      style={{
-        fontSize: "clamp(0.9rem, 2.5vw, 1.15rem)",
-        lineHeight: "1.6",
-      }}
-    >
-      The United Kingdom is one of the most popular destinations for
-      international students, offering world-class education, cultural
-      diversity, and excellent career opportunities. With globally
-      recognized universities and vibrant cities, the UK promises a bright
-      future for students.
-    </p>
-    <Link
-      to="/contact"
-      style={{
-        display: "inline-block",
-        marginTop: "20px",
-        padding: "12px 25px",
-        backgroundColor: "#2563eb",
-        color: "#fff",
-        borderRadius: "8px",
-        textDecoration: "none",
-        fontWeight: "600",
-        fontSize: "clamp(0.9rem, 2vw, 1rem)",
-      }}
-    >
-      Apply Now
-    </Link>
-  </div>
-
-  {/* Hero Image */}
-  <img
-    src="/assets/uk-universities/uk-banner.jpg"
-    alt="Study in UK"
-    style={{
-      flex: "1 1 300px",
-      minWidth: "280px",
-      width: "100%",
-      maxWidth: "600px",
-      borderRadius: "16px",
-      objectFit: "cover",
-      boxShadow: "0 8px 20px rgba(0,0,0,0.15)",
-      transition: "transform 0.3s ease",
-    }}
-    onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.03)")}
-    onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
-  />
-</section>
+        <div className="uk-hero-text">
+          <h1>Study in the UK</h1>
+          <p>
+            The UK is one of the world’s most popular study destinations, known for academic
+            excellence, centuries-old universities, and global recognition of its degrees.
+            Students benefit from shorter courses, diverse cultures, and strong career
+            opportunities through post-study work visas.
+          </p>
+          <Link to="/contact" className="apply-btn">Apply Now</Link>
+        </div>
+        <img src="/assets/uk/uk-banner.jpg" alt="Study in UK" className="uk-hero-img" />
       </section>
 
       {/* Quick Stats */}
-      <section
-  style={{
-    padding: "80px 20px",
-    textAlign: "center",
-    maxWidth: "1200px",
-    margin: "0 auto",
-    position: "relative",
-    fontFamily: "'Poppins', sans-serif",
-  }}
->
-  <h2
-    style={{
-      fontSize: "clamp(2rem, 4vw, 3rem)",
-      fontWeight: "800",
-      marginBottom: "40px",
-      background: "linear-gradient(135deg, #2563eb, #1e3a8a)", // brand gradient
-      WebkitBackgroundClip: "text",
-      WebkitTextFillColor: "transparent",
-      letterSpacing: "1.2px",
-      transition: "transform 0.3s ease",
-      cursor: "default",
-    }}
-    onMouseEnter={(e) => (e.target.style.transform = "translateY(-3px) scale(1.02)")}
-    onMouseLeave={(e) => (e.target.style.transform = "translateY(0) scale(1)")}
-  >
-    UK Education at a Glance
-  </h2>
+      <section className="uk-stats">
+        <h2>The UK at a Glance</h2>
+        <div className="uk-stats-grid">
+          {[
+            "160+ Recognized Universities",
+            "Top-ranked: Oxford, Cambridge, Imperial, LSE, Edinburgh",
+            "£10K – £38K Tuition Fees",
+            "£9K – £15K Living Costs",
+            "680K+ International Students",
+            "English Taught Programs",
+            "2-Year Graduate Route Visa",
+          ].map((stat, i) => (
+            <div key={i} className="uk-stat-card">{stat}</div>
+          ))}
+        </div>
+      </section>
 
-  <div
-    style={{
-      display: "grid",
-      gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-      gap: "2rem",
-      justifyItems: "center",
-      transition: "all 0.4s ease",
-    }}
-  >
+      {/* Why Choose */}
+      <section className="uk-why-choose">
+        <h2>Why Choose the UK?</h2>
+        <ul>
+          <li>Globally recognized degrees from prestigious universities</li>
+          <li>Shorter courses: 3 years UG, 1 year PG</li>
+          <li>Access to world-class research and faculty</li>
+          <li>Strong Indian student community & multicultural exposure</li>
+          <li>20 hrs/week part-time work during term</li>
+        </ul>
+      </section>
+
+      {/* Benefits for Indian Students */}
+      <section className="uk-benefits">
+        <h2>Benefits for Indian Students</h2>
+        <ul>
+          <li>Wide range of English-taught programs</li>
+          <li>Graduate Route Visa ensures post-study job opportunities</li>
+          <li>Direct flights & large Indian diaspora for cultural comfort</li>
+          <li>Exclusive scholarships (Chevening, GREAT, Commonwealth)</li>
+        </ul>
+      </section>
+
+      {/* Top Universities */}
+<section className="uk-universities">
+  <h2>Top Universities in UK</h2>
+  <div className="universities-grid">
     {[
-      "150+ Universities",
-      "€11K - €35K Tuition Fees",
-      "600K+ International Students",
-      "2-Year Graduate Immigration Route",
-    ].map((text, index) => (
-      <div
-        key={index}
-        style={{
-          background: "rgba(255, 255, 255, 0.1)",
-          backdropFilter: "blur(16px) saturate(180%)",
-          WebkitBackdropFilter: "blur(16px) saturate(180%)",
-          borderRadius: "16px",
-          boxShadow: "0 8px 25px rgba(0,0,0,0.15)",
-          transition: "transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease",
-          padding: "28px 20px",
-          fontSize: "1.05rem",
-          fontWeight: "600",
-          color: "#1f2937",
-          textAlign: "center",
-          cursor: "default",
-          position: "relative",
-          overflow: "hidden",
-        }}
-        onMouseEnter={(e) => {
-          e.currentTarget.style.transform = "translateY(-6px) scale(1.05)";
-          e.currentTarget.style.boxShadow = "0 12px 30px rgba(0,0,0,0.2)";
-          e.currentTarget.style.background = "rgba(255,255,255,0.2)";
-        }}
-        onMouseLeave={(e) => {
-          e.currentTarget.style.transform = "translateY(0) scale(1)";
-          e.currentTarget.style.boxShadow = "0 8px 25px rgba(0,0,0,0.15)";
-          e.currentTarget.style.background = "rgba(255,255,255,0.1)";
-        }}
-      >
-        {text}
+      { name: "Oxford", img: "/assets/uk/universities/oxford.jpg" },
+      { name: "Cambridge", img: "/assets/uk/universities/cambridge.jpg" },
+      { name: "Imperial College London", img: "/assets/uk/universities/imperial.jpg" },
+      { name: "LSE", img: "/assets/uk/universities/lse.jpg" },
+      { name: "University of Manchester", img: "/assets/uk/universities/manchester.jpg" },
+      { name: "Edinburgh", img: "/assets/uk/universities/edinburgh.jpg" },
+      { name: "King’s College London", img: "/assets/uk/universities/kcl.jpg" },
+      { name: "Warwick", img: "/assets/uk/universities/warwick.jpg" },
+    ].map((uni, i) => (
+      <div className="uni-card" key={i}>
+        <img src={uni.img} alt={uni.name} />
+        <p>{uni.name}</p>
       </div>
     ))}
   </div>
 </section>
 
 
-      {/* Why Study in UK */}
-      <section className="uk-why">
-        <h2>Why Choose the UK?</h2>
+     {/* Courses */}
+<section className="uk-courses">
+  <h2>Popular Courses in UK</h2>
+  <div className="course-grid">
+    {[
+      { name: "Business & Management", img: "/assets/uk/courses/business.jpg" },
+      { name: "Law", img: "/assets/uk/courses/law.jpg" },
+      { name: "Medicine & Healthcare", img: "/assets/uk/courses/medicine.jpg" },
+      { name: "Computer Science & Data Science", img: "/assets/uk/courses/computer.jpg" },
+      { name: "Engineering", img: "/assets/uk/courses/engineering.jpg" },
+      { name: "Finance & Accounting", img: "/assets/uk/courses/finance.jpg" },
+      { name: "Artificial Intelligence & Robotics", img: "/assets/uk/courses/ai.jpg" },
+      { name: "International Relations", img: "/assets/uk/courses/international.jpg" },
+      { name: "Hospitality & Tourism", img: "/assets/uk/courses/hospitality.jpg" },
+    ].map((course, i) => (
+      <div className="course-card" key={i}>
+        <img
+          src={course.img}
+          alt={course.name}
+          
+        />
+        <p >{course.name}</p>
+      </div>
+    ))}
+  </div>
+</section>
+
+
+      {/* Costs */}
+      <section className="uk-costs">
+        <h2>Cost of Studying & Living</h2>
+        <p>UG: £10,000 – £25,000/year | PG: £12,000 – £38,000/year</p>
+        <p>Living: £800–£1,200/month (outside London), £1,200–£1,800/month (London)</p>
+      </section>
+
+      {/* Career Prospects */}
+      <section className="uk-career">
+        <h2>Career Prospects</h2>
+        <p>
+          Graduate Route Visa allows 2 years stay (3 for PhD). High demand in IT, Finance,
+          Engineering, Healthcare, Data Science, and Education. Many global firms headquartered
+          in the UK offer excellent networking opportunities.
+        </p>
+      </section>
+
+      {/* Documents & Visa */}
+      <section className="uk-documents">
+        <h2>Documents & Visa Process</h2>
+        <h4>University Application</h4>
         <ul>
-          <li>Prestigious Universities & Globally Recognized Degrees</li>
-          <li>15 of the World's Top 100 Universities</li>
-          <li>Sandwich Programs (Study + Work Experience)</li>
-          <li>Gateway to Europe for Travel & Opportunities</li>
-          <li>Work up to 20 hours per week during term</li>
-          <li>Shorter Degree Programs (3 Years UG, 1 Year PG)</li>
+          <li>Academic transcripts, SOP, LORs, CV</li>
+          <li>English test results (IELTS/TOEFL/PTE)</li>
+          <li>Passport copy</li>
+        </ul>
+        <h4>Visa Application (Student Route)</h4>
+        <ul>
+          <li>CAS from university</li>
+          <li>Proof of funds & TB test</li>
+          <li>Health surcharge payment</li>
         </ul>
       </section>
 
-      {/* Top Universities with Marquee */}
-      <section className="uk-universities">
-        <h2>Top Universities in the UK</h2>
-        <div className="marquee">
-          <div className="marquee-track">
-            {[
-              {
-                name: "University of Oxford",
-                img: "/assets/uk-universities/oxford.jpg",
-              },
-              {
-                name: "University of Cambridge",
-                img: "/assets/uk-universities/cambridge.jpg",
-              },
-              {
-                name: "Imperial College London",
-                img: "/assets/uk-universities/imperial.jpg",
-              },
-              {
-                name: "University College London",
-                img: "/assets/uk-universities/ucl.jpg",
-              },
-              {
-                name: "University of Edinburgh",
-                img: "/assets/uk-universities/edinburgh.jpg",
-              },
-              {
-                name: "King’s College London",
-                img: "/assets/uk-universities/kcl.jpg",
-              },
-            ].map((uni, i) => (
-              <div className="uni-card" key={i}>
-                <img src={uni.img} alt={uni.name} />
-                <p>{uni.name}</p>
-              </div>
-            ))}
-          </div>
-        </div>
+      {/* Student Life */}
+     <section className="uk-student-life">
+  <h2>Student Life</h2>
+  <p>
+    The UK offers a vibrant student lifestyle with multicultural exposure, student discounts,
+    historic landmarks, and modern facilities.
+  </p>
+
+  {/* ✅ Single Image */}
+  <div className="student-life-image">
+    <img src="/assets/uk/uk-student-life.jpg" alt="Student Life in UK" />
+  </div>
+</section>
+      {/* Application Timeline *
+        
       </section>
 
-      {/* Popular Courses */}
-      <section className="uk-courses">
-        <h2>Popular Courses in the UK</h2>
-        <div className="course-grid">
-          {[
-            {
-              name: "Business & Management",
-              img: "/assets/uk-universities/business.jpg",
-            },
-            {
-              name: "Engineering",
-              img: "/assets/uk-universities/engineering.jpg",
-            },
-            {
-              name: "Medicine",
-              img: "/assets/uk-universities/medicine.jpg",
-            },
-            {
-              name: "Law",
-              img: "/assets/uk-universities/law.jpg",
-            },
-            {
-              name: "Computer Science",
-              img: "/assets/uk-universities/computer-science.jpg",
-            },
-            {
-              name: "Arts & Design",
-              img: "/assets/uk-universities/arts-design.jpg",
-            },
-          ].map((course, i) => (
-            <div className="course-card" key={i}>
-              <img src={course.img} alt={course.name} />
-              <p>{course.name}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Cost of Study & Scholarships */}
-<section className="uk-cost" style={{ maxWidth: "1100px", margin: "60px auto", padding: "0 20px" }}>
-  <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "40px" }}>
     
-    {/* Text Column */}
-    <div style={{ flex: "1 1 500px" }}>
-      <h2>Cost of Studying in the UK</h2>
-      <p>
-        Tuition fees range between €11,000 - €35,000 annually. Living costs
-        vary by city, averaging €10,000 - €12,000 per year in London and less
-        in other cities.
-      </p>
-      <h3>Scholarships in the UK</h3>
-      <ul>
-        <li>Chevening Scholarships</li>
-        <li>Commonwealth Scholarships</li>
-        <li>GREAT Scholarships</li>
-        <li>University-Specific Grants</li>
-      </ul>
-    </div>
 
-    {/* Image Column */}
-    <div style={{ flex: "1 1 400px" }}>
-      <img
-        src="/assets/uk-universities/uk-scholarship.jpg"
-        alt="Scholarships in the UK"
-        className="scholarship-img"
-        style={{ width: "100%", borderRadius: "16px", boxShadow: "0 10px 25px rgba(0,0,0,0.15)", transition: "transform 0.3s ease" }}
-        onMouseEnter={e => e.currentTarget.style.transform = "scale(1.03)"}
-        onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}
-      />
-    </div>
-  </div>
-</section>
-
-{/* Career Prospects */}
-<section className="uk-career" style={{ maxWidth: "900px", margin: "60px auto", padding: "0 20px" }}>
-  <h2>Career Prospects in the UK</h2>
-  <p>
-    The UK offers excellent job opportunities for graduates, particularly
-    in fields like Finance, Technology, Healthcare, and Engineering. The
-    2-Year Graduate Immigration Route allows students to gain work
-    experience after studies.
-  </p>
-</section>
-
-{/* Documents & Visa Process */}
-<section className="uk-documents" style={{ maxWidth: "900px", margin: "60px auto", padding: "0 20px" }}>
-  <h2>Documents Required</h2>
-  <ul>
-    <li>Valid Passport</li>
-    <li>Academic Transcripts & Certificates</li>
-    <li>English Proficiency Test (IELTS/TOEFL)</li>
-    <li>Proof of Funds</li>
-    <li>Offer Letter from a UK University</li>
-  </ul>
-
-  <h2>UK Student Visa</h2>
-  <p>
-    Apply for the Tier 4 (General) Student Visa. The process requires a
-    Confirmation of Acceptance for Studies (CAS), financial documents, and
-    health surcharge payment.
-  </p>
-</section>
-
-{/* Student Life */}
-<section className="uk-life" style={{ maxWidth: "1100px", margin: "60px auto", padding: "0 20px" }}>
-  <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "40px" }}>
-
-    {/* Image Column */}
-    <div style={{ flex: "1 1 400px" }}>
-      <img
-        src="/assets/uk-universities/student-life.jpg"
-        alt="Student Life in UK"
-        style={{ width: "100%", borderRadius: "16px", boxShadow: "0 10px 25px rgba(0,0,0,0.15)", transition: "transform 0.3s ease" }}
-        onMouseEnter={e => e.currentTarget.style.transform = "scale(1.03)"}
-        onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}
-      />
-    </div>
-
-    {/* Text Column */}
-    <div style={{ flex: "1 1 500px" }}>
-      <h2>Student Life in the UK</h2>
-      <p>
-        The UK offers a multicultural environment with vibrant cities,
-        historic landmarks, and excellent student facilities. Students enjoy
-        discounts on travel, cultural events, and more.
-      </p>
-    </div>
-
-  </div>
-</section>
-<EnrollSection country="UK" />
-
-      {/* FAQ Section */}
-      <section className="uk-faq">
-        <h2>FAQs About Studying in the UK</h2>
-        <div className="faq-item">
-          <h4>What is the average tuition fee in the UK?</h4>
-          <p>
-            It ranges from €11,000 to €35,000 per year depending on the course
-            and university.
-          </p>
-        </div>
-        <div className="faq-item">
-          <h4>Can I work while studying?</h4>
-          <p>
-            Yes, international students can work up to 20 hours per week during
-            term time.
-          </p>
-        </div>
+      {/* FAQs */}
+      <section className="uk-faqs">
+        <h2>FAQs</h2>
         <div className="faq-item">
           <h4>Is IELTS mandatory?</h4>
-          <p>
-            Most universities require IELTS or an equivalent English proficiency
-            test score.
-          </p>
+          <p>Not always—some universities waive it if you studied in English medium.</p>
         </div>
+        <div className="faq-item">
+          <h4>Can I stay after studies?</h4>
+          <p>Yes, Graduate Route allows 2 years (3 for PhD) stay for work/job search.</p>
+        </div>
+        <div className="faq-item">
+          <h4>Are there scholarships for Indian students?</h4>
+          <p>Yes—Chevening, Commonwealth, GREAT, and university awards.</p>
+        </div>
+        <div className="faq-item">
+          <h4>How much can I earn part-time?</h4>
+          <p>On average £8–£12/hour depending on location and job type.</p>
+        </div>
+
+
+          {/* Enroll Section */}
+      <EnrollSection country="UK" />
+        <p>“Planning to study in the UK? Our consultancy helps you select the right university, prepare your application, secure scholarships, and guide you through the visa process.”</p>
       </section>
+
     </div>
   );
 }

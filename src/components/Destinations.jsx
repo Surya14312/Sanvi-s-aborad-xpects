@@ -1,6 +1,8 @@
+// src/components/Destinations.jsx
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
+// ✅ Study Abroad Destinations
 const destinations = [
   { name: "United Kingdom", image: "/assets/destinations/uk.jpg" },
   { name: "Canada", image: "/assets/destinations/canada.jpg" },
@@ -13,15 +15,25 @@ const destinations = [
   { name: "Spain", image: "/assets/destinations/spain.jpg" },
   { name: "Malaysia", image: "/assets/destinations/malaysia.jpg" },
   { name: "Mauritius", image: "/assets/destinations/mauritius.jpg" },
-  { name: "India", image: "/assets/destinations/india.jpg" },
   { name: "Netherlands", image: "/assets/destinations/netherlands.jpg" },
   { name: "Italy", image: "/assets/destinations/italy.jpg" },
+  { name: "Poland", image: "/assets/destinations/poland.jpg" },
+  { name: "Portugal", image: "/assets/destinations/portugal.jpg" },
+  { name: "USA", image: "/assets/destinations/usa.jpg" },
+  { name: "Malta", image: "/assets/destinations/malta.jpg" },
+  { name: "Lithuania", image: "/assets/destinations/lithuania.jpg" },
+  { name: "New Zealand", image: "/assets/destinations/newzealand.jpg" },
+  { name: "China", image: "/assets/destinations/china.jpg" },
+  { name: "Georgia", image: "/assets/destinations/georgia.jpg" }, 
+  { name: "Philippines", image: "/assets/destinations/philippines.jpg" },
+  { name: "Vietnam", image: "/assets/destinations/vietnam.jpg" },
 ];
 
 const Destinations = () => {
   const navigate = useNavigate();
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
+  // ✅ Handle responsiveness
   useEffect(() => {
     const handleResize = () => setScreenWidth(window.innerWidth);
     window.addEventListener("resize", handleResize);
@@ -30,7 +42,6 @@ const Destinations = () => {
 
   const isMobile = screenWidth <= 480;
   const isTablet = screenWidth > 480 && screenWidth <= 768;
-
   const cardWidth = isMobile ? 180 : isTablet ? 220 : 260;
   const cardHeight = isMobile ? 120 : 160;
 
@@ -43,6 +54,7 @@ const Destinations = () => {
         fontFamily: "'Segoe UI', sans-serif",
       }}
     >
+      {/* Title */}
       <h2
         style={{
           fontSize: isMobile ? "1.8rem" : "2.5rem",
@@ -54,6 +66,8 @@ const Destinations = () => {
       >
         🌍 Top Study Destinations
       </h2>
+
+      {/* Subtitle */}
       <p
         style={{
           fontSize: isMobile ? "0.95rem" : "1.1rem",
@@ -66,6 +80,7 @@ const Destinations = () => {
         Explore popular countries to study abroad with <strong>Sanvi’s Abroad Xperts</strong>
       </p>
 
+      {/* Scrolling Cards */}
       <div
         style={{
           overflow: "hidden",
@@ -103,6 +118,7 @@ const Destinations = () => {
                 e.currentTarget.style.boxShadow = "0 6px 20px rgba(0,0,0,0.1)";
               }}
             >
+              {/* Image */}
               <img
                 src={dest.image}
                 alt={dest.name}
@@ -118,6 +134,8 @@ const Destinations = () => {
                   borderTopRightRadius: "16px",
                 }}
               />
+
+              {/* Country Name + Button */}
               <div style={{ padding: "14px" }}>
                 <h3
                   style={{
@@ -145,10 +163,12 @@ const Destinations = () => {
                     transition: "background 0.3s ease",
                   }}
                   onMouseEnter={(e) => {
-                    e.target.style.background = "linear-gradient(to right, #005fcc, #0099cc)";
+                    e.target.style.background =
+                      "linear-gradient(to right, #005fcc, #0099cc)";
                   }}
                   onMouseLeave={(e) => {
-                    e.target.style.background = "linear-gradient(to right, #0077ff, #00b0ff)";
+                    e.target.style.background =
+                      "linear-gradient(to right, #0077ff, #00b0ff)";
                   }}
                 >
                   Learn More
@@ -159,6 +179,7 @@ const Destinations = () => {
         </div>
       </div>
 
+      {/* Scrolling Animation */}
       <style>
         {`
           @keyframes scroll {

@@ -2,320 +2,195 @@ import React from "react";
 import { Link } from "react-router-dom";
 import EnrollSection from "../components/EnrollSection";
 
+
 function France() {
   return (
     <div className="france-container">
-      {/* ✅ Hero Section */}
+      {/* Hero Section */}
       <section className="france-hero">
         <div className="france-hero-content">
           <h1>Study in France</h1>
           <p>
-            France is a world-renowned destination for international students,
-            offering prestigious universities, affordable education, and rich
-            cultural experiences. With globally recognized degrees and strong
-            government support for education, France is ideal for academic and
-            personal growth.
+            France is a leading destination for international students, offering world-class
+            education, affordable tuition, and a rich cultural experience. With globally recognized
+            universities, strong research opportunities, and access to the European job market, France
+            combines academic excellence with lifestyle advantages.
           </p>
-          <Link to="/contact" className="apply-btn">
-            Apply Now
-          </Link>
+          <Link to="/contact" className="apply-btn">Apply Now</Link>
         </div>
-        <img
-          src="/assets/france-universities/france-banner.jpg"
-          alt="Study in France"
-          className="hero-img"
-        />
+        <div className="france-hero-img">
+          <img src="/assets/france/france-banner.jpg" alt="Study in France" />
+        </div>
       </section>
-      {/* ✅ Quick Stats */}
-      <section
-  style={{
-    padding: "80px 20px",
-    textAlign: "center",
-    maxWidth: "1200px",
-    margin: "0 auto",
-    position: "relative",
-    fontFamily: "'Poppins', sans-serif",
-  }}
->
-  <h2
-    style={{
-      fontSize: "clamp(2rem, 4vw, 3rem)",
-      fontWeight: "800",
-      marginBottom: "40px",
-      background: "linear-gradient(135deg, #1e40af, #dc2626)", // 🇫🇷 France blue-red gradient
-      WebkitBackgroundClip: "text",
-      WebkitTextFillColor: "transparent",
-      letterSpacing: "1.2px",
-      transition: "transform 0.3s ease",
-      cursor: "default",
-    }}
-    onMouseEnter={(e) =>
-      (e.target.style.transform = "translateY(-3px) scale(1.02)")
-    }
-    onMouseLeave={(e) =>
-      (e.target.style.transform = "translateY(0) scale(1)")
-    }
-  >
-    France Education at a Glance
-  </h2>
 
-  <div
-    style={{
-      display: "grid",
-      gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-      gap: "2rem",
-      justifyItems: "center",
-      transition: "all 0.4s ease",
-    }}
-  >
+      {/* Quick Stats */}
+      <section className="france-glance">
+        <h2>France at a Glance</h2>
+        <div className="glance-grid">
+          {[
+            "3,500+ Higher Education Institutions",
+            "Top-ranked: Sorbonne, PSL, Polytechnique, HEC, INSEAD",
+            "€2,770 – €20,000 Tuition Fees",
+            "€8K – €12K Living Costs (higher in Paris)",
+            "400K+ International Students (4th globally)",
+            "French & English Taught Programs",
+            "Up to 2 Years Stay-back Visa",
+          ].map((stat, i) => (
+            <div className="glance-card" key={i}>{stat}</div>
+          ))}
+        </div>
+      </section>
+
+      {/* Why Choose France */}
+      <section className="france-why">
+        <h2>Why Choose France?</h2>
+        <ul>
+          <li>Globally respected education system with top universities and Grandes Écoles</li>
+          <li>Affordable tuition fees compared to UK/USA</li>
+          <li>Hub for business, fashion, culinary arts, engineering, and research</li>
+          <li>Central European location with Schengen access</li>
+          <li>Strong focus on innovation, sustainability, and research excellence</li>
+        </ul>
+      </section>
+
+      {/* Benefits for Indian Students */}
+      <section className="france-benefits">
+        <h2>Benefits for Indian Students</h2>
+        <ul>
+          <li>Many English-taught programs at bachelor’s, master’s, and doctoral levels</li>
+          <li>Strong demand for STEM and management graduates</li>
+          <li>Access to Eiffel, Charpak, and Erasmus+ scholarships</li>
+          <li>Networking opportunities with Airbus, L’Oréal, Renault, BNP Paribas</li>
+          <li>20 hrs/week part-time work rights during studies</li>
+        </ul>
+      </section>
+
+      {/* ✅ Top Universities */}
+<section className="france-universities">
+  <h2>Top Universities in France</h2>
+  <div className="universities-grid">
     {[
-      "70+ Public Universities & Grandes Écoles",
-      "€3K – €15K Tuition Fees",
-      "400K+ International Students",
-      "Post-Study Work Visa up to 2 Years",
-    ].map((text, index) => (
-      <div
-        key={index}
-        style={{
-          background: "rgba(255, 255, 255, 0.1)",
-          backdropFilter: "blur(16px) saturate(180%)",
-          WebkitBackdropFilter: "blur(16px) saturate(180%)",
-          borderRadius: "16px",
-          boxShadow: "0 8px 25px rgba(0,0,0,0.15)",
-          transition:
-            "transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease",
-          padding: "28px 20px",
-          fontSize: "1.05rem",
-          fontWeight: "600",
-          color: "#1f2937",
-          textAlign: "center",
-          cursor: "default",
-          position: "relative",
-          overflow: "hidden",
-        }}
-        onMouseEnter={(e) => {
-          e.currentTarget.style.transform = "translateY(-6px) scale(1.05)";
-          e.currentTarget.style.boxShadow = "0 12px 30px rgba(0,0,0,0.2)";
-          e.currentTarget.style.background = "rgba(255,255,255,0.2)";
-        }}
-        onMouseLeave={(e) => {
-          e.currentTarget.style.transform = "translateY(0) scale(1)";
-          e.currentTarget.style.boxShadow = "0 8px 25px rgba(0,0,0,0.15)";
-          e.currentTarget.style.background = "rgba(255,255,255,0.1)";
-        }}
-      >
-        {text}
+      { name: "Sorbonne University", img: "/assets/france/universities/sorbonne.jpg" },
+      { name: "PSL Research University", img: "/assets/france/universities/psl.jpg" },
+      { name: "École Polytechnique", img: "/assets/france/universities/polytechnique.jpg" },
+      { name: "HEC Paris", img: "/assets/france/universities/hec.jpg" },
+      { name: "INSEAD", img: "/assets/france/universities/insead.jpg" },
+      { name: "Université Paris-Saclay", img: "/assets/france/universities/paris-saclay.jpg" },
+      { name: "Sciences Po", img: "/assets/france/universities/sciences-po.jpg" },
+      { name: "Grenoble Alpes University", img: "/assets/france/universities/grenoble.jpg" },
+    ].map((uni, i) => (
+      <div className="uni-card" key={i}>
+        <img src={uni.img} alt={uni.name} />
+        <p>{uni.name}</p>
       </div>
     ))}
   </div>
 </section>
 
-      {/* ✅ Why Study in France */}
-      <section className="france-why">
-        <h2>Why Choose France?</h2>
-        <ul>
-          <li>Low Tuition Fees at Public Universities</li>
-          <li>Home to Top Business & Engineering Schools</li>
-          <li>French Government Scholarships Available</li>
-          <li>English-Taught Programs Available</li>
-          <li>Rich Culture, Cuisine & Architecture</li>
-          <li>Strong International Student Support</li>
-        </ul>
+    {/* Popular Courses */}
+<section className="france-courses">
+  <h2>Popular Courses in France</h2>
+  <div className="course-grid">
+    {[
+      { name: "Business & Management", img: "/assets/france/courses/c1.jpg" },
+      { name: "Engineering (Aerospace, Civil, Mechanical, IT)", img: "/assets/france/courses/c2.jpg" },
+      { name: "Fashion & Luxury Brand Management", img: "/assets/france/courses/c3.jpg" },
+      { name: "Culinary Arts & Hospitality", img: "/assets/france/courses/c4.jpg" },
+      { name: "International Relations & Political Science", img: "/assets/france/courses/c5.jpg" },
+      { name: "Data Science & Artificial Intelligence", img: "/assets/france/courses/c6.jpg" },
+      { name: "Environmental Studies & Sustainability", img: "/assets/france/courses/c7.jpg" },
+      { name: "Medicine & Healthcare", img: "/assets/france/courses/c8.jpg" },
+    ].map((course, i) => (
+      <div className="course-card" key={i}>
+        <img src={course.img} alt={course.name} />
+        <p>{course.name}</p>
+      </div>
+    ))}
+  </div>
+</section>
+
+
+      {/* Cost of Studying & Living */}
+      <section className="france-cost">
+        <h2>Cost of Studying & Living</h2>
+        <p>UG: €2,770 – €10,000/year | PG: €3,770 – €20,000/year</p>
+        <p>Living: €600–€1,000/month (outside Paris), €1,200–€1,800/month (Paris)</p>
       </section>
-      {/* ✅ Top Universities */}
-      <section className="france-universities">
-        <h2>Top Universities in France</h2>
-        <div className="marquee">
-          <div className="marquee-track">
-            {[
-              {
-                name: "Sorbonne University",
-                img: "/assets/france-universities/sorbonne.jpg",
-              },
-              {
-                name: "École Polytechnique",
-                img: "/assets/france-universities/polytechnique.jpg",
-              },
-              {
-                name: "University of Paris-Saclay",
-                img: "/assets/france-universities/paris-saclay.jpg",
-              },
-              {
-                name: "Sciences Po",
-                img: "/assets/france-universities/sciences-po.jpg",
-              },
-              {
-                name: "Grenoble Alpes University",
-                img: "/assets/france-universities/grenoble.jpg",
-              },
-              {
-                name: "INSEAD Business School",
-                img: "/assets/france-universities/insead.jpg",
-              },
-            ].map((uni, i) => (
-              <div className="uni-card" key={i}>
-                <img src={uni.img} alt={uni.name} />
-                <p>{uni.name}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* ✅ Popular Courses */}
-      <section className="france-courses">
-        <h2>Popular Courses in France</h2>
-        <div className="course-grid">
-          {[
-            {
-              name: "Luxury & Fashion Management",
-              img: "/assets/france-universities/fashion.jpg",
-            },
-            {
-              name: "Business & Economics",
-              img: "/assets/france-universities/business.jpg",
-            },
-            {
-              name: "Engineering",
-              img: "/assets/france-universities/engineering.jpg",
-            },
-            {
-              name: "Artificial Intelligence",
-              img: "/assets/france-universities/ai.jpg",
-            },
-            {
-              name: "International Relations",
-              img: "/assets/france-universities/relations.jpg",
-            },
-            {
-              name: "Culinary Arts",
-              img: "/assets/france-universities/culinary.jpg",
-            },
-          ].map((course, i) => (
-            <div className="course-card" key={i}>
-              <img src={course.img} alt={course.name} />
-              <p>{course.name}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-      {/* ✅ Equipment & Infrastructure */}
-      <section className="france-equipment">
-        <h2>Our Equipment & Infrastructure</h2>
+
+      {/* Career Prospects */}
+      <section className="france-career">
+        <h2>Career Prospects</h2>
         <p>
-          French institutions feature advanced research labs, creative studios,
-          business incubators, and industry collaborations to foster innovation
-          and hands-on learning.
+          France is home to global leaders in aerospace, luxury brands, automotive, and finance.
+          International students with a Master’s degree can stay for up to 2 years to seek employment.
+          High demand in IT, engineering, hospitality, and research sectors. Schengen access allows
+          opportunities across Europe.
         </p>
       </section>
-  {/* Cost of Study & Scholarships */}
-<section className="france-cost" style={{ maxWidth: "1100px", margin: "60px auto", padding: "0 20px" }}>
-  <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "40px" }}>
 
-    {/* Text Column */}
-    <div style={{ flex: "1 1 500px" }}>
-      <h2>Cost of Studying in France</h2>
-      <p>
-        Tuition fees range from €3,000 - €20,000 annually depending on the program and university. Living costs vary by city, averaging €10,000 - €15,000 per year in Paris and less in smaller cities.
-      </p>
-      <h3>Scholarships in France</h3>
-      <ul>
-        <li>Eiffel Excellence Scholarships</li>
-        <li>French Government Scholarships</li>
-        <li>University-Specific Scholarships</li>
-        <li>International Student Financial Aid Programs</li>
-      </ul>
-    </div>
+      {/* Documents & Visa */}
+      <section className="france-documents">
+        <h2>Documents Required</h2>
+        <ul>
+          <li>Academic transcripts (10th, 12th, bachelor’s if applicable)</li>
+          <li>Proof of English/French proficiency (IELTS/TOEFL/DELF/DALF)</li>
+          <li>SOP, LORs, CV, Passport copy</li>
+          <li>Proof of funds & accommodation</li>
+        </ul>
+        <h2>France Student Visa (VLS-TS)</h2>
+        <p>
+          Covers course duration (renewable if required). Requires acceptance letter, proof of
+          sufficient funds (€7,380/year), accommodation, health insurance, and language proof.
+          Processing time: 3–6 weeks. Students can work 964 hours/year (~20 hrs/week).
+        </p>
+      </section>
 
-    {/* Image Column */}
-    <div style={{ flex: "1 1 400px" }}>
-      <img
-        src="/assets/france-universities/france-scholarship.jpg"
-        alt="Scholarships in France"
-        className="scholarship-img"
-        style={{ width: "100%", borderRadius: "16px", boxShadow: "0 10px 25px rgba(0,0,0,0.15)", transition: "transform 0.3s ease" }}
-        onMouseEnter={e => e.currentTarget.style.transform = "scale(1.03)"}
-        onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}
-      />
-    </div>
+      <section className="france-student-life">
+  <h2>Student Life in France</h2>
+  <p>
+    France offers a vibrant lifestyle with historic campuses, festivals, multicultural cities, 
+    and diverse opportunities for internships, networking, and language learning. 
+    Students also enjoy cultural experiences, culinary delights, and exploring Europe.
+  </p>
+
+  {/* ✅ Single Image */}
+  <div className="student-life-image">
+    <img 
+      src="/assets/france/france-student-life.jpg" 
+      alt="Student Life in France" 
+     
+    />
   </div>
 </section>
 
-{/* Career Prospects */}
-<section className="france-career" style={{ maxWidth: "900px", margin: "60px auto", padding: "0 20px" }}>
-  <h2>Career Prospects in France</h2>
-  <p>
-    France offers strong job opportunities in Engineering, Technology, Finance, Luxury & Fashion, and Healthcare. International students can work part-time during studies and may apply for the “Autorisation Provisoire de Travail” after graduation to gain work experience.
-  </p>
-</section>
+      {/* Enroll Section */}
+      <EnrollSection country="France" />
 
-{/* Documents & Visa Process */}
-<section className="france-documents" style={{ maxWidth: "900px", margin: "60px auto", padding: "0 20px" }}>
-  <h2>Documents Required</h2>
-  <ul>
-    <li>Valid Passport</li>
-    <li>Academic Transcripts & Certificates</li>
-    <li>French or English Proficiency Test (DELF/DALF/IELTS/TOEFL)</li>
-    <li>Proof of Funds</li>
-    <li>Offer Letter from a French University</li>
-  </ul>
-
-  <h2>France Student Visa</h2>
-  <p>
-    Apply for a long-stay student visa (VLS-TS) via the French consulate or Campus France portal using the university acceptance letter, proof of funds, and required documents.
-  </p>
-</section>
-
-{/* Student Life */}
-<section className="france-life" style={{ maxWidth: "1100px", margin: "60px auto", padding: "0 20px" }}>
-  <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "40px" }}>
-
-    {/* Image Column */}
-    <div style={{ flex: "1 1 400px" }}>
-      <img
-        src="/assets/france-universities/student-life.jpg"
-        alt="Student Life in France"
-        style={{ width: "100%", borderRadius: "16px", boxShadow: "0 10px 25px rgba(0,0,0,0.15)", transition: "transform 0.3s ease" }}
-        onMouseEnter={e => e.currentTarget.style.transform = "scale(1.03)"}
-        onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}
-      />
-    </div>
-
-    {/* Text Column */}
-    <div style={{ flex: "1 1 500px" }}>
-      <h2>Student Life in France</h2>
-      <p>
-        France offers a dynamic and culturally rich student environment with historic campuses, vibrant cities, and diverse cultural experiences. Students can enjoy local festivals, internships, language learning, and extensive networking opportunities.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-       <EnrollSection country="France" />
-      {/* ✅ FAQs */}
+      {/* FAQs */}
       <section className="france-faq">
-        <h2>FAQs About Studying in France</h2>
+        <h2>FAQs</h2>
         <div className="faq-item">
-          <h4>Can I study in English in France?</h4>
-          <p>
-            Yes, many universities offer English-taught programs, especially at
-            the Master's level.
-          </p>
+          <h4>Is French mandatory?</h4>
+          <p>Not always—many programs are in English. But French helps with jobs & social life.</p>
         </div>
         <div className="faq-item">
-          <h4>Is IELTS required to study in France?</h4>
-          <p>
-            For English programs, IELTS or equivalent is required. For French
-            programs, a French language certificate is needed.
-          </p>
+          <h4>Can I get scholarships?</h4>
+          <p>Yes, Eiffel, Charpak, Erasmus+, and university-specific scholarships are available.</p>
         </div>
         <div className="faq-item">
-          <h4>Do I get a stay-back visa after graduation?</h4>
-          <p>
-            Yes, France offers a 2-year stay-back visa for international
-            graduates to find employment.
-          </p>
+          <h4>How much can I earn part-time?</h4>
+          <p>On average €8–€12/hour depending on job type.</p>
         </div>
+        <div className="faq-item">
+          <h4>Can I stay after graduation?</h4>
+          <p>Yes, Master’s graduates can apply for a 2-year temporary residence permit.</p>
+        </div>
+        {/* Enroll Section */}
+      <EnrollSection country="France" />
+
+        <p>“Looking to study in France? Our consultancy assists with university selection, scholarships, application support, and end-to-end visa guidance.”
+
+</p>
       </section>
     </div>
   );

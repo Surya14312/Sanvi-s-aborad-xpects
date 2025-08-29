@@ -1,6 +1,6 @@
 // src/pages/UniversityApplicationGuide.jsx
 import React from "react";
-
+import { Link } from "react-router-dom";
 const UniversityApplicationGuide = () => {
   return (
     <div className="blog-container">
@@ -139,7 +139,9 @@ const UniversityApplicationGuide = () => {
           <li>Identify scholarships and financial aid opportunities</li>
           <li>Provide visa guidance, pre-departure support, and accommodation assistance</li>
         </ul>
-        <p><strong>“Ready to apply to your dream university abroad? Let our experts guide you through the entire process, from shortlisting to visa approval. Book your free consultation today!”</strong></p>
+        <p><strong>“Ready to apply to your dream university abroad? Let our experts guide you through the entire process, from shortlisting to visa approval.<Link to="/contact" style={styles.ctaBtn}>
+  Book Free Consultation
+</Link></strong></p>
       </section>
     </div>
   );

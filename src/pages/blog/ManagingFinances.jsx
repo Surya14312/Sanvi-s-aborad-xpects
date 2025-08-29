@@ -4,7 +4,7 @@ import React from "react";
 const ManageFinances = () => {
   // --- Reusable Styles ---
   const containerStyle = {
-    maxWidth: "1100px",
+    
     margin: "0 auto",
     padding: "40px 20px",
     fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",

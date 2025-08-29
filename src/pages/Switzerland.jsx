@@ -1,328 +1,208 @@
+// src/pages/Switzerland.jsx
 import React from "react";
 import { Link } from "react-router-dom";
 import EnrollSection from "../components/EnrollSection";
 
+
 function Switzerland() {
   return (
     <div className="switzerland-container">
-      {/* ✅ Hero Section */}
+      
+      {/* Hero Section */}
       <section className="switzerland-hero">
-        <div className="switzerland-hero-content">
+        <div className="switzerland-hero-text">
           <h1>Study in Switzerland</h1>
           <p>
-            Switzerland is a global education hub known for excellence in
-            hospitality, business, science, and research. With its high quality
-            of life, multicultural environment, and world-class universities,
-            Switzerland offers a unique and enriching study experience.
+            Switzerland is globally known for its high-quality education, research-driven universities, 
+            and strong ties with industries. With four national languages (German, French, Italian, Romansh) 
+            and many English-taught programs, it offers a truly international learning environment.
           </p>
-          <Link to="/contact" className="apply-btn">
-            Apply Now
-          </Link>
+          <Link to="/contact" className="apply-btn">Apply Now</Link>
         </div>
         <img
-          src="/assets/switzerland-universities/switzerland-banner.jpg"
+          src="/assets/switzerland/switzerland-banner.jpg"
           alt="Study in Switzerland"
-          className="hero-img"
+          className="switzerland-hero-img"
         />
       </section>
 
-      {/* ✅ Quick Stats */}
-      <section
-  style={{
-    padding: "80px 20px",
-    textAlign: "center",
-    maxWidth: "1200px",
-    margin: "0 auto",
-    position: "relative",
-    fontFamily: "'Poppins', sans-serif",
-  }}
->
-  <h2
-    style={{
-      fontSize: "clamp(2rem, 4vw, 3rem)",
-      fontWeight: "800",
-      marginBottom: "40px",
-      background: "linear-gradient(135deg, #dc2626, #ffffff)", // 🇨🇭 Switzerland red-white gradient
-      WebkitBackgroundClip: "text",
-      WebkitTextFillColor: "transparent",
-      letterSpacing: "1.2px",
-      transition: "transform 0.3s ease",
-      cursor: "default",
-    }}
-    onMouseEnter={(e) =>
-      (e.target.style.transform = "translateY(-3px) scale(1.02)")
-    }
-    onMouseLeave={(e) =>
-      (e.target.style.transform = "translateY(0) scale(1)")
-    }
-  >
-    Switzerland Education at a Glance
-  </h2>
+      {/* Quick Stats */}
+      <section className="switzerland-stats">
+        <h2>Switzerland at a Glance</h2>
+        <div className="switzerland-stats-grid">
+          {[
+            "12 Public Universities + Applied Sciences",
+            "ETH Zurich & EPFL Ranked Among World’s Best",
+            "CHF 1,500 – 6,500/year Public Tuition",
+            "CHF 10,000 – 30,000/year Private Tuition",
+            "CHF 18,000 – 28,000 Living Costs",
+            "25% International Student Population",
+            "Languages: German, French, Italian, English",
+            "Post-Study Work: 6-Month Job-Seeking Visa",
+          ].map((stat, i) => (
+            <div key={i} className="switzerland-stat-card">{stat}</div>
+          ))}
+        </div>
+      </section>
 
-  <div
-    style={{
-      display: "grid",
-      gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-      gap: "2rem",
-      justifyItems: "center",
-      transition: "all 0.4s ease",
-    }}
-  >
+      {/* Why Choose Switzerland */}
+      <section className="switzerland-why-choose">
+        <h2>Why Choose Switzerland?</h2>
+        <ul>
+          <li>Home to ETH Zurich and EPFL, world leaders in science & tech</li>
+          <li>Hub for finance, pharmaceuticals, hospitality, and luxury brands</li>
+          <li>High employability with global companies like Nestlé, Novartis, UBS, Rolex</li>
+          <li>Safe, multicultural, high standard of living</li>
+          <li>Central Schengen location with access to EU opportunities</li>
+        </ul>
+      </section>
+
+      {/* Benefits for Indian Students */}
+      <section className="switzerland-benefits">
+        <h2>Benefits for Indian Students</h2>
+        <ul>
+          <li>Affordable public university tuition compared to UK/USA</li>
+          <li>Strong demand for STEM, hospitality, finance, and management graduates</li>
+          <li>Scholarships: Swiss Government Excellence, ETH Zurich Excellence</li>
+          <li>World-class research & internships with global industries</li>
+          <li>Multilingual education offers advantage in international job markets</li>
+        </ul>
+      </section>
+
+    {/* Top Universities */}
+<section className="switzerland-universities">
+  <h2>Top Universities in Switzerland</h2>
+  <div className="universities-grid">
     {[
-      "40+ Universities & Institutions",
-      "CHF 15K – CHF 40K Tuition Fees",
-      "50K+ International Students",
-      "Post-Study Work Opportunities",
-    ].map((text, index) => (
-      <div
-        key={index}
-        style={{
-          background: "rgba(255, 255, 255, 0.1)",
-          backdropFilter: "blur(16px) saturate(180%)",
-          WebkitBackdropFilter: "blur(16px) saturate(180%)",
-          borderRadius: "16px",
-          boxShadow: "0 8px 25px rgba(0,0,0,0.15)",
-          transition:
-            "transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease",
-          padding: "28px 20px",
-          fontSize: "1.05rem",
-          fontWeight: "600",
-          color: "#1f2937",
-          textAlign: "center",
-          cursor: "default",
-          position: "relative",
-          overflow: "hidden",
-        }}
-        onMouseEnter={(e) => {
-          e.currentTarget.style.transform = "translateY(-6px) scale(1.05)";
-          e.currentTarget.style.boxShadow = "0 12px 30px rgba(0,0,0,0.2)";
-          e.currentTarget.style.background = "rgba(255,255,255,0.2)";
-        }}
-        onMouseLeave={(e) => {
-          e.currentTarget.style.transform = "translateY(0) scale(1)";
-          e.currentTarget.style.boxShadow = "0 8px 25px rgba(0,0,0,0.15)";
-          e.currentTarget.style.background = "rgba(255,255,255,0.1)";
-        }}
-      >
-        {text}
+      { name: "ETH Zurich", img: "/assets/switzerland/universities/eth.jpg" },
+      { name: "EPFL Lausanne", img: "/assets/switzerland/universities/epfl.jpg" },
+      { name: "University of Zurich", img: "/assets/switzerland/universities/uzh.jpg" },
+      { name: "University of Geneva", img: "/assets/switzerland/universities/geneva.jpg" },
+      { name: "University of Basel", img: "/assets/switzerland/universities/basel.jpg" },
+      { name: "University of Lausanne", img: "/assets/switzerland/universities/lausanne.jpg" },
+      { name: "University of Bern", img: "/assets/switzerland/universities/bern.jpg" },
+      { name: "St. Gallen University", img: "/assets/switzerland/universities/stgallen.jpg" },
+    ].map((uni, i) => (
+      <div className="uni-card" key={i}>
+        <img src={uni.img} alt={uni.name} />
+        <p>{uni.name}</p>
       </div>
     ))}
   </div>
 </section>
 
 
-      {/* ✅ Why Study in Switzerland */}
-      <section className="switzerland-why">
-        <h2>Why Choose Switzerland?</h2>
+{/* Popular Courses */}
+<section className="switzerland-courses">
+  <h2>Popular Courses in Switzerland</h2>
+  <div className="course-grid">
+    {[
+      { name: "Engineering & Technology", img: "/assets/switzerland/courses/c1.jpg" },
+      { name: "Computer Science & Data Science", img: "/assets/switzerland/courses/c2.jpg" },
+      { name: "Finance, Banking & Business", img: "/assets/switzerland/courses/c3.jpg" },
+      { name: "Hospitality & Tourism Management", img: "/assets/switzerland/courses/c4.jpg" },
+      { name: "Life Sciences & Biotechnology", img: "/assets/switzerland/courses/c5.jpg" },
+      { name: "International Relations & Law", img: "/assets/switzerland/courses/c6.jpg" },
+      { name: "Medicine & Healthcare", img: "/assets/switzerland/courses/c7.jpg" },
+      { name: "Environmental Sciences & Sustainability", img: "/assets/switzerland/courses/c8.jpg" },
+    ].map((course, i) => (
+      <div className="course-card" key={i}>
+        <img src={course.img} alt={course.name} />
+        <p>{course.name}</p>
+      </div>
+    ))}
+  </div>
+</section>
+
+
+      {/* Costs & Scholarships */}
+      <section className="switzerland-costs">
+        <h2>Cost of Studying & Living</h2>
+        <p>
+          <strong>UG:</strong> CHF 1,500 – 6,500/year (public), CHF 10,000 – 30,000/year (private)<br/>
+          <strong>PG:</strong> CHF 1,500 – 8,000/year (public), CHF 20,000 – 40,000/year (private business schools)<br/>
+          <strong>Living:</strong> CHF 18,000 – 28,000/year (~CHF 1,500–2,300/month, higher in Zurich/Geneva)
+        </p>
+        <h3>Scholarships</h3>
         <ul>
-          <li>Top Hospitality & Business Schools</li>
-          <li>High Quality of Life & Safety</li>
-          <li>Multilingual & Multicultural Environment</li>
-          <li>Strong Industry Partnerships</li>
-          <li>Excellent Research & Innovation Facilities</li>
-          <li>English-Taught Courses Available</li>
+          <li>ETH Zurich Excellence Scholarships</li>
+          <li>Swiss Government Excellence Scholarships</li>
+          <li>University-specific merit scholarships</li>
         </ul>
       </section>
 
-      {/* ✅ Top Universities */}
-      <section className="switzerland-universities">
-        <h2>Top Universities in Switzerland</h2>
-        <div className="marquee">
-          <div className="marquee-track">
-            {[
-              {
-                name: "ETH Zurich",
-                img: "/assets/switzerland-universities/eth.jpg",
-              },
-              {
-                name: "École Polytechnique Fédérale de Lausanne (EPFL)",
-                img: "/assets/switzerland-universities/epfl.jpg",
-              },
-              {
-                name: "University of Zurich",
-                img: "/assets/switzerland-universities/uzh.jpg",
-              },
-              {
-                name: "University of Geneva",
-                img: "/assets/switzerland-universities/geneva.jpg",
-              },
-              {
-                name: "University of Lausanne",
-                img: "/assets/switzerland-universities/lausanne.jpg",
-              },
-              {
-                name: "Glion Institute of Higher Education",
-                img: "/assets/switzerland-universities/glion.jpg",
-              },
-            ].map((uni, i) => (
-              <div className="uni-card" key={i}>
-                <img src={uni.img} alt={uni.name} />
-                <p>{uni.name}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ✅ Popular Courses */}
-      <section className="switzerland-courses">
-        <h2>Popular Courses in Switzerland</h2>
-        <div className="course-grid">
-          {[
-            {
-              name: "Hospitality & Tourism Management",
-              img: "/assets/switzerland-universities/hospitality.jpg",
-            },
-            {
-              name: "Business & Finance",
-              img: "/assets/switzerland-universities/business.jpg",
-            },
-            {
-              name: "International Relations",
-              img: "/assets/switzerland-universities/relations.jpg",
-            },
-            {
-              name: "Life Sciences & Medicine",
-              img: "/assets/switzerland-universities/medicine.jpg",
-            },
-            {
-              name: "Engineering & Technology",
-              img: "/assets/switzerland-universities/engineering.jpg",
-            },
-            {
-              name: "Environmental Studies",
-              img: "/assets/switzerland-universities/environment.jpg",
-            },
-          ].map((course, i) => (
-            <div className="course-card" key={i}>
-              <img src={course.img} alt={course.name} />
-              <p>{course.name}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ✅ Equipment & Infrastructure */}
-      <section className="switzerland-equipment">
-        <h2>Our Equipment & Infrastructure</h2>
+      {/* Career Prospects */}
+      <section className="switzerland-career">
+        <h2>Career Prospects</h2>
         <p>
-          Swiss institutions offer cutting-edge facilities including modern
-          labs, innovation centers, research institutes, and close ties with
-          multinational corporations.
+          Switzerland offers excellent career paths in banking, pharmaceuticals, engineering, IT, 
+          and hospitality. International students can apply for a 6-month job-seeking visa after graduation 
+          and transition to a work permit once employed. Multilingual skills are highly valued.
         </p>
       </section>
 
-  {/* Cost of Study & Scholarships */}
-<section className="switzerland-cost" style={{ maxWidth: "1100px", margin: "60px auto", padding: "0 20px" }}>
-  <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "40px" }}>
-
-    {/* Text Column */}
-    <div style={{ flex: "1 1 500px" }}>
-      <h2>Cost of Studying in Switzerland</h2>
-      <p>
-        Tuition fees range from CHF 1,000 - CHF 4,000 per semester for public universities, while private universities can charge CHF 20,000 - CHF 40,000 annually. Living costs vary by city, averaging CHF 18,000 - CHF 25,000 per year.
-      </p>
-      <h3>Scholarships in Switzerland</h3>
-      <ul>
-        <li>ETH Excellence Scholarships</li>
-        <li>Swiss Government Excellence Scholarships</li>
-        <li>University-Specific Scholarships</li>
-        <li>International Student Financial Aid Programs</li>
-      </ul>
-    </div>
-
-    {/* Image Column */}
-    <div style={{ flex: "1 1 400px" }}>
-      <img
-        src="/assets/switzerland-universities/switzerland-scholarship.jpg"
-        alt="Scholarships in Switzerland"
-        className="scholarship-img"
-        style={{ width: "100%", borderRadius: "16px", boxShadow: "0 10px 25px rgba(0,0,0,0.15)", transition: "transform 0.3s ease" }}
-        onMouseEnter={e => e.currentTarget.style.transform = "scale(1.03)"}
-        onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}
-      />
-    </div>
-  </div>
-</section>
-
-{/* Career Prospects */}
-<section className="switzerland-career" style={{ maxWidth: "900px", margin: "60px auto", padding: "0 20px" }}>
-  <h2>Career Prospects in Switzerland</h2>
-  <p>
-    Switzerland offers strong job opportunities in Finance, Engineering, Technology, Pharmaceuticals, and Research. International students can work part-time during studies and may apply for a post-graduation work permit to gain professional experience.
-  </p>
-</section>
-
-{/* Documents & Visa Process */}
-<section className="switzerland-documents" style={{ maxWidth: "900px", margin: "60px auto", padding: "0 20px" }}>
-  <h2>Documents Required</h2>
-  <ul>
-    <li>Valid Passport</li>
-    <li>Academic Transcripts & Certificates</li>
-    <li>English, French, or German Proficiency Test (IELTS/TOEFL/DELF/DSH)</li>
-    <li>Proof of Funds</li>
-    <li>Offer Letter from a Swiss University</li>
-  </ul>
-
-  <h2>Switzerland Student Visa</h2>
-  <p>
-    Apply for a student visa via the Swiss consulate using the university acceptance letter, proof of funds, health insurance, and required documents.
-  </p>
-</section>
-
-{/* Student Life */}
-<section className="switzerland-life" style={{ maxWidth: "1100px", margin: "60px auto", padding: "0 20px" }}>
-  <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "40px" }}>
-
-    {/* Image Column */}
-    <div style={{ flex: "1 1 400px" }}>
-      <img
-        src="/assets/switzerland-universities/student-life.jpg"
-        alt="Student Life in Switzerland"
-        style={{ width: "100%", borderRadius: "16px", boxShadow: "0 10px 25px rgba(0,0,0,0.15)", transition: "transform 0.3s ease" }}
-        onMouseEnter={e => e.currentTarget.style.transform = "scale(1.03)"}
-        onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}
-      />
-    </div>
-
-    {/* Text Column */}
-    <div style={{ flex: "1 1 500px" }}>
-      <h2>Student Life in Switzerland</h2>
-      <p>
-        Switzerland offers a high-quality and multicultural student experience with scenic campuses, vibrant cities, and rich cultural opportunities. Students can enjoy outdoor activities, networking events, festivals, and internships while studying.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-      <EnrollSection country="Switzerland" />
-
-      {/* ✅ FAQs */}
-      <section className="switzerland-faq">
-        <h2>FAQs About Studying in Switzerland</h2>
-        <div className="faq-item">
-          <h4>Can I study in English in Switzerland?</h4>
-          <p>
-            Yes, many programs—especially at Master's level—are taught in
-            English, although some universities require basic French or German.
-          </p>
-        </div>
-        <div className="faq-item">
-          <h4>Is Switzerland expensive for students?</h4>
-          <p>
-            Living costs are high but manageable with budgeting. Scholarships
-            and part-time work can help reduce expenses.
-          </p>
-        </div>
-        <div className="faq-item">
-          <h4>Can I work while studying in Switzerland?</h4>
-          <p>
-            Yes, international students can work up to 15 hours per week during
-            the semester and full-time during holidays.
-          </p>
-        </div>
+      {/* Documents & Visa */}
+      <section className="switzerland-documents">
+        <h2>Documents Required</h2>
+        <ul>
+          <li>Academic transcripts (10th, 12th, bachelor’s if applicable)</li>
+          <li>Proof of English/German/French proficiency (IELTS/TOEFL/DELF/Goethe certificate)</li>
+          <li>SOP, LORs, CV, Passport copy</li>
+          <li>University acceptance letter</li>
+          <li>Proof of funds (~CHF 21,000 for one year)</li>
+          <li>Accommodation & health insurance proof</li>
+        </ul>
+        <h2>Student Visa</h2>
+        <p>
+          Type D National Visa, valid for course duration. Processing time: 8–12 weeks. 
+          Students can work 15 hrs/week during term & full-time during holidays.
+        </p>
       </section>
+
+      {/* Student Life */}
+      <section className="switzerland-student-life">
+  <h2>Student Life</h2>
+  <p>
+    Switzerland offers an enriching student lifestyle with stunning alpine landscapes,
+    world-class universities, multicultural communities, efficient public transport,
+    and opportunities to explore both academic excellence and outdoor adventures.
+  </p>
+
+  {/* ✅ Single Image */}
+  <div className="student-life-image">
+    <img src="/assets/switzerland/switzerland-student-life.jpg" alt="Student Life in Switzerland" />
+  </div>
+</section>
+
+
+     
+
+      {/* FAQs */}
+      <section className="switzerland-faqs">
+        <h2>FAQs</h2>
+        <div className="faq-item">
+          <h4>Are programs available in English?</h4>
+          <p>Yes, especially postgraduate courses at ETH Zurich, EPFL, and other top universities.</p>
+        </div>
+        <div className="faq-item">
+          <h4>Can Indian students get scholarships?</h4>
+          <p>Yes, including Swiss Government Excellence and university-specific scholarships.</p>
+        </div>
+        <div className="faq-item">
+          <h4>How much can students earn part-time?</h4>
+          <p>CHF 20–25/hour on average, depending on location and work type.</p>
+        </div>
+        <div className="faq-item">
+          <h4>Can I stay in Switzerland after graduation?</h4>
+          <p>Yes, students can apply for a 6-month job search visa and later secure a work permit.</p>
+        </div>
+
+
+         {/* Enroll */}
+      <EnrollSection country="Switzerland" />
+        <p>“Looking to study in Switzerland? Our consultancy provides complete support for university applications, scholarships, and visa processes tailored for Indian students.”</p>
+      </section>
+
     </div>
   );
 }

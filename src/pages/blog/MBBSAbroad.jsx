@@ -4,12 +4,13 @@ import React from "react";
 export default function MBBSAbroad() {
   // --- Inline Styles ---
   const containerStyle = {
-    maxWidth: "1100px",
+    // maxWidth: "1100px",
     margin: "0 auto",
     padding: "40px 20px",
     fontFamily: "Arial, sans-serif",
     lineHeight: "1.7",
     color: "#333",
+    backgroundColor: "#f9fafc",
   };
 
   const headingPrimary = {

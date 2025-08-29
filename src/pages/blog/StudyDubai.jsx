@@ -1,6 +1,5 @@
 // src/pages/WhyDubai.jsx
 import React from "react";
-import { Helmet } from "react-helmet-async";
 
 const WhyDubai = () => {
   const styles = {
@@ -10,8 +9,8 @@ const WhyDubai = () => {
       color: "#333",
       backgroundColor: "#f9fafc",
       padding: "40px 20px",
-      maxWidth: "1000px",
-      margin: "0 auto",
+      // maxWidth: "1000px",
+      
     },
     hero: {
       position: "relative",
@@ -124,15 +123,6 @@ const WhyDubai = () => {
 
   return (
     <div style={styles.page}>
-      {/* SEO */}
-      <Helmet>
-        <title>Why Study in Dubai? | The Rising Hub for International Students</title>
-        <meta
-          name="description"
-          content="Discover why Dubai is a top destination for international students: world-class universities, scholarships, career opportunities, and a multicultural environment."
-        />
-      </Helmet>
-
       {/* Hero */}
       <section style={{ ...styles.hero, backgroundImage: `url('/assets/destinations/dubai.jpg')` }}>
         <div style={styles.heroOverlay}>
@@ -201,14 +191,14 @@ const WhyDubai = () => {
           </thead>
           <tbody>
             <tr>
-              <td style={styles.tableTd} data-label="University / Course Type">Public / Government-affiliated</td>
-              <td style={styles.tableTd} data-label="Tuition Fee (per year)">AED 25,000 – 50,000</td>
-              <td style={styles.tableTd} data-label="Living Costs (per month)">AED 2,500 – 3,500</td>
+              <td style={styles.tableTd}>Public / Government-affiliated</td>
+              <td style={styles.tableTd}>AED 25,000 – 50,000</td>
+              <td style={styles.tableTd}>AED 2,500 – 3,500</td>
             </tr>
             <tr>
-              <td style={styles.tableTd} data-label="University / Course Type">Private / International Branch</td>
-              <td style={styles.tableTd} data-label="Tuition Fee (per year)">AED 50,000 – 100,000</td>
-              <td style={styles.tableTd} data-label="Living Costs (per month)">AED 3,000 – 4,500</td>
+              <td style={styles.tableTd}>Private / International Branch</td>
+              <td style={styles.tableTd}>AED 50,000 – 100,000</td>
+              <td style={styles.tableTd}>AED 3,000 – 4,500</td>
             </tr>
           </tbody>
         </table>
@@ -274,4 +264,3 @@ const WhyDubai = () => {
 };
 
 export default WhyDubai;
-   
