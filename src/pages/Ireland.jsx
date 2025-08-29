@@ -74,22 +74,47 @@ function Ireland() {
   <h2>Top Universities in Ireland</h2>
   <div className="universities-grid">
     {[
-      "Trinity College Dublin",
-      "University College Dublin (UCD)",
-      "University College Cork (UCC)",
-      "Dublin City University (DCU)",
-      "National University of Ireland Galway (NUIG)",
-      "Maynooth University",
-      "Technological University Dublin",
-      "Royal College of Surgeons in Ireland",
-    ].map((name, i) => (
+      {
+        name: "Trinity College Dublin",
+        img: "/assets/ireland/universities/trinity.jpg",
+      },
+      {
+        name: "University College Dublin (UCD)",
+        img: "/assets/ireland/universities/ucd.jpg",
+      },
+      {
+        name: "University College Cork (UCC)",
+        img: "/assets/ireland/universities/ucc.jpg",
+      },
+      {
+        name: "Dublin City University (DCU)",
+        img: "/assets/ireland/universities/dcu.jpg",
+      },
+      {
+        name: "National University of Ireland Galway (NUIG)",
+        img: "/assets/ireland/universities/nuig.jpg",
+      },
+      {
+        name: "Maynooth University",
+        img: "/assets/ireland/universities/maynooth.jpg",
+      },
+      {
+        name: "Technological University Dublin",
+        img: "/assets/ireland/universities/tudublin.jpg",
+      },
+      {
+        name: "Royal College of Surgeons in Ireland",
+        img: "/assets/ireland/universities/rcsi.jpg",
+      },
+    ].map((uni, i) => (
       <div className="uni-card" key={i}>
-        <img src={`/assets/ireland/universities/u${i + 1}.jpg`} alt={name} />
-        <p>{name}</p>
+        <img src={uni.img} alt={uni.name} />
+        <p>{uni.name}</p>
       </div>
     ))}
   </div>
 </section>
+
 
 
    {/* Popular Courses */}

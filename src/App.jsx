@@ -160,7 +160,6 @@ function App() {
         <Route path="/blog/why-dubai" element={<StudyDubai />} />
         <Route path="/blog/why-europe" element={<StudyEurope />} />
         <Route path="/blog/application-guide" element={<UniversityApplicationGuide />} />
-        
         <Route path="/blog/common-mistakes" element={<CommonApplicationMistakes />} />
         <Route path="/blog/compare-systems" element={<CompareEducation />} />
         <Route path="/blog/english-programs" element={<EnglishTaught />} />

@@ -71,18 +71,42 @@ function Dubai() {
   <h2>Top Universities in Dubai</h2>
   <div className="universities-grid">
     {[
-      "University of Dubai",
-      "American University in Dubai",
-      "Middlesex University Dubai",
-      "Heriot-Watt University Dubai",
-      "University of Birmingham Dubai",
-      "Canadian University Dubai",
-      "Amity University Dubai",
-      "Manipal Academy of Higher Education Dubai",
-    ].map((name, i) => (
+      {
+        name: "University of Dubai",
+        img: "/assets/dubai/universities/u1.jpg",
+      },
+      {
+        name: "American University in Dubai",
+        img: "/assets/dubai/universities/u2.jpg",
+      },
+      {
+        name: "Middlesex University Dubai",
+        img: "/assets/dubai/universities/u3.jpg",
+      },
+      {
+        name: "Heriot-Watt University Dubai",
+        img: "/assets/dubai/universities/u4.jpg",
+      },
+      {
+        name: "University of Birmingham Dubai",
+        img: "/assets/dubai/universities/u5.jpg",
+      },
+      {
+        name: "Canadian University Dubai",
+        img: "/assets/dubai/universities/u6.jpg",
+      },
+      {
+        name: "Amity University Dubai",
+        img: "/assets/dubai/universities/u7.jpg",
+      },
+      {
+        name: "Manipal Academy of Higher Education Dubai",
+        img: "/assets/dubai/universities/u8.jpg",
+      },
+    ].map((uni, i) => (
       <div className="uni-card" key={i}>
-        <img src={`/assets/dubai/universities/u${i + 1}.jpg`} alt={name} />
-        <p>{name}</p>
+        <img src={uni.img} alt={uni.name} />
+        <p>{uni.name}</p>
       </div>
     ))}
   </div>
@@ -95,11 +119,11 @@ function Dubai() {
     {[
       { name: "Business & Management", img: "/assets/dubai/courses/c1.jpg" },
       { name: "Computer Science & IT", img: "/assets/dubai/courses/c2.jpg" },
-      { name: "Engineering (Civil, Mechanical, Electrical)", img: "/asset/dubai/courses/c3.jpg" },
+      { name: "Engineering (Civil, Mechanical, Electrical)", img: "/assets/dubai/courses/c3.jpg" },
       { name: "Architecture & Design", img: "/assets/dubai/courses/c4.jpg" },
       { name: "International Business & Finance", img: "/assets/dubai/courses/c5.jpg" },
       { name: "Media & Communication", img: "/assets/dubai/courses/c6.jpg" },
-      { name: "Hospitality & Tourism", img: "/asset/dubai/courses/c7.jpg" },
+      { name: "Hospitality & Tourism", img: "/assets/dubai/courses/c7.jpg" },
       { name: "Health Sciences & Nursing", img: "/assets/dubai/courses/c8.jpg" },
     ].map((course, i) => (
       <div className="course-card" key={i}>

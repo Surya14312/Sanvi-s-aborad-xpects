@@ -7,6 +7,10 @@ body {
   /* OR */
   margin: 40px auto;  /* 40px top/bottom, auto centers horizontally */
 }
+body {
+  overflow-x: hidden !important;
+}
+
 
 /* ========================
    Scroll To Top Button

@@ -5,7 +5,7 @@ import SmartLink from "./SmartLink";
 const studyAbroadCountries = [
   "UK", "Canada", "Singapore", "Ireland", "France", "Germany",
   "Switzerland", "Dubai", "Spain", "Malaysia", "Mauritius",
-  "Netherlands", "Italy", "Poland", "Portugal", "USA", "Malta", "Lithuania"
+  "Netherlands", "Italy", "Poland", "Portugal", "USA", "Malta", "Lithuania",
 ];
 
 // ✅ MBBS Countries
