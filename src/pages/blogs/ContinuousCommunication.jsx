@@ -1,100 +1,71 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 const ContinuousCommunication = () => {
   return (
     <div className="communication-container">
-      <h1>Continuous Communication & Support</h1>
-
-      <section>
-        <h2>Why Continuous Communication Matters</h2>
+      {/* Hero Section */}
+      <section className="communication-hero">
+        <h1>Continuous Communication & Support</h1>
         <p>
-          At Sanvi’s Abroad Xperts, we believe consistent communication is key
-          to your successful study abroad experience. We stay connected with you
-          at every step to provide timely updates, guidance, and support.
+          Studying abroad is a journey that requires ongoing guidance and support.
+          Our continuous communication service ensures that students and parents
+          are always informed, updated, and connected with our consultancy from
+          the application stage to post-arrival and beyond.
         </p>
       </section>
 
-      <section>
-        <h2>Pre-Application Guidance</h2>
+      {/* Why Continuous Communication */}
+      <section className="communication-importance">
+        <h2>Why Continuous Communication Is Important</h2>
         <ul>
-          <li>
-            Regular updates on application status and document verification.
-          </li>
-          <li>Prompt answers to your queries via phone, email, and chat.</li>
-          <li>
-            Assistance with scholarship applications and financial planning.
-          </li>
+          <li>Students may have questions at any stage of the application or study journey.</li>
+          <li>Visa updates, university notifications, and travel alerts require timely communication.</li>
+          <li>Continuous guidance prevents confusion and reduces stress.</li>
+          <li>Parents get reassurance about their child’s progress and safety abroad.</li>
         </ul>
       </section>
 
-      <section>
-        <h2>Visa Process Support</h2>
+      {/* How We Help */}
+      <section className="communication-how">
+        <h2>How We Help</h2>
         <ul>
-          <li>
-            Step-by-step guidance through visa documentation and submission.
-          </li>
-          <li>Reminders for important deadlines and embassy appointments.</li>
-          <li>Mock interview sessions and personalized coaching.</li>
-          <li>Status tracking and follow-ups until visa approval.</li>
+          <li>Regular Updates – Keep students informed about application status, visa processing, and scholarship results.</li>
+          <li>Dedicated Counsellor – Each student gets a point of contact for queries and guidance.</li>
+          <li>Prompt Responses – Quick resolution of doubts regarding universities, courses, or living abroad.</li>
+          <li>Follow-Ups – Monitoring post-arrival adaptation, academics, and wellbeing.</li>
+          <li>Multi-Channel Communication – Support via email, phone, WhatsApp, or video calls.</li>
+          <li>Feedback & Guidance – Continuous feedback on documents, test preparations, and university applications.</li>
         </ul>
       </section>
 
-      <section>
-        <h2>Pre-Departure Preparation</h2>
+      {/* Benefits */}
+      <section className="communication-benefits">
+        <h2>Benefits for Students</h2>
         <ul>
-          <li>
-            Information sessions on travel, packing, and cultural adjustment.
-          </li>
-          <li>Health, safety, and accommodation guidance.</li>
-          <li>Personalized checklists and resource kits.</li>
-          <li>Access to webinars and orientation programs.</li>
+          <li>Peace of mind knowing help is always available.</li>
+          <li>Timely updates on deadlines, requirements, and changes.</li>
+          <li>Personalized support for every stage of the journey.</li>
+          <li>Stronger relationship with the consultancy for long-term guidance.</li>
+          <li>Enhanced confidence in decision-making and problem-solving abroad.</li>
         </ul>
       </section>
 
-      <section>
-        <h2>Arrival & Post-Arrival Support</h2>
-        <ul>
-          <li>Airport pickup and welcome assistance.</li>
-          <li>Help with local registrations, SIM cards, and banking.</li>
-          <li>24/7 helpline for emergencies and urgent queries.</li>
-          <li>Regular check-ins during your first semester.</li>
-          <li>Guidance on academic, social, and cultural integration.</li>
-        </ul>
+      {/* FAQs */}
+      <section className="communication-faqs">
+        <h2>FAQs</h2>
+        <p><strong>Q1:</strong> How long does continuous communication last?<br/>
+           We provide support from the moment you start your journey with us until you are comfortably settled abroad — and beyond if needed.</p>
+        <p><strong>Q2:</strong> How can I contact my counsellor?<br/>
+           You can reach your counsellor through multiple channels — email, phone, WhatsApp, or video calls.</p>
+        <p><strong>Q3:</strong> Does this service include post-arrival issues?<br/>
+           Yes, any queries related to academics, accommodation, travel, or cultural adjustment are included.</p>
       </section>
 
-      <section>
-        <h2>Ongoing Academic & Career Support</h2>
-        <ul>
-          <li>Help with course registration and academic planning.</li>
-          <li>Workshops on resume writing, internships, and job search.</li>
-          <li>Networking events and career counseling sessions.</li>
-          <li>Support for extending visas or pursuing higher studies.</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Communication Channels</h2>
+      {/* Closing Statement */}
+      <section className="communication-closing">
         <p>
-          We make it easy to reach us through multiple channels to suit your
-          needs:
-        </p>
-        <ul>
-          <li>Email support with quick response times.</li>
-          <li>Phone calls and WhatsApp for instant assistance.</li>
-          <li>Online chat support on our website.</li>
-          <li>Dedicated education consultant assigned to you.</li>
-          <li>Regular newsletters with latest updates and tips.</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Your Success is Our Priority</h2>
-        <p>
-          Our goal is to ensure you feel supported and informed throughout your
-          entire study abroad journey. Continuous communication helps us address
-          your concerns promptly, reduce stress, and empower you to make the
-          most of your international education experience.
+          “Stay informed, supported, and confident throughout your international education journey.
+          Connect with us anytime — we are with you every step of the way!”
         </p>
       </section>
     </div>

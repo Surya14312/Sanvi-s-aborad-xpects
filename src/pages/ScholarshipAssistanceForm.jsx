@@ -1,74 +1,88 @@
+// src/pages/ScholarshipAssistanceForm.js
 import React from "react";
 import { useLocation } from "react-router-dom";
+
 
 const ScholarshipAssistanceForm = () => {
   const { state } = useLocation();
   const selectedCountry = state?.country || "";
 
   return (
-    <div
-      style={{
-       
-      
-        padding: "2rem",
-        backgroundColor: "#fff",
-        boxShadow: "0 8px 20px rgba(0,0,0,0.1)",
-        borderRadius: "12px",
-        fontFamily: "'Segoe UI', sans-serif",
-        lineHeight: 1.6,
-        color: "#333",
-      }}
-    >
-      <h2
-        style={{
-          color: "#b91c1c",
-          marginBottom: "1.5rem",
-          textAlign: "center",
-        }}
-      >
-        🎓 Scholarship Assistance
-      </h2>
+    <div className="scholarship-container">
+   <section className="scholarship-hero">
+  <div className="scholarship-hero-image">
+    <img 
+      src="/assets/scholarship-hero.jpg"  // <-- Place your hero image in the public/assets folder
+      alt="Scholarship Assistance" 
+    />
+    <div className="scholarship-hero-overlay">
+      <h2 className="scholarship-title">🎓 Scholarship Assistance</h2>
+      <p className="scholarship-intro">
+        Studying abroad can be expensive, but scholarships can significantly reduce financial burden. Our
+        team provides end-to-end support in identifying, applying, and securing the right scholarships for your
+        chosen program and destination. With our guidance, you increase your chances of receiving financial aid
+        and making your dream education more affordable.
+      </p>
+    </div>
+  </div>
+</section>
 
-      <p>
-        Are you dreaming of studying abroad but worried about tuition costs? Our
-        Scholarship Assistance Program is here to help you access financial aid
-        and reduce your educational expenses. We guide you through the process
-        of identifying and applying for scholarships specific to your field and
-        country of interest.
-      </p>
-      <p>
-        Many international universities offer merit-based and need-based
-        scholarships to deserving students. With our expert counseling, we help
-        you craft strong applications, prepare necessary documents, and meet
-        important deadlines to improve your chances of success.
-      </p>
-      <p>
-        Whether you're targeting undergraduate, postgraduate, or research
-        programs, we ensure that you are aware of all available funding options,
-        including government grants, institutional awards, and private
-        scholarships.
-      </p>
-      <p>
-        By submitting this form, you take the first step toward unlocking
-        scholarship opportunities that align with your academic achievements,
-        background, and goals. Our team will review your profile and connect you
-        with the most relevant options available globally.
-      </p>
-      <p>
-        Don’t let finances hold back your aspirations. Fill in the details below
-        to begin your journey with full guidance and support from Sanvi’s Abroad
-        Xperts!
-      </p>
 
-      <p
-        style={{
-          fontStyle: "italic",
-          color: "#555",
-          marginTop: "2rem",
-          textAlign: "center",
-        }}
-      >
+      <section>
+        <h3>Why Scholarship Assistance Matters</h3>
+        <ul>
+          <li>Universities abroad offer merit-based, need-based, and country-specific scholarships.</li>
+          <li>Many students miss opportunities simply because they are unaware of available options.</li>
+          <li>Early and correct application increases your chances of securing funding.</li>
+          <li>Scholarships not only ease financial stress but also strengthen your profile.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>How We Help</h3>
+        <ul>
+          <li>Identify suitable scholarships based on your academic profile, chosen country, and program.</li>
+          <li>Guide you on eligibility requirements and deadlines.</li>
+          <li>Assist in preparing strong application documents (SOPs, LORs, essays).</li>
+          <li>Provide tips for interview rounds, if required.</li>
+          <li>Ensure applications are submitted correctly and on time.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Types of Scholarships We Assist With</h3>
+        <ul>
+          <li>University-funded scholarships – offered directly by the institution.</li>
+          <li>Government-funded scholarships – like Erasmus+ (EU), Chevening (UK), DAAD (Germany), Fulbright (USA), etc.</li>
+          <li>Private/NGO scholarships – funded by organizations and foundations.</li>
+          <li>Country-specific scholarships for Indians – like Commonwealth Scholarships, Inlaks, Tata Trusts, and more.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Benefits for Students</h3>
+        <ul>
+          <li>Access to a wide database of international scholarships.</li>
+          <li>Personalized matching with opportunities relevant to your field.</li>
+          <li>Professional editing and drafting support for essays and statements.</li>
+          <li>Increased chances of securing partial or full funding.</li>
+          <li>Reduced overall cost of studying abroad.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>FAQs</h3>
+        <p><strong>Q1:</strong> Can I apply for multiple scholarships at once?<br />Yes, you can apply to multiple scholarships if you meet eligibility criteria.</p>
+        <p><strong>Q2:</strong> Are there scholarships available for average students?<br />Absolutely. Apart from merit-based, there are scholarships for financial need, specific regions, and particular fields of study.</p>
+        <p><strong>Q3:</strong> How much funding can I expect?<br />This depends on the scholarship — some cover tuition fees, others include living costs, travel, or full expenses.</p>
+      </section>
+
+      <p className="selected-country">
         Selected Country: <strong>{selectedCountry || "Not selected"}</strong>
+      </p>
+
+      <p className="scholarship-cta">
+        “Don’t let finances stop you from achieving your international education dream. Explore your scholarship opportunities with us today.”
       </p>
     </div>
   );

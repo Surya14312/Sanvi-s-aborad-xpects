@@ -1,79 +1,84 @@
+// src/pages/TravelAssistance.js
 import React from "react";
 
 const TravelAssistance = () => {
   return (
     <div className="travel-container">
       {/* Hero Section */}
-      <div className="travel-hero">
+      <section className="travel-hero">
         <div className="travel-text">
           <h1>Travel Assistance</h1>
           <p>
-            Planning your study abroad journey can be overwhelming, but we make
-            it seamless with our dedicated Travel Assistance service. We ensure
-            your travel experience is stress-free, economical, and safe. Our
-            team helps you with everything from ticket booking and visa
-            compliance to airport pickup and pre-departure briefing.
+            Traveling abroad for education can be overwhelming, especially for first-time international students. 
+            From booking flights to airport transfers and travel insurance, our travel assistance service ensures a seamless and stress-free journey from your home country to your study destination.
           </p>
         </div>
         <div className="travel-image">
-          <img src="/assets/travel.jpg" alt="travel - Assistance" />
+          <img src="/assets/travel.jpg" alt="Travel Assistance" />
         </div>
-      </div>
+      </section>
 
-      {/* Services Section */}
-      <div className="travel-section">
-        <h2>Our Travel Support Includes:</h2>
+      {/* Why Travel Assistance Is Important */}
+      <section className="travel-section">
+        <h2>Why Travel Assistance Is Important</h2>
         <ul>
-          <li>Visa documentation & travel compliance assistance</li>
-          <li>International & domestic flight booking</li>
-          <li>Travel insurance & health coverage recommendations</li>
-          <li>Foreign exchange & currency card setup</li>
-          <li>Pre-departure orientation program</li>
-          <li>Airport pickup & accommodation transfer planning</li>
-          <li>Emergency travel support & updates</li>
+          <li>First-time travelers often face confusion with flight bookings, visa stamps, and baggage restrictions.</li>
+          <li>Some countries require pre-departure medical tests or insurance.</li>
+          <li>Understanding local travel rules, airport procedures, and immigration protocols is essential.</li>
+          <li>Safe and organized travel reduces stress and ensures timely arrival at universities.</li>
         </ul>
-      </div>
+      </section>
 
-      {/* Benefits Section */}
-      <div className="travel-section">
-        <h2>Why Choose Our Assistance?</h2>
-        <p>
-          With global tie-ups and years of experience helping students relocate,
-          we ensure:
-        </p>
+      {/* How We Help */}
+      <section className="travel-section">
+        <h2>How We Help</h2>
         <ul>
-          <li>Peace of mind during the entire travel process</li>
-          <li>Discounted student airfares with top airlines</li>
-          <li>24x7 support during emergencies or delays</li>
-          <li>Coordination with your university’s arrival team</li>
-          <li>Customized guidance based on your destination country</li>
+          <li>Flight Bookings – Guidance on cost-effective flights and best travel routes.</li>
+          <li>Airport Transfers – Assistance with pickups from airport to university or accommodation.</li>
+          <li>Travel Insurance – Advice and arrangements for mandatory or optional travel insurance.</li>
+          <li>Pre-Departure Checklist – Ensuring you carry all essential documents, tickets, currency, and emergency contacts.</li>
+          <li>Accommodation Support – Guidance in booking hostels, dorms, or private rentals before arrival.</li>
+          <li>Local Travel Tips – Orientation on public transport, local SIM cards, and essential services.</li>
         </ul>
-      </div>
+      </section>
 
-      {/* Pre-Departure Section */}
-      <div className="travel-section">
-        <h2>Pre-Departure Briefing</h2>
-        <p>We conduct pre-departure sessions where we cover:</p>
+      {/* Benefits for Students */}
+      <section className="travel-section">
+        <h2>Benefits for Students</h2>
         <ul>
-          <li>Travel documents checklist</li>
-          <li>Do’s and Don’ts while traveling abroad</li>
-          <li>How to navigate airports</li>
-          <li>Emergency contact info</li>
-          <li>Culture shock and local customs of your destination</li>
+          <li>Hassle-free and organized international travel.</li>
+          <li>Safety and security from departure to arrival.</li>
+          <li>Avoids last-minute mistakes or missed flights.</li>
+          <li>Prepares students for smooth transition to their new country.</li>
+          <li>Peace of mind for both students and parents.</li>
         </ul>
-      </div>
+      </section>
+
+      {/* FAQs */}
+      <section className="travel-section">
+        <h2>FAQs</h2>
+        <p><strong>Q1:</strong> Can you book my flight tickets directly?<br />
+           We provide guidance on the best flights and routes, but the actual booking is done by the student or their guardian.</p>
+        <p><strong>Q2:</strong> Is travel insurance mandatory?<br />
+           For many countries, yes. We guide you on required coverage and help arrange insurance.</p>
+        <p><strong>Q3:</strong> Do you assist with airport pickups?<br />
+           Yes, we coordinate with local service providers or university transport for smooth transfers.</p>
+      </section>
 
       {/* Call to Action */}
-      <div className="travel-cta">
-        <h2>Need Travel Help?</h2>
+      <section className="travel-cta">
+        <h2>Traveling abroad shouldn’t be stressful.</h2>
+        <p>
+          Let us guide you from booking flights to settling safely at your university — ensuring your journey begins on the right note.
+        </p>
         <p>
           Please{" "}
           <a href="/contact" className="contact-link">
             contact us
           </a>{" "}
-          to discuss your travel needs and get personalized assistance.
+          to get personalized travel assistance.
         </p>
-      </div>
+      </section>
     </div>
   );
 };

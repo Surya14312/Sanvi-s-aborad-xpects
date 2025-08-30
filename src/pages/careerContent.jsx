@@ -4,47 +4,67 @@ export default {
     title: "Your Career Starts Here",
     subtitle:
       "Get expert guidance and personalized career advice to take the perfect step toward your dream education abroad.",
-    cta: "Book a Free Counseling",
+    cta: "Book a Free Counseling" ,
     image: "/assets/counseling-banner.jpg",
   },
+
   whatIs: {
-    title: "What is Career Counseling?",
-    description: `Career counseling is a professional service where trained counselors assist students
-      in understanding their strengths, interests, and abilities to make informed educational and career decisions. 
-      It helps clarify goals, overcome confusion, and develop a roadmap for success.`,
+    title: "Career Counselling",
+    description: `Choosing the right career path is one of the most crucial decisions in a student’s life. 
+    With countless courses, universities, and countries available, students often feel confused or overwhelmed. 
+    Our career counselling service is designed to provide expert guidance based on a student’s academic background, 
+    interests, and future aspirations.`,
   },
+
   whyImportant: {
-    title: "Why is Career Counseling Important?",
+    title: "Why Career Counselling is Important?",
     points: [
-      "🔍 Helps discover the right course and country",
-      "🎯 Builds a strategic study plan",
-      "👩‍🎓 Matches your skills and interests",
-      "📚 Provides clarity over career goals",
-      "🌐 Boosts confidence in your decision",
+      " Helps avoid making uninformed or random choices.",
+      " Provides clarity about suitable fields based on strengths and skills.",
+      " Bridges the gap between student interests and career opportunities.",
+      " Helps students understand future job markets and prospects.",
     ],
   },
+
   sections: [
-    // Here, paste your 600-line content as objects like:
     {
-      title: "Benefits of Career Counseling",
+      title: "How We Help",
       content: [
-        "Benefit 1: Detailed description...",
-        "Benefit 2: More detailed explanation...",
-        // keep adding paragraphs here
+        "One-on-one sessions with expert counsellors.",
+        "Assessment of academic records, personal interests, and career goals.",
+        "Personality and aptitude mapping.",
+        "Guidance on aligning career goals with the right courses and universities.",
+        "Suggesting alternative career pathways in case of challenges.",
       ],
     },
     {
-      title: "Step-by-Step Counseling Process",
+      title: "Key Benefits for Students",
       content: [
-        "Step 1: Initial consultation...",
-        "Step 2: Skill assessment...",
-        // etc.
+        "Clarity in decision-making.",
+        "Personalized guidance rather than generic suggestions.",
+        "Awareness of emerging fields and global opportunities.",
+        "Step-by-step roadmap for academics and career success.",
       ],
     },
-    // Continue for all your sections...
+    {
+  title: "FAQs",
+  content: [
+    {
+      question: "Do I need career counselling if I already know my course?",
+      answer: "Yes, because career counselling not only confirms your decision but also helps align your goals with the right country, university, and opportunities."
+    },
+    {
+      question: "Is career counselling only for students after 12th?",
+      answer: "No, it’s equally valuable for graduates, postgraduates, and even working professionals planning higher studies abroad."
+    }
+  ]
+    }
+
+
   ],
+
   contact: {
-    text: "Have questions about our counseling services or need guidance on the next step in your academic journey?",
+    text: "Confused about your career path? Book a session with our expert counsellors today and take the first step towards a successful future.",
     linkText: "Contact us",
   },
 };

@@ -1,104 +1,77 @@
+// src/pages/PreDepartureOrientation.js
 import React from "react";
-import { Link } from "react-router-dom";
 
 const PreDepartureOrientation = () => {
   return (
     <div className="orientation-container">
+      {/* Hero Section */}
+     <section className="orientation-hero">
+  <div className="orientation-hero-content">
+    <div className="orientation-text">
       <h1>Pre-Departure Orientation</h1>
+      <p>
+        Studying abroad is exciting, but it comes with challenges such as cultural differences, academic expectations, and daily life adjustments. 
+        Our pre-departure orientation prepares students for their new environment, ensuring they are confident, informed, and ready to start their international education journey.
+      </p>
+    </div>
+    <div className="orientation-image">
+      <img src="/assets/pre-departure.jpg" alt="Pre-Departure Orientation" />
+    </div>
+  </div>
+</section>
 
-      <section>
-        <h2>Welcome & Introduction</h2>
+
+      {/* Why Orientation Is Important */}
+      <section className="orientation-section">
+        <h2>Why Pre-Departure Orientation Is Important</h2>
+        <ul>
+          <li>Helps students adapt to a new academic and cultural environment.</li>
+          <li>Reduces anxiety related to travel, accommodation, and university life.</li>
+          <li>Introduces important aspects like student rights, local laws, and safety measures.</li>
+          <li>Prepares students for practical challenges like banking, transportation, and healthcare.</li>
+        </ul>
+      </section>
+
+      {/* How We Help */}
+      <section className="orientation-section">
+        <h2>How We Help</h2>
+        <ul>
+          <li>Country-Specific Guidance – Overview of culture, lifestyle, climate, and local customs.</li>
+          <li>Academic Expectations – Insight into the teaching style, assessment methods, and grading systems.</li>
+          <li>Health & Safety – Guidance on health insurance, vaccinations, and emergency protocols.</li>
+          <li>Financial Awareness – Tips on budgeting, currency exchange, and managing expenses abroad.</li>
+          <li>Travel & Accommodation Tips – Guidance on airports, local transport, and housing arrangements.</li>
+          <li>Student Support Systems – Introducing support networks, student communities, and counselling resources.</li>
+        </ul>
+      </section>
+
+      {/* Benefits for Students */}
+      <section className="orientation-section">
+        <h2>Benefits for Students</h2>
+        <ul>
+          <li>Smooth transition to the new country and university.</li>
+          <li>Enhanced confidence in handling academic and social challenges.</li>
+          <li>Awareness of safety, healthcare, and emergency procedures.</li>
+          <li>Practical tips for day-to-day life abroad.</li>
+          <li>Reduced culture shock and stress during the initial phase of study.</li>
+        </ul>
+      </section>
+
+      {/* FAQs */}
+      <section className="orientation-section">
+        <h2>FAQs</h2>
+        <p><strong>Q1:</strong> Is pre-departure orientation mandatory?<br />
+          Not legally, but it is highly recommended to ensure a smooth transition and avoid initial difficulties.</p>
+        <p><strong>Q2:</strong> How long is the orientation session?<br />
+          Typically 1–2 days, depending on the country and program, with follow-up support as needed.</p>
+        <p><strong>Q3:</strong> Does it cover visa and travel guidance?<br />
+          Yes, it complements visa guidance and includes travel tips, local laws, and university protocols.</p>
+      </section>
+
+      {/* Conclusion / CTA */}
+      <section className="orientation-cta">
         <p>
-          Congratulations on your admission! This orientation will prepare you
-          for your journey ahead and help you start your studies smoothly
-          abroad.
-        </p>
-      </section>
-
-      <section>
-        <h2>Travel & Packing Tips</h2>
-        <ul>
-          <li>
-            Ensure you have your passport, visa, travel tickets, and insurance.
-          </li>
-          <li>Pack appropriate clothing for your destination’s weather.</li>
-          <li>Follow baggage weight limits and customs regulations.</li>
-          <li>
-            Be prepared for airport security checks and transit procedures.
-          </li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Financial Preparedness</h2>
-        <ul>
-          <li>Exchange currency beforehand or plan to withdraw abroad.</li>
-          <li>Learn how to open a local bank account.</li>
-          <li>Create a budget for your expenses and save emergency funds.</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Health & Safety</h2>
-        <ul>
-          <li>Carry your health insurance card and know how to use it.</li>
-          <li>Complete necessary vaccinations before departure.</li>
-          <li>Save emergency contacts including your country’s embassy.</li>
-          <li>Stay aware of your surroundings and local safety tips.</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Accommodation & Living</h2>
-        <ul>
-          <li>Know your housing arrangements and what to expect on arrival.</li>
-          <li>Set up utilities and internet as soon as possible.</li>
-          <li>Respect local customs and roommate agreements.</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Academic Preparation</h2>
-        <ul>
-          <li>Attend university orientation sessions.</li>
-          <li>Connect with academic advisors and student services.</li>
-          <li>Manage your time well and plan your study schedule.</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Communication</h2>
-        <ul>
-          <li>Set up a local SIM card or international phone plan.</li>
-          <li>Stay in touch with family and friends regularly.</li>
-          <li>Download emergency and communication apps.</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Legal & Immigration Information</h2>
-        <ul>
-          <li>Understand and follow your visa conditions strictly.</li>
-          <li>Register with local authorities if required.</li>
-          <li>Be aware of laws and regulations in your host country.</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Social & Cultural Integration</h2>
-        <ul>
-          <li>Join student clubs and social groups.</li>
-          <li>Be open to learning and adapting to new cultures.</li>
-          <li>Reach out for support if you experience culture shock.</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Q&A and Contact Info</h2>
-        <p>
-          For any questions, contact your education consultant or visit our
-          website. Emergency help lines and embassy contacts should always be
-          saved on your phone.
+          “Start your international education journey confidently! Join our pre-departure orientation to prepare academically, socially, and culturally for life abroad.”
         </p>
       </section>
     </div>

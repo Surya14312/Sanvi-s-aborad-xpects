@@ -8,8 +8,12 @@ const ApplicationProcedure = () => {
         <div className="hero-text">
           <h1>Application Procedure</h1>
           <p>
-            Follow our simple and guided application process to begin your
-            international education journey with The Sanvi’s Abroad Xperts.
+            The university application process is one of the most critical stages
+            in a student’s study abroad journey. From filling out forms to writing
+            compelling essays and preparing required documents, each step must be
+            handled carefully. A small mistake can lead to delays or even rejection.
+            We provide complete end-to-end guidance to ensure your applications are
+            accurate, timely, and impactful.
           </p>
         </div>
         <div className="hero-image">
@@ -17,55 +21,59 @@ const ApplicationProcedure = () => {
         </div>
       </section>
 
-      {/* Step-by-step Guide */}
-      <section className="steps-section">
-        <h2>Step-by-Step Process</h2>
-        <div className="steps">
-          {[
-            "Initial Counseling & Profile Evaluation",
-            "University & Course Selection",
-            "Documentation Assistance",
-            "Application Submission",
-            "Offer Letter & Acceptance",
-            "Visa Documentation & Interview Prep",
-            "Accommodation & Pre-departure Support",
-          ].map((step, index) => (
-            <div className="step-card" key={index}>
-              <div className="step-number">{index + 1}</div>
-              <h3>{step}</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-                nec odio. Praesent libero. Sed cursus ante dapibus diam.
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Required Documents */}
-      <section className="document-list-section">
-        <h2>Documents Required</h2>
-        <ul className="doc-list">
-          <li>Academic Transcripts & Certificates</li>
-          <li>Valid Passport</li>
-          <li>English Proficiency Test Scores (IELTS, TOEFL, etc.)</li>
-          <li>Statement of Purpose (SOP)</li>
-          <li>Letters of Recommendation (LOR)</li>
-          <li>Updated Resume/CV</li>
-          <li>Passport Size Photographs</li>
-          <li>Proof of Funds</li>
+      {/* Why Important */}
+      <section className="app-importance">
+        <h2>Why Application Procedure Support is Important</h2>
+        <ul>
+          <li>
+            University applications often require multiple documents (transcripts,
+            SOP, LORs, test scores, financial proofs).
+          </li>
+          <li>
+            Each institution has its own guidelines, formats, and deadlines.
+          </li>
+          <li>Missing even a single requirement may result in rejection.</li>
+          <li>
+            Competitive admissions demand well-crafted Statements of Purpose (SOPs)
+            and Letters of Recommendation (LORs).
+          </li>
+          <li>
+            Students often underestimate the importance of presentation and
+            detailing.
+          </li>
         </ul>
       </section>
 
-      {/* Tips */}
-      <section className="app-tips">
-        <h2>Tips for a Successful Application</h2>
+      {/* How We Help */}
+      <section className="app-help">
+        <h2>How We Help</h2>
         <ul>
-          <li>Start early and research well.</li>
-          <li>Tailor your SOP to each university.</li>
-          <li>Maintain a checklist to track document submissions.</li>
-          <li>Practice mock visa interviews with us.</li>
-          <li>Consult our experts at each stage for review and improvement.</li>
+          <li>Guiding students through the entire application timeline.</li>
+          <li>Preparing a checklist of required documents per university.</li>
+          <li>Assisting in drafting and refining SOPs, essays, and resumes.</li>
+          <li>Coordinating with recommenders for strong LORs.</li>
+          <li>
+            Submitting applications on behalf of students where permitted.
+          </li>
+          <li>
+            Tracking application status and ensuring no deadlines are missed.
+          </li>
+        </ul>
+      </section>
+
+      {/* Key Benefits */}
+      <section className="app-benefits">
+        <h2>Key Benefits for Students</h2>
+        <ul>
+          <li>Stress-free and streamlined application process.</li>
+          <li>Professional guidance for impactful SOPs and essays.</li>
+          <li>
+            Increased chances of acceptance due to error-free, well-presented
+            applications.
+          </li>
+          <li>
+            Save time and effort with organized documentation and tracking.
+          </li>
         </ul>
       </section>
 
@@ -75,16 +83,16 @@ const ApplicationProcedure = () => {
         <div className="faq-items">
           {[
             {
-              q: "Do I need to appear for IELTS/TOEFL?",
-              a: "Most universities require proof of English proficiency. We can guide you based on the destination country.",
+              q: "When should I start my university applications?",
+              a: "Ideally, 8–12 months before your intended intake.",
             },
             {
-              q: "How long does the entire process take?",
-              a: "Typically 3 to 6 months, depending on your preparedness and intake deadlines.",
+              q: "Do you help in writing SOPs and LORs?",
+              a: "Yes, we guide you in drafting personalized, plagiarism-free, and impressive documents.",
             },
             {
-              q: "Can I apply to multiple universities at once?",
-              a: "Yes! In fact, we recommend applying to at least 3-5 to maximize your chances.",
+              q: "What if I miss a deadline?",
+              a: "We ensure reminders and tracking, but if a deadline is missed, we guide you with the next available intakes or alternate universities.",
             },
           ].map((item, index) => (
             <div className="faq-card" key={index}>
@@ -93,6 +101,14 @@ const ApplicationProcedure = () => {
             </div>
           ))}
         </div>
+      </section>
+
+      {/* Closing Line */}
+      <section className="closing-quote">
+        <p>
+          “Applying abroad doesn’t have to be stressful. Let us handle the process
+          while you focus on preparing for your new journey.”
+        </p>
       </section>
     </div>
   );

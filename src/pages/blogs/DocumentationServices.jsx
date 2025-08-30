@@ -1,113 +1,108 @@
+// src/pages/Documentation.js
 import React from "react";
 import { Link } from "react-router-dom";
 
+
 const Documentation = () => {
   return (
-    <div className="career-container">
+    <div className="documentation-container">
       {/* Hero Section */}
-      <section className="career-hero">
-        <div className="career-hero-text">
+      <section className="documentation-hero">
+        <div className="documentation-hero-text">
           <h1>Documentation Services</h1>
           <p>
-            We provide professional documentation services tailored for visa
-            applications, university admissions, career advancement, and more.
-            Let your documents speak for your potential.
+            Accurate documentation is the backbone of every successful study abroad application. From academic transcripts to Statement of Purpose (SOP), Letters of Recommendation (LOR), and financial proofs, each document must be prepared and presented according to university and embassy standards. Our documentation services ensure your application is professional, verified, and impactful.
           </p>
         </div>
         <img
           src="/assets/documentation-banner.jpg"
           alt="Documentation Services"
-          className="career-banner-img"
+          className="documentation-banner-img"
         />
       </section>
 
-      {/* Info Sections */}
-      <section className="career-info">
-        <h2>Our Expertise</h2>
-        <p>
-          Our documentation team ensures clarity, professionalism, and precision
-          across a wide range of formats. Whether you're applying to a
-          university, submitting a visa application, or preparing a business
-          proposal — we’ve got you covered.
-        </p>
-      </section>
-
-      <section className="career-info">
-        <h2>Types of Documentation</h2>
+      {/* Importance Section */}
+      <section className="documentation-info">
+        <h2>Why Documentation Services Are Important</h2>
         <ul>
-          <li>Statement of Purpose (SOP)</li>
-          <li>Letters of Recommendation (LOR)</li>
-          <li>Resume & CV Writing</li>
-          <li>Cover Letters</li>
-          <li>Visa Application Documents</li>
-          <li>Project Reports & Research Abstracts</li>
+          <li>Even small errors in documents can lead to delays or rejection.</li>
+          <li>Universities and embassies require documents in a specific format.</li>
+          <li>A well-crafted SOP or LOR can make the difference between acceptance and rejection.</li>
+          <li>Properly verified documents (HRD, Apostille, Notary) are often mandatory for study visas.</li>
+          <li>Properly organized financial and identity documents speed up visa approvals.</li>
         </ul>
       </section>
 
-      <section className="career-info">
-        <h2>Key Benefits</h2>
+      {/* How We Help */}
+      <section className="documentation-info">
+        <h2>How We Help</h2>
         <ul>
-          <li>Customized to fit each individual's goals</li>
-          <li>Reviewed by experts and language professionals</li>
-          <li>Fast turnaround and client-friendly revisions</li>
-          <li>Confidentiality and quality assurance guaranteed</li>
+          <li>Application Documents: SOP, LORs, Resume/CV, Admission Essays.</li>
+          <li>Academic Documents: Transcripts, degree certificates, mark sheets.</li>
+          <li>Financial Documents: Bank statements, affidavits, income tax returns.</li>
+          <li>Identity Proofs: Passport, photographs, national IDs.</li>
+          <li>Editing & Review: Professional review of SOPs, essays, and resumes to highlight strengths.</li>
+          <li>Compliance Check: Ensure documents meet university and visa requirements.</li>
         </ul>
       </section>
 
-      <section className="career-info">
-        <h2>Modern Documentation Trends</h2>
-        <p>
-          We stay up-to-date with evolving global requirements. Our services
-          integrate modern formatting, ATS-friendly layouts, and keyword
-          optimization to boost your chances of success.
-        </p>
-      </section>
-
-      <section className="career-info">
-        <h2>How We Deliver</h2>
+      {/* Specialized Documentation Support */}
+      <section className="documentation-info">
+        <h2>Specialized Documentation Support</h2>
         <ul>
-          <li>Step 1: Share your background and goals</li>
-          <li>Step 2: Receive a draft within 48–72 hours</li>
-          <li>Step 3: Request edits if needed</li>
-          <li>Step 4: Final polished document delivered in PDF/Word</li>
+          <li>HRD (Human Resource Development) Attestation – Required for verifying educational documents from the issuing state.</li>
+          <li>Apostille Services – For countries under the Hague Convention, ensuring international recognition of documents.</li>
+          <li>Notary Attestation – Certifying true copies of documents for both universities and visa applications.</li>
         </ul>
       </section>
 
-      <section className="career-info">
-        <h2>Let Your Documents Speak</h2>
-        <p>
-          Whether you're targeting top universities or leading companies,
-          well-prepared documents make all the difference. Reach out to us for
-          personalized, professional documentation that reflects your strengths.
-        </p>
+      {/* Benefits */}
+      <section className="documentation-info">
+        <h2>Benefits for Students</h2>
+        <ul>
+          <li>Hassle-free and complete documentation process.</li>
+          <li>Stronger application with professional SOPs and resumes.</li>
+          <li>Verified documents that are accepted globally.</li>
+          <li>Higher chances of university and visa acceptance.</li>
+          <li>Saves time and reduces stress of handling paperwork.</li>
+          <li>Expert guidance on financial and supporting documents.</li>
+        </ul>
+      </section>
+
+      {/* Common Mistakes */}
+      <section className="documentation-info">
+        <h2>Common Mistakes Students Make (and We Avoid)</h2>
+        <ul>
+          <li>Submitting incomplete or outdated transcripts.</li>
+          <li>SOPs that are generic or copied.</li>
+          <li>LORs that don’t highlight relevant strengths.</li>
+          <li>Missing mandatory document attestation (HRD/Apostille/Notary).</li>
+          <li>Missing deadlines due to poor organization.</li>
+        </ul>
+      </section>
+
+      {/* FAQs */}
+      <section className="documentation-info">
+        <h2>FAQs</h2>
+        <p><strong>Q1:</strong> Do I need HRD attestation for all universities?<br />Not all, but many universities and embassies require HRD attestation for degree certificates. We guide you based on the destination country.</p>
+        <p><strong>Q2:</strong> What is Apostille, and do I need it?<br />An Apostille certifies your documents for use in countries under the Hague Convention. We help you get this done efficiently.</p>
+        <p><strong>Q3:</strong> Will you help with Notary attestation?<br />Yes, we arrange for notarization of required documents to ensure they are legally valid.</p>
+        <p><strong>Q4:</strong> Can you prepare my SOPs and LORs?<br />We don’t write them for you, but we edit, review, and guide you to make them strong and authentic.</p>
       </section>
 
       {/* Call to Action Section */}
-      <section className="call-to-action" style={{ marginTop: "40px", textAlign: "center" }}>
-        <button
-          className="apply-button"
-          onClick={() => window.location.href = "/contact"}
-          style={{
-            padding: "12px 28px",
-            backgroundColor: "#c91432",
-            color: "#fff",
-            border: "none",
-            borderRadius: "6px",
-            cursor: "pointer",
-            fontSize: "18px",
-            marginRight: "20px",
-          }}
-        >
+      <section className="call-to-action">
+        <button className="apply-button" onClick={() => window.location.href = "/contact"}>
           Apply Now
         </button>
-
-        <span style={{ fontSize: "18px" }}>
-          Need help?{" "}
-          <Link to="/contact" style={{ color: "#c91432", fontWeight: "600" }}>
-            Contact Us
-          </Link>
+        <span className="contact-link">
+          Need help? <Link to="/contact">Contact Us</Link>
         </span>
       </section>
+
+      <p className="documentation-cta">
+        “Let us simplify your documentation with HRD attestation, Apostille, Notary, SOPs, LORs, and financial papers — ensuring your application meets every global requirement.”
+      </p>
     </div>
   );
 };

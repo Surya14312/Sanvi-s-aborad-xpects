@@ -42,12 +42,19 @@ const CareerCounseling = () => {
         </ul>
       </Section>
 
-      {/* All other big sections */}
+      {/* Other Sections (including FAQs) */}
       {careerData.sections.map((sec, idx) => (
         <Section key={idx} title={sec.title}>
-          {sec.content.map((para, pIdx) => (
-            <p key={pIdx}>{para}</p>
-          ))}
+          {sec.content.map((item, pIdx) =>
+            item.question && item.answer ? (
+              <div key={pIdx} className="faq-item">
+                <p><strong>{item.question}</strong></p>
+                <p>{item.answer}</p>
+              </div>
+            ) : (
+              <p key={pIdx}>{item}</p>
+            )
+          )}
         </Section>
       ))}
 
