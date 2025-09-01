@@ -39,7 +39,7 @@ const studentServices = [
 const whatWeDoItems = [
   { name: "What We Do", path: "/what-we-do" },
   { name: "About Us", path: "/about" },
-  { name: "Work With Us", path: "/work-with-us" },
+  // { name: "Work With Us", path: "/work-with-us" },
 ];
 
 function Navbar() {

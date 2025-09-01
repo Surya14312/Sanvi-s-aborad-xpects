@@ -29,21 +29,22 @@ function Portugal() {
       </section>
 
       {/* Quick Stats */}
-      <section className="portugal-glance">
-        <h2>Portugal at a Glance</h2>
-        <div className="portugal-stats-grid">
-          {[
-            "50+ Universities & Institutions (public/private universities, polytechnics, business schools)",
-            "Tuition Fees: €1,500–5,000/year (public), €5,000–15,000/year (private)",
-            "Living Costs: €7,000–12,000/year (~₹6–10 lakh)",
-            "50,000+ International Students",
-            "Language of Instruction: Portuguese & English",
-            "Post-Study Work: Stay-back permit for up to 12 months",
-          ].map((text, index) => (
-            <div key={index} className="portugal-stat-card">{text}</div>
-          ))}
-        </div>
-      </section>
+      <section className="stats-section">
+  <h2>Portugal at a Glance</h2>
+  <div className="stats-grid">
+    {[
+      "50+ Universities & Institutions (public/private universities, polytechnics, business schools)",
+      "Tuition Fees: €1,500–5,000/year (public), €5,000–15,000/year (private)",
+      "Living Costs: €7,000–12,000/year (~₹6–10 lakh)",
+      "50,000+ International Students",
+      "Language of Instruction: Portuguese & English",
+      "Post-Study Work: Stay-back permit for up to 12 months",
+    ].map((stat, index) => (
+      <div key={index} className="stat-card">{stat}</div>
+    ))}
+  </div>
+</section>
+
 
       {/* Why Study in Portugal */}
       <section className="portugal-why">
@@ -131,9 +132,9 @@ function Portugal() {
               <li>University-specific awards</li>
             </ul>
           </div>
-          <div className="cost-img-container">
+          {/* <div className="cost-img-container">
             <img src="/assets/portugal/scholarships.jpg" alt="Scholarships in Portugal" />
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -174,7 +175,7 @@ function Portugal() {
           Work Rights: Part-time work allowed during studies (up to 20 hours/week)
         </p>
       </section>
-      <section className="portugal-student-life">
+      {/* <section className="portugal-student-life">
   <h2>Student Life in Portugal</h2>
   <p>
     Portugal offers a welcoming student lifestyle with historic universities, affordable living,
@@ -182,11 +183,11 @@ function Portugal() {
     Students enjoy festivals, cultural traditions, and opportunities to explore beautiful coastlines and cities.
   </p>
 
-  {/* ✅ Single Image */}
+  
   <div className="student-life-image">
     <img src="/assets/portugal/portugal-student-life.jpg" alt="Student Life in Portugal" />
   </div>
-</section>
+</section> */}
 
 
       {/* FAQs */}

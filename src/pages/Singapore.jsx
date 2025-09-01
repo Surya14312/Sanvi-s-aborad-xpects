@@ -30,22 +30,23 @@ function Singapore() {
       </section>
 
       {/* Singapore at a Glance */}
-      <section className="singapore-glance">
-        <h2>Singapore at a Glance</h2>
-        <div className="singapore-stats-grid">
-          {[
-            "30+ Universities & Institutions",
-            "Top: NUS, NTU, SMU, James Cook, Kaplan",
-            "Tuition: SGD 8K – 50K/year",
-            "Living: SGD 10K – 18K/year",
-            "80,000+ International Students",
-            "English as Medium of Instruction",
-            "Post-Study Work via Employment Passes",
-          ].map((stat, i) => (
-            <div key={i} className="singapore-stat-card">{stat}</div>
-          ))}
-        </div>
-      </section>
+     <section className="stats-section">
+  <h2>Singapore at a Glance</h2>
+  <div className="stats-grid">
+    {[
+      "30+ Universities & Institutions",
+      "Top: NUS, NTU, SMU, James Cook, Kaplan",
+      "Tuition: SGD 8K – 50K/year",
+      "Living: SGD 10K – 18K/year",
+      "80,000+ International Students",
+      "English as Medium of Instruction",
+      "Post-Study Work via Employment Passes",
+    ].map((stat, i) => (
+      <div key={i} className="stat-card">{stat}</div>
+    ))}
+  </div>
+</section>
+
 
       {/* Why Choose Singapore */}
       <section className="singapore-why-choose">
@@ -166,7 +167,7 @@ function Singapore() {
       </section>
 
       {/* Student Life */}
-    <section className="singapore-student-life">
+    {/* <section className="singapore-student-life">
   <h2>Student Life in Singapore</h2>
   <p>
     Singapore offers a vibrant, multicultural lifestyle with modern campuses,
@@ -174,11 +175,11 @@ function Singapore() {
     Students enjoy one of Asia’s safest and most connected cities.
   </p>
 
-  {/* ✅ Single Image */}
+ 
   <div className="student-life-image">
     <img src="/assets/singapore/singapore-student-life.jpg" alt="Student Life in Singapore" />
   </div>
-</section>
+</section> */}
 
 
       {/* Enroll */}
@@ -207,7 +208,9 @@ function Singapore() {
           <h4>Do institutions offer scholarships?</h4>
           <p>Yes, many universities offer merit-based scholarships and tuition waivers.</p>
         </div>
+         <section className="poland-summary">
         <p>“Planning to study in Singapore? Whether it’s a diploma in Hospitality or Logistics or a full-fledged degree, our consultancy guides you through admissions, visa processes, and career pathways.”</p>
+      </section>
       </section>
 
     </div>

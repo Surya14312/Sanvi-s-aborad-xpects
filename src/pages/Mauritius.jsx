@@ -27,19 +27,20 @@ function Mauritius() {
       </section>
 
       {/* Quick Stats */}
-      <section className="mauritius-glance">
-        <h2>Mauritius Education at a Glance</h2>
-        <div className="glance-grid">
-          {[
-            "25+ Higher Education Institutions",
-            "USD 5K – USD 15K Tuition Fees",
-            "10K+ International Students",
-            "Post-Study Work & Internship Opportunities",
-          ].map((text, index) => (
-            <div key={index} className="glance-card">{text}</div>
-          ))}
-        </div>
-      </section>
+      <section className="stats-section">
+  <h2>Mauritius at a Glance</h2>
+  <div className="stats-grid">
+    {[
+      "25+ Higher Education Institutions",
+      "USD 5K – USD 15K Tuition Fees",
+      "10K+ International Students",
+      "Post-Study Work & Internship Opportunities",
+    ].map((stat, index) => (
+      <div key={index} className="stat-card">{stat}</div>
+    ))}
+  </div>
+</section>
+
 
       {/* Why Study in Mauritius */}
       <section className="mauritius-why">
@@ -131,12 +132,12 @@ function Mauritius() {
               <li>International Student Financial Aid Programs</li>
             </ul>
           </div>
-          <div className="cost-image">
+          {/* <div className="cost-image">
             <img
               src="/assets/mauritius/mauritius-scholarship.jpg"
               alt="Scholarships in Mauritius"
             />
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -167,7 +168,7 @@ function Mauritius() {
         </p>
       </section>
 
-      <section className="mauritius-student-life">
+      {/* <section className="mauritius-student-life">
   <h2>Student Life in Mauritius</h2>
   <p>
     Mauritius provides a multicultural, safe, and affordable student experience. 
@@ -175,13 +176,13 @@ function Mauritius() {
     and vibrant campus life while exploring the island’s natural beauty.
   </p>
 
-  {/* ✅ Single Image */}
+  
   <div className="student-life-image">
     <img src="/assets/mauritius/mauritius-student-life.jpg" alt="Student Life in Mauritius" />
   </div>
-</section>
+</section> */}
 
-      <EnrollSection country="Mauritius" />
+     
 
       {/* FAQs */}
       <section className="mauritius-faq">
@@ -198,6 +199,12 @@ function Mauritius() {
           <h4>Is Mauritius affordable for Indian students?</h4>
           <p>Yes, Mauritius offers lower tuition and living costs compared to US, UK, or Australia.</p>
         </div>
+         <EnrollSection country="Mauritius" />
+        <section className="malta-summary">
+        <p>
+          Planning to study in Mauritius? Our consultancy provides guidance on university admissions, scholarship applications, visa processing, and career planning for Indian students seeking a rewarding study abroad experience.
+        </p>
+      </section>
       </section>
     </div>
   );

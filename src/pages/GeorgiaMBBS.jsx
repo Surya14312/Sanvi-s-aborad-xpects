@@ -21,21 +21,22 @@ function GeorgiaMBBS() {
       </section>
 
       {/* Quick Stats */}
-      <section className="georgia-glance">
-        <h2>Georgia at a Glance</h2>
-        <div className="glance-grid">
-          {[
-            "5–6 medical universities recognized by NMC/WHO",
-            "Tuition Fees: $4,500–6,500/year (~₹3.5–5 lakh)",
-            "Living Costs: $3,000–4,500/year (~₹2.5–3.5 lakh)",
-            "Language of Instruction: English and Georgian (English MBBS available)",
-            "Duration of MBBS: 6 years including internship",
-            "Degrees recognized by WHO, NMC, FAIMER",
-          ].map((text, index) => (
-            <div key={index} className="glance-card">{text}</div>
-          ))}
-        </div>
-      </section>
+      <section className="stats-section">
+  <h2>Georgia at a Glance</h2>
+  <div className="stats-grid">
+    {[
+      "5–6 medical universities recognized by NMC/WHO",
+      "Tuition Fees: $4,500–6,500/year (~₹3.5–5 lakh)",
+      "Living Costs: $3,000–4,500/year (~₹2.5–3.5 lakh)",
+      "Language of Instruction: English and Georgian (English MBBS available)",
+      "Duration of MBBS: 6 years including internship",
+      "Degrees recognized by WHO, NMC, FAIMER",
+    ].map((stat, index) => (
+      <div key={index} className="stat-card">{stat}</div>
+    ))}
+  </div>
+</section>
+
 
       {/* Why MBBS in Georgia */}
       <section className="georgia-why">
@@ -128,7 +129,7 @@ function GeorgiaMBBS() {
           Work Rights: Limited; internships as part of curriculum
         </p>
       </section>
-      <section className="georgia-mbbs-student-life">
+      {/* <section className="georgia-mbbs-student-life">
   <h2>Student Life in Georgia</h2>
   <p>
     Georgia offers a safe and affordable student-friendly environment with modern campuses, 
@@ -136,7 +137,7 @@ function GeorgiaMBBS() {
     MBBS students can enjoy internships, extracurricular activities, and explore the country’s rich culture and landscapes.
   </p>
 
-  {/* ✅ Single Image */}
+ 
   <div className="student-life-image">
     <img 
       src="/assets/georgia/georgia-mbbs-student-life.jpg" 
@@ -144,7 +145,7 @@ function GeorgiaMBBS() {
       
     />
   </div>
-</section>
+</section> */}
 
 
       {/* FAQs */}

@@ -25,19 +25,20 @@ function Malaysia() {
       </section>
 
       {/* Quick Stats */}
-      <section className="malaysia-glance">
-        <h2>Malaysia Education at a Glance</h2>
-        <div className="glance-grid">
-          {[
-            "150+ Higher Education Institutions",
-            "RM 10K – RM 40K Tuition Fees",
-            "130K+ International Students",
-            "Post-Study Work & Internship Opportunities",
-          ].map((text, index) => (
-            <div key={index} className="glance-card">{text}</div>
-          ))}
-        </div>
-      </section>
+     <section className="stats-section">
+  <h2>Malaysia at a Glance</h2>
+  <div className="stats-grid">
+    {[
+      "150+ Higher Education Institutions",
+      "RM 10K – RM 40K Tuition Fees",
+      "130K+ International Students",
+      "Post-Study Work & Internship Opportunities",
+    ].map((stat, index) => (
+      <div key={index} className="stat-card">{stat}</div>
+    ))}
+  </div>
+</section>
+
 
       {/* Why Study in Malaysia */}
       <section className="malaysia-why">
@@ -133,13 +134,7 @@ function Malaysia() {
               <li>International Student Financial Aid Programs</li>
             </ul>
           </div>
-          <div className="cost-img-container">
-            <img
-              src="/assets/malaysia/malaysia-scholarship.jpg"
-              alt="Scholarships in Malaysia"
-              className="cost-img"
-            />
-          </div>
+          
         </div>
       </section>
 
@@ -171,7 +166,7 @@ function Malaysia() {
         </p>
       </section>
 
-     <section className="malaysia-student-life">
+     {/* <section className="malaysia-student-life">
   <h2>Student Life in Malaysia</h2>
   <p>
     Malaysia offers a multicultural and affordable student experience with modern campuses, 
@@ -179,14 +174,14 @@ function Malaysia() {
     networking opportunities, and extracurricular activities while exploring Malaysia’s rich culture.
   </p>
 
-  {/* ✅ Single Image */}
+\
   <div className="student-life-image">
     <img src="/assets/malaysia/malaysia-student-life.jpg" alt="Student Life in Malaysia" />
   </div>
-</section>
+</section> */}
 
 
-      <EnrollSection country="Malaysia" />
+    
 
       {/* FAQs */}
       <section className="malaysia-faq">
@@ -203,6 +198,13 @@ function Malaysia() {
           <h4>Is Malaysia affordable for international students?</h4>
           <p>Yes, Malaysia is one of the most budget-friendly study destinations with low tuition and living costs.</p>
         </div>
+
+          <EnrollSection country="Malaysia" />
+              <section className="malta-summary">
+        <p>
+          Planning to study in Malaysia? Our consultancy provides guidance on university admissions, scholarship applications, visa processing, and career planning for Indian students seeking a rewarding study abroad experience.
+        </p>
+      </section>
       </section>
     </div>
   );

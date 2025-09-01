@@ -28,21 +28,22 @@ function Poland() {
       </section>
 
       {/* Quick Stats */}
-      <section className="poland-glance">
-        <h2 className="glance-heading">Poland at a Glance</h2>
-        <div className="poland-stats-grid">
-          {[
-            "450+ Universities & Institutions (18 public + private)",
-            "Tuition Fees: €2,000–6,000/year (medical), €2,000–5,000/year (other programs)",
-            "Living Costs: €4,500–6,500/year (~₹4–5.5 lakh)",
-            "60,000+ International Students",
-            "Language of Instruction: Polish & English",
-            "Post-Study Work: 1-year residence permit to seek employment",
-          ].map((text, index) => (
-            <div key={index} className="poland-stat-card">{text}</div>
-          ))}
-        </div>
-      </section>
+      <section className="stats-section">
+  <h2>Poland at a Glance</h2>
+  <div className="stats-grid">
+    {[
+      "450+ Universities & Institutions (18 public + private)",
+      "Tuition Fees: €2,000–6,000/year (medical), €2,000–5,000/year (other programs)",
+      "Living Costs: €4,500–6,500/year (~₹4–5.5 lakh)",
+      "60,000+ International Students",
+      "Language of Instruction: Polish & English",
+      "Post-Study Work: 1-year residence permit to seek employment",
+    ].map((stat, index) => (
+      <div key={index} className="stat-card">{stat}</div>
+    ))}
+  </div>
+</section>
+
 
       {/* Why Study in Poland */}
       <section className="poland-why">
@@ -130,9 +131,9 @@ function Poland() {
               <li>Government scholarship programs</li>
             </ul>
           </div>
-          <div className="cost-img-container">
+          {/* <div className="cost-img-container">
             <img src="/assets/poland/scholarship.jpg" alt="Scholarships in Poland" />
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -173,7 +174,7 @@ function Poland() {
           Work Rights: Part-time during studies, full-time during holidays
         </p>
       </section>
-      <section className="dubai-student-life">
+      {/* <section className="dubai-student-life">
   <h2>Student Life in Poland</h2>
   <p>
     poland offers a modern and cosmopolitan student lifestyle with world-class campuses, 
@@ -181,11 +182,11 @@ function Poland() {
     Students enjoy stunning architecture, global networking opportunities, and a safe, dynamic environment.
   </p>
 
-  {/* ✅ Single Image */}
+ 
   <div className="student-life-image">
     <img src="/assets/poland/poland-student-life.jpg" alt="Student Life in Dubai" />
   </div>
-</section>
+</section> */}
 
 
       {/* FAQs */}

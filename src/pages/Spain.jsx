@@ -28,22 +28,23 @@ function Spain() {
       </section>
 
       {/* Spain at a Glance */}
-      <section className="spain-glance">
-        <h2>Spain at a Glance</h2>
-        <div className="spain-stats-grid">
-          {[
-            "76 Public + 36 Private Universities",
-            "Top: University of Barcelona, UAM, Complutense Madrid, IE, Valencia",
-            "Tuition: €1,500–€4,000 (public), €5,000–€20,000 (private)",
-            "Living: €8,000–€12,000/year (~₹7–10 lakh)",
-            "125,000+ International Students",
-            "Languages: Spanish & English",
-            "Post-Study Stay Back: 12 months",
-          ].map((stat, i) => (
-            <div key={i} className="spain-stat-card">{stat}</div>
-          ))}
-        </div>
-      </section>
+     <section className="stats-section">
+  <h2>Spain at a Glance</h2>
+  <div className="stats-grid">
+    {[
+      "76 Public + 36 Private Universities",
+      "Top: University of Barcelona, UAM, Complutense Madrid, IE, Valencia",
+      "Tuition: €1,500–€4,000 (public), €5,000–€20,000 (private)",
+      "Living: €8,000–€12,000/year (~₹7–10 lakh)",
+      "125,000+ International Students",
+      "Languages: Spanish & English",
+      "Post-Study Stay Back: 12 months",
+    ].map((stat, i) => (
+      <div key={i} className="stat-card">{stat}</div>
+    ))}
+  </div>
+</section>
+
 
       {/* Why Choose Spain */}
       <section className="spain-why-choose">
@@ -166,7 +167,7 @@ function Spain() {
       </section>
 
       {/* Student Life */}
-     <section className="spain-student-life">
+     {/* <section className="spain-student-life">
   <h2>Student Life in Spain</h2>
   <p>
     Spanish campuses offer historic architecture, modern facilities, and diverse student activities.
@@ -174,11 +175,11 @@ function Spain() {
     making their academic journey vibrant and memorable.
   </p>
 
-  {/* ✅ Single Image */}
+ 
   <div className="student-life-image">
     <img src="/assets/spain/spain-student-life.jpg" alt="Student Life in Spain" />
   </div>
-</section>
+</section> */}
 
 
       {/* Enroll CTA */}
@@ -207,7 +208,13 @@ function Spain() {
           <h4>Can I stay in Spain after graduation?</h4>
           <p>Yes, international students can stay up to 12 months to seek employment.</p>
         </div>
+
+        {/* Enroll CTA */}
+      <EnrollSection country="Spain" />
+      
+        <section className="poland-summary">
         <p>“Planning to study in Spain? Our consultancy helps Indian students with university admissions, scholarship applications, visa guidance, and career planning for a smooth journey.”</p>
+     </section>
       </section>
 
     </div>

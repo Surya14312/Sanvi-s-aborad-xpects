@@ -28,18 +28,29 @@ function Canada() {
       </section>
 
       {/* ✅ Canada at a Glance */}
-      <section className="canada-glance">
-        <h2>Canada at a Glance</h2>
-        <ul>
-          <li>Number of Universities and Institutions: 100+ universities + 200+ colleges</li>
-          <li>Top-ranked Institutions: University of Toronto, University of British Columbia, McGill University, University of Alberta, University of Waterloo</li>
-          <li>Tuition Fees (International Students): CAD 15,000 – CAD 35,000/year (~₹10–28 lakh)</li>
-          <li>Living Costs: CAD 12,000 – CAD 18,000/year (~₹9.5–14 lakh)</li>
-          <li>International Students: 640,000+ from over 180 countries</li>
-          <li>Language of Instruction: English and French</li>
-          <li>Post-Study Work Opportunities: Post-Graduation Work Permit (PGWP) up to 3 years</li>
-        </ul>
-      </section>
+     {/* Quick Stats */}
+{/* Quick Stats */}
+<section className="stats-section">
+  <h2>Canada at a Glance</h2>
+  <div className="stats-grid">
+    {[
+      "100+ Universities + 200+ Colleges",
+      "Top-ranked: Toronto, UBC, McGill, Alberta, Waterloo",
+      "CAD 15K – 35K Tuition Fees (~₹10–28 lakh)",
+      "CAD 12K – 18K Living Costs (~₹9.5–14 lakh)",
+      "640K+ International Students from 180+ Countries",
+      "Languages: English & French",
+      "Post-Study Work: PGWP up to 3 years",
+    ].map((stat, index) => (
+      <div key={index} className="stat-card">
+        <p>{stat}</p>
+      </div>
+    ))}
+  </div>
+</section>
+
+
+
 
       {/* ✅ Why Choose Canada */}
       <section className="canada-why">
@@ -172,7 +183,7 @@ function Canada() {
           </li>
         </ul>
       </section>
-      <section className="canada-mbbs-student-life">
+      {/* <section className="canada-mbbs-student-life">
   <h2>Student Life in Canada</h2>
   <p>
     Canada offers a safe, multicultural, and student-friendly environment with world-class campuses, 
@@ -180,7 +191,7 @@ function Canada() {
     student clubs, and explore Canada’s natural landscapes and urban attractions.
   </p>
 
-  {/* ✅ Single Image */}
+  
   <div className="student-life-image">
     <img 
       src="/assets/canada/canada-mbbs-student-life.jpg" 
@@ -188,7 +199,7 @@ function Canada() {
 
     />
   </div>
-</section>
+</section> */}
 
 
       {/* ✅ FAQs */}

@@ -23,21 +23,22 @@ function Malta() {
       </section>
 
       {/* Quick Stats */}
-      <section className="malta-glance">
-        <h2>Malta at a Glance</h2>
-        <div className="glance-grid">
-          {[
-            "4 universities + several specialized institutes",
-            "Tuition Fees: €4,000–10,000/year (~₹3.5–8 lakh)",
-            "Living Costs: €8,000–12,000/year (~₹7–10 lakh)",
-            "10,000+ International Students",
-            "Language of Instruction: English",
-            "Post-Study Work: 6 months–1 year stay-back options",
-          ].map((text, index) => (
-            <div key={index} className="glance-card">{text}</div>
-          ))}
-        </div>
-      </section>
+      <section className="stats-section">
+  <h2>Malta at a Glance</h2>
+  <div className="stats-grid">
+    {[
+      "4 universities + several specialized institutes",
+      "Tuition Fees: €4,000–10,000/year (~₹3.5–8 lakh)",
+      "Living Costs: €8,000–12,000/year (~₹7–10 lakh)",
+      "10,000+ International Students",
+      "Language of Instruction: English",
+      "Post-Study Work: 6 months–1 year stay-back options",
+    ].map((stat, index) => (
+      <div key={index} className="stat-card">{stat}</div>
+    ))}
+  </div>
+</section>
+
 
       {/* Why Study in Malta */}
       <section className="malta-why">
@@ -151,7 +152,7 @@ function Malta() {
           Work Rights: Part-time work allowed during studies; full-time during holidays if permitted
         </p>
       </section>
-      <section className="malta-student-life">
+      {/* <section className="malta-student-life">
   <h2>Student Life in Malta</h2>
   <p>
     Malta offers a vibrant student lifestyle with historic campuses, Mediterranean culture,
@@ -159,11 +160,11 @@ function Malta() {
     networking opportunities, and a lively social scene while exploring the islands.
   </p>
 
-  {/* ✅ Single Image */}
+  
   <div className="student-life-image">
     <img src="/assets/malta/malta-student-life.jpg" alt="Student Life in Malta" />
   </div>
-</section>
+</section> */}
 
 
 

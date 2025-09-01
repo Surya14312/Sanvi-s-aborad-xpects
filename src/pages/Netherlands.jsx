@@ -32,22 +32,23 @@ function Netherlands() {
       </section>
 
       {/* Quick Stats */}
-      <section className="netherlands-glance">
-        <h2>Netherlands at a Glance</h2>
-        <div className="glance-grid">
-          {[
-            "50+ Universities & Institutions (13 Research, 36 Applied Sciences)",
-            "Top: University of Amsterdam, TU Delft, Utrecht, Erasmus, Leiden",
-            "Tuition: €6,000 – €20,000/year (~₹5.5–18 lakh)",
-            "Living: €800 – €1,200/month (~₹70K – 1 lakh)",
-            "115,000+ International Students from 160+ countries",
-            "2,000+ English-taught programs",
-            "1-Year Orientation Visa after graduation",
-          ].map((stat, i) => (
-            <div key={i} className="stat-card">{stat}</div>
-          ))}
-        </div>
-      </section>
+      <section className="stats-section">
+  <h2>Netherlands at a Glance</h2>
+  <div className="stats-grid">
+    {[
+      "50+ Universities & Institutions (13 Research, 36 Applied Sciences)",
+      "Top: University of Amsterdam, TU Delft, Utrecht, Erasmus, Leiden",
+      "Tuition: €6,000 – €20,000/year (~₹5.5–18 lakh)",
+      "Living: €800 – €1,200/month (~₹70K – 1 lakh)",
+      "115,000+ International Students from 160+ countries",
+      "2,000+ English-taught programs",
+      "1-Year Orientation Visa after graduation",
+    ].map((stat, i) => (
+      <div key={i} className="stat-card">{stat}</div>
+    ))}
+  </div>
+</section>
+
 
       {/* Why Study */}
       <section className="netherlands-why">
@@ -181,7 +182,7 @@ function Netherlands() {
       </section>
 
       {/* Student Life */}
-     <section className="netherlands-student-life">
+     {/* <section className="netherlands-student-life">
   <h2>Student Life in the Netherlands</h2>
   <p>
     The Netherlands offers modern campuses, multicultural cities, vibrant cultural festivals,
@@ -189,15 +190,12 @@ function Netherlands() {
     and global networking opportunities while experiencing Dutch culture.
   </p>
 
-  {/* ✅ Single Image */}
+  
   <div className="student-life-image">
     <img src="/assets/netherlands/netherlands-student-life.jpg" alt="Student Life in the Netherlands" />
   </div>
-</section>
+</section> */}
 
-
-      {/* Enroll CTA */}
-      <EnrollSection country="Netherlands" />
 
       {/* FAQs */}
       <section className="netherlands-faq">
@@ -225,8 +223,16 @@ function Netherlands() {
             permits.
           </p>
         </div>
+        
+      {/* Enroll CTA */}
+      <EnrollSection country="Netherlands" />
+
+        
+               <section className="poland-summary">
         <p>“Looking to study in the Netherlands? From world-class universities to excellent job prospects, our consultancy helps you with admissions, scholarships, and visa applications.”</p>
       </section>
+      </section>
+      
     </div>
   );
 }

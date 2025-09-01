@@ -24,22 +24,23 @@ function France() {
       </section>
 
       {/* Quick Stats */}
-      <section className="france-glance">
-        <h2>France at a Glance</h2>
-        <div className="glance-grid">
-          {[
-            "3,500+ Higher Education Institutions",
-            "Top-ranked: Sorbonne, PSL, Polytechnique, HEC, INSEAD",
-            "€2,770 – €20,000 Tuition Fees",
-            "€8K – €12K Living Costs (higher in Paris)",
-            "400K+ International Students (4th globally)",
-            "French & English Taught Programs",
-            "Up to 2 Years Stay-back Visa",
-          ].map((stat, i) => (
-            <div className="glance-card" key={i}>{stat}</div>
-          ))}
-        </div>
-      </section>
+      <section className="stats-section">
+  <h2>France at a Glance</h2>
+  <div className="stats-grid">
+    {[
+      "3,500+ Higher Education Institutions",
+      "Top-ranked: Sorbonne, PSL, Polytechnique, HEC, INSEAD",
+      "€2,770 – €20,000 Tuition Fees",
+      "€8K – €12K Living Costs (higher in Paris)",
+      "400K+ International Students (4th globally)",
+      "French & English Taught Programs",
+      "Up to 2 Years Stay-back Visa",
+    ].map((stat, i) => (
+      <div key={i} className="stat-card">{stat}</div>
+    ))}
+  </div>
+</section>
+
 
       {/* Why Choose France */}
       <section className="france-why">
@@ -145,7 +146,7 @@ function France() {
         </p>
       </section>
 
-      <section className="france-student-life">
+      {/* <section className="france-student-life">
   <h2>Student Life in France</h2>
   <p>
     France offers a vibrant lifestyle with historic campuses, festivals, multicultural cities, 
@@ -153,7 +154,7 @@ function France() {
     Students also enjoy cultural experiences, culinary delights, and exploring Europe.
   </p>
 
-  {/* ✅ Single Image */}
+ 
   <div className="student-life-image">
     <img 
       src="/assets/france/france-student-life.jpg" 
@@ -161,7 +162,7 @@ function France() {
      
     />
   </div>
-</section>
+</section> */}
 
       {/* Enroll Section */}
       <EnrollSection country="France" />
@@ -187,10 +188,13 @@ function France() {
         </div>
         {/* Enroll Section */}
       <EnrollSection country="France" />
+      <section className="malta-summary">
+
 
         <p>“Looking to study in France? Our consultancy assists with university selection, scholarships, application support, and end-to-end visa guidance.”
 
 </p>
+</section>
       </section>
     </div>
   );

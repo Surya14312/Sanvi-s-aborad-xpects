@@ -24,22 +24,23 @@ function Dubai() {
       </section>
 
       {/* Dubai at a Glance */}
-      <section className="dubai-glance">
-        <h2>Dubai at a Glance</h2>
-        <div className="glance-grid">
-          {[
-            "60+ Universities & Branch Campuses",
-            "Top: Birmingham, Heriot-Watt, AUD, Middlesex, Manipal",
-            "Tuition: AED 40K – 90K/year",
-            "Living: AED 40K – 55K/year",
-            "60,000+ International Students",
-            "English as Medium of Instruction",
-            "Post-Study Work & Long-Term Residency Options",
-          ].map((stat, i) => (
-            <div className="glance-card" key={i}>{stat}</div>
-          ))}
-        </div>
-      </section>
+      <section className="stats-section">
+  <h2>Dubai at a Glance</h2>
+  <div className="stats-grid">
+    {[
+      "60+ Universities & Branch Campuses",
+      "Top: Birmingham, Heriot-Watt, AUD, Middlesex, Manipal",
+      "Tuition: AED 40K – 90K/year",
+      "Living: AED 40K – 55K/year",
+      "60,000+ International Students",
+      "English as Medium of Instruction",
+      "Post-Study Work & Long-Term Residency Options",
+    ].map((stat, i) => (
+      <div key={i} className="stat-card">{stat}</div>
+    ))}
+  </div>
+</section>
+
 
       {/* Why Choose Dubai */}
       <section className="dubai-why">
@@ -182,7 +183,7 @@ function Dubai() {
       </section>
 
       {/* Student Life */}
-     <section className="dubai-student-life">
+     {/* <section className="dubai-student-life">
   <h2>Student Life in Dubai</h2>
   <p>
     Dubai offers a vibrant lifestyle with modern campuses, multicultural communities, 
@@ -190,7 +191,7 @@ function Dubai() {
     and access to internships while experiencing one of the world’s safest and most dynamic cities.
   </p>
 
-  {/* ✅ Single Image */}
+ 
   <div className="student-life-image">
     <img 
       src="/assets/dubai/dubai-student-life.jpg" 
@@ -198,7 +199,7 @@ function Dubai() {
       
     />
   </div>
-</section>
+</section> */}
 
       {/* Enroll Section */}
       <EnrollSection country="Dubai" />
@@ -228,7 +229,10 @@ function Dubai() {
         </div>
          {/* Enroll Section */}
       <EnrollSection country="Dubai" />
+      <section className="malta-summary">
+
         <p>“Looking to study in Dubai? Our consultancy helps Indian students with university admissions, visa applications, and career guidance to make your journey smooth.”</p>
+      </section>
       </section>
     </div>
   );

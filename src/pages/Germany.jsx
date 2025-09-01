@@ -29,34 +29,47 @@ function Germany() {
       </section>
 
       {/* ✅ Quick Stats */}
-      <section
-      
-      >
-        <h2
-         
-        >
-          Germany at a Glance
-        </h2>
+     <section
+  style={{
+    padding: "80px 20px",
+    maxWidth: "1200px",
+    margin: "0 auto",
+    textAlign: "center",
+  }}
+>
+  <h2 style={{ fontSize: "2rem", marginBottom: "40px" }}>Germany at a Glance</h2>
 
-        <div
-          
-        >
-          {[
-            "400+ Higher Education Institutions",
-            "Public Tuition: €0–€400/semester",
-            "350k–500k International Students",
-            "18-Month Post-Study Job Permit",
-          ].map((text, index) => (
-            <div
-              key={index}
-             
-             
-            >
-              {text}
-            </div>
-          ))}
-        </div>
-      </section>
+  <div
+    style={{
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+      gap: "20px",
+      justifyItems: "center",
+    }}
+  >
+    {[
+      "400+ Higher Education Institutions",
+      "Public Tuition: €0–€400/semester",
+      "350k–500k International Students",
+      "18-Month Post-Study Job Permit",
+    ].map((text, index) => (
+      <div
+        key={index}
+        style={{
+          background: "#f7f9fc",
+          padding: "20px",
+          borderRadius: "12px",
+          boxShadow: "0 8px 20px rgba(0,0,0,0.1)",
+          fontSize: "1rem",
+          fontWeight: "500",
+        }}
+      >
+        {text}
+      </div>
+    ))}
+  </div>
+</section>
+
 
       {/* ✅ Why Study in Germany */}
       <section className="germany-why">
@@ -194,32 +207,7 @@ function Germany() {
         </p>
       </section>
 
-      <section className="germany-student-life">
-  <h2>Student Life in Germany</h2>
-  <p>
-    Germany offers a multicultural and student-friendly environment with vibrant cities, 
-    historic campuses, festivals, internships, and extensive networking opportunities. 
-    Students also enjoy modern facilities, cultural experiences, and travel opportunities across Europe.
-  </p>
 
-  <section className="germany-student-life">
-  {/* <h2>Student Life in Germany</h2>
-  <p>
-    Germany offers a multicultural and student-friendly environment with vibrant cities, 
-    historic campuses, festivals, internships, and extensive networking opportunities. 
-    Students also enjoy modern facilities, cultural experiences, and travel opportunities across Europe.
-  </p> */}
-
-  {/* ✅ Single Image */}
-  <div className="student-life-image">
-    <img 
-      src="/assets/germany/germany-student-life.jpg" 
-      alt="Student Life in Germany" 
-    
-    />
-  </div>
-</section>
-</section>
 
       <EnrollSection country="Germany" />
 
@@ -246,7 +234,10 @@ function Germany() {
           <h4>How long can I stay after graduation?</h4>
           <p>Up to 18 months on a job-search permit; then you may convert to EU Blue Card.</p>
         </div>
+        <section className="malta-summary">
+
         <p>“Plan a tuition-free (or low-tuition) German degree with strong career outcomes. Get a personalized shortlist, funding plan, and visa file—start with a free counseling session today.”</p>
+      </section>
       </section>
     </div>
   );

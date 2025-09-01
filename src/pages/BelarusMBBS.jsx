@@ -5,7 +5,7 @@ import EnrollSection from "../components/EnrollSection";
 function BelarusMBBS() {
   return (
     <div className="belarus-container">
-      {/* ✅ Hero Section */}
+      {/* Hero Section */}
       <section className="belarus-hero">
         <div className="belarus-hero-content">
           <h1>Study MBBS in Belarus</h1>
@@ -14,43 +14,28 @@ function BelarusMBBS() {
           </p>
           <Link to="/contact" className="apply-btn">Apply Now</Link>
         </div>
-        <img
-          src="/assets/belarus/belarus-hero.jpg"
-          alt="MBBS in Belarus"
-          className="hero-img"
-        />
+        <img src="/assets/belarus/belarus-hero.jpg" alt="MBBS in Belarus" className="hero-img"/>
       </section>
 
-      {/* ✅ Quick Stats */}
-      <section style={{ padding: "80px 20px", textAlign: "center", maxWidth: "1200px", margin: "0 auto" }}>
-        <h2
-          
-        >
-          Belarus at a Glance
-        </h2>
+      {/* Quick Stats */}
+     <section className="stats-section">
+  <h2>Belarus at a Glance</h2>
+  <div className="stats-grid">
+    {[
+      "5–6 medical universities recognized by NMC/WHO",
+      "Tuition Fees: $4,000–5,500/year (~₹3.5–4.5 lakh)",
+      "Living Costs: $2,500–4,000/year (~₹2–3.5 lakh)",
+      "Language of Instruction: English and Russian (English-taught MBBS)",
+      "Duration of MBBS: 5 years 9 months – 6 years including internship",
+      "Degrees recognized by WHO, NMC, FAIMER",
+    ].map((stat, index) => (
+      <div key={index} className="stat-card">{stat}</div>
+    ))}
+  </div>
+</section>
 
-        <div
-          
-        >
-          {[
-            "5–6 medical universities recognized by NMC/WHO",
-            "Tuition Fees: $4,000–5,500/year (~₹3.5–4.5 lakh)",
-            "Living Costs: $2,500–4,000/year (~₹2–3.5 lakh)",
-            "Language of Instruction: English and Russian (English-taught MBBS)",
-            "Duration of MBBS: 5 years 9 months – 6 years including internship",
-            "Degrees recognized by WHO, NMC, FAIMER",
-          ].map((text, index) => (
-            <div
-              key={index}
-              
-            >
-              {text}
-            </div>
-          ))}
-        </div>
-      </section>
 
-      {/* ✅ Why MBBS in Belarus */}
+      {/* Why MBBS */}
       <section className="belarus-why">
         <h2>Why Choose Belarus?</h2>
         <ul>
@@ -63,7 +48,7 @@ function BelarusMBBS() {
         </ul>
       </section>
 
-      {/* ✅ Benefits for Indian Students */}
+      {/* Benefits */}
       <section className="belarus-benefits">
         <h2>Benefits for Indian Students</h2>
         <ul>
@@ -75,38 +60,37 @@ function BelarusMBBS() {
         </ul>
       </section>
 
-     {/* ✅ Top Medical Universities */}
-<section className="belarus-universities">
-  <h2>Top Medical Universities in Belarus</h2>
-  <div className="universities-grid">
-    {[
-      { name: "Belarusian State Medical University (Minsk)", img: "/assets/belarus/universities/bsmu.jpg" },
-      { name: "Gomel State Medical University", img: "/assets/belarus/universities/gomel.jpg" },
-      { name: "Vitebsk State Medical University", img: "/assets/belarus/universities/vitebsk.jpg" },
-      { name: "Grodno State Medical University", img: "/assets/belarus/universities/grodno.jpg" },
-      { name: "Mogilev State Medical University", img: "/assets/belarus/universities/mogilev.jpg" },
-    ].map((uni, i) => (
-      <div className="uni-card" key={i}>
-        <img src={uni.img} alt={uni.name} />
-        <p>{uni.name}</p>
-      </div>
-    ))}
-  </div>
-</section>
+      {/* Universities */}
+      <section className="belarus-universities">
+        <h2>Top Medical Universities in Belarus</h2>
+        <div className="universities-grid">
+          {[
+            { name: "Belarusian State Medical University (Minsk)", img: "/assets/belarus/universities/bsmu.jpg" },
+            { name: "Gomel State Medical University", img: "/assets/belarus/universities/gomel.jpg" },
+            { name: "Vitebsk State Medical University", img: "/assets/belarus/universities/vitebsk.jpg" },
+            { name: "Grodno State Medical University", img: "/assets/belarus/universities/grodno.jpg" },
+            { name: "Mogilev State Medical University", img: "/assets/belarus/universities/mogilev.jpg" },
+          ].map((uni, i) => (
+            <div className="uni-card" key={i}>
+              <img src={uni.img} alt={uni.name}/>
+              <p>{uni.name}</p>
+            </div>
+          ))}
+        </div>
+      </section>
 
-
-      {/* ✅ Cost of Studying & Living */}
-      <section className="belarus-cost" >
+      {/* Cost */}
+      <section className="belarus-cost">
         <h2>Cost of Studying and Living</h2>
         <p>
-          Tuition Fees: $4,000 – $5,500/year (~₹3.5–4.5 lakh)<br />
-          Living Expenses: $2,500 – $4,000/year (~₹2–3.5 lakh)<br />
+          Tuition Fees: $4,000 – $5,500/year (~₹3.5–4.5 lakh)<br/>
+          Living Expenses: $2,500 – $4,000/year (~₹2–3.5 lakh)<br/>
           Total MBBS Cost (5.8–6 years): $35,000 – $42,000 (~₹30–35 lakh)
         </p>
       </section>
 
-      {/* ✅ Career Prospects */}
-      <section className="belarus-career" >
+      {/* Career */}
+      <section className="belarus-career">
         <h2>Career Prospects After MBBS</h2>
         <ul>
           <li>Eligible to appear for FMGE/NExT exam in India.</li>
@@ -116,7 +100,7 @@ function BelarusMBBS() {
         </ul>
       </section>
 
-      {/* ✅ Documents & Visa */}
+      {/* Documents & Visa */}
       <section className="belarus-documents">
         <h2>Documents Required (Indians)</h2>
         <ul>
@@ -134,33 +118,15 @@ function BelarusMBBS() {
 
         <h2>Student Visa for Belarus</h2>
         <p>
-          Type: Student Visa<br />
-          Requirements: University admission, proof of funds, passport, insurance<br />
-          Visa Duration: Course duration + 3 months<br />
-          Processing Time: 4–6 weeks<br />
+          Type: Student Visa<br/>
+          Requirements: University admission, proof of funds, passport, insurance<br/>
+          Visa Duration: Course duration + 3 months<br/>
+          Processing Time: 4–6 weeks<br/>
           Work Rights: Limited; internships as part of curriculum
         </p>
       </section>
-      <section className="belarus-mbbs-student-life">
-  <h2>Student Life in Belarus</h2>
-  <p>
-    Belarus offers a safe, affordable, and student-friendly environment with modern campuses, 
-    multicultural communities, and vibrant student life. MBBS students can enjoy internships, 
-    networking opportunities, cultural events, and explore the country’s rich history and landscapes.
-  </p>
 
-  {/* ✅ Single Image */}
-  <div className="student-life-image">
-    <img 
-      src="/images/belarus-mbbs-student-life.jpg" 
-      alt="Student Life in Belarus" 
-      
-    />
-  </div>
-</section>
-
-
-      {/* ✅ FAQs */}
+      {/* FAQs */}
       <section className="belarus-faq">
         <h2>FAQs About Studying MBBS in Belarus</h2>
         <div className="faq-item">
@@ -187,7 +153,8 @@ function BelarusMBBS() {
 
       <EnrollSection country="Belarus" />
 
-      <section className="belarus-summary" style={{ maxWidth: "900px", margin: "60px auto", padding: "0 20px", textAlign: "center" }}>
+      {/* Summary */}
+      <section className="belarus-summary">
         <p>
           Planning to pursue MBBS in Belarus? Our consultancy assists Indian students with university selection, NEET guidance, visa processing, and career planning to ensure a smooth and successful medical education journey.
         </p>

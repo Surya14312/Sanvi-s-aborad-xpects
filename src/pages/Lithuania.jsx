@@ -23,21 +23,22 @@ function Lithuania() {
       </section>
 
       {/* Quick Stats */}
-      <section className="lithuania-glance">
-        <h2>Lithuania at a Glance</h2>
-        <div className="glance-grid">
-          {[
-            "15+ universities + 40+ colleges and private institutions",
-            "Tuition Fees: €3,000–11,000/year (~₹2.5–9 lakh)",
-            "Living Costs: €6,000–9,000/year (~₹5–7 lakh)",
-            "10,000+ International Students",
-            "Language of Instruction: English and Lithuanian",
-            "Post-Study Work: Stay-back permit up to 12 months",
-          ].map((text, index) => (
-            <div key={index} className="glance-card">{text}</div>
-          ))}
-        </div>
-      </section>
+     <section className="stats-section">
+  <h2>Lithuania at a Glance</h2>
+  <div className="stats-grid">
+    {[
+      "15+ universities + 40+ colleges and private institutions",
+      "Tuition Fees: €3,000–11,000/year (~₹2.5–9 lakh)",
+      "Living Costs: €6,000–9,000/year (~₹5–7 lakh)",
+      "10,000+ International Students",
+      "Language of Instruction: English and Lithuanian",
+      "Post-Study Work: Stay-back permit up to 12 months",
+    ].map((stat, index) => (
+      <div key={index} className="stat-card">{stat}</div>
+    ))}
+  </div>
+</section>
+
 
       {/* Why Study in Lithuania */}
       <section className="lithuania-why">
@@ -156,7 +157,7 @@ function Lithuania() {
           Work Rights: Part-time work allowed during studies (up to 20 hours/week)
         </p>
       </section>
-      <section className="lithuania-student-life">
+      {/* <section className="lithuania-student-life">
   <h2>Student Life in Lithuania</h2>
   <p>
     Lithuania offers a safe and affordable student lifestyle with historic universities, 
@@ -164,11 +165,11 @@ function Lithuania() {
     networking opportunities, and a rich academic and social experience.
   </p>
 
-  {/* ✅ Single Image */}
+ 
   <div className="student-life-image">
     <img src="/assets/lithuania/lithuania-student-life.jpg" alt="Student Life in Lithuania" />
   </div>
-</section>
+</section> */}
 
 
       {/* FAQs */}

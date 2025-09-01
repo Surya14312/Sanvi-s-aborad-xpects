@@ -25,21 +25,22 @@ function USA() {
       </section>
 
       {/* Quick Stats */}
-      <section className="usa-stats">
-        <h2>USA at a Glance</h2>
-        <div className="usa-stats-grid">
-          {[
-            "4,000+ Universities & Institutions (Ivy League, state universities, private institutions, community colleges)",
-            "Tuition Fees: $20,000–60,000/year (~₹16–50 lakh)",
-            "Living Costs: $12,000–20,000/year (~₹10–16 lakh)",
-            "1 million+ International Students",
-            "Language of Instruction: English",
-            "Post-Study Work: Optional Practical Training (OPT) 12–36 months",
-          ].map((text, index) => (
-            <div key={index} className="usa-stat-card">{text}</div>
-          ))}
-        </div>
-      </section>
+      <section className="stats-section">
+  <h2>USA at a Glance</h2>
+  <div className="stats-grid">
+    {[
+      "4,000+ Universities & Institutions (Ivy League, state universities, private institutions, community colleges)",
+      "Tuition Fees: $20,000–60,000/year (~₹16–50 lakh)",
+      "Living Costs: $12,000–20,000/year (~₹10–16 lakh)",
+      "1 million+ International Students",
+      "Language of Instruction: English",
+      "Post-Study Work: Optional Practical Training (OPT) 12–36 months",
+    ].map((text, index) => (
+      <div key={index} className="stat-card">{text}</div>
+    ))}
+  </div>
+</section>
+
 
       {/* Why Study in USA */}
       <section className="usa-why">
@@ -129,14 +130,14 @@ function USA() {
         <li>University-specific financial aid</li>
       </ul>
     </div>
-    <div>
+    {/* <div>
       <img
         src="/assets/usa/scholarships.jpg"
         alt="Scholarships in USA"
        
      
       />
-    </div>
+    </div> */}
   </div>
 </section>
 
@@ -180,7 +181,7 @@ function USA() {
           Work Rights: On-campus 20 hours/week during term; OPT/CPT for off-campus
         </p>
       </section>
-     <section className="usa-student-life">
+     {/* <section className="usa-student-life">
   <h2>Student Life</h2>
   <p>
     The USA offers a dynamic student lifestyle with diverse cultures, world-class campuses,
@@ -188,11 +189,11 @@ function USA() {
     and natural landscapes.
   </p>
 
-  {/* ✅ Single Image */}
+ 
   <div className="student-life-image">
     <img src="/assets/usa/usa-student-life.jpg" alt="Student Life in USA" />
   </div>
-</section>
+</section> */}
 
 
 

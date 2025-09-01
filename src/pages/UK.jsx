@@ -23,23 +23,24 @@ function UK() {
         <img src="/assets/uk/uk-banner.jpg" alt="Study in UK" className="uk-hero-img" />
       </section>
 
-      {/* Quick Stats */}
-      <section className="uk-stats">
-        <h2>The UK at a Glance</h2>
-        <div className="uk-stats-grid">
-          {[
-            "160+ Recognized Universities",
-            "Top-ranked: Oxford, Cambridge, Imperial, LSE, Edinburgh",
-            "£10K – £38K Tuition Fees",
-            "£9K – £15K Living Costs",
-            "680K+ International Students",
-            "English Taught Programs",
-            "2-Year Graduate Route Visa",
-          ].map((stat, i) => (
-            <div key={i} className="uk-stat-card">{stat}</div>
-          ))}
-        </div>
-      </section>
+     {/* Quick Stats */}
+<section className="stats-section">
+  <h2>The UK at a Glance</h2>
+  <div className="stats-grid">
+    {[
+      "160+ Recognized Universities",
+      "Top-ranked: Oxford, Cambridge, Imperial, LSE, Edinburgh",
+      "£10K – £38K Tuition Fees",
+      "£9K – £15K Living Costs",
+      "680K+ International Students",
+      "English Taught Programs",
+      "2-Year Graduate Route Visa",
+    ].map((stat, i) => (
+      <div key={i} className="stat-card">{stat}</div>
+    ))}
+  </div>
+</section>
+
 
       {/* Why Choose */}
       <section className="uk-why-choose">
@@ -150,18 +151,18 @@ function UK() {
       </section>
 
       {/* Student Life */}
-     <section className="uk-student-life">
+     {/* <section className="uk-student-life">
   <h2>Student Life</h2>
   <p>
     The UK offers a vibrant student lifestyle with multicultural exposure, student discounts,
     historic landmarks, and modern facilities.
   </p>
 
-  {/* ✅ Single Image */}
+  
   <div className="student-life-image">
     <img src="/assets/uk/uk-student-life.jpg" alt="Student Life in UK" />
   </div>
-</section>
+</section> */}
       {/* Application Timeline *
         
       </section>
@@ -191,7 +192,9 @@ function UK() {
 
           {/* Enroll Section */}
       <EnrollSection country="UK" />
+        <section className="poland-summary">
         <p>“Planning to study in the UK? Our consultancy helps you select the right university, prepare your application, secure scholarships, and guide you through the visa process.”</p>
+      </section>
       </section>
 
     </div>

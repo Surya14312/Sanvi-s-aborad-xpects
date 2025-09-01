@@ -31,7 +31,7 @@ function Home() {
     { name: "Spain", image: "/assets/destinations/spain.jpg", description: "Great climate, culture, and academic opportunities." },
     { name: "Malaysia", image: "/assets/destinations/malaysia.jpg", description: "Affordable, quality education in Asia." },
     { name: "Mauritius", image: "/assets/destinations/mauritius.jpg", description: "Tropical paradise with excellent study options." },
-    { name: "India", image: "/asset/destinations/india.jpg", description: "Diverse culture and top-ranked institutions." },
+   
     { name: "Netherlands", image: "/assets/destinations/netherlands.jpg", description: "Hub for tech, design, and business." },
     { name: "Italy", image: "/assets/destinations/italy.jpg", description: "Experience art, culture, and top universities." },
     { name: "Poland", image: "/assets/destinations/poland.jpg", description: "Affordable education in a historic setting." },
@@ -39,7 +39,7 @@ function Home() {
     { name: "USA", image: "/asset/destinations/usa.jpg", description: "World’s top universities and diverse opportunities." },
     { name: "Malta", image: "/assets/destinations/malta.jpg", description: "English-speaking country with rich history." },
     { name: "Lithuania", image: "/assets/destinations/lithuania.jpg", description: "Affordable education in a Baltic gem." },
-    { name: "New Zealand", image: "/assets/destinations/newzealand.jpg", description: "Stunning landscapes and quality education." },
+    // { name: "New Zealand", image: "/assets/destinations/newzealand.jpg", description: "Stunning landscapes and quality education." },
     { name: "China", image: "/assets/destinations/china.jpg", description: "Rapidly growing education sector with rich culture." },
     { name: "Georgia", image: "/assets/destinations/georgia.jpg", description: "Affordable medical and technical education." },
     { name: "Philippines", image: "/assets/destinations/philippines.jpg", description: "English-speaking country with strong medical programs." },

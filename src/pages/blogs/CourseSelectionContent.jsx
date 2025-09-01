@@ -18,10 +18,10 @@ export default {
   whyImportant: {
     title: "Why Course Selection is Important?",
     points: [
-      "🎯 Avoids the risk of enrolling in courses with low career prospects.",
-      "📘 Ensures that the student’s chosen program matches their academic eligibility.",
-      "🔬 Helps students explore interdisciplinary and emerging fields.",
-      "💰 Saves time and money by avoiding course switches later."
+      " Avoids the risk of enrolling in courses with low career prospects.",
+      " Ensures that the student’s chosen program matches their academic eligibility.",
+      " Helps students explore interdisciplinary and emerging fields.",
+      " Saves time and money by avoiding course switches later."
     ]
   },
 

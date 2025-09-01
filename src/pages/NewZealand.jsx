@@ -26,21 +26,22 @@ function NewZealand() {
       </section>
 
       {/* Quick Stats */}
-      <section className="newzealand-glance">
-        <h2 className="glance-heading">New Zealand at a Glance</h2>
-        <div className="newzealand-stats-grid">
-          {[
-            "8 Public Universities + Polytechnics & Private Institutions",
-            "Tuition Fees: NZD 22,000–40,000/year (~₹11–20 lakh)",
-            "Living Costs: NZD 12,000–18,000/year (~₹6–9 lakh)",
-            "125,000+ International Students",
-            "Language of Instruction: English",
-            "Post-Study Work Visa: Up to 3 years",
-          ].map((text, index) => (
-            <div key={index} className="newzealand-stat-card">{text}</div>
-          ))}
-        </div>
-      </section>
+      <section className="stats-section">
+  <h2>New Zealand at a Glance</h2>
+  <div className="stats-grid">
+    {[
+      "8 Public Universities + Polytechnics & Private Institutions",
+      "Tuition Fees: NZD 22,000–40,000/year (~₹11–20 lakh)",
+      "Living Costs: NZD 12,000–18,000/year (~₹6–9 lakh)",
+      "125,000+ International Students",
+      "Language of Instruction: English",
+      "Post-Study Work Visa: Up to 3 years",
+    ].map((stat, index) => (
+      <div key={index} className="stat-card">{stat}</div>
+    ))}
+  </div>
+</section>
+
 
       {/* Why Study in New Zealand */}
       <section className="newzealand-why">
@@ -168,18 +169,18 @@ function NewZealand() {
       </section>
 
       {/* Student Life */}
-      <section className="newzealand-student-life">
+      {/* <section className="newzealand-student-life">
   <h2>Student Life in New Zealand</h2>
   <p>
     New Zealand provides a safe, multicultural, and vibrant student experience with internships, 
     networking opportunities, campus events, and the chance to explore stunning natural landscapes.
   </p>
 
-  {/* ✅ Single Image */}
+  
   <div className="student-life-image">
     <img src="/assets/newzealand/newzealand-student-life.jpg" alt="Student Life in New Zealand" />
   </div>
-</section>
+</section> */}
 
 
       <EnrollSection country="New Zealand" />
@@ -207,7 +208,9 @@ function NewZealand() {
           <h4>How much is the cost of living?</h4>
           <p>NZD 1,000–1,500/month (~₹50,000–75,000), depending on location and lifestyle.</p>
         </div>
+           <section className="poland-summary">
    <p>“Looking to study in New Zealand? Our consultancy guides Indian students through university selection, scholarship applications, visa processes, and career planning for a smooth study abroad journey.”</p>
+      </section>
       </section>
     </div>
   );

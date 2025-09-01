@@ -2,9 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import EnrollSection from "../components/EnrollSection";
 
-
 function ChinaMBBS() {
-  const stats = [
+  const chinaStats = [
     "50+ medical universities recognized by NMC/WHO",
     "Tuition Fees: $3,500–8,000/year (~₹3–6.5 lakh)",
     "Living Costs: $2,500–5,000/year (~₹2–4 lakh)",
@@ -12,8 +11,6 @@ function ChinaMBBS() {
     "Duration of MBBS: 6 years including internship",
     "Degrees recognized by WHO, NMC, FAIMER",
   ];
-
-
 
   return (
     <div className="china-container">
@@ -33,7 +30,7 @@ function ChinaMBBS() {
       <section className="china-stats">
         <h2>China at a Glance</h2>
         <div className="stats-grid">
-          {stats.map((text, index) => (
+          {chinaStats.map((text, index) => (
             <div className="stat-card" key={index}>{text}</div>
           ))}
         </div>
@@ -64,28 +61,27 @@ function ChinaMBBS() {
         </ul>
       </section>
 
-     {/* ✅ Top Medical Universities */}
-<section className="china-universities">
-  <h2>Top Medical Universities in China</h2>
-  <div className="universities-grid">
-    {[
-      { name: "Peking University Health Science Center", img: "/assets/china/universities/u1.jpg" },
-      { name: "Fudan University", img: "/assets/china/universities/u2.jpg" },
-      { name: "Shanghai Jiao Tong University School of Medicine", img: "/assets/china/universities/u3.jpg" },
-      { name: "Zhejiang University School of Medicine", img: "/assets/china/universities/u4.jpg" },
-      { name: "Capital Medical University", img: "/assets/china/universities/u5.jpg" },
-      { name: "Tianjin Medical University", img: "/assets/china/universities/u6.jpg" },
-      { name: "Southern Medical University", img: "/assets/china/universities/u7.jpg" },
-      { name: "Wuhan University", img: "/assets/china/universities/u8.jpg" },
-    ].map((uni, i) => (
-      <div className="uni-card" key={i}>
-        <img src={uni.img} alt={uni.name} />
-        <p>{uni.name}</p>
-      </div>
-    ))}
-  </div>
-</section>
-
+      {/* Top Medical Universities */}
+      <section className="china-universities">
+        <h2>Top Medical Universities in China</h2>
+        <div className="universities-grid">
+          {[
+            { name: "Peking University Health Science Center", img: "/assets/china/universities/u1.jpg" },
+            { name: "Fudan University", img: "/assets/china/universities/u2.jpg" },
+            { name: "Shanghai Jiao Tong University School of Medicine", img: "/assets/china/universities/u3.jpg" },
+            { name: "Zhejiang University School of Medicine", img: "/assets/china/universities/u4.jpg" },
+            { name: "Capital Medical University", img: "/assets/china/universities/u5.jpg" },
+            { name: "Tianjin Medical University", img: "/assets/china/universities/u6.jpg" },
+            { name: "Southern Medical University", img: "/assets/china/universities/u7.jpg" },
+            { name: "Wuhan University", img: "/assets/china/universities/u8.jpg" },
+          ].map((uni, i) => (
+            <div className="uni-card" key={i}>
+              <img src={uni.img} alt={uni.name} />
+              <p>{uni.name}</p>
+            </div>
+          ))}
+        </div>
+      </section>
 
       {/* Cost */}
       <section className="china-cost">
@@ -133,48 +129,22 @@ function ChinaMBBS() {
           Work Rights: Limited; internships allowed as part of curriculum
         </p>
       </section>
-      <section className="china-mbbs-student-life">
-  <h2>Student Life in China</h2>
-  <p>
-    China offers a dynamic and student-friendly environment with modern campuses, 
-    multicultural communities, and a rich cultural heritage. MBBS students can enjoy internships, 
-    networking opportunities, festivals, and explore China’s historic cities and natural landscapes.
-  </p>
-
-  {/* ✅ Single Image */}
-  <div className="student-life-image">
-    <img 
-      src="/assets/china/china-mbbs-student-life.jpg" 
-      alt="Student Life in China" 
-
-    />
-  </div>
-</section>
-
 
       {/* FAQs */}
       <section className="china-faq">
         <h2>FAQs About Studying MBBS in China</h2>
-        <div className="faq-item">
-          <h4>Is NEET mandatory for Indian students?</h4>
-          <p>Yes, NEET qualification is required for admission.</p>
-        </div>
-        <div className="faq-item">
-          <h4>Is English-taught MBBS valid in India?</h4>
-          <p>Yes, graduates can appear for FMGE/NExT to practice in India.</p>
-        </div>
-        <div className="faq-item">
-          <h4>What is the cost of living?</h4>
-          <p>$2,500–$5,000/year (~₹2–4 lakh) including accommodation, food, and transport.</p>
-        </div>
-        <div className="faq-item">
-          <h4>Are scholarships available?</h4>
-          <p>Yes, Chinese government and universities provide scholarships for international students.</p>
-        </div>
-        <div className="faq-item">
-          <h4>How long is the MBBS course?</h4>
-          <p>6 years including internship.</p>
-        </div>
+        {[
+          { q: "Is NEET mandatory for Indian students?", a: "Yes, NEET qualification is required for admission." },
+          { q: "Is English-taught MBBS valid in India?", a: "Yes, graduates can appear for FMGE/NExT to practice in India." },
+          { q: "What is the cost of living?", a: "$2,500–$5,000/year (~₹2–4 lakh) including accommodation, food, and transport." },
+          { q: "Are scholarships available?", a: "Yes, Chinese government and universities provide scholarships for international students." },
+          { q: "How long is the MBBS course?", a: "6 years including internship." },
+        ].map((faq, i) => (
+          <div className="faq-item" key={i}>
+            <h4>{faq.q}</h4>
+            <p>{faq.a}</p>
+          </div>
+        ))}
       </section>
 
       {/* Enroll Section */}

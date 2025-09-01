@@ -27,23 +27,24 @@ function Switzerland() {
       </section>
 
       {/* Quick Stats */}
-      <section className="switzerland-stats">
-        <h2>Switzerland at a Glance</h2>
-        <div className="switzerland-stats-grid">
-          {[
-            "12 Public Universities + Applied Sciences",
-            "ETH Zurich & EPFL Ranked Among World’s Best",
-            "CHF 1,500 – 6,500/year Public Tuition",
-            "CHF 10,000 – 30,000/year Private Tuition",
-            "CHF 18,000 – 28,000 Living Costs",
-            "25% International Student Population",
-            "Languages: German, French, Italian, English",
-            "Post-Study Work: 6-Month Job-Seeking Visa",
-          ].map((stat, i) => (
-            <div key={i} className="switzerland-stat-card">{stat}</div>
-          ))}
-        </div>
-      </section>
+     <section className="stats-section">
+  <h2>Switzerland at a Glance</h2>
+  <div className="stats-grid">
+    {[
+      "12 Public Universities + Applied Sciences",
+      "ETH Zurich & EPFL Ranked Among World’s Best",
+      "CHF 1,500 – 6,500/year Public Tuition",
+      "CHF 10,000 – 30,000/year Private Tuition",
+      "CHF 18,000 – 28,000 Living Costs",
+      "25% International Student Population",
+      "Languages: German, French, Italian, English",
+      "Post-Study Work: 6-Month Job-Seeking Visa",
+    ].map((stat, i) => (
+      <div key={i} className="stat-card">{stat}</div>
+    ))}
+  </div>
+</section>
+
 
       {/* Why Choose Switzerland */}
       <section className="switzerland-why-choose">
@@ -160,7 +161,7 @@ function Switzerland() {
       </section>
 
       {/* Student Life */}
-      <section className="switzerland-student-life">
+      {/* <section className="switzerland-student-life">
   <h2>Student Life</h2>
   <p>
     Switzerland offers an enriching student lifestyle with stunning alpine landscapes,
@@ -168,11 +169,11 @@ function Switzerland() {
     and opportunities to explore both academic excellence and outdoor adventures.
   </p>
 
-  {/* ✅ Single Image */}
+ 
   <div className="student-life-image">
     <img src="/assets/switzerland/switzerland-student-life.jpg" alt="Student Life in Switzerland" />
   </div>
-</section>
+</section> */}
 
 
      
@@ -200,7 +201,9 @@ function Switzerland() {
 
          {/* Enroll */}
       <EnrollSection country="Switzerland" />
+        <section className="poland-summary">
         <p>“Looking to study in Switzerland? Our consultancy provides complete support for university applications, scholarships, and visa processes tailored for Indian students.”</p>
+      </section>
       </section>
 
     </div>

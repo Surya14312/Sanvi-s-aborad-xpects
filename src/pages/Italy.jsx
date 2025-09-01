@@ -26,19 +26,20 @@ function Italy() {
       </section>
 
       {/* Quick Stats */}
-      <section className="italy-glance">
-        <h2>Italy Education at a Glance</h2>
-        <div className="glance-grid">
-          {[
-            "90+ Universities & Institutions",
-            "€900 – €4,000 Tuition Fees per Year (Public Universities)",
-            "65K+ International Students",
-            "Post-Study Work & Cultural Exchange Opportunities",
-          ].map((text, index) => (
-            <div key={index} className="glance-card">{text}</div>
-          ))}
-        </div>
-      </section>
+     <section className="stats-section">
+  <h2>Italy at a Glance</h2>
+  <div className="stats-grid">
+    {[
+      "90+ Universities & Institutions",
+      "€900 – €4,000 Tuition Fees per Year (Public Universities)",
+      "65K+ International Students",
+      "Post-Study Work & Cultural Exchange Opportunities",
+    ].map((stat, index) => (
+      <div key={index} className="stat-card">{stat}</div>
+    ))}
+  </div>
+</section>
+
 
       {/* Why Study in Italy */}
       <section className="italy-why">
@@ -126,12 +127,7 @@ function Italy() {
               <li>Invest Your Talent Scholarships</li>
             </ul>
           </div>
-          <div className="cost-img">
-            <img
-              src="/assets/italy/italy-scholarship.jpg"
-              alt="Scholarships in Italy"
-            />
-          </div>
+        
         </div>
       </section>
 
@@ -164,7 +160,7 @@ function Italy() {
         </p>
       </section>
 
-      <section className="italy-student-life">
+      {/* <section className="italy-student-life">
   <h2>Student Life in Italy</h2>
   <p>
     Italy offers a rich cultural and historical student experience with picturesque campuses, 
@@ -172,11 +168,11 @@ function Italy() {
     culinary experiences, and networking opportunities while exploring Italy’s heritage and lifestyle.
   </p>
 
-  {/* ✅ Single Image */}
+
   <div className="student-life-image">
     <img src="/assets/italy/italy-student-life.jpg" alt="Student Life in Italy" />
   </div>
-</section>
+</section> */}
 
      
 
@@ -207,7 +203,9 @@ function Italy() {
 
 
          <EnrollSection country="Italy" />
+             <section className="malta-summary">
         <p>“Ready to begin your journey in Italy? Contact our expert counselors today to find the right university, secure scholarships, and ensure a smooth visa process.”</p>
+      </section>
       </section>
     </div>
   );

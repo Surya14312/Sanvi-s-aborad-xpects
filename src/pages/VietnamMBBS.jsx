@@ -21,21 +21,22 @@ function VietnamMBBS() {
       </section>
 
       {/* Quick Stats */}
-      <section className="vietnam-stats">
-        <h2>Vietnam at a Glance</h2>
-        <div className="vietnam-stats-grid">
-          {[
-            "10+ medical universities recognized by NMC/WHO",
-            "Tuition Fees: $4,000–6,000/year (~₹3.5–5 lakh)",
-            "Living Costs: $2,500–4,000/year (~₹2–3.5 lakh)",
-            "Language of Instruction: English and Vietnamese (English MBBS available)",
-            "Duration of MBBS: 6 years including internship",
-            "Degrees recognized by WHO, NMC, FAIMER",
-          ].map((text, index) => (
-            <div key={index} className="vietnam-stat-card">{text}</div>
-          ))}
-        </div>
-      </section>
+     <section className="stats-section">
+  <h2>Vietnam at a Glance</h2>
+  <div className="stats-grid">
+    {[
+      "10+ medical universities recognized by NMC/WHO",
+      "Tuition Fees: $4,000–6,000/year (~₹3.5–5 lakh)",
+      "Living Costs: $2,500–4,000/year (~₹2–3.5 lakh)",
+      "Language of Instruction: English and Vietnamese (English MBBS available)",
+      "Duration of MBBS: 6 years including internship",
+      "Degrees recognized by WHO, NMC, FAIMER",
+    ].map((text, index) => (
+      <div key={index} className="stat-card">{text}</div>
+    ))}
+  </div>
+</section>
+
 
       {/* Why MBBS */}
       <section className="vietnam-why">
@@ -127,7 +128,7 @@ function VietnamMBBS() {
           Work Rights: Limited; internships allowed as part of curriculum
         </p>
       </section>
-      <section className="vietnam-student-life">
+      {/* <section className="vietnam-student-life">
   <h2>Student Life</h2>
   <p>
     Vietnam offers a unique student lifestyle with affordable living, rich cultural traditions,
@@ -135,11 +136,11 @@ function VietnamMBBS() {
     from bustling cities to serene countryside.
   </p>
 
-  {/* ✅ Single Image */}
+ 
   <div className="student-life-image">
     <img src="/assets/vietnam/vietnam-student-life.jpg" alt="Student Life in Vietnam" />
   </div>
-</section>
+</section> */}
 
 
       {/* FAQs */}

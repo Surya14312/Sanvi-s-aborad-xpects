@@ -23,21 +23,22 @@ function PhilippinesMBBS() {
       </section>
 
       {/* Quick Stats */}
-      <section className="philippines-glance">
-        <h2 className="glance-heading">Philippines at a Glance</h2>
-        <div className="philippines-stats-grid">
-          {[
-            "20+ medical colleges recognized by MCI/NMC",
-            "Tuition Fees: $3,000–6,000/year (~₹2.5–5 lakh)",
-            "Living Costs: $3,000–5,000/year (~₹2.5–4 lakh)",
-            "Language of Instruction: English",
-            "Duration of MBBS: 5.5–6 years including internship",
-            "Degrees recognized by WHO, NMC, FAIMER",
-          ].map((text, index) => (
-            <div key={index} className="philippines-stat-card">{text}</div>
-          ))}
-        </div>
-      </section>
+      <section className="stats-section">
+  <h2>Philippines at a Glance</h2>
+  <div className="stats-grid">
+    {[
+      "20+ medical colleges recognized by MCI/NMC",
+      "Tuition Fees: $3,000–6,000/year (~₹2.5–5 lakh)",
+      "Living Costs: $3,000–5,000/year (~₹2.5–4 lakh)",
+      "Language of Instruction: English",
+      "Duration of MBBS: 5.5–6 years including internship",
+      "Degrees recognized by WHO, NMC, FAIMER",
+    ].map((stat, index) => (
+      <div key={index} className="stat-card">{stat}</div>
+    ))}
+  </div>
+</section>
+
 
       {/* Why MBBS in Philippines */}
       <section className="philippines-why">
@@ -133,7 +134,7 @@ function PhilippinesMBBS() {
           Work Rights: Limited; mostly internships as part of curriculum
         </p>
       </section>
-      <section className="philippines-student-life">
+      {/* <section className="philippines-student-life">
   <h2>Student Life in the Philippines</h2>
   <p>
     The Philippines offers a vibrant student lifestyle with friendly communities, 
@@ -141,11 +142,11 @@ function PhilippinesMBBS() {
     Students enjoy modern campuses, festivals, internships, and opportunities to explore islands and cities.
   </p>
 
-  {/* ✅ Single Image */}
+  
   <div className="student-life-image">
     <img src="/assets/philippines/philippines-student-life.jpg" alt="Student Life in the Philippines" />
   </div>
-</section>
+</section> */}
 
 
       {/* FAQs */}
