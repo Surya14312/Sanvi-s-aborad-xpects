@@ -1,40 +1,36 @@
-// src/pages/TestPreparation.js
+// src/pages/TestPreparations.jsx
 import React from "react";
 import { Link } from "react-router-dom";
 
-const TestPreparation = () => {
+const TestPreparations = () => {
   return (
-    <div className="test-prep-container">
-      {/* Main Heading */}
-      <h1 className="title">
-        Test Preparations (IELTS, TOEFL, GRE/GMAT, PTE, SAT, Duolingo, German, French)
-      </h1>
+    <div className="test-preparations-container">
+      {/* ================= Intro ================= */}
+      <section className="test-intro">
+        <h1>Test Preparations</h1>
+        <p>
+          Standardized tests play a crucial role in university admissions abroad. Whether it’s proving your English proficiency or showcasing your aptitude for graduate-level study, the right preparation can make all the difference. We provide personalized coaching and guidance for all major tests required for studying abroad, ensuring you achieve your target scores with confidence.
+        </p>
+      </section>
 
-      {/* Intro */}
-      <p className="intro">
-        Standardized tests play a crucial role in university admissions abroad. Whether it’s proving your
-        English proficiency or showcasing your aptitude for graduate-level study, the right preparation can
-        make all the difference. We provide personalized coaching and guidance for all major tests required
-        for studying abroad, ensuring you achieve your target scores with confidence.
-      </p>
+      <hr />
 
-      {/* Why Test Preparation Matters */}
-      <section>
+      {/* ================= Why Test Preparation Matters ================= */}
+      <section className="test-why-important">
         <h2>Why Test Preparation Matters</h2>
         <ul>
           <li>Most universities require proof of English proficiency (IELTS, TOEFL, PTE, Duolingo).</li>
           <li>Competitive programs (MBA, MS, PhD) often demand GRE/GMAT scores.</li>
           <li>Undergraduate admissions frequently look at SAT scores.</li>
-          <li>
-            Language proficiency (German, French) opens opportunities in non-English speaking countries and
-            improves employability.
-          </li>
+          <li>Language proficiency (German, French) opens opportunities in non-English speaking countries and improves employability.</li>
           <li>A high score can also increase eligibility for scholarships.</li>
         </ul>
       </section>
 
-      {/* How We Help */}
-      <section>
+      <hr />
+
+      {/* ================= How We Help ================= */}
+      <section className="test-how-help">
         <h2>How We Help</h2>
         <ul>
           <li>Diagnostic tests to assess current skill level.</li>
@@ -46,62 +42,28 @@ const TestPreparation = () => {
         </ul>
       </section>
 
-      {/* Tests We Cover */}
-     <h1 style={{ textAlign: 'center', fontSize: '2.5rem', color: '#333' }}>
-  Examinations
-</h1>
+      <hr />
 
-      <ul>
-  <li>
-    <Link to="/ielts" className="test-link">
-      IELTS – Academic and General Training modules.
-    </Link>
-  </li>
-  <li>
-    <Link to="/toefl" className="test-link">
-      TOEFL – Internet-based test for English proficiency.
-    </Link>
-  </li>
-  <li>
-    <Link to="/pte" className="test-link">
-      PTE Academic – Computer-based test focusing on practical English skills.
-    </Link>
-  </li>
-  <li>
-    <Link to="/duolingo" className="test-link">
-      Duolingo English Test – Affordable, fast, and widely accepted by universities.
-    </Link>
-  </li>
-  <li>
-    <Link to="/gre" className="test-link">
-      GRE – Required for master’s and PhD programs, measuring verbal, quantitative, and analytical writing.
-    </Link>
-  </li>
-  <li>
-    <Link to="/gmat" className="test-link">
-      GMAT – Focused on business and management programs worldwide.
-    </Link>
-  </li>
-  <li>
-    <Link to="/sat" className="test-link">
-      SAT – For undergraduate admissions in the USA and other countries.
-    </Link>
-  </li>
-  <li>
-    <Link to="/german" className="test-link">
-      German Language Courses (A1 to C1) – For study and career opportunities in Germany.
-    </Link>
-  </li>
-  <li>
-    <Link to="/french" className="test-link">
-      French Language Courses (A1 to C1) – For study opportunities in France, Canada, Switzerland, and Africa.
-    </Link>
-  </li>
-</ul>
+      {/* ================= Tests We Cover ================= */}
+      <section className="test-list">
+        <h2>Tests We Cover</h2>
+        <ul>
+          <li><Link to="/test-prep/ielts">IELTS – Academic and General Training modules</Link></li>
+          <li><Link to="/test-prep/toefl">TOEFL – Internet-based test for English proficiency</Link></li>
+          <li><Link to="/test-prep/pte">PTE Academic – Computer-based test focusing on practical English skills</Link></li>
+          <li><Link to="/test-prep/duolingo">Duolingo English Test – Affordable, fast, and widely accepted by universities</Link></li>
+          <li><Link to="/test-prep/gre">GRE – Required for master’s and PhD programs, measuring verbal, quantitative, and analytical writing</Link></li>
+          <li><Link to="/test-prep/gmat">GMAT – Focused on business and management programs worldwide</Link></li>
+          <li><Link to="/test-prep/sat">SAT – For undergraduate admissions in the USA and other countries</Link></li>
+          <li><Link to="/test-prep/german">German Language Courses (A1 to C1) – For study and career opportunities in Germany</Link></li>
+          <li><Link to="/test-prep/french">French Language Courses (A1 to C1) – For study opportunities in France, Canada, Switzerland, and Africa</Link></li>
+        </ul>
+      </section>
 
+      <hr />
 
-      {/* Benefits for Students */}
-      <section>
+      {/* ================= Benefits for Students ================= */}
+      <section className="test-benefits">
         <h2>Benefits for Students</h2>
         <ul>
           <li>Comprehensive preparation under one roof.</li>
@@ -112,33 +74,35 @@ const TestPreparation = () => {
         </ul>
       </section>
 
-      {/* FAQs */}
-      <section>
+      <hr />
+
+      {/* ================= FAQs ================= */}
+      <section className="test-faqs">
         <h2>FAQs</h2>
-        <p>
+        <div className="faq-item">
           <strong>Q1: How long does test preparation usually take?</strong>
-          <br />
-          On average, 6–12 weeks depending on the exam and your current proficiency.
-        </p>
-        <p>
+          <p>On average, 6–12 weeks depending on the exam and your current proficiency.</p>
+        </div>
+        <div className="faq-item">
           <strong>Q2: Do you provide online classes?</strong>
-          <br />
-          Yes, we offer both online and offline classes for maximum convenience.
-        </p>
-        <p>
+          <p>Yes, we offer both online and offline classes for maximum convenience.</p>
+        </div>
+        <div className="faq-item">
           <strong>Q3: Can you help me improve just in Speaking/Writing?</strong>
-          <br />
-          Absolutely. We offer focused training modules for individual skills.
-        </p>
+          <p>Absolutely. We offer focused training modules for individual skills.</p>
+        </div>
       </section>
 
-      {/* Closing Statement */}
-      <blockquote className="closing">
-        “Maximize your chances of admission and scholarships with top test scores. Enroll in our expert-led
-        test preparation programs today.”
-      </blockquote>
+      <hr />
+
+      {/* ================= Callout ================= */}
+      <section className="test-callout">
+        <blockquote>
+          “Maximize your chances of admission and scholarships with top test scores. Enroll in our expert-led test preparation programs today.”
+        </blockquote>
+      </section>
     </div>
   );
 };
 
-export default TestPreparation;
+export default TestPreparations;

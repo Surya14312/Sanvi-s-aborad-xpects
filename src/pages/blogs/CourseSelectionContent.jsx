@@ -46,12 +46,19 @@ export default {
       ]
     },
     {
-      title: "FAQs",
-      content: [
-        "Q1: Can I change my course later if I am not satisfied?\nYes, but it can be costly and time-consuming. Our service helps you avoid such confusion by choosing the right course from the beginning.",
-        "Q2: Do you recommend only popular courses?\nNo, we recommend courses based on your profile. Sometimes niche programs may provide better career opportunities."
-      ]
+  title: "FAQs",
+  content: [
+    {
+      question: "Can I change my course later if I am not satisfied?",
+      answer: "Yes, it is possible, but it can be costly and time-consuming. Our consultancy helps you select the right course from the start to minimize such issues."
+    },
+    {
+      question: "Do you only recommend popular courses?",
+      answer: "No, we recommend courses that best match your profile and career goals. Sometimes, niche programs can offer better opportunities and growth."
     }
+  ]
+}
+
   ],
 
   contact: {

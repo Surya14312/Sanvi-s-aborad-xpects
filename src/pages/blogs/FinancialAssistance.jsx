@@ -1,28 +1,21 @@
-// src/pages/FinancialAssistance.js
+// src/pages/FinancialAssistance.jsx
 import React from "react";
 
 const FinancialAssistance = () => {
   return (
-    <div className="financial-container">
-      {/* Hero Section */}
-      <section className="financial-hero">
-        <div className="financial-text">
-          <h1>Financial Assistance for International Students</h1>
-          <p>
-            Studying abroad requires careful financial planning. From tuition
-            fees and living expenses to travel costs and insurance, managing
-            finances can be challenging. Our financial assistance service helps
-            students plan, secure funding, and manage costs efficiently,
-            ensuring a smooth study abroad experience.
-          </p>
-        </div>
-        <div className="financial-image">
-          <img src="/assets/financial-aid.jpg" alt="Financial Support" />
-        </div>
+    <div className="financial-assistance-container">
+      {/* ================= Intro ================= */}
+      <section className="financial-intro">
+        <h1>Financial Assistance</h1>
+        <p>
+          Studying abroad requires careful financial planning. From tuition fees and living expenses to travel costs and insurance, managing finances can be challenging. Our financial assistance service helps students plan, secure funding, and manage costs efficiently, ensuring a smooth study abroad experience.
+        </p>
       </section>
 
-      {/* Why Financial Assistance Is Important */}
-      <section className="financial-section">
+      <hr />
+
+      {/* ================= Why Financial Assistance Is Important ================= */}
+      <section className="financial-why-important">
         <h2>Why Financial Assistance Is Important</h2>
         <ul>
           <li>Helps students understand the total cost of studying abroad, including hidden expenses.</li>
@@ -32,8 +25,10 @@ const FinancialAssistance = () => {
         </ul>
       </section>
 
-      {/* How We Help */}
-      <section className="financial-section">
+      <hr />
+
+      {/* ================= How We Help ================= */}
+      <section className="financial-how-help">
         <h2>How We Help</h2>
         <ul>
           <li>Budget Planning – Estimate tuition, living costs, travel, insurance, and miscellaneous expenses.</li>
@@ -45,8 +40,10 @@ const FinancialAssistance = () => {
         </ul>
       </section>
 
-      {/* Benefits for Students */}
-      <section className="financial-section">
+      <hr />
+
+      {/* ================= Benefits for Students ================= */}
+      <section className="financial-benefits">
         <h2>Benefits for Students</h2>
         <ul>
           <li>Accurate understanding of the financial requirements.</li>
@@ -57,87 +54,32 @@ const FinancialAssistance = () => {
         </ul>
       </section>
 
-      {/* Scholarships */}
-      <section className="financial-section">
-        <h2>Scholarships</h2>
-        <p>
-          Many universities and governments offer merit-based and need-based
-          scholarships to international students. These can cover tuition,
-          accommodation, travel, and living costs.
-        </p>
-        <ul>
-          <li>Merit-Based Scholarships</li>
-          <li>Country-Specific Scholarships</li>
-          <li>Program-Specific Scholarships</li>
-          <li>Private and NGO Scholarships</li>
-        </ul>
-      </section>
+      <hr />
 
-      {/* Part-Time Jobs */}
-      <section className="financial-section">
-        <h2>Part-Time Work Opportunities</h2>
-        <p>
-          International students can often work part-time during studies. This
-          helps with expenses and builds experience.
-        </p>
-        <ul>
-          <li>Up to 20 hours/week during term time</li>
-          <li>Full-time during breaks</li>
-          <li>On-campus and off-campus roles</li>
-        </ul>
-      </section>
-
-      {/* Education Loans */}
-      <section className="financial-section">
-        <h2>Education Loans</h2>
-        <p>
-          We assist students in securing education loans from banks and
-          financial institutions. We guide you with documentation and
-          applications.
-        </p>
-        <ul>
-          <li>Secured and Unsecured Loans</li>
-          <li>Flexible Repayment Plans</li>
-          <li>Loan Amount Based on Country & Course</li>
-        </ul>
-      </section>
-
-      {/* Budgeting Tips */}
-      <section className="financial-section">
-        <h2>Budgeting Tips</h2>
-        <p>Manage your money smartly during your studies abroad:</p>
-        <ul>
-          <li>Track monthly expenses with apps</li>
-          <li>Cook your meals to save more</li>
-          <li>Use public transport/student passes</li>
-          <li>Use student discounts for shopping</li>
-        </ul>
-      </section>
-
-      {/* FAQs */}
-      <section className="financial-section">
+      {/* ================= FAQs ================= */}
+      <section className="financial-faqs">
         <h2>FAQs</h2>
-        <p><strong>Q1:</strong> Can you help me get an education loan?<br />
-           Yes, we guide you through the complete process — eligibility, documents, and repayment options.</p>
-        <p><strong>Q2:</strong> Do you provide guidance for partial funding or scholarships?<br />
-           Absolutely, we help identify scholarships and grants that match your profile.</p>
-        <p><strong>Q3:</strong> Will you help in preparing financial documents for visa?<br />
-           Yes, we ensure all bank statements, sponsor letters, and proof of funds meet embassy requirements.</p>
+        <div className="faq-item">
+          <strong>Q1: Can you help me get an education loan?</strong>
+          <p>Yes, we guide you through the complete process — eligibility, documents, and repayment options.</p>
+        </div>
+        <div className="faq-item">
+          <strong>Q2: Do you provide guidance for partial funding or scholarships?</strong>
+          <p>Absolutely, we help identify scholarships and grants that match your profile.</p>
+        </div>
+        <div className="faq-item">
+          <strong>Q3: Will you help in preparing financial documents for visa?</strong>
+          <p>Yes, we ensure all bank statements, sponsor letters, and proof of funds meet embassy requirements.</p>
+        </div>
       </section>
 
-      {/* Call to Action */}
-      <section className="financial-cta">
-        <h2>Worried about managing finances for studying abroad?</h2>
-        <p>
-          Let us help you plan, fund, and manage your international education with expert financial guidance.
-        </p>
-        <p>
-          Please{" "}
-          <a href="/contact" className="contact-link">
-            contact us
-          </a>{" "}
-          to schedule a free consultation.
-        </p>
+      <hr />
+
+      {/* ================= Callout ================= */}
+      <section className="financial-callout">
+        <blockquote>
+          “Worried about managing finances for studying abroad? Let us help you plan, fund, and manage your international education with expert financial guidance.”
+        </blockquote>
       </section>
     </div>
   );

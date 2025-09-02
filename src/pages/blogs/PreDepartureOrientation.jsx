@@ -1,28 +1,21 @@
-// src/pages/PreDepartureOrientation.js
+// src/pages/PreDepartureOrientation.jsx
 import React from "react";
 
 const PreDepartureOrientation = () => {
   return (
-    <div className="orientation-container">
-      {/* Hero Section */}
-     <section className="orientation-hero">
-  <div className="orientation-hero-content">
-    <div className="orientation-text">
-      <h1>Pre-Departure Orientation</h1>
-      <p>
-        Studying abroad is exciting, but it comes with challenges such as cultural differences, academic expectations, and daily life adjustments. 
-        Our pre-departure orientation prepares students for their new environment, ensuring they are confident, informed, and ready to start their international education journey.
-      </p>
-    </div>
-    <div className="orientation-image">
-      <img src="/assets/pre-departure.jpg" alt="Pre-Departure Orientation" />
-    </div>
-  </div>
-</section>
+    <div className="pre-departure-orientation-container">
+      {/* ================= Intro ================= */}
+      <section className="orientation-intro">
+        <h1>Pre-Departure Orientation</h1>
+        <p>
+          Studying abroad is exciting, but it comes with challenges such as cultural differences, academic expectations, and daily life adjustments. Our pre-departure orientation prepares students for their new environment, ensuring they are confident, informed, and ready to start their international education journey.
+        </p>
+      </section>
 
+      <hr />
 
-      {/* Why Orientation Is Important */}
-      <section className="orientation-section">
+      {/* ================= Why Orientation Is Important ================= */}
+      <section className="orientation-why-important">
         <h2>Why Pre-Departure Orientation Is Important</h2>
         <ul>
           <li>Helps students adapt to a new academic and cultural environment.</li>
@@ -32,8 +25,10 @@ const PreDepartureOrientation = () => {
         </ul>
       </section>
 
-      {/* How We Help */}
-      <section className="orientation-section">
+      <hr />
+
+      {/* ================= How We Help ================= */}
+      <section className="orientation-how-help">
         <h2>How We Help</h2>
         <ul>
           <li>Country-Specific Guidance – Overview of culture, lifestyle, climate, and local customs.</li>
@@ -45,8 +40,10 @@ const PreDepartureOrientation = () => {
         </ul>
       </section>
 
-      {/* Benefits for Students */}
-      <section className="orientation-section">
+      <hr />
+
+      {/* ================= Benefits for Students ================= */}
+      <section className="orientation-benefits">
         <h2>Benefits for Students</h2>
         <ul>
           <li>Smooth transition to the new country and university.</li>
@@ -57,22 +54,32 @@ const PreDepartureOrientation = () => {
         </ul>
       </section>
 
-      {/* FAQs */}
-      <section className="orientation-section">
+      <hr />
+
+      {/* ================= FAQs ================= */}
+      <section className="orientation-faqs">
         <h2>FAQs</h2>
-        <p><strong>Q1:</strong> Is pre-departure orientation mandatory?<br />
-          Not legally, but it is highly recommended to ensure a smooth transition and avoid initial difficulties.</p>
-        <p><strong>Q2:</strong> How long is the orientation session?<br />
-          Typically 1–2 days, depending on the country and program, with follow-up support as needed.</p>
-        <p><strong>Q3:</strong> Does it cover visa and travel guidance?<br />
-          Yes, it complements visa guidance and includes travel tips, local laws, and university protocols.</p>
+        <div className="faq-item">
+          <strong>Q1: Is pre-departure orientation mandatory?</strong>
+          <p>Not legally, but it is highly recommended to ensure a smooth transition and avoid initial difficulties.</p>
+        </div>
+        <div className="faq-item">
+          <strong>Q2: How long is the orientation session?</strong>
+          <p>Typically 1–2 days, depending on the country and program, with follow-up support as needed.</p>
+        </div>
+        <div className="faq-item">
+          <strong>Q3: Does it cover visa and travel guidance?</strong>
+          <p>Yes, it complements visa guidance and includes travel tips, local laws, and university protocols.</p>
+        </div>
       </section>
 
-      {/* Conclusion / CTA */}
-      <section className="orientation-cta">
-        <p>
+      <hr />
+
+      {/* ================= Callout ================= */}
+      <section className="orientation-callout">
+        <blockquote>
           “Start your international education journey confidently! Join our pre-departure orientation to prepare academically, socially, and culturally for life abroad.”
-        </p>
+        </blockquote>
       </section>
     </div>
   );

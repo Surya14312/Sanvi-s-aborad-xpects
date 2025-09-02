@@ -191,10 +191,35 @@ function UK() {
 
 
           {/* Enroll Section */}
-      <EnrollSection country="UK" />
-        <section className="poland-summary">
-        <p>“Planning to study in the UK? Our consultancy helps you select the right university, prepare your application, secure scholarships, and guide you through the visa process.”</p>
-      </section>
+      {/* <EnrollSection country="UK" /> */}
+
+<section className="poland-summary">
+  <h2>Planning to study in the UK?</h2>
+  <p>
+    Our consultancy helps you select the right university, prepare your application,
+    secure scholarships, and guide you through the visa process.
+  </p>
+  <button
+    onClick={() => (window.location.href = "/contact")}
+    style={{
+      marginTop: "20px",
+      padding: "12px 24px",
+      fontSize: "1rem",
+      fontWeight: "600",
+      color: "#fff",
+      background: "#003566",
+      border: "none",
+      borderRadius: "8px",
+      cursor: "pointer",
+      transition: "background 0.3s ease",
+    }}
+    onMouseOver={(e) => (e.currentTarget.style.background = "#002244")}
+    onMouseOut={(e) => (e.currentTarget.style.background = "#003566")}
+  >
+    Apply Now
+  </button>
+</section>
+
       </section>
 
     </div>

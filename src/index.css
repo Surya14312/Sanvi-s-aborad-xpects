@@ -1231,10 +1231,14 @@ body {
   .uk-container {
     font-family: "Segoe UI", Tahoma, sans-serif;
     color: #333;
-    line-height: 1.6;
-    background: #f9fbff;
-    padding: 0;
-    margin: 0;
+  
+  padding: 25px 30px;
+  background: #ffffff;
+  
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  text-align: center;
+  line-height: 1.6;
+
   }
 
   /* Hero Section */
@@ -1406,7 +1410,7 @@ body {
   /* Courses Section */
 .course-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 25px;
   padding: 0;
   margin: 0 auto;
@@ -1552,6 +1556,9 @@ body {
   background: #f9fbff;
   padding: 0;
   margin: 0;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  /* text-align: center; */
+
 }
 
 /* Hero Section */
@@ -1632,6 +1639,7 @@ body {
 }
 
 /* Universities */
+/* ===== Canada Universities Section ===== */
 .canada-universities {
   padding: 40px 20px;
   max-width: 1200px;
@@ -1642,15 +1650,17 @@ body {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 30px;
-  color: #1a1a1a;
+  color: #003566;
 }
 
+/* Grid Layout */
 .universities-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 25px;
 }
 
+/* University Card */
 .uni-card {
   background: #fff;
   border-radius: 12px;
@@ -1658,6 +1668,7 @@ body {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
+  cursor: pointer;
 }
 
 .uni-card img {
@@ -1667,18 +1678,19 @@ body {
 }
 
 .uni-card p {
-  padding: 15px 10px;
+  padding: 15px 12px;
   font-weight: 600;
   color: #333;
   font-size: 1rem;
 }
 
+/* Hover Effect */
 .uni-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
 }
 
-/* Responsive adjustments */
+/* ===== Responsive Styles ===== */
 @media (max-width: 768px) {
   .uni-card img {
     height: 150px;
@@ -1695,12 +1707,15 @@ body {
   .uni-card p {
     font-size: 0.85rem;
   }
-}/* Courses */
+}
+
+/* coures */
 .course-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
   gap: 20px;
   padding: 0 10%;
+  margin-bottom: 30px;
 }
 .course-card {
   background: #fff;
@@ -1734,7 +1749,9 @@ body {
   background: #fff;
   padding: 25px;
   border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  margin-bottom: 30px;
+  margin-top: auto;
 }
 .canada-documents h3 {
   margin-top: 15px;
@@ -1783,6 +1800,7 @@ body {
   background: #f9fbff;
   padding: 0;
   margin: 0;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
 }
 
 /* Hero Section */
@@ -1966,7 +1984,8 @@ body {
   background: #fff;
   padding: 25px;
   border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  margin-bottom: 30px;
 }
 
 /* FAQs */
@@ -2211,7 +2230,8 @@ body {
   background: #fff;
   padding: 25px;
   border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  margin-bottom: 30px;
 }
 
 /* FAQs */
@@ -2283,7 +2303,20 @@ body {
   width: 45%;
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
+
+/* ===== Responsive for mobile ===== */
+@media (max-width: 768px) {
+  .france-hero-img {
+    width: 100%;       /* full width on smaller screens */
+    margin: 0 auto;    /* center the image */
+    border-radius: 8px; /* slightly smaller radius for mobile */
+  }
+}
+
 .apply-btn {
   display: inline-block;
   background: #ffb703;
@@ -2441,7 +2474,8 @@ body {
   background: #fff;
   padding: 25px;
   border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  margin-bottom: 30px;
 }
 .france-documents h3 {
   margin-top: 15px;
@@ -2685,7 +2719,9 @@ h2::after {
   background: #fff;
   padding: 25px;
   border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  margin-bottom: 30px;
+  
 }
 .germany-documents h3 {
   margin-top: 15px;
@@ -2918,7 +2954,8 @@ h2::after {
   background: #fff;
   padding: 25px;
   border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  margin-bottom: 30px;
 }
 .switzerland-documents h3 {
   margin-top: 15px;
@@ -3148,7 +3185,8 @@ h2::after {
   background: #fff;
   padding: 25px;
   border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  margin-bottom: 30px;
 }
 .dubai-documents h3 {
   margin-top: 15px;
@@ -3394,7 +3432,8 @@ h2::after {
     background: #fff;
     padding: 25px;
     border-radius: 12px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  margin-bottom: 30px;
   }
   .spain-documents h4 {
     margin-top: 15px;
@@ -3628,7 +3667,8 @@ h2::after {
   background: #fff;
   padding: 25px;
   border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  margin-bottom: 30px;
 }
 .malaysia-documents h3 {
   margin-top: 15px;
@@ -3858,7 +3898,8 @@ h2::after {
   background: #fff;
   padding: 25px;
   border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+ box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  margin-bottom: 30px;
 }
 .mauritius-documents h3 {
   margin-top: 15px;
@@ -4090,7 +4131,8 @@ h2::after {
   background: #fff;
   padding: 25px;
   border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  margin-bottom: 30px;
 }
 .netherlands-documents h3 {
   margin-top: 15px;
@@ -4348,7 +4390,8 @@ h2::after {
   background: #fff;
   padding: 25px;
   border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  margin-bottom: 30px;
 }
 
 /* Responsive */
@@ -4574,7 +4617,8 @@ h2::after {
   background: #fff;
   padding: 25px;
   border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  margin-bottom: 30px;
 }
 
 /* FAQs */
@@ -4818,7 +4862,8 @@ h2::after {
   background: #fff;
   padding: 25px;
   border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+ box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  margin-bottom: 30px;
 }
 
 /* FAQs */
@@ -5063,7 +5108,8 @@ h2::after {
   background: #fff;
   padding: 25px;
   border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+ box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  margin-bottom: 30px;
 }
 
 /* FAQs */
@@ -5304,7 +5350,8 @@ h2::after {
   background: #fff;
   padding: 25px;
   border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+ box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  margin-bottom: 30px;
 }
 
 /* FAQs */
@@ -5546,7 +5593,8 @@ h2::after {
   background: #fff;
   padding: 25px;
   border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+ box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  margin-bottom: 30px;
 }
 
 /* FAQs */
@@ -5763,7 +5811,8 @@ h2::after {
   background: #fff;
   padding: 25px;
   border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+ box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  margin-bottom: 30px;
 }
 
 /* FAQs */
@@ -5981,7 +6030,8 @@ h2::after {
   background: #fff;
   padding: 25px;
   border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+ box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  margin-bottom: 30px;
 }
 
 /* FAQs */
@@ -6200,7 +6250,8 @@ width: 45%;
   background: #fff;
   padding: 25px;
   border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  margin-bottom: 30px;
 }
 
 /* FAQs */
@@ -6418,7 +6469,8 @@ width: 45%;
   background: #fff;
   padding: 25px;
   border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+ box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  margin-bottom: 30px;
 }
 
 /* FAQs */
@@ -6643,7 +6695,8 @@ section h2 {
   background: #fff;
   padding: 25px;
   border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  margin-bottom: 30px;
 }
 
 /* FAQs */
@@ -6771,201 +6824,301 @@ section h2 {
 /* ===== Container ===== */
 /* =====================
    General Page Styling
-===================== */
-/* =====================
-   Career Page Container
-===================== */
-.career-container {
-  font-family: "Segoe UI", Tahoma, sans-serif;
+/* src/styles/CareerCounselling.css */
+
+/* ===== Page Container ===== */
+.career-counselling-container {
+  /* margin: 50px auto; */
+  padding: 0 20px; 
+  font-family: 'Segoe UI', Tahoma, sans-serif;
   color: #222;
-  margin: 0 auto;
-  padding: 20px;
-  box-sizing: border-box;
   background-color: #f9fbff;
-  line-height: 1.6;
-}
-
-/* =====================
-   Hero Section
-===================== */
-.career-hero {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-  border-radius: 16px;
-  color: #fff;
-  padding: 40px 20px;
-  margin-bottom: 40px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.career-hero:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 18px 35px rgba(0,0,0,0.2);
-}
-
-.career-hero-text {
-  flex: 1 1 400px;
-}
-
-.career-hero-text h1 {
-  font-size: 2.5rem;
-  margin-bottom: 15px;
-}
-
-.career-hero-text p {
-  font-size: 1.1rem;
-  margin-bottom: 20px;
-  line-height: 1.6;
-}
-
-.apply-button {
-  display: inline-block;
-  padding: 12px 28px;
-  background: #ff7f50;
-  color: #fff;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 8px;
-  transition: background 0.3s ease, transform 0.3s ease;
-}
-
-.apply-button:hover {
-  background: #ff5722;
-  transform: translateY(-3px);
-}
-
-.career-banner-img {
-  flex: 1 1 300px;
-  max-width: 500px;
-  border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-  object-fit: cover;
-}
-
-/* =====================
-   Sections (Info & Benefits)
-===================== */
-.career-info {
-  margin-bottom: 40px;
-  background: #fff;
-  padding: 25px 20px;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.career-info:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-}
-
-.career-info h2 {
-  font-size: 2rem;
-  color: #2575fc;
-  margin-bottom: 20px;
-  border-bottom: 3px solid #ff7f50;
-  display: inline-block;
-  padding-bottom: 5px;
-}
-
-.career-info p {
-  font-size: 1rem;
   line-height: 1.7;
-  margin-bottom: 15px;
+  /* max-width and background removed */
 }
 
-.career-info ul {
-  list-style: inside disc;
-  padding-left: 0;
+/* ===== Section Styling with Fade-in Animation ===== */
+.career-counselling-container section {
+  margin-bottom: 50px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s forwards;
 }
 
-.career-info ul li {
-  margin-bottom: 10px;
-  font-size: 1rem;
-}
+/* Staggered animation for sections */
+.career-counselling-container section:nth-child(1) { animation-delay: 0.2s; }
+.career-counselling-container section:nth-child(2) { animation-delay: 0.4s; }
+.career-counselling-container section:nth-child(3) { animation-delay: 0.6s; }
+.career-counselling-container section:nth-child(4) { animation-delay: 0.8s; }
+.career-counselling-container section:nth-child(5) { animation-delay: 1s; }
+.career-counselling-container section:nth-child(6) { animation-delay: 1.2s; }
 
-/* =====================
-   FAQ Cards
-===================== */
-.faq-item {
-  background: rgba(37, 117, 252, 0.05);
-  border-left: 5px solid #2575fc;
-  padding: 15px 20px;
-  border-radius: 8px;
-  margin-bottom: 15px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.faq-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-}
-
-.faq-item p {
-  margin: 5px 0;
-}
-
-/* =====================
-   Contact Section
-===================== */
-.contact-section {
-  background: #ff7f50;
-  color: #fff;
-  padding: 25px 20px;
+/* ===== Headings ===== */
+.career-counselling-container h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #0d3b66;
   text-align: center;
-  border-radius: 12px;
+  letter-spacing: 1px;
+}
+
+.career-counselling-container h2 {
+  font-size: 2rem;
+  color: #0d3b66;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.career-counselling-container h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #f95738;
+  margin-top: 5px;
+  border-radius: 3px;
+}
+
+/* ===== Paragraphs ===== */
+.career-counselling-container p {
+  font-size: 1.05rem;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+/* ===== Lists ===== */
+.career-counselling-container ul {
+  list-style-type: disc;
+  padding-left: 25px;
+}
+
+.career-counselling-container ul li {
+  margin-bottom: 10px;
+  font-size: 1.05rem;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.career-counselling-container ul li:hover {
+  transform: translateX(10px);
+  color: #f95738;
+}
+
+/* ===== FAQs ===== */
+.career-counselling-container .faq-item {
+  background: #f5f7fa;
+  border-left: 4px solid #f95738;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.career-counselling-container .faq-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.career-counselling-container strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #0d3b66;
+}
+
+/* ===== Blockquote Callout ===== */
+.career-counselling-container blockquote {
+  background: linear-gradient(135deg, #f95738, #ff6b6b);
+  color: white;
+  padding: 25px 30px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  text-align: center;
+  font-style: italic;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.career-counselling-container blockquote:hover {
+  transform: scale(1.03);
+}
+
+/* ===== Divider ===== */
+hr {
+  border: none;
+  height: 1px;
+  background: #ddd;
   margin: 40px 0;
-  font-size: 1.1rem;
 }
 
-.contact-section .contact-link {
-  color: #fff;
-  font-weight: bold;
-  text-decoration: underline;
-  margin-left: 5px;
-  transition: color 0.3s ease;
-}
-
-.contact-section .contact-link:hover {
-  color: #ffe5d1;
-}
-
-/* =====================
-   Responsive Styling
-===================== */
-@media (max-width: 992px) {
-  .career-hero {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .career-hero-text h1 {
-    font-size: 2rem;
-  }
-
-  .career-banner-img {
-    max-width: 100%;
+/* ===== Fade-in Animation ===== */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-@media (max-width: 576px) {
-  .career-info h2 {
-    font-size: 1.5rem;
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .career-counselling-container {
+    padding: 0 15px;
   }
 
-  .career-info p,
-  .career-info ul li {
-    font-size: 0.95rem;
+  .career-counselling-container h1 {
+    font-size: 2.2rem;
   }
 
-  .apply-button {
-    padding: 10px 20px;
-    font-size: 0.95rem;
+  .career-counselling-container h2 {
+    font-size: 1.6rem;
+  }
+
+  .career-counselling-container blockquote {
+    font-size: 1rem;
+  }
+}
+.course-selection-container {
+  padding: 0 20px;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  color: #222;
+  background-color: #f9fbff;
+  line-height: 1.7;
+}
+
+/* ===== Section Styling with Fade-in Animation ===== */
+.course-selection-container section {
+  margin-bottom: 50px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s forwards;
+}
+
+/* Staggered animation for sections */
+.course-selection-container section:nth-child(1) { animation-delay: 0.2s; }
+.course-selection-container section:nth-child(2) { animation-delay: 0.4s; }
+.course-selection-container section:nth-child(3) { animation-delay: 0.6s; }
+.course-selection-container section:nth-child(4) { animation-delay: 0.8s; }
+.course-selection-container section:nth-child(5) { animation-delay: 1s; }
+.course-selection-container section:nth-child(6) { animation-delay: 1.2s; }
+
+/* ===== Headings ===== */
+.course-selection-container h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #0d3b66;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.course-selection-container h2 {
+  font-size: 2rem;
+  color: #0d3b66;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.course-selection-container h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #f95738;
+  margin-top: 5px;
+  border-radius: 3px;
+}
+
+/* ===== Paragraphs ===== */
+.course-selection-container p {
+  font-size: 1.05rem;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+/* ===== Lists ===== */
+.course-selection-container ul {
+  list-style-type: disc;
+  padding-left: 25px;
+}
+
+.course-selection-container ul li {
+  margin-bottom: 10px;
+  font-size: 1.05rem;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.course-selection-container ul li:hover {
+  transform: translateX(10px);
+  color: #f95738;
+}
+
+/* ===== FAQs ===== */
+.course-selection-container .faq-item {
+  background: #f5f7fa;
+  border-left: 4px solid #f95738;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.course-selection-container .faq-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.course-selection-container strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #0d3b66;
+}
+
+/* ===== Blockquote Callout ===== */
+.course-selection-container blockquote {
+  background: linear-gradient(135deg, #f95738, #ff6b6b);
+  color: white;
+  padding: 25px 30px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  text-align: center;
+  font-style: italic;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.course-selection-container blockquote:hover {
+  transform: scale(1.03);
+}
+
+/* ===== Divider ===== */
+hr {
+  border: none;
+  height: 1px;
+  background: #ddd;
+  margin: 40px 0;
+}
+
+/* ===== Fade-in Animation ===== */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .course-selection-container {
+    padding: 0 15px;
+  }
+
+  .course-selection-container h1 {
+    font-size: 2.2rem;
+  }
+
+  .course-selection-container h2 {
+    font-size: 1.6rem;
+  }
+
+  .course-selection-container blockquote {
+    font-size: 1rem;
   }
 }
 
@@ -6985,395 +7138,369 @@ body {
 /* =====================
    Documentation Page Container
 ===================== */
-.documentation-container {
-font-family: "Segoe UI", Tahoma, sans-serif;
+/* src/styles/Services.css */
+
+/* ===== Page Container ===== */
+.documentation-services-container,
+.career-counselling-container {
+  /* margin: 50px auto; */
+  padding: 0 20px; 
+  font-family: 'Segoe UI', Tahoma, sans-serif;
   color: #222;
-  margin: 0 auto;
-  padding: 20px;
-  box-sizing: border-box;
   background-color: #f9fbff;
-  line-height: 1.6;
-}
-
-/* =====================
-   Hero Section
-===================== */
-.documentation-hero {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-  border-radius: 16px;
-  color: #fff;
-  padding: 40px 20px;
-  margin-bottom: 40px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.documentation-hero:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 18px 35px rgba(0,0,0,0.2);
-}
-
-.documentation-hero-text {
-  flex: 1 1 400px;
-}
-
-.documentation-hero-text h1 {
-  font-size: 2.5rem;
-  margin-bottom: 15px;
-}
-
-.documentation-hero-text p {
-  font-size: 1.1rem;
-  margin-bottom: 20px;
-  line-height: 1.6;
-}
-
-.documentation-banner-img {
-  flex: 1 1 300px;
-  max-width: 500px;
-  border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-  object-fit: cover;
-}
-
-/* =====================
-   Info Sections (Cards)
-===================== */
-.documentation-info {
-  margin-bottom: 40px;
-  background: #fff;
-  padding: 25px 20px;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.documentation-info:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-}
-
-.documentation-info h2 {
-  font-size: 2rem;
-  color: #2575fc;
-  margin-bottom: 20px;
-  border-bottom: 3px solid #ff7f50;
-  display: inline-block;
-  padding-bottom: 5px;
-}
-
-.documentation-info p {
-  font-size: 1rem;
   line-height: 1.7;
-  margin-bottom: 15px;
 }
 
-.documentation-info ul {
-  list-style: inside disc;
-  padding-left: 0;
+/* ===== Section Styling with Fade-in Animation ===== */
+.documentation-services-container section,
+.career-counselling-container section {
+  margin-bottom: 50px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s forwards;
 }
 
-.documentation-info ul li {
-  margin-bottom: 10px;
-  font-size: 1rem;
-}
+/* Staggered animation for sections */
+.documentation-services-container section:nth-child(1),
+.career-counselling-container section:nth-child(1) { animation-delay: 0.2s; }
+.documentation-services-container section:nth-child(2),
+.career-counselling-container section:nth-child(2) { animation-delay: 0.4s; }
+.documentation-services-container section:nth-child(3),
+.career-counselling-container section:nth-child(3) { animation-delay: 0.6s; }
+.documentation-services-container section:nth-child(4),
+.career-counselling-container section:nth-child(4) { animation-delay: 0.8s; }
+.documentation-services-container section:nth-child(5),
+.career-counselling-container section:nth-child(5) { animation-delay: 1s; }
+.documentation-services-container section:nth-child(6),
+.career-counselling-container section:nth-child(6) { animation-delay: 1.2s; }
 
-/* =====================
-   FAQs Styling
-===================== */
-.faq-item {
-  background: rgba(37, 117, 252, 0.05);
-  border-left: 5px solid #2575fc;
-  padding: 15px 20px;
-  border-radius: 8px;
-  margin-bottom: 15px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.faq-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-}
-
-.faq-item p {
-  margin: 5px 0;
-}
-
-/* =====================
-   Call to Action
-===================== */
-.call-to-action {
+/* ===== Headings ===== */
+.documentation-services-container h1,
+.career-counselling-container h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #0d3b66;
   text-align: center;
+  letter-spacing: 1px;
+}
+
+.documentation-services-container h2,
+.career-counselling-container h2 {
+  font-size: 2rem;
+  color: #0d3b66;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.documentation-services-container h2::after,
+.career-counselling-container h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #f95738;
+  margin-top: 5px;
+  border-radius: 3px;
+}
+
+/* ===== Paragraphs ===== */
+.documentation-services-container p,
+.career-counselling-container p {
+  font-size: 1.05rem;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+/* ===== Lists ===== */
+.documentation-services-container ul,
+.career-counselling-container ul {
+  list-style-type: disc;
+  padding-left: 25px;
+}
+
+.documentation-services-container ul li,
+.career-counselling-container ul li {
+  margin-bottom: 10px;
+  font-size: 1.05rem;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.documentation-services-container ul li:hover,
+.career-counselling-container ul li:hover {
+  transform: translateX(10px);
+  color: #f95738;
+}
+
+/* ===== FAQs ===== */
+.documentation-services-container .faq-item,
+.career-counselling-container .faq-item {
+  background: #f5f7fa;
+  border-left: 4px solid #f95738;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.documentation-services-container .faq-item:hover,
+.career-counselling-container .faq-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.documentation-services-container strong,
+.career-counselling-container strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #0d3b66;
+}
+
+/* ===== Blockquote Callout ===== */
+.documentation-services-container blockquote,
+.career-counselling-container blockquote {
+  background: linear-gradient(135deg, #f95738, #ff6b6b);
+  color: white;
+  padding: 25px 30px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  text-align: center;
+  font-style: italic;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.documentation-services-container blockquote:hover,
+.career-counselling-container blockquote:hover {
+  transform: scale(1.03);
+}
+
+/* ===== Divider ===== */
+hr {
+  border: none;
+  height: 1px;
+  background: #ddd;
   margin: 40px 0;
 }
 
-.apply-button {
-  display: inline-block;
-  padding: 12px 28px;
-  background: #ff7f50;
-  color: #fff;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s ease, transform 0.3s ease;
-}
-
-.apply-button:hover {
-  background: #ff5722;
-  transform: translateY(-3px);
-}
-
-.contact-link {
-  display: block;
-  margin-top: 10px;
-  font-size: 1rem;
-  color: #2575fc;
-  text-decoration: underline;
-}
-
-.contact-link:hover {
-  color: #ff7f50;
-}
-
-/* =====================
-   Documentation CTA Text
-===================== */
-.documentation-cta {
-  font-size: 1.1rem;
-  text-align: center;
-  margin: 30px 0;
-  font-style: italic;
-  color: #333;
-}
-
-/* =====================
-   Responsive Styling
-===================== */
-@media (max-width: 992px) {
-  .documentation-hero {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .documentation-hero-text h1 {
-    font-size: 2rem;
-  }
-
-  .documentation-banner-img {
-    max-width: 100%;
+/* ===== Fade-in Animation ===== */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-@media (max-width: 576px) {
-  .documentation-info h2 {
-    font-size: 1.5rem;
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .documentation-services-container,
+  .career-counselling-container {
+    padding: 0 15px;
   }
 
-  .documentation-info p,
-  .documentation-info ul li,
-  .documentation-cta {
-    font-size: 0.95rem;
+  .documentation-services-container h1,
+  .career-counselling-container h1 {
+    font-size: 2.2rem;
   }
 
-  .apply-button {
-    padding: 10px 20px;
-    font-size: 0.95rem;
+  .documentation-services-container h2,
+  .career-counselling-container h2 {
+    font-size: 1.6rem;
+  }
+
+  .documentation-services-container blockquote,
+  .career-counselling-container blockquote {
+    font-size: 1rem;
   }
 }
 /* application */
 /* =====================
    Application Page Container
 ===================== */
-.application-container {
-  font-family: "Segoe UI", Tahoma, sans-serif;
+/* src/styles/Services.css */
+
+/* ===== Page Container ===== */
+.application-procedure-container,
+.documentation-services-container,
+.career-counselling-container {
+  /* margin: 50px auto; */
+  padding: 0 20px; 
+  font-family: 'Segoe UI', Tahoma, sans-serif;
   color: #222;
-  margin: 0 auto;
-  padding: 20px;
-  box-sizing: border-box;
   background-color: #f9fbff;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
-/* =====================
-   Hero Section
-===================== */
-.app-hero {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-  border-radius: 16px;
-  color: #fff;
-  padding: 40px 20px;
-  margin-bottom: 40px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* ===== Section Styling with Fade-in Animation ===== */
+.application-procedure-container section,
+.documentation-services-container section,
+.career-counselling-container section {
+  margin-bottom: 50px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s forwards;
 }
 
-.app-hero:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 18px 35px rgba(0,0,0,0.2);
+/* Staggered animation for sections */
+.application-procedure-container section:nth-child(1),
+.documentation-services-container section:nth-child(1),
+.career-counselling-container section:nth-child(1) { animation-delay: 0.2s; }
+.application-procedure-container section:nth-child(2),
+.documentation-services-container section:nth-child(2),
+.career-counselling-container section:nth-child(2) { animation-delay: 0.4s; }
+/* continue for other sections as needed */
+
+/* ===== Headings ===== */
+.application-procedure-container h1,
+.documentation-services-container h1,
+.career-counselling-container h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #0d3b66;
+  text-align: center;
+  letter-spacing: 1px;
 }
 
-.hero-text {
-  flex: 1 1 400px;
+.application-procedure-container h2,
+.documentation-services-container h2,
+.career-counselling-container h2 {
+  font-size: 2rem;
+  color: #0d3b66;
+  margin-bottom: 15px;
+  position: relative;
 }
 
-.hero-text h1 {
-  font-size: 2.5rem;
+.application-procedure-container h2::after,
+.documentation-services-container h2::after,
+.career-counselling-container h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #f95738;
+  margin-top: 5px;
+  border-radius: 3px;
+}
+
+/* ===== Paragraphs ===== */
+.application-procedure-container p,
+.documentation-services-container p,
+.career-counselling-container p {
+  font-size: 1.05rem;
+  color: #444;
   margin-bottom: 15px;
 }
 
-.hero-text p {
-  font-size: 1.1rem;
-  margin-bottom: 20px;
-  line-height: 1.6;
+/* ===== Lists ===== */
+.application-procedure-container ul,
+.documentation-services-container ul,
+.career-counselling-container ul {
+  list-style-type: disc;
+  padding-left: 25px;
 }
 
-.hero-image {
-  flex: 1 1 300px;
-  max-width: 500px;
-}
-
-.hero-image img {
-  width: 100%;
-  border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-  object-fit: cover;
-}
-
-/* =====================
-   Info Sections (Cards)
-===================== */
-.app-importance,
-.app-help,
-.app-benefits {
-  margin-bottom: 40px;
-  background: #fff;
-  padding: 25px 20px;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.app-importance:hover,
-.app-help:hover,
-.app-benefits:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-}
-
-.app-importance h2,
-.app-help h2,
-.app-benefits h2 {
-  font-size: 2rem;
-  color: #2575fc;
-  margin-bottom: 20px;
-  border-bottom: 3px solid #ff7f50;
-  display: inline-block;
-  padding-bottom: 5px;
-}
-
-.app-importance ul,
-.app-help ul,
-.app-benefits ul {
-  list-style: inside disc;
-  padding-left: 0;
-}
-
-.app-importance ul li,
-.app-help ul li,
-.app-benefits ul li {
+.application-procedure-container ul li,
+.documentation-services-container ul li,
+.career-counselling-container ul li {
   margin-bottom: 10px;
-  font-size: 1rem;
+  font-size: 1.05rem;
+  transition: transform 0.3s, color 0.3s;
 }
 
-/* =====================
-   FAQ Styling
-===================== */
-.app-faq {
-  margin-bottom: 40px;
+.application-procedure-container ul li:hover,
+.documentation-services-container ul li:hover,
+.career-counselling-container ul li:hover {
+  transform: translateX(10px);
+  color: #f95738;
 }
 
-.faq-items {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.faq-card {
-  background: rgba(37, 117, 252, 0.05);
-  border-left: 5px solid #2575fc;
+/* ===== FAQs ===== */
+.application-procedure-container .faq-item,
+.documentation-services-container .faq-item,
+.career-counselling-container .faq-item {
+  background: #f5f7fa;
+  border-left: 4px solid #f95738;
   padding: 15px 20px;
-  border-radius: 8px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.faq-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+.application-procedure-container .faq-item:hover,
+.documentation-services-container .faq-item:hover,
+.career-counselling-container .faq-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
 
-.faq-card h4 {
+.application-procedure-container strong,
+.documentation-services-container strong,
+.career-counselling-container strong {
+  display: block;
   margin-bottom: 8px;
-  color: #2575fc;
+  color: #0d3b66;
 }
 
-.faq-card p {
-  margin: 0;
-}
-
-/* =====================
-   Closing Quote
-===================== */
-.closing-quote {
+/* ===== Blockquote Callout ===== */
+.application-procedure-container blockquote,
+.documentation-services-container blockquote,
+.career-counselling-container blockquote {
+  background: linear-gradient(135deg, #f95738, #ff6b6b);
+  color: white;
+  padding: 25px 30px;
+  font-size: 1.2rem;
+  border-radius: 10px;
   text-align: center;
   font-style: italic;
-  font-size: 1.1rem;
-  color: #333;
-  margin: 30px 0;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
 }
 
-/* =====================
-   Responsive Styling
-===================== */
-@media (max-width: 992px) {
-  .app-hero {
-    flex-direction: column;
-    text-align: center;
-  }
+.application-procedure-container blockquote:hover,
+.documentation-services-container blockquote:hover,
+.career-counselling-container blockquote:hover {
+  transform: scale(1.03);
+}
 
-  .hero-text h1 {
-    font-size: 2rem;
-  }
+/* ===== Divider ===== */
+hr {
+  border: none;
+  height: 1px;
+  background: #ddd;
+  margin: 40px 0;
+}
 
-  .hero-image img {
-    max-width: 100%;
+/* ===== Fade-in Animation ===== */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-@media (max-width: 576px) {
-  .app-importance h2,
-  .app-help h2,
-  .app-benefits h2,
-  .app-faq h2 {
-    font-size: 1.5rem;
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .application-procedure-container,
+  .documentation-services-container,
+  .career-counselling-container {
+    padding: 0 15px;
   }
 
-  .app-importance ul li,
-  .app-help ul li,
-  .app-benefits ul li,
-  .faq-card p,
-  .closing-quote {
-    font-size: 0.95rem;
+  .application-procedure-container h1,
+  .documentation-services-container h1,
+  .career-counselling-container h1 {
+    font-size: 2.2rem;
+  }
+
+  .application-procedure-container h2,
+  .documentation-services-container h2,
+  .career-counselling-container h2 {
+    font-size: 1.6rem;
+  }
+
+  .application-procedure-container blockquote,
+  .documentation-services-container blockquote,
+  .career-counselling-container blockquote {
+    font-size: 1rem;
   }
 }
 
@@ -7393,149 +7520,73 @@ body {
 /* =====================
    Financial Assistance Container
 ===================== */
-.financial-container {
-  font-family: "Segoe UI", Tahoma, sans-serif;
+/* Page Container */
+.financial-assistance-container,
+.career-counselling-container,
+.documentation-services-container,
+.application-procedure-container {
+    /* margin: 50px auto; */
+  padding: 0 20px; 
+  font-family: 'Segoe UI', Tahoma, sans-serif;
   color: #222;
-  margin: 0 auto;
-  padding: 20px;
-  box-sizing: border-box;
   background-color: #f9fbff;
-  line-height: 1.6;
-}
-
-/* =====================
-   Hero Section
-===================== */
-.financial-hero {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-  border-radius: 16px;
-  color: #fff;
-  padding: 40px 20px;
-  margin-bottom: 40px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.financial-hero:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.2);
-}
-
-.financial-text {
-  flex: 1 1 400px;
-}
-
-.financial-text h1 {
-  font-size: 2.5rem;
-  margin-bottom: 15px;
-}
-
-.financial-text p {
-  font-size: 1.1rem;
-  margin-bottom: 20px;
-  line-height: 1.6;
-}
-
-.financial-image {
-  flex: 1 1 300px;
-}
-
-.financial-image img {
-  max-width: 500px;
-  border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-  object-fit: cover;
-}
-
-/* =====================
-   Sections
-===================== */
-.financial-section {
-  margin-bottom: 40px;
-}
-
-.financial-section h2 {
-  font-size: 2rem;
-  color: #2575fc;
-  margin-bottom: 20px;
-  border-bottom: 3px solid #ff7f50;
-  display: inline-block;
-  padding-bottom: 5px;
-}
-
-.financial-section p {
-  font-size: 1rem;
   line-height: 1.7;
-  margin-bottom: 15px;
 }
 
-.financial-section ul {
-  list-style: inside disc;
-  padding-left: 0;
+/* Sections with Fade-in */
+.financial-assistance-container section,
+.career-counselling-container section,
+.documentation-services-container section,
+.application-procedure-container section {
+  margin-bottom: 50px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s forwards;
 }
 
-.financial-section ul li {
-  margin-bottom: 10px;
-  font-size: 1rem;
-}
-
-/* =====================
-   Call to Action Section
-===================== */
-.financial-cta {
-  background: #ff7f50;
-  color: #fff;
-  padding: 25px 20px;
+/* Heading styling */
+.financial-assistance-container h1,
+.financial-assistance-container h2,
+.career-counselling-container h1,
+.career-counselling-container h2 {
+    font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #0d3b66;
   text-align: center;
-  border-radius: 12px;
-  margin: 40px 0;
-  font-size: 1.1rem;
+  letter-spacing: 1px;
 }
 
-.financial-cta .contact-link {
-  color: #fff;
-  font-weight: bold;
-  text-decoration: underline;
-  margin-left: 5px;
-  transition: color 0.3s ease;
+.financial-assistance-container h2::after,
+.career-counselling-container h2::after {
+  background: #f95738;
 }
 
-.financial-cta .contact-link:hover {
-  color: #ffe5d1;
+/* List hover effect */
+.financial-assistance-container ul li:hover {
+  transform: translateX(10px);
+  color: #f95738;
 }
 
-/* =====================
-   Responsive
-===================== */
-@media (max-width: 992px) {
-  .financial-hero {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .financial-text h1 {
-    font-size: 2rem;
-  }
-
-  .financial-image img {
-    max-width: 100%;
-  }
+/* FAQ items hover */
+.financial-assistance-container .faq-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
 
-@media (max-width: 576px) {
-  .financial-section h2 {
-    font-size: 1.5rem;
-  }
+/* Blockquote callout */
+.financial-assistance-container blockquote {
+  background: linear-gradient(135deg, #f95738, #ff6b6b);
+  color: white;
+  padding: 25px 30px;
+  border-radius: 10px;
+  text-align: center;
+  font-style: italic;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
 
-  .financial-section p,
-  .financial-section ul li {
-    font-size: 0.95rem;
-  }
+.financial-assistance-container blockquote:hover {
+  transform: scale(1.03);
 }
 
 /* travelassistance.css */
@@ -7554,149 +7605,75 @@ body {
 /* =====================
    Travel Assistance Container
 ===================== */
-.travel-container {
-  font-family: "Segoe UI", Tahoma, sans-serif;
+/* Page Container */
+.travel-assistance-container,
+.career-counselling-container,
+.financial-assistance-container,
+.documentation-services-container,
+.application-procedure-container {
+  /* margin: 50px auto; */
+  padding: 0 20px; 
+  font-family: 'Segoe UI', Tahoma, sans-serif;
   color: #222;
-  margin: 0 auto;
-  padding: 20px;
-  box-sizing: border-box;
   background-color: #f9fbff;
-  line-height: 1.6;
-}
-
-/* =====================
-   Hero Section
-===================== */
-.travel-hero {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-  border-radius: 16px;
-  color: #fff;
-  padding: 40px 20px;
-  margin-bottom: 40px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.travel-hero:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.2);
-}
-
-.travel-text {
-  flex: 1 1 400px;
-}
-
-.travel-text h1 {
-  font-size: 2.5rem;
-  margin-bottom: 15px;
-}
-
-.travel-text p {
-  font-size: 1.1rem;
-  margin-bottom: 20px;
-  line-height: 1.6;
-}
-
-.travel-image {
-  flex: 1 1 300px;
-}
-
-.travel-image img {
-  max-width: 500px;
-  border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-  object-fit: cover;
-}
-
-/* =====================
-   Sections
-===================== */
-.travel-section {
-  margin-bottom: 40px;
-}
-
-.travel-section h2 {
-  font-size: 2rem;
-  color: #2575fc;
-  margin-bottom: 20px;
-  border-bottom: 3px solid #ff7f50;
-  display: inline-block;
-  padding-bottom: 5px;
-}
-
-.travel-section p {
-  font-size: 1rem;
   line-height: 1.7;
-  margin-bottom: 15px;
 }
 
-.travel-section ul {
-  list-style: inside disc;
-  padding-left: 0;
+/* Sections with fade-in animation */
+.travel-assistance-container section,
+.career-counselling-container section,
+.financial-assistance-container section,
+.documentation-services-container section,
+.application-procedure-container section {
+  margin-bottom: 50px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s forwards;
 }
 
-.travel-section ul li {
-  margin-bottom: 10px;
-  font-size: 1rem;
-}
-
-/* =====================
-   Call to Action Section
-===================== */
-.travel-cta {
-  background: #ff7f50;
-  color: #fff;
-  padding: 25px 20px;
+/* Headings styling */
+.travel-assistance-container h1,
+.travel-assistance-container h2,
+.career-counselling-container h1,
+.career-counselling-container h2 {
+    font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #0d3b66;
   text-align: center;
-  border-radius: 12px;
-  margin: 40px 0;
-  font-size: 1.1rem;
+  letter-spacing: 1px;
 }
 
-.travel-cta .contact-link {
-  color: #fff;
-  font-weight: bold;
-  text-decoration: underline;
-  margin-left: 5px;
-  transition: color 0.3s ease;
+.travel-assistance-container h2::after,
+.career-counselling-container h2::after {
+  background: #f95738;
 }
 
-.travel-cta .contact-link:hover {
-  color: #ffe5d1;
+/* List hover effect */
+.travel-assistance-container ul li:hover {
+  transform: translateX(10px);
+  color: #f95738;
 }
 
-/* =====================
-   Responsive
-===================== */
-@media (max-width: 992px) {
-  .travel-hero {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .travel-text h1 {
-    font-size: 2rem;
-  }
-
-  .travel-image img {
-    max-width: 100%;
-  }
+/* FAQ items hover */
+.travel-assistance-container .faq-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
 
-@media (max-width: 576px) {
-  .travel-section h2 {
-    font-size: 1.5rem;
-  }
+/* Blockquote callout */
+.travel-assistance-container blockquote {
+  background: linear-gradient(135deg, #f95738, #ff6b6b);
+  color: white;
+  padding: 25px 30px;
+  border-radius: 10px;
+  text-align: center;
+  font-style: italic;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
 
-  .travel-section p,
-  .travel-section ul li {
-    font-size: 0.95rem;
-  }
+.travel-assistance-container blockquote:hover {
+  transform: scale(1.03);
 }
 /* General Container */
 /* ===== Global Styles ===== */
@@ -7713,311 +7690,157 @@ body {
 /* =====================
    Post Arrival Support Container
 ===================== */
-.postarrival-container {
-  font-family: "Segoe UI", Tahoma, sans-serif;
+/* Page Container */
+.post-arrival-support-container,
+.career-counselling-container,
+.financial-assistance-container,
+.documentation-services-container,
+.application-procedure-container,
+.travel-assistance-container {
+    /* margin: 50px auto; */
+  padding: 0 20px; 
+  font-family: 'Segoe UI', Tahoma, sans-serif;
   color: #222;
-  margin: 0 auto;
-  padding: 20px;
-  box-sizing: border-box;
   background-color: #f9fbff;
-  line-height: 1.6;
-}
-
-/* =====================
-   Hero Section
-===================== */
-.postarrival-hero {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-  border-radius: 16px;
-  color: #fff;
-  padding: 40px 20px;
-  margin-bottom: 40px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.postarrival-hero:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.2);
-}
-
-.postarrival-text {
-  flex: 1 1 400px;
-}
-
-.postarrival-text h1 {
-  font-size: 2.5rem;
-  margin-bottom: 15px;
-}
-
-.postarrival-text p {
-  font-size: 1.1rem;
-  margin-bottom: 20px;
-  line-height: 1.6;
-}
-
-.postarrival-image {
-  flex: 1 1 300px;
-}
-
-.postarrival-image img {
-  max-width: 500px;
-  border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-  object-fit: cover;
-}
-
-/* =====================
-   Sections
-===================== */
-.postarrival-importance,
-.postarrival-how,
-.postarrival-benefits,
-.postarrival-faqs {
-  margin-bottom: 40px;
-}
-
-.postarrival-importance h2,
-.postarrival-how h2,
-.postarrival-benefits h2,
-.postarrival-faqs h2 {
-  font-size: 2rem;
-  color: #2575fc;
-  margin-bottom: 20px;
-  border-bottom: 3px solid #ff7f50;
-  display: inline-block;
-  padding-bottom: 5px;
-}
-
-.postarrival-importance p,
-.postarrival-how p,
-.postarrival-benefits p,
-.postarrival-faqs p {
-  font-size: 1rem;
   line-height: 1.7;
-  margin-bottom: 15px;
 }
 
-.postarrival-importance ul,
-.postarrival-how ul,
-.postarrival-benefits ul {
-  list-style: inside disc;
-  padding-left: 0;
+/* Sections with fade-in animation */
+.post-arrival-support-container section,
+.career-counselling-container section,
+.financial-assistance-container section,
+.documentation-services-container section,
+.application-procedure-container section,
+.travel-assistance-container section {
+  margin-bottom: 50px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s forwards;
 }
 
-.postarrival-importance ul li,
-.postarrival-how ul li,
-.postarrival-benefits ul li {
-  margin-bottom: 10px;
-  font-size: 1rem;
+/* Headings styling */
+.post-arrival-support-container h1,
+.post-arrival-support-container h2,
+.career-counselling-container h1,
+.career-counselling-container h2 {
+    font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #0d3b66;
+  text-align: center;
+  letter-spacing: 1px;
 }
 
-/* =====================
-   FAQ Styling
-===================== */
-.postarrival-faqs p {
-  background: rgba(37, 117, 252, 0.05);
-  border-left: 5px solid #2575fc;
-  padding: 15px 20px;
-  border-radius: 8px;
-  margin-bottom: 15px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+.post-arrival-support-container h2::after,
+.career-counselling-container h2::after {
+  background: #f95738;
 }
 
-.postarrival-faqs p:hover {
-  transform: translateY(-2px);
+/* List hover effect */
+.post-arrival-support-container ul li:hover {
+  transform: translateX(10px);
+  color: #f95738;
+}
+
+/* FAQ items hover */
+.post-arrival-support-container .faq-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+/* Blockquote callout */
+.post-arrival-support-container blockquote {
+  background: linear-gradient(135deg, #f95738, #ff6b6b);
+  color: white;
+  padding: 25px 30px;
+  border-radius: 10px;
+  text-align: center;
+  font-style: italic;
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
 }
 
-/* =====================
-   Responsive
-===================== */
-@media (max-width: 992px) {
-  .postarrival-hero {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .postarrival-text h1 {
-    font-size: 2rem;
-  }
-
-  .postarrival-image img {
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 576px) {
-  .postarrival-importance h2,
-  .postarrival-how h2,
-  .postarrival-benefits h2,
-  .postarrival-faqs h2 {
-    font-size: 1.5rem;
-  }
-
-  .postarrival-importance p,
-  .postarrival-how p,
-  .postarrival-benefits p,
-  .postarrival-faqs p,
-  .postarrival-importance ul li,
-  .postarrival-how ul li,
-  .postarrival-benefits ul li {
-    font-size: 0.95rem;
-  }
+.post-arrival-support-container blockquote:hover {
+  transform: scale(1.03);
 }
 /* country selection */
 /* ===== Global Container ===== */
-/* =====================
-   Country Selection Container
-===================== */
-.country-selection-container {
-font-family: "Segoe UI", Tahoma, sans-serif;
+/* Page Container */
+.country-selection-container,
+.career-counselling-container,
+.financial-assistance-container,
+.documentation-services-container,
+.application-procedure-container,
+.travel-assistance-container,
+.post-arrival-support-container {
+  /* margin: 50px auto; */
+  padding: 0 20px; 
+  font-family: 'Segoe UI', Tahoma, sans-serif;
   color: #222;
-  margin: 0 auto;
-  padding: 20px;
-  box-sizing: border-box;
   background-color: #f9fbff;
-  line-height: 1.6;
-}
-
-/* =====================
-   Hero Section
-===================== */
-.hero-section {
-  position: relative;
-  height: 450px;
-  margin-bottom: 50px;
-  border-radius: 16px;
-  overflow: hidden;
-}
-
-.hero-video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 39, 102, 0.5); /* Semi-transparent overlay */
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  text-align: center;
-}
-
-.hero-overlay h1 {
-  font-size: 3rem;
-  margin-bottom: 15px;
-}
-
-.hero-overlay p {
-  font-size: 1.2rem;
-  max-width: 800px;
-}
-
-/* =====================
-   Info Section
-===================== */
-.info-section h2 {
-  font-size: 2rem;
-  color: #2575fc;
-  margin-bottom: 20px;
-  border-bottom: 3px solid #ff7f50;
-  display: inline-block;
-  padding-bottom: 5px;
-}
-
-.info-section h3 {
-  font-size: 1.5rem;
-  margin-top: 30px;
-  margin-bottom: 15px;
-  color: #2575fc;
-}
-
-.info-section p {
-  font-size: 1rem;
-  margin-bottom: 15px;
   line-height: 1.7;
 }
 
-.info-section ul {
-  list-style: inside disc;
-  padding-left: 0;
+/* Sections with fade-in animation */
+.country-selection-container section,
+.career-counselling-container section,
+.financial-assistance-container section,
+.documentation-services-container section,
+.application-procedure-container section,
+.travel-assistance-container section,
+.post-arrival-support-container section {
+  margin-bottom: 50px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s forwards;
+}
+
+/* Headings styling */
+.country-selection-container h1,
+.country-selection-container h2,
+.career-counselling-container h1,
+.career-counselling-container h2 {
+    font-size: 2.8rem;
   margin-bottom: 20px;
+  color: #0d3b66;
+  text-align: center;
+  letter-spacing: 1px;
 }
 
-.info-section ul li {
-  margin-bottom: 10px;
-  font-size: 1rem;
+.country-selection-container h2::after,
+.career-counselling-container h2::after {
+  background: #f95738;
 }
 
-/* Links in list */
-.info-section ul li a {
-  color: #2575fc;
-  text-decoration: underline;
-  transition: color 0.3s;
+/* List hover effect */
+.country-selection-container ul li:hover,
+.career-counselling-container ul li:hover {
+  transform: translateX(10px);
+  color: #f95738;
 }
 
-.info-section ul li a:hover {
-  color: #ff7f50;
+/* FAQ items hover */
+.country-selection-container .faq-item:hover,
+.career-counselling-container .faq-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
 
-/* Blockquote */
-.info-section blockquote {
-  margin: 30px 0;
-  padding: 20px;
-  background: rgba(37, 117, 252, 0.05);
-  border-left: 5px solid #2575fc;
-  border-radius: 8px;
+/* Blockquote callout */
+.country-selection-container blockquote,
+.career-counselling-container blockquote {
+  background: linear-gradient(135deg, #f95738, #ff6b6b);
+  color: white;
+  padding: 25px 30px;
+  border-radius: 10px;
+  text-align: center;
   font-style: italic;
-  font-size: 1.1rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
 }
 
-/* =====================
-   Responsive
-===================== */
-@media (max-width: 992px) {
-  .hero-overlay h1 {
-    font-size: 2.2rem;
-  }
-  .hero-overlay p {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .hero-overlay h1 {
-    font-size: 1.8rem;
-  }
-  .hero-overlay p {
-    font-size: 0.95rem;
-  }
-
-  .info-section h2 {
-    font-size: 1.6rem;
-  }
-
-  .info-section h3 {
-    font-size: 1.3rem;
-  }
-
-  .info-section p,
-  .info-section ul li {
-    font-size: 0.95rem;
-  }
+.country-selection-container blockquote:hover,
+.career-counselling-container blockquote:hover {
+  transform: scale(1.03);
 }
 
 /* destination */
@@ -8173,140 +7996,136 @@ font-family: "Segoe UI", Tahoma, sans-serif;
 /* country pages */
 /* Page background */
 /* ===== Global Container ===== */
-/* =====================
-   University Selection Container
-===================== */
+/* ================= Container ================= */
 .university-selection-container {
-  font-family: "Segoe UI", Tahoma, sans-serif;
+    /* margin: 50px auto; */
+  padding: 0 20px; 
+  font-family: 'Segoe UI', Tahoma, sans-serif;
   color: #222;
-  margin: 0 auto;
-  padding: 20px;
-  box-sizing: border-box;
   background-color: #f9fbff;
-  line-height: 1.6;
-}
-
-/* =====================
-   Hero Section
-===================== */
-.hero-section {
-  position: relative;
-  height: 450px;
-  margin-bottom: 50px;
-  border-radius: 16px;
-  overflow: hidden;
-}
-
-.hero-video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 39, 102, 0.5); /* Semi-transparent overlay */
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  text-align: center;
-}
-
-.hero-overlay h1 {
-  font-size: 3rem;
-  margin-bottom: 15px;
-}
-
-.hero-overlay p {
-  font-size: 1.2rem;
-  max-width: 800px;
-}
-
-/* =====================
-   Info Section
-===================== */
-.info-section h2 {
-  font-size: 2rem;
-  color: #2575fc;
-  margin-bottom: 20px;
-  border-bottom: 3px solid #ff7f50;
-  display: inline-block;
-  padding-bottom: 5px;
-}
-
-.info-section h3 {
-  font-size: 1.5rem;
-  margin-top: 30px;
-  margin-bottom: 15px;
-  color: #2575fc;
-}
-
-.info-section p {
-  font-size: 1rem;
-  margin-bottom: 15px;
   line-height: 1.7;
 }
 
-.info-section ul {
-  list-style: inside disc;
-  padding-left: 0;
+/* ================= Section Animation ================= */
+.university-selection-container section {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s forwards;
+  margin-bottom: 40px;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= Headings ================= */
+.university-selection-container h1,
+.university-selection-container h2 {
+    font-size: 2.8rem;
   margin-bottom: 20px;
+  color: #0d3b66;
+  text-align: center;
+  letter-spacing: 1px;
 }
 
-.info-section ul li {
+.university-selection-container h2::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #ff6f00;
+  margin-top: 5px;
+  border-radius: 3px;
+}
+
+/* ================= Paragraphs ================= */
+.university-selection-container p {
+  font-size: 1.05rem;
+  margin-bottom: 15px;
+}
+
+/* ================= List Items ================= */
+.university-selection-container ul {
+  list-style: disc inside;
+  margin-left: 0;
+  padding-left: 20px;
+}
+
+.university-selection-container ul li {
   margin-bottom: 10px;
-  font-size: 1rem;
+  transition: all 0.3s ease;
+  cursor: default;
 }
 
-/* Blockquote */
-.info-section blockquote {
-  margin: 30px 0;
-  padding: 20px;
-  background: rgba(37, 117, 252, 0.05);
-  border-left: 5px solid #2575fc;
-  border-radius: 8px;
+.university-selection-container ul li:hover {
+  color: #0d47a1;
+  transform: translateX(5px);
+}
+
+/* ================= FAQs ================= */
+.faq-item {
+  margin-bottom: 15px;
+  padding: 15px;
+  border-left: 4px solid #0d47a1;
+  background: #f7f9fc;
+  border-radius: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.faq-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item strong {
+  display: block;
+  margin-bottom: 5px;
+  color: #0d47a1;
+}
+
+/* ================= Blockquote ================= */
+.university-callout blockquote {
+  background: linear-gradient(135deg, #0d47a1, #1976d2);
+  color: #fff;
+  padding: 25px 20px;
+  border-radius: 10px;
   font-style: italic;
   font-size: 1.1rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* =====================
-   Responsive
-===================== */
-@media (max-width: 992px) {
-  .hero-overlay h1 {
-    font-size: 2.2rem;
-  }
-  .hero-overlay p {
-    font-size: 1rem;
-  }
+.university-callout blockquote:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-@media (max-width: 576px) {
-  .hero-overlay h1 {
+/* ================= HR Styling ================= */
+.university-selection-container hr {
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  margin: 35px 0;
+}
+
+/* ================= Responsive ================= */
+@media (max-width: 768px) {
+  .university-selection-container {
+    padding: 20px 15px;
+  }
+
+  .university-selection-container h1 {
     font-size: 1.8rem;
   }
-  .hero-overlay p {
-    font-size: 0.95rem;
-  }
 
-  .info-section h2 {
-    font-size: 1.6rem;
-  }
-
-  .info-section h3 {
+  .university-selection-container h2 {
     font-size: 1.3rem;
   }
 
-  .info-section p,
-  .info-section ul li {
-    font-size: 0.95rem;
+  .university-callout blockquote {
+    font-size: 1rem;
   }
 }
 /* ================================
@@ -8541,348 +8360,175 @@ textarea {
 /* =====================
    Visa Assistance Container
 ===================== */
-.visa-container {
- font-family: "Segoe UI", Tahoma, sans-serif;
+/* Page Container */
+.visa-assistance-container {
+    /* margin: 50px auto; */
+  padding: 0 20px; 
+  font-family: 'Segoe UI', Tahoma, sans-serif;
   color: #222;
-  margin: 0 auto;
-  padding: 20px;
-  box-sizing: border-box;
   background-color: #f9fbff;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
-/* =====================
-   Hero Section
-===================== */
-.visa-hero {
-  position: relative;
-  height: 450px;
+/* Sections with fade-in animation */
+.visa-assistance-container section {
   margin-bottom: 50px;
-  border-radius: 16px;
-  overflow: hidden;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s forwards;
 }
 
-.visa-hero-image {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.visa-hero-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.visa-hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 39, 102, 0.55); /* Semi-transparent overlay */
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  text-align: center;
-}
-
-.visa-hero-overlay h1 {
-  font-size: 3rem;
-  margin-bottom: 15px;
-}
-
-.visa-hero-overlay p {
-  font-size: 1.2rem;
-  max-width: 800px;
-}
-
-/* =====================
-   Sections (Importance, How, Benefits, Focus, Mistakes, FAQs)
-===================== */
-.visa-importance,
-.visa-how,
-.visa-benefits,
-.visa-focus,
-.visa-mistakes,
-.visa-faqs,
-.visa-country-section {
-  margin-bottom: 40px;
-}
-
-.visa-importance h2,
-.visa-how h2,
-.visa-benefits h2,
-.visa-focus h2,
-.visa-mistakes h2,
-.visa-faqs h2,
-.visa-country-section h2 {
-  font-size: 2rem;
-  color: #2575fc;
+/* Headings styling */
+.visa-assistance-container h1,
+.visa-assistance-container h2 {
+    font-size: 2.8rem;
   margin-bottom: 20px;
-  border-bottom: 3px solid #ff7f50;
-  display: inline-block;
-  padding-bottom: 5px;
+  color: #0d3b66;
+  text-align: center;
+  letter-spacing: 1px;
 }
 
-.visa-importance ul,
-.visa-how ul,
-.visa-benefits ul,
-.visa-focus ul,
-.visa-mistakes ul,
-.visa-country-section ul {
-  list-style: inside disc;
-  margin-left: 0;
-  padding-left: 0;
+/* Optional underline accent for h2 */
+.visa-assistance-container h2::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 4px;
+  margin-top: 8px;
+  background: #f95738;
+  border-radius: 2px;
 }
 
-.visa-importance ul li,
-.visa-how ul li,
-.visa-benefits ul li,
-.visa-focus ul li,
-.visa-mistakes ul li,
-.visa-country-section ul li {
-  margin-bottom: 10px;
-  font-size: 1rem;
+/* List hover effect */
+.visa-assistance-container ul li:hover {
+  transform: translateX(10px);
+  color: #f95738;
+  transition: 0.3s;
 }
 
-/* =====================
-   Accordion for Country-wise Visa Checklist
-===================== */
-.visa-country {
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  overflow: hidden;
+/* FAQ items hover */
+.visa-assistance-container .faq-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
+  padding: 10px;
+  border-radius: 5px;
 }
 
-.visa-toggle {
-  width: 100%;
-  background-color: #2575fc;
-  color: #fff;
-  border: none;
-  padding: 12px 20px;
-  text-align: left;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.visa-toggle:hover {
-  background-color: #1a54b8;
-}
-
-.visa-checklist {
-  background-color: #f0f7ff;
-  padding: 15px 25px;
-  animation: fadeIn 0.3s ease-in-out;
-}
-
-.visa-checklist li {
-  margin-bottom: 8px;
-}
-
-/* =====================
-   Conclusion Section
-===================== */
-.visa-conclusion {
-  margin-top: 40px;
+/* Blockquote callout */
+.visa-assistance-container blockquote {
+  background: linear-gradient(135deg, #f95738, #ff6b6b);
+  color: white;
+  padding: 25px 30px;
+  border-radius: 10px;
+  text-align: center;
   font-style: italic;
-  font-size: 1.1rem;
-  background: rgba(37, 117, 252, 0.05);
-  padding: 20px;
-  border-left: 5px solid #2575fc;
-  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
 }
 
-/* =====================
-   Animations
-===================== */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-10px);}
-  to { opacity: 1; transform: translateY(0);}
+.visa-assistance-container blockquote:hover {
+  transform: scale(1.03);
 }
 
-/* =====================
-   Responsive
-===================== */
-@media (max-width: 992px) {
-  .visa-hero-overlay h1 {
-    font-size: 2.2rem;
-  }
-  .visa-hero-overlay p {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .visa-hero-overlay h1 {
-    font-size: 1.8rem;
-  }
-  .visa-hero-overlay p {
-    font-size: 0.95rem;
-  }
-
-  .visa-importance h2,
-  .visa-how h2,
-  .visa-benefits h2,
-  .visa-focus h2,
-  .visa-mistakes h2,
-  .visa-faqs h2,
-  .visa-country-section h2 {
-    font-size: 1.5rem;
-  }
-
-  .visa-importance ul li,
-  .visa-how ul li,
-  .visa-benefits ul li,
-  .visa-focus ul li,
-  .visa-mistakes ul li,
-  .visa-country-section ul li {
-    font-size: 0.95rem;
-  }
-
-  .visa-toggle {
-    font-size: 0.95rem;
-    padding: 10px 15px;
-  }
-
-  .visa-checklist {
-    padding: 12px 15px;
+/* Fade-in animation keyframes */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 /* test preparation */
 /* ===== Global Container ===== */
-/* =====================
-   Test Preparation Container
-===================== */
-.test-prep-container {
-  font-family: "Segoe UI", Tahoma, sans-serif;
+/* Page Container */
+.test-preparations-container {
+  /* margin: 50px auto; */
+  padding: 0 20px; 
+  font-family: 'Segoe UI', Tahoma, sans-serif;
   color: #222;
-  margin: 0 auto;
-  padding: 20px;
-  box-sizing: border-box;
   background-color: #f9fbff;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
-/* =====================
-   Main Title & Intro
-===================== */
-.test-prep-container .title {
-  text-align: center;
-  font-size: 2.8rem;
-  color: #2575fc;
+/* Sections with fade-in animation */
+.test-preparations-container section {
+  margin-bottom: 50px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s forwards;
+}
+
+/* Headings styling */
+.test-preparations-container h1,
+.test-preparations-container h2 {
+   font-size: 2.8rem;
   margin-bottom: 20px;
-}
-
-.test-prep-container .intro {
-  font-size: 1.15rem;
+  color: #0d3b66;
   text-align: center;
-  margin-bottom: 40px;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
+  letter-spacing: 1px;
 }
 
-/* =====================
-   Sections (Why, How, Benefits, FAQs)
-===================== */
-.test-prep-container section h2 {
-  font-size: 2rem;
-  color: #2575fc;
-  margin-bottom: 20px;
-  border-bottom: 3px solid #ff7f50;
-  display: inline-block;
-  padding-bottom: 5px;
+/* Optional underline accent for h2 */
+.test-preparations-container h2::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 4px;
+  margin-top: 8px;
+  background: #f95738;
+  border-radius: 2px;
 }
 
-.test-prep-container section ul {
-  list-style: inside disc;
-  padding-left: 0;
+/* List hover effect */
+.test-preparations-container ul li:hover {
+  transform: translateX(10px);
+  color: #f95738;
+  transition: 0.3s;
 }
 
-.test-prep-container section ul li {
-  margin-bottom: 10px;
-  font-size: 1rem;
+/* FAQ items hover */
+.test-preparations-container .faq-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
+  padding: 10px;
+  border-radius: 5px;
 }
 
-/* =====================
-   Test Links
-===================== */
-.test-prep-container .test-link {
-  color: #1a54b8;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.test-prep-container .test-link:hover {
-  color: #ff7f50;
-  text-decoration: underline;
-}
-
-/* =====================
-   Examinations Heading
-===================== */
-.test-prep-container h1 {
+/* Blockquote callout */
+.test-preparations-container blockquote {
+  background: linear-gradient(135deg, #f95738, #ff6b6b);
+  color: white;
+  padding: 25px 30px;
+  border-radius: 10px;
   text-align: center;
-  font-size: 2.5rem;
-  color: #333;
-  margin: 40px 0 20px 0;
-}
-
-/* =====================
-   Blockquote (Closing Statement)
-===================== */
-.test-prep-container blockquote.closing {
   font-style: italic;
-  font-size: 1.15rem;
-  background: rgba(37, 117, 252, 0.05);
-  padding: 20px;
-  border-left: 5px solid #2575fc;
-  border-radius: 8px;
-  margin: 40px 0;
-  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
 }
 
-/* =====================
-   Responsive
-===================== */
-@media (max-width: 992px) {
-  .test-prep-container .title {
-    font-size: 2.2rem;
-  }
+.test-preparations-container blockquote:hover {
+  transform: scale(1.03);
+}
 
-  .test-prep-container h1 {
-    font-size: 2rem;
-  }
-
-  .test-prep-container section h2 {
-    font-size: 1.7rem;
+/* Fade-in animation keyframes */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-@media (max-width: 576px) {
-  .test-prep-container .title {
-    font-size: 1.8rem;
-  }
+/* Links styling inside test list */
+.test-preparations-container .test-list ul li a {
+  color: #0d3b66;
+  text-decoration: none;
+  transition: color 0.3s, transform 0.3s;
+}
 
-  .test-prep-container h1 {
-    font-size: 1.6rem;
-  }
-
-  .test-prep-container section h2 {
-    font-size: 1.4rem;
-  }
-
-  .test-prep-container .intro,
-  .test-prep-container section ul li,
-  .test-prep-container blockquote.closing {
-    font-size: 0.95rem;
-  }
+.test-preparations-container .test-list ul li a:hover {
+  color: #f95738;
+  transform: translateX(5px);
 }
 
 
@@ -11505,408 +11151,251 @@ a:hover {
 
 /* ===== Global Container ===== */
 /* ===== Global Container ===== */
-/* ===== Global Container ===== */
-/* =====================
-   Scholarship Assistance Container
-===================== */
-.scholarship-container {
-  font-family: "Segoe UI", Tahoma, sans-serif;
+/* Page Container */
+.scholarship-assistance-container {
+  /* margin: 50px auto; */
+  padding: 0 20px; 
+  font-family: 'Segoe UI', Tahoma, sans-serif;
   color: #222;
-  margin: 0 auto;
-  padding: 20px;
-  box-sizing: border-box;
   background-color: #f9fbff;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
-/* =====================
-   Hero Section
-===================== */
-.scholarship-hero {
-  position: relative;
-  margin-bottom: 40px;
+/* Sections with fade-in animation */
+.scholarship-assistance-container section {
+  margin-bottom: 50px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s forwards;
 }
 
-.scholarship-hero-image img {
-  width: 100%;
-  height: auto;
+/* Headings styling */
+.scholarship-assistance-container h1,
+.scholarship-assistance-container h2 {
+    font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #0d3b66;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+/* Optional underline accent for h2 */
+.scholarship-assistance-container h2::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 4px;
+  margin-top: 8px;
+  background: #f95738;
+  border-radius: 2px;
+}
+
+/* List hover effect */
+.scholarship-assistance-container ul li:hover {
+  transform: translateX(10px);
+  color: #f95738;
+  transition: 0.3s;
+}
+
+/* FAQ items hover */
+.scholarship-assistance-container .faq-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Blockquote callout */
+.scholarship-assistance-container blockquote {
+  background: linear-gradient(135deg, #f95738, #ff6b6b);
+  color: white;
+  padding: 25px 30px;
   border-radius: 10px;
-  object-fit: cover;
-}
-
-.scholarship-hero-overlay {
-  position: absolute;
-  top: 20%;
-  left: 10%;
-  color: #fff;
-  background: rgba(0, 0, 0, 0.35);
-  padding: 20px;
-  border-radius: 8px;
-  max-width: 600px;
-}
-
-.scholarship-title {
-  font-size: 2.5rem;
-  margin-bottom: 15px;
-  color: #ffdb58;
-}
-
-.scholarship-intro {
-  font-size: 1.1rem;
-  line-height: 1.5;
-}
-
-/* =====================
-   Sections (Why, How, Types, Benefits, FAQs)
-===================== */
-.scholarship-container section h3 {
-  font-size: 2rem;
-  color: #2575fc;
-  margin-bottom: 15px;
-  border-bottom: 3px solid #ff7f50;
-  display: inline-block;
-  padding-bottom: 5px;
-}
-
-.scholarship-container section ul {
-  list-style: inside disc;
-  padding-left: 0;
-}
-
-.scholarship-container section ul li {
-  margin-bottom: 10px;
-  font-size: 1rem;
-}
-
-/* =====================
-   Selected Country Display
-===================== */
-.selected-country {
-  font-size: 1.1rem;
-  margin-top: 30px;
-  font-weight: bold;
   text-align: center;
-}
-
-/* =====================
-   Call to Action / Closing Statement
-===================== */
-.scholarship-cta {
   font-style: italic;
-  font-size: 1.2rem;
-  background: rgba(37, 117, 252, 0.05);
-  padding: 20px;
-  border-left: 5px solid #2575fc;
-  border-radius: 8px;
-  margin: 40px 0;
-  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
 }
 
-/* =====================
-   Responsive
-===================== */
-@media (max-width: 992px) {
-  .scholarship-hero-overlay {
-    top: 15%;
-    left: 5%;
-    padding: 15px;
-  }
-
-  .scholarship-title {
-    font-size: 2rem;
-  }
-
-  .scholarship-container section h3 {
-    font-size: 1.7rem;
-  }
+.scholarship-assistance-container blockquote:hover {
+  transform: scale(1.03);
 }
 
-@media (max-width: 576px) {
-  .scholarship-hero-overlay {
-    top: 10%;
-    left: 5%;
-    padding: 10px;
-  }
-
-  .scholarship-title {
-    font-size: 1.6rem;
-  }
-
-  .scholarship-container section h3 {
-    font-size: 1.4rem;
-  }
-
-  .scholarship-intro,
-  .scholarship-container section ul li,
-  .selected-country,
-  .scholarship-cta {
-    font-size: 0.95rem;
+/* Fade-in animation keyframes */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
-/* ===== Container ===== */
-/* =====================
-   Pre-Departure Orientation Container
 /* =====================
    Pre-Departure Orientation Container
 ===================== */
-.orientation-container {
-  font-family: "Segoe UI", Tahoma, sans-serif;
+/* Page Container */
+.pre-departure-orientation-container {
+  /* max-width: 1000px; */
+  /* margin: 50px auto; */
+  padding: 0 20px;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
   color: #222;
-  margin: 0 auto;
-  padding: 20px;
-  box-sizing: border-box;
+  line-height: 1.7;
   background-color: #f9fbff;
-  line-height: 1.6;
 }
 
-/* =====================
-   Hero Section
-===================== */
-.orientation-hero {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  margin-bottom: 40px;
-  gap: 20px;
-  background: rgba(37, 117, 252, 0.05);
-  padding: 20px;
-  border-left: 5px solid #2575fc;
-  border-radius: 8px;
+/* Sections with fade-in animation */
+.pre-departure-orientation-container section {
+  margin-bottom: 50px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s forwards;
 }
 
-.orientation-hero-content {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  gap: 20px;
-}
-
-.orientation-text {
-  flex: 1 1 500px;
-}
-
-.orientation-text h1 {
-  font-size: 2.5rem;
-  color: #2575fc;
-  margin-bottom: 15px;
-}
-
-.orientation-text p {
-  font-size: 1.1rem;
-  line-height: 1.5;
-}
-
-.orientation-image {
-  flex: 1 1 400px;
-}
-
-.orientation-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  object-fit: cover;
-}
-
-/* =====================
-   Sections (Why, How, Benefits, FAQs)
-===================== */
-.orientation-section h2 {
-  font-size: 2rem;
-  color: #2575fc;
-  margin-bottom: 15px;
-  border-bottom: 3px solid #ff7f50;
-  display: inline-block;
-  padding-bottom: 5px;
-}
-
-.orientation-section ul {
-  list-style: inside disc;
-  padding-left: 0;
-}
-
-.orientation-section ul li {
-  margin-bottom: 10px;
-  font-size: 1rem;
-}
-
-.orientation-section p {
-  font-size: 1rem;
-  margin-bottom: 10px;
-}
-
-/* =====================
-   Call to Action / Conclusion
-===================== */
-.orientation-cta {
-  font-style: italic;
-  font-size: 1.2rem;
-  background: rgba(37, 117, 252, 0.05);
-  padding: 20px;
-  border-left: 5px solid #2575fc;
-  border-radius: 8px;
-  margin: 40px 0;
+/* Headings styling */
+.pre-departure-orientation-container h1,
+.pre-departure-orientation-container h2 {
+    font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #0d3b66;
   text-align: center;
+  letter-spacing: 1px;
 }
 
-/* =====================
-   Responsive
-===================== */
-@media (max-width: 992px) {
-  .orientation-hero {
-    flex-direction: column;
-  }
-
-  .orientation-text h1 {
-    font-size: 2rem;
-  }
-
-  .orientation-section h2 {
-    font-size: 1.7rem;
-  }
+/* Optional underline accent for h2 */
+.pre-departure-orientation-container h2::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 4px;
+  margin-top: 8px;
+  background: #f95738;
+  border-radius: 2px;
 }
 
-@media (max-width: 576px) {
-  .orientation-text h1 {
-    font-size: 1.6rem;
-  }
-
-  .orientation-section h2 {
-    font-size: 1.4rem;
-  }
-
-  .orientation-text p,
-  .orientation-section ul li,
-  .orientation-section p {
-    font-size: 0.95rem;
-  }
+/* List hover effect */
+.pre-departure-orientation-container ul li:hover {
+  transform: translateX(10px);
+  color: #f95738;
+  transition: 0.3s;
 }
 
+/* FAQ items hover */
+.pre-departure-orientation-container .faq-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
+  padding: 10px;
+  border-radius: 5px;
+}
 
+/* Blockquote callout */
+.pre-departure-orientation-container blockquote {
+  background: linear-gradient(135deg, #f95738, #ff6b6b);
+  color: white;
+  padding: 25px 30px;
+  border-radius: 10px;
+  text-align: center;
+  font-style: italic;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.pre-departure-orientation-container blockquote:hover {
+  transform: scale(1.03);
+}
+
+/* Fade-in animation keyframes */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 
 /* =====================
    Continuous Communication Container
 ===================== */
-.communication-container {
- font-family: "Segoe UI", Tahoma, sans-serif;
+/* Page Container */
+.continuous-communication-container {
+  /* margin: 50px auto; */
+  padding: 0 20px; 
+  font-family: 'Segoe UI', Tahoma, sans-serif;
   color: #222;
-  margin: 0 auto;
-  padding: 20px;
-  box-sizing: border-box;
   background-color: #f9fbff;
-  line-height: 1.6;
-}
-
-/* =====================
-   Hero Section
-===================== */
-.communication-hero {
+  line-height: 1.7;
+  margin-top: 30px;
   margin-bottom: 40px;
-  background: rgba(37, 117, 252, 0.05);
-  padding: 25px;
-  border-left: 5px solid #2575fc;
-  border-radius: 8px;
 }
 
-.communication-hero h1 {
-  font-size: 2.5rem;
-  color: #2575fc;
-  margin-bottom: 15px;
+/* Sections with fade-in animation */
+.continuous-communication-container section {
+  margin-bottom: 50px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s forwards;
 }
 
-.communication-hero p {
-  font-size: 1.1rem;
-  line-height: 1.5;
-}
-
-/* =====================
-   Sections (Importance, How, Benefits, FAQs)
-===================== */
-.communication-importance h2,
-.communication-how h2,
-.communication-benefits h2,
-.communication-faqs h2 {
-  font-size: 2rem;
-  color: #2575fc;
-  margin-bottom: 15px;
-  border-bottom: 3px solid #ff7f50;
-  display: inline-block;
-  padding-bottom: 5px;
-}
-
-.communication-importance ul,
-.communication-how ul,
-.communication-benefits ul {
-  list-style: inside disc;
-  padding-left: 0;
-}
-
-.communication-importance ul li,
-.communication-how ul li,
-.communication-benefits ul li {
-  margin-bottom: 10px;
-  font-size: 1rem;
-}
-
-.communication-importance p,
-.communication-how p,
-.communication-benefits p,
-.communication-faqs p {
-  font-size: 1rem;
-  margin-bottom: 10px;
-}
-
-/* =====================
-   Call to Action / Closing Statement
-===================== */
-.communication-closing {
-  font-style: italic;
-  font-size: 1.2rem;
-  background: rgba(37, 117, 252, 0.05);
-  padding: 20px;
-  border-left: 5px solid #2575fc;
-  border-radius: 8px;
-  margin: 40px 0;
+/* Headings styling */
+.continuous-communication-container h1,
+.continuous-communication-container h2 {
+    font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #0d3b66;
   text-align: center;
+  letter-spacing: 1px;
 }
 
-/* =====================
-   Responsive
-===================== */
-@media (max-width: 992px) {
-  .communication-hero h1 {
-    font-size: 2rem;
-  }
-
-  .communication-importance h2,
-  .communication-how h2,
-  .communication-benefits h2,
-  .communication-faqs h2 {
-    font-size: 1.7rem;
-  }
+/* Optional underline accent for h2 */
+.continuous-communication-container h2::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 4px;
+  margin-top: 8px;
+  background: #f95738;
+  border-radius: 2px;
 }
 
-@media (max-width: 576px) {
-  .communication-hero h1 {
-    font-size: 1.6rem;
-  }
-
-  .communication-importance h2,
-  .communication-how h2,
-  .communication-benefits h2,
-  .communication-faqs h2 {
-    font-size: 1.4rem;
-  }
-
-  .communication-hero p,
-  .communication-importance ul li,
-  .communication-how ul li,
-  .communication-benefits ul li,
-  .communication-faqs p {
-    font-size: 0.95rem;
-  }
+/* List hover effect */
+.continuous-communication-container ul li:hover {
+  transform: translateX(10px);
+  color: #f95738;
+  transition: 0.3s;
 }
 
+/* FAQ items hover */
+.continuous-communication-container .faq-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Blockquote callout */
+.continuous-communication-container blockquote {
+  background: linear-gradient(135deg, #f95738, #ff6b6b);
+  color: white;
+  padding: 25px 30px;
+  border-radius: 10px;
+  text-align: center;
+  font-style: italic;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.continuous-communication-container blockquote:hover {
+  transform: scale(1.03);
+}
+
+/* Fade-in animation keyframes */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 /* blog details */
 /* BlogDetails.css */

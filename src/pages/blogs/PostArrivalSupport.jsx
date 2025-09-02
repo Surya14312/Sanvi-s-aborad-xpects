@@ -1,26 +1,21 @@
+// src/pages/PostArrivalSupport.jsx
 import React from "react";
 
 const PostArrivalSupport = () => {
   return (
-    <div className="postarrival-container">
-      {/* Hero Section */}
-      <section className="postarrival-hero">
-        <div className="postarrival-text">
-          <h1>Post-Arrival Support</h1>
-          <p>
-            Arriving in a new country can be overwhelming, especially for
-            first-time international students. Our post-arrival support ensures
-            students settle smoothly, adjust to the new environment, and quickly
-            become comfortable with their academic and daily life.
-          </p>
-        </div>
-        <div className="postarrival-image">
-          <img src="/assets/postarrival.jpg" alt="Post-Arrival Support" />
-        </div>
+    <div className="post-arrival-support-container">
+      {/* ================= Intro ================= */}
+      <section className="arrival-intro">
+        <h1>Post-Arrival Support</h1>
+        <p>
+          Arriving in a new country can be overwhelming, especially for first-time international students. Our post-arrival support ensures students settle smoothly, adjust to the new environment, and quickly become comfortable with their academic and daily life.
+        </p>
       </section>
 
-      {/* Why Post-Arrival Support */}
-      <section className="postarrival-importance">
+      <hr />
+
+      {/* ================= Why Post-Arrival Support Is Important ================= */}
+      <section className="arrival-why-important">
         <h2>Why Post-Arrival Support Is Important</h2>
         <ul>
           <li>Helps students navigate a new city, culture, and university system.</li>
@@ -30,8 +25,10 @@ const PostArrivalSupport = () => {
         </ul>
       </section>
 
-      {/* How We Help */}
-      <section className="postarrival-how">
+      <hr />
+
+      {/* ================= How We Help ================= */}
+      <section className="arrival-how-help">
         <h2>How We Help</h2>
         <ul>
           <li>Airport Pickup Assistance – Safe arrival at accommodation or university housing.</li>
@@ -44,8 +41,10 @@ const PostArrivalSupport = () => {
         </ul>
       </section>
 
-      {/* Benefits */}
-      <section className="postarrival-benefits">
+      <hr />
+
+      {/* ================= Benefits for Students ================= */}
+      <section className="arrival-benefits">
         <h2>Benefits for Students</h2>
         <ul>
           <li>Quick and smooth settlement in the new country.</li>
@@ -56,17 +55,32 @@ const PostArrivalSupport = () => {
         </ul>
       </section>
 
-      {/* FAQs */}
-      <section className="postarrival-faqs">
+      <hr />
+
+      {/* ================= FAQs ================= */}
+      <section className="arrival-faqs">
         <h2>FAQs</h2>
-        <p><strong>Q1:</strong> How long does post-arrival support last?<br/>
-           Typically 1–3 months, or until the student feels comfortable navigating the new environment.</p>
-        <p><strong>Q2:</strong> Does post-arrival support include help with academic issues?<br/>
-           Yes, we provide guidance on course registration, professors, and academic support resources.</p>
-        <p><strong>Q3:</strong> Is emergency support available 24/7?<br/>
-           Yes, we provide round-the-clock guidance for urgent issues like medical emergencies or visa queries.</p>
+        <div className="faq-item">
+          <strong>Q1: How long does post-arrival support last?</strong>
+          <p>Typically 1–3 months, or until the student feels comfortable navigating the new environment.</p>
+        </div>
+        <div className="faq-item">
+          <strong>Q2: Does post-arrival support include help with academic issues?</strong>
+          <p>Yes, we provide guidance on course registration, professors, and academic support resources.</p>
+        </div>
+        <div className="faq-item">
+          <strong>Q3: Is emergency support available 24/7?</strong>
+          <p>Yes, we provide round-the-clock guidance for urgent issues like medical emergencies or visa queries.</p>
+        </div>
+      </section>
 
+      <hr />
 
+      {/* ================= Callout ================= */}
+      <section className="arrival-callout">
+        <blockquote>
+          “Ensure a smooth start to your international journey! Our post-arrival support helps you settle, adapt, and thrive in your new country with confidence.”
+        </blockquote>
       </section>
     </div>
   );

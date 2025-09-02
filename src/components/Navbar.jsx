@@ -4,7 +4,7 @@ import SmartLink from "./SmartLink";
 // ✅ Study Abroad Countries
 const studyAbroadCountries = [
   "UK", "Canada", "Singapore", "Ireland", "France", "Germany",
-  "Switzerland", "Dubai", "Spain", "Malaysia", "Mauritius",
+  "Switzerland", "Dubai", "Spain",  
   "Netherlands", "Italy", "Poland", "Portugal", "USA", "Malta", "Lithuania",
 ];
 

@@ -1,74 +1,82 @@
+// src/pages/CareerCounselling.jsx
 import React from "react";
-import { Link } from "react-router-dom";
-import careerData from "../careerContent";
 
-const Section = ({ title, children }) => (
-  <section className="career-info">
-    <h2>{title}</h2>
-    {children}
-  </section>
-);
-
-const CareerCounseling = () => {
+const CareerCounselling = () => {
   return (
-    <div className="career-container">
-      {/* Hero */}
-      <section className="career-hero">
-        <div className="career-hero-text">
-          <h1>{careerData.hero.title}</h1>
-          <p>{careerData.hero.subtitle}</p>
-          <Link to="/apply" className="apply-button">
-            {careerData.hero.cta}
-          </Link>
-        </div>
-        <img
-          src={careerData.hero.image}
-          alt="Career Counseling"
-          className="career-banner-img"
-        />
+    <div className="career-counselling-container" >      
+      {/* ================= Career Counselling Intro ================= */}
+      <section>
+        <h1>Career Counselling</h1>
+        <p>
+          Choosing the right career path is one of the most crucial decisions in a student’s life. With countless courses, universities, and countries available, students often feel confused or overwhelmed. Our career counselling service is designed to provide expert guidance based on a student’s academic background, interests, and future aspirations.
+        </p>
       </section>
 
-      {/* What is Career Counseling */}
-      <Section title={careerData.whatIs.title}>
-        <p>{careerData.whatIs.description}</p>
-      </Section>
+      <hr  />
 
-      {/* Why Important */}
-      <Section title={careerData.whyImportant.title}>
+      {/* ================= Why Career Counselling is Important ================= */}
+      <section>
+        <h2>Why Career Counselling is Important</h2>
         <ul>
-          {careerData.whyImportant.points.map((point, idx) => (
-            <li key={idx}>{point}</li>
-          ))}
+          <li>Helps avoid making uninformed or random choices.</li>
+          <li>Provides clarity about suitable fields based on strengths and skills.</li>
+          <li>Bridges the gap between student interests and career opportunities.</li>
+          <li>Helps students understand future job markets and prospects.</li>
         </ul>
-      </Section>
+      </section>
 
-      {/* Other Sections (including FAQs) */}
-      {careerData.sections.map((sec, idx) => (
-        <Section key={idx} title={sec.title}>
-          {sec.content.map((item, pIdx) =>
-            item.question && item.answer ? (
-              <div key={pIdx} className="faq-item">
-                <p><strong>{item.question}</strong></p>
-                <p>{item.answer}</p>
-              </div>
-            ) : (
-              <p key={pIdx}>{item}</p>
-            )
-          )}
-        </Section>
-      ))}
+      <hr />
 
-      {/* Contact */}
-      <section className="contact-section">
-        <p>
-          {careerData.contact.text}{" "}
-          <Link to="/contact" className="contact-link">
-            {careerData.contact.linkText}
-          </Link>
-        </p>
+      {/* ================= How We Help ================= */}
+      <section>
+        <h2>How We Help</h2>
+        <ul>
+          <li>One-on-one sessions with expert counsellors.</li>
+          <li>Assessment of academic records, personal interests, and career goals.</li>
+          <li>Personality and aptitude mapping.</li>
+          <li>Guidance on aligning career goals with the right courses and universities.</li>
+          <li>Suggesting alternative career pathways in case of challenges.</li>
+        </ul>
+      </section>
+
+      <hr />
+
+      {/* ================= Key Benefits ================= */}
+      <section>
+        <h2>Key Benefits for Students</h2>
+        <ul>
+          <li>Clarity in decision-making.</li>
+          <li>Personalized guidance rather than generic suggestions.</li>
+          <li>Awareness of emerging fields and global opportunities.</li>
+          <li>Step-by-step roadmap for academics and career success.</li>
+        </ul>
+      </section>
+
+      <hr  />
+
+      {/* ================= FAQs ================= */}
+      <section>
+        <h2>FAQs</h2>
+        <div >
+          <strong>Q1: Do I need career counselling if I already know my course?</strong>
+          <p>Yes, because career counselling not only confirms your decision but also helps align your goals with the right country, university, and opportunities.</p>
+        </div>
+        <div>
+          <strong>Q2: Is career counselling only for students after 12th?</strong>
+          <p>No, it’s equally valuable for graduates, postgraduates, and even working professionals planning higher studies abroad.</p>
+        </div>
+      </section>
+
+      <hr />
+
+      {/* ================= Callout ================= */}
+      <section>
+        <blockquote >
+          “Confused about your career path? Book a session with our expert counsellors today and take the first step towards a successful future.”
+        </blockquote>
       </section>
     </div>
   );
 };
 
-export default CareerCounseling;
+export default CareerCounselling;

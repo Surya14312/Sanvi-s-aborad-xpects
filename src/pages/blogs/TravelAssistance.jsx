@@ -1,25 +1,21 @@
-// src/pages/TravelAssistance.js
+// src/pages/TravelAssistance.jsx
 import React from "react";
 
 const TravelAssistance = () => {
   return (
-    <div className="travel-container">
-      {/* Hero Section */}
-      <section className="travel-hero">
-        <div className="travel-text">
-          <h1>Travel Assistance</h1>
-          <p>
-            Traveling abroad for education can be overwhelming, especially for first-time international students. 
-            From booking flights to airport transfers and travel insurance, our travel assistance service ensures a seamless and stress-free journey from your home country to your study destination.
-          </p>
-        </div>
-        <div className="travel-image">
-          <img src="/assets/travel.jpg" alt="Travel Assistance" />
-        </div>
+    <div className="travel-assistance-container">
+      {/* ================= Intro ================= */}
+      <section className="travel-intro">
+        <h1>Travel Assistance</h1>
+        <p>
+          Traveling abroad for education can be overwhelming, especially for first-time international students. From booking flights to airport transfers and travel insurance, our travel assistance service ensures a seamless and stress-free journey from your home country to your study destination.
+        </p>
       </section>
 
-      {/* Why Travel Assistance Is Important */}
-      <section className="travel-section">
+      <hr />
+
+      {/* ================= Why Travel Assistance Is Important ================= */}
+      <section className="travel-why-important">
         <h2>Why Travel Assistance Is Important</h2>
         <ul>
           <li>First-time travelers often face confusion with flight bookings, visa stamps, and baggage restrictions.</li>
@@ -29,8 +25,10 @@ const TravelAssistance = () => {
         </ul>
       </section>
 
-      {/* How We Help */}
-      <section className="travel-section">
+      <hr />
+
+      {/* ================= How We Help ================= */}
+      <section className="travel-how-help">
         <h2>How We Help</h2>
         <ul>
           <li>Flight Bookings – Guidance on cost-effective flights and best travel routes.</li>
@@ -42,8 +40,10 @@ const TravelAssistance = () => {
         </ul>
       </section>
 
-      {/* Benefits for Students */}
-      <section className="travel-section">
+      <hr />
+
+      {/* ================= Benefits for Students ================= */}
+      <section className="travel-benefits">
         <h2>Benefits for Students</h2>
         <ul>
           <li>Hassle-free and organized international travel.</li>
@@ -54,30 +54,32 @@ const TravelAssistance = () => {
         </ul>
       </section>
 
-      {/* FAQs */}
-      <section className="travel-section">
+      <hr />
+
+      {/* ================= FAQs ================= */}
+      <section className="travel-faqs">
         <h2>FAQs</h2>
-        <p><strong>Q1:</strong> Can you book my flight tickets directly?<br />
-           We provide guidance on the best flights and routes, but the actual booking is done by the student or their guardian.</p>
-        <p><strong>Q2:</strong> Is travel insurance mandatory?<br />
-           For many countries, yes. We guide you on required coverage and help arrange insurance.</p>
-        <p><strong>Q3:</strong> Do you assist with airport pickups?<br />
-           Yes, we coordinate with local service providers or university transport for smooth transfers.</p>
+        <div className="faq-item">
+          <strong>Q1: Can you book my flight tickets directly?</strong>
+          <p>We provide guidance on the best flights and routes, but the actual booking is done by the student or their guardian.</p>
+        </div>
+        <div className="faq-item">
+          <strong>Q2: Is travel insurance mandatory?</strong>
+          <p>For many countries, yes. We guide you on required coverage and help arrange insurance.</p>
+        </div>
+        <div className="faq-item">
+          <strong>Q3: Do you assist with airport pickups?</strong>
+          <p>Yes, we coordinate with local service providers or university transport for smooth transfers.</p>
+        </div>
       </section>
 
-      {/* Call to Action */}
-      <section className="travel-cta">
-        <h2>Traveling abroad shouldn’t be stressful.</h2>
-        <p>
-          Let us guide you from booking flights to settling safely at your university — ensuring your journey begins on the right note.
-        </p>
-        <p>
-          Please{" "}
-          <a href="/contact" className="contact-link">
-            contact us
-          </a>{" "}
-          to get personalized travel assistance.
-        </p>
+      <hr />
+
+      {/* ================= Callout ================= */}
+      <section className="travel-callout">
+        <blockquote>
+          “Traveling abroad shouldn’t be stressful. Let us guide you from booking flights to settling safely at your university — ensuring your journey begins on the right note.”
+        </blockquote>
       </section>
     </div>
   );

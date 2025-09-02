@@ -200,10 +200,59 @@ function Switzerland() {
 
 
          {/* Enroll */}
-      <EnrollSection country="Switzerland" />
-        <section className="poland-summary">
-        <p>“Looking to study in Switzerland? Our consultancy provides complete support for university applications, scholarships, and visa processes tailored for Indian students.”</p>
-      </section>
+      {/* <EnrollSection country="Switzerland" /> */}
+       <section
+  style={{
+    maxWidth: "900px",
+    margin: "40px auto",
+    padding: "25px 30px",
+    background: "#ffffff",
+    borderRadius: "16px",
+    boxShadow: "0 6px 18px rgba(0, 0, 0, 0.12)",
+    textAlign: "center",
+    fontFamily: '"Segoe UI", Tahoma, sans-serif',
+    color: "#333",
+    lineHeight: 1.6,
+  }}
+>
+  <h2
+    style={{
+      fontSize: "1.8rem",
+      marginBottom: "15px",
+      color: "#003566",
+      fontWeight: "700",
+    }}
+  >
+    Looking to study in Switzerland?
+  </h2>
+  <p
+    style={{
+      fontSize: "1rem",
+      margin: "0 0 20px 0",
+    }}
+  >
+    Our consultancy provides complete support for university applications, scholarships, and visa processes tailored for Indian students.
+  </p>
+  <button
+    onClick={() => (window.location.href = "/contact")}
+    style={{
+      padding: "12px 24px",
+      fontSize: "1rem",
+      fontWeight: "600",
+      color: "#fff",
+      background: "#003566",
+      border: "none",
+      borderRadius: "8px",
+      cursor: "pointer",
+      transition: "background 0.3s ease",
+    }}
+    onMouseOver={(e) => (e.currentTarget.style.background = "#002244")}
+    onMouseOut={(e) => (e.currentTarget.style.background = "#003566")}
+  >
+    Apply Now
+  </button>
+</section>
+
       </section>
 
     </div>

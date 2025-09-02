@@ -1,28 +1,21 @@
-// src/pages/Documentation.js
+// src/pages/DocumentationServices.jsx
 import React from "react";
-import { Link } from "react-router-dom";
 
-
-const Documentation = () => {
+const DocumentationServices = () => {
   return (
-    <div className="documentation-container">
-      {/* Hero Section */}
-      <section className="documentation-hero">
-        <div className="documentation-hero-text">
-          <h1>Documentation Services</h1>
-          <p>
-            Accurate documentation is the backbone of every successful study abroad application. From academic transcripts to Statement of Purpose (SOP), Letters of Recommendation (LOR), and financial proofs, each document must be prepared and presented according to university and embassy standards. Our documentation services ensure your application is professional, verified, and impactful.
-          </p>
-        </div>
-        <img
-          src="/assets/documentation-banner.jpg"
-          alt="Documentation Services"
-          className="documentation-banner-img"
-        />
+    <div className="documentation-services-container">
+      {/* ================= Intro ================= */}
+      <section className="documentation-intro">
+        <h1>Documentation Services</h1>
+        <p>
+          Accurate documentation is the backbone of every successful study abroad application. From academic transcripts to Statement of Purpose (SOP), Letters of Recommendation (LOR), and financial proofs, each document must be prepared and presented according to university and embassy standards. Our documentation services ensure your application is professional, verified, and impactful.
+        </p>
       </section>
 
-      {/* Importance Section */}
-      <section className="documentation-info">
+      <hr />
+
+      {/* ================= Why Documentation Services Are Important ================= */}
+      <section className="documentation-why-important">
         <h2>Why Documentation Services Are Important</h2>
         <ul>
           <li>Even small errors in documents can lead to delays or rejection.</li>
@@ -33,8 +26,10 @@ const Documentation = () => {
         </ul>
       </section>
 
-      {/* How We Help */}
-      <section className="documentation-info">
+      <hr />
+
+      {/* ================= How We Help ================= */}
+      <section className="documentation-how-help">
         <h2>How We Help</h2>
         <ul>
           <li>Application Documents: SOP, LORs, Resume/CV, Admission Essays.</li>
@@ -46,8 +41,10 @@ const Documentation = () => {
         </ul>
       </section>
 
-      {/* Specialized Documentation Support */}
-      <section className="documentation-info">
+      <hr />
+
+      {/* ================= Specialized Documentation Support ================= */}
+      <section className="documentation-specialized">
         <h2>Specialized Documentation Support</h2>
         <ul>
           <li>HRD (Human Resource Development) Attestation – Required for verifying educational documents from the issuing state.</li>
@@ -56,8 +53,10 @@ const Documentation = () => {
         </ul>
       </section>
 
-      {/* Benefits */}
-      <section className="documentation-info">
+      <hr />
+
+      {/* ================= Benefits for Students ================= */}
+      <section className="documentation-benefits">
         <h2>Benefits for Students</h2>
         <ul>
           <li>Hassle-free and complete documentation process.</li>
@@ -69,8 +68,10 @@ const Documentation = () => {
         </ul>
       </section>
 
-      {/* Common Mistakes */}
-      <section className="documentation-info">
+      <hr />
+
+      {/* ================= Common Mistakes ================= */}
+      <section className="documentation-mistakes">
         <h2>Common Mistakes Students Make (and We Avoid)</h2>
         <ul>
           <li>Submitting incomplete or outdated transcripts.</li>
@@ -81,30 +82,39 @@ const Documentation = () => {
         </ul>
       </section>
 
-      {/* FAQs */}
-      <section className="documentation-info">
+      <hr />
+
+      {/* ================= FAQs ================= */}
+      <section className="documentation-faqs">
         <h2>FAQs</h2>
-        <p><strong>Q1:</strong> Do I need HRD attestation for all universities?<br />Not all, but many universities and embassies require HRD attestation for degree certificates. We guide you based on the destination country.</p>
-        <p><strong>Q2:</strong> What is Apostille, and do I need it?<br />An Apostille certifies your documents for use in countries under the Hague Convention. We help you get this done efficiently.</p>
-        <p><strong>Q3:</strong> Will you help with Notary attestation?<br />Yes, we arrange for notarization of required documents to ensure they are legally valid.</p>
-        <p><strong>Q4:</strong> Can you prepare my SOPs and LORs?<br />We don’t write them for you, but we edit, review, and guide you to make them strong and authentic.</p>
+        <div className="faq-item">
+          <strong>Q1: Do I need HRD attestation for all universities?</strong>
+          <p>Not all, but many universities and embassies require HRD attestation for degree certificates. We guide you based on the destination country.</p>
+        </div>
+        <div className="faq-item">
+          <strong>Q2: What is Apostille, and do I need it?</strong>
+          <p>An Apostille certifies your documents for use in countries under the Hague Convention. We help you get this done efficiently.</p>
+        </div>
+        <div className="faq-item">
+          <strong>Q3: Will you help with Notary attestation?</strong>
+          <p>Yes, we arrange for notarization of required documents to ensure they are legally valid.</p>
+        </div>
+        <div className="faq-item">
+          <strong>Q4: Can you prepare my SOPs and LORs?</strong>
+          <p>We don’t write them for you, but we edit, review, and guide you to make them strong and authentic.</p>
+        </div>
       </section>
 
-      {/* Call to Action Section */}
-      <section className="call-to-action">
-        <button className="apply-button" onClick={() => window.location.href = "/contact"}>
-          Apply Now
-        </button>
-        <span className="contact-link">
-          Need help? <Link to="/contact">Contact Us</Link>
-        </span>
-      </section>
+      <hr />
 
-      <p className="documentation-cta">
-        “Let us simplify your documentation with HRD attestation, Apostille, Notary, SOPs, LORs, and financial papers — ensuring your application meets every global requirement.”
-      </p>
+      {/* ================= Callout ================= */}
+      <section className="documentation-callout">
+        <blockquote>
+          “Let us simplify your documentation with HRD attestation, Apostille, Notary, SOPs, LORs, and financial papers — ensuring your application meets every global requirement.”
+        </blockquote>
+      </section>
     </div>
   );
 };
 
-export default Documentation;
+export default DocumentationServices;

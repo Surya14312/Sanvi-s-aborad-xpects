@@ -77,9 +77,32 @@ function Canada() {
         </ul>
       </section>
 {/* ✅ Top Universities */}
-<section className="canada-universities">
-  <h2>Top Universities in Canada</h2>
-  <div className="university-grid">
+<section
+  style={{
+    padding: "50px 20px",
+    maxWidth: "1300px",
+    margin: "0 auto",
+  }}
+>
+  <h2
+    style={{
+      textAlign: "center",
+      fontSize: "2rem",
+      marginBottom: "40px",
+      fontWeight: "700",
+      color: "#003566",
+    }}
+  >
+    Top Universities in Canada
+  </h2>
+
+  <div
+    style={{
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+      gap: "30px",
+    }}
+  >
     {[
       { name: "University of Toronto", img: "/assets/canada/universities/toronto.jpg" },
       { name: "University of British Columbia (UBC)", img: "/assets/canada/universities/ubc.jpg" },
@@ -90,13 +113,57 @@ function Canada() {
       { name: "Queen’s University", img: "/assets/canada/universities/queens.jpg" },
       { name: "University of Montreal", img: "/assets/canada/universities/montreal.jpg" },
     ].map((uni, i) => (
-      <div key={i} className="uni-card">
-        <img src={uni.img} alt={uni.name} />
-        <p>{uni.name}</p>
+      <div
+        key={i}
+        style={{
+          background: "#fff",
+          borderRadius: "16px",
+          overflow: "hidden",
+          boxShadow: "0 6px 18px rgba(0, 0, 0, 0.12)",
+          transition: "transform 0.3s ease, box-shadow 0.3s ease",
+          textAlign: "center",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
+          cursor: "pointer",
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.transform = "translateY(-6px)";
+          e.currentTarget.style.boxShadow = "0 10px 22px rgba(0,0,0,0.2)";
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.transform = "translateY(0)";
+          e.currentTarget.style.boxShadow = "0 6px 18px rgba(0,0,0,0.12)";
+        }}
+      >
+        <img
+          src={uni.img}
+          alt={uni.name}
+          style={{
+            width: "100%",
+            height: "200px",
+            objectFit: "cover",
+            borderTopLeftRadius: "16px",
+            borderTopRightRadius: "16px",
+          }}
+        />
+        <p
+          style={{
+            padding: "18px 12px",
+            fontWeight: "600",
+            fontSize: "1rem",
+            color: "#222",
+            background: "#fff",
+            margin: "0",
+          }}
+        >
+          {uni.name}
+        </p>
       </div>
     ))}
   </div>
 </section>
+
 
 
      {/* ✅ Popular Courses */}
@@ -228,18 +295,61 @@ function Canada() {
       </section>
 
       {/* ✅ Enroll Section */}
-      <EnrollSection country="Canada" />
+      {/* <EnrollSection country="Canada" /> */}
 
       {/* ✅ Call to Action */}
-      <section className="canada-cta">
-        <p>
-          Planning to study in Canada? Our consultancy guides Indian students through university selection, 
-          scholarship applications, visa processing, and career planning for a successful study abroad experience.
-        </p>
-        <Link to="/contact" className="apply-btn">
-          Get Expert Guidance
-        </Link>
-      </section>
+     <section
+  style={{
+    maxWidth: "900px",
+    margin: "40px auto",
+    padding: "25px 30px",
+    background: "#ffffff",
+    borderRadius: "16px",
+    boxShadow: "0 6px 18px rgba(0, 0, 0, 0.12)",
+    textAlign: "center",
+    fontFamily: '"Segoe UI", Tahoma, sans-serif',
+    color: "#333",
+    lineHeight: 1.6,
+  }}
+>
+  <h2
+    style={{
+      fontSize: "1.8rem",
+      marginBottom: "15px",
+      color: "#003566",
+      fontWeight: "700",
+    }}
+  >
+    Planning to study in Canada?
+  </h2>
+  <p
+    style={{
+      fontSize: "1rem",
+      margin: "0 0 20px 0",
+    }}
+  >
+    Our consultancy guides Indian students through university selection, scholarship applications, visa processing, and career planning for a successful study abroad experience.
+  </p>
+  <button
+    onClick={() => (window.location.href = "/contact")}
+    style={{
+      padding: "12px 24px",
+      fontSize: "1rem",
+      fontWeight: "600",
+      color: "#fff",
+      background: "#003566",
+      border: "none",
+      borderRadius: "8px",
+      cursor: "pointer",
+      transition: "background 0.3s ease",
+    }}
+    onMouseOver={(e) => (e.currentTarget.style.background = "#002244")}
+    onMouseOut={(e) => (e.currentTarget.style.background = "#003566")}
+  >
+    Apply Now
+  </button>
+</section>
+
     </div>
   );
 }

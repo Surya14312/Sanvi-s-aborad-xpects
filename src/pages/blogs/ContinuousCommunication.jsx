@@ -1,21 +1,21 @@
+// src/pages/ContinuousCommunication.jsx
 import React from "react";
 
 const ContinuousCommunication = () => {
   return (
-    <div className="communication-container">
-      {/* Hero Section */}
-      <section className="communication-hero">
-        <h1>Continuous Communication & Support</h1>
+    <div className="continuous-communication-container">
+      {/* ================= Intro ================= */}
+      <section className="communication-intro">
+        <h1>Continuous Communication</h1>
         <p>
-          Studying abroad is a journey that requires ongoing guidance and support.
-          Our continuous communication service ensures that students and parents
-          are always informed, updated, and connected with our consultancy from
-          the application stage to post-arrival and beyond.
+          Studying abroad is a journey that requires ongoing guidance and support. Our continuous communication service ensures that students and parents are always informed, updated, and connected with our consultancy from the application stage to post-arrival and beyond.
         </p>
       </section>
 
-      {/* Why Continuous Communication */}
-      <section className="communication-importance">
+      <hr />
+
+      {/* ================= Why Continuous Communication Is Important ================= */}
+      <section className="communication-why-important">
         <h2>Why Continuous Communication Is Important</h2>
         <ul>
           <li>Students may have questions at any stage of the application or study journey.</li>
@@ -25,8 +25,10 @@ const ContinuousCommunication = () => {
         </ul>
       </section>
 
-      {/* How We Help */}
-      <section className="communication-how">
+      <hr />
+
+      {/* ================= How We Help ================= */}
+      <section className="communication-how-help">
         <h2>How We Help</h2>
         <ul>
           <li>Regular Updates – Keep students informed about application status, visa processing, and scholarship results.</li>
@@ -38,7 +40,9 @@ const ContinuousCommunication = () => {
         </ul>
       </section>
 
-      {/* Benefits */}
+      <hr />
+
+      {/* ================= Benefits for Students ================= */}
       <section className="communication-benefits">
         <h2>Benefits for Students</h2>
         <ul>
@@ -50,23 +54,32 @@ const ContinuousCommunication = () => {
         </ul>
       </section>
 
-      {/* FAQs */}
+      <hr />
+
+      {/* ================= FAQs ================= */}
       <section className="communication-faqs">
         <h2>FAQs</h2>
-        <p><strong>Q1:</strong> How long does continuous communication last?<br/>
-           We provide support from the moment you start your journey with us until you are comfortably settled abroad — and beyond if needed.</p>
-        <p><strong>Q2:</strong> How can I contact my counsellor?<br/>
-           You can reach your counsellor through multiple channels — email, phone, WhatsApp, or video calls.</p>
-        <p><strong>Q3:</strong> Does this service include post-arrival issues?<br/>
-           Yes, any queries related to academics, accommodation, travel, or cultural adjustment are included.</p>
+        <div className="faq-item">
+          <strong>Q1: How long does continuous communication last?</strong>
+          <p>We provide support from the moment you start your journey with us until you are comfortably settled abroad — and beyond if needed.</p>
+        </div>
+        <div className="faq-item">
+          <strong>Q2: How can I contact my counsellor?</strong>
+          <p>You can reach your counsellor through multiple channels — email, phone, WhatsApp, or video calls.</p>
+        </div>
+        <div className="faq-item">
+          <strong>Q3: Does this service include post-arrival issues?</strong>
+          <p>Yes, any queries related to academics, accommodation, travel, or cultural adjustment are included.</p>
+        </div>
       </section>
 
-      {/* Closing Statement */}
-      <section className="communication-closing">
-        <p>
-          “Stay informed, supported, and confident throughout your international education journey.
-          Connect with us anytime — we are with you every step of the way!”
-        </p>
+      <hr />
+
+      {/* ================= Callout ================= */}
+      <section className="communication-callout">
+        <blockquote>
+          “Stay informed, supported, and confident throughout your international education journey. Connect with us anytime — we are with you every step of the way!”
+        </blockquote>
       </section>
     </div>
   );

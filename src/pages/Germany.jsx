@@ -138,14 +138,14 @@ function Germany() {
       </section>
 
       {/* ✅ Equipment & Infrastructure */}
-      <section className="germany-equipment">
+      {/* <section className="germany-equipment">
         <h2>Our Equipment & Infrastructure</h2>
         <p>
           German universities offer cutting-edge laboratories, technical workshops,
           research centers, and collaborations with major global industries like BMW,
           Bosch, and Siemens.
         </p>
-      </section>
+      </section> */}
 
       {/* ✅ Cost of Study & Scholarships */}
       <section className="germany-cost" style={{ maxWidth: "1100px", margin: "60px auto", padding: "0 20px" }}>
@@ -178,14 +178,41 @@ function Germany() {
       </section>
 
       {/* ✅ Career Prospects */}
-      <section >
-        <h2>Career Prospects in Germany</h2>
-        <p>
-          Germany offers strong opportunities in Engineering, IT, Automotive, Research, and Healthcare.
-          Students can work part-time and apply for an 18-month residence permit after graduation,
-          with conversion to EU Blue Card possible upon qualifying employment.
-        </p>
-      </section>
+     <section
+  style={{
+    maxWidth: "900px",
+    margin: "40px auto",
+    padding: "25px 30px",
+    background: "#ffffff",
+    borderRadius: "16px",
+    boxShadow: "0 6px 18px rgba(0, 0, 0, 0.12)",
+    textAlign: "center",
+  }}
+>
+  <h2
+    style={{
+      fontSize: "1.8rem",
+      marginBottom: "15px",
+      color: "#003566",
+      fontWeight: "700",
+    }}
+  >
+    Career Prospects in Germany
+  </h2>
+  <p
+    style={{
+      fontSize: "1rem",
+      lineHeight: "1.6",
+      color: "#333",
+      margin: "0",
+    }}
+  >
+    Germany offers strong opportunities in Engineering, IT, Automotive, Research, and Healthcare.
+    Students can work part-time and apply for an 18-month residence permit after graduation,
+    with conversion to EU Blue Card possible upon qualifying employment.
+  </p>
+</section>
+
 
       {/* ✅ Documents & Visa */}
       <section className="germany-documents" >
@@ -209,7 +236,7 @@ function Germany() {
 
 
 
-      <EnrollSection country="Germany" />
+      
 
       {/* ✅ FAQs */}
       <section className="germany-faq">
@@ -234,10 +261,59 @@ function Germany() {
           <h4>How long can I stay after graduation?</h4>
           <p>Up to 18 months on a job-search permit; then you may convert to EU Blue Card.</p>
         </div>
-        <section className="malta-summary">
+        {/* <EnrollSection country="Germany" /> */}
+       <section
+  style={{
+    maxWidth: "900px",
+    margin: "40px auto",
+    padding: "25px 30px",
+    background: "#ffffff",
+    borderRadius: "16px",
+    boxShadow: "0 6px 18px rgba(0, 0, 0, 0.12)",
+    textAlign: "center",
+    fontFamily: '"Segoe UI", Tahoma, sans-serif',
+    color: "#333",
+    lineHeight: 1.6,
+  }}
+>
+  <h2
+    style={{
+      fontSize: "1.8rem",
+      marginBottom: "15px",
+      color: "#003566",
+      fontWeight: "700",
+    }}
+  >
+    Plan a tuition-free or low-tuition German degree
+  </h2>
+  <p
+    style={{
+      fontSize: "1rem",
+      margin: "0 0 20px 0",
+    }}
+  >
+    Get a personalized shortlist, funding plan, and visa file—start with a free counseling session today.
+  </p>
+  <button
+    onClick={() => (window.location.href = "/contact")}
+    style={{
+      padding: "12px 24px",
+      fontSize: "1rem",
+      fontWeight: "600",
+      color: "#fff",
+      background: "#003566",
+      border: "none",
+      borderRadius: "8px",
+      cursor: "pointer",
+      transition: "background 0.3s ease",
+    }}
+    onMouseOver={(e) => (e.currentTarget.style.background = "#002244")}
+    onMouseOut={(e) => (e.currentTarget.style.background = "#003566")}
+  >
+    Apply Now
+  </button>
+</section>
 
-        <p>“Plan a tuition-free (or low-tuition) German degree with strong career outcomes. Get a personalized shortlist, funding plan, and visa file—start with a free counseling session today.”</p>
-      </section>
       </section>
     </div>
   );
