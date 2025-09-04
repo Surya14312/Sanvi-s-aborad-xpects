@@ -91,21 +91,35 @@ function Lithuania() {
   <h2>Popular Courses in Lithuania</h2>
   <div className="course-grid">
     {[
-      { name: "Computer Science", img: "/assets/lithuania/courses/computer-science.jpg" },
-      { name: "Data Science", img: "/assets/lithuania/courses/data-science.jpg" },
-      { name: "Engineering (Mechanical, Electrical, Civil)", img: "/assets/lithuania/courses/engineering.jpg" },
-      { name: "Law and International Relations", img: "/assets/lithuania/courses/law.jpg" },
-      { name: "Business Administration and Management", img: "/assets/lithuania/courses/business.jpg" },
-      { name: "Finance and Economics", img: "/assets/lithuania/courses/finance.jpg" },
-      { name: "Life Sciences and Biotechnology", img: "/assets/lithuania/courses/biotech.jpg" },
-      { name: "Arts, Design, and Communication", img: "/assets/lithuania/courses/arts.jpg" },
-      { name: "Hospitality and Tourism Management", img: "/assets/lithuania/courses/hospitality.jpg" },
+     { name: "Computer Science", img: "/assets/lithuania/courses/computer-science.jpg" },
+{ name: "Data Science", img: "/assets/lithuania/courses/data-science.jpg" },
+{ name: "Mechanical Engineering", img: "/assets/lithuania/courses/mechanical.jpg" },
+{ name: "Electrical Engineering", img: "/assets/lithuania/courses/electrical.jpg" },
+{ name: "Civil Engineering", img: "/assets/lithuania/courses/civil.jpg" },
+{ name: "Law", img: "/assets/lithuania/courses/law.jpg" },
+{ name: "International Relations", img: "/assets/lithuania/courses/international-relations.jpg" },
+{ name: "Business Administration Management", img: "/assets/lithuania/courses/business-administration.jpg" },
+// { name: "", img: "/assets/lithuania/courses/management.jpg" },
+{ name: "Finance", img: "/assets/lithuania/courses/finance.jpg" },
+{ name: "Economics", img: "/assets/lithuania/courses/economics.jpg" },
+{ name: "Life Sciences", img: "/assets/lithuania/courses/life-sciences.jpg" },
+{ name: "Biotechnology", img: "/assets/lithuania/courses/biotechnology.jpg" },
+{ name: "Arts", img: "/assets/lithuania/courses/arts.jpg" },
+{ name: "Design", img: "/assets/lithuania/courses/design.jpg" },
+{ name: "Communication", img: "/assets/lithuania/courses/communication.jpg" },
+{ name: "Hospitality Management", img: "/assets/lithuania/courses/hospitality.jpg" },
+{ name: "Tourism Management", img: "/assets/lithuania/courses/tourism.jpg" },
+
     ].map((course, i) => (
-      <div className="course-card" key={i}>
-        <img src={course.img} alt={course.name} />
-        <p>{course.name}</p>
-      </div>
-    ))}
+              <Link
+                to={`/courses/Lithuania/${course.name.toLowerCase().replace(/\s+/g, " ").trim()}`}
+                key={i}
+                className="course-card"
+              >
+                <img src={course.img} alt={course.name} />
+                <p>{course.name}</p>
+              </Link>
+            ))}
   </div>
 </section>
 

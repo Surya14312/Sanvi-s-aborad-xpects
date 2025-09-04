@@ -83,18 +83,33 @@ function Italy() {
   <h2>Popular Courses in Italy</h2>
   <div className="course-grid">
     {[
-      { name: "Engineering (Mechanical, Civil, Computer, Automotive)", img: "/assets/italy/courses/course-1.jpg" },
-      { name: "Architecture & Design", img: "/assets/italy/courses/course-2.jpg" },
-      { name: "Fashion & Arts", img: "/assets/italy/courses/course-3.jpg" },
-      { name: "Business & Management (MBA, International Business)", img: "/assets/italy/courses/course-4.jpg" },
-      { name: "Medicine & Health Sciences", img: "/assets/italy/courses/course-5.jpg" },
-      { name: "Humanities and Social Sciences", img: "/assets/italy/courses/course-6.jpg" },
+     { name: "Mechanical Engineering", img: "/assets/italy/courses/mechanical.jpg" },
+{ name: "Civil Engineering", img: "/assets/italy/courses/civil.jpg" },
+{ name: "Computer Engineering", img: "/assets/italy/courses/computer.jpg" },
+{ name: "Automotive Engineering", img: "/assets/italy/courses/automotive.jpg" },
+{ name: "Architecture", img: "/assets/italy/courses/architecture.jpg" },
+{ name: "Design", img: "/assets/italy/courses/design.jpg" },
+{ name: "Fashion", img: "/assets/italy/courses/fashion.jpg" },
+{ name: "Arts", img: "/assets/italy/courses/arts.jpg" },
+{ name: "Business & Management", img: "/assets/italy/courses/business-administration.jpg" },
+// { name: "Management", img: "/assets/italy/courses/management.jpg" },
+{ name: "MBA", img: "/assets/italy/courses/mba.jpg" },
+{ name: "International Business", img: "/assets/italy/courses/international-business.jpg" },
+{ name: "Medicine & Health ", img: "/assets/italy/courses/medicine.jpg" },
+// { name: "Sciences", img: "/assets/italy/courses/health-sciences.jpg" },
+{ name: "Humanities", img: "/assets/italy/courses/humanities.jpg" },
+{ name: "Social Sciences", img: "/assets/italy/courses/social-sciences.jpg" },
+
     ].map((course, i) => (
-      <div className="course-card" key={i}>
-        <img src={course.img} alt={course.name} />
-        <p>{course.name}</p>
-      </div>
-    ))}
+              <Link
+                to={`/courses/Italy/${course.name.toLowerCase().replace(/\s+/g, " ").trim()}`}
+                key={i}
+                className="course-card"
+              >
+                <img src={course.img} alt={course.name} />
+                <p>{course.name}</p>
+              </Link>
+            ))}
   </div>
 </section>
 

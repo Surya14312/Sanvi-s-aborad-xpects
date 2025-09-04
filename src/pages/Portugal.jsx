@@ -99,20 +99,36 @@ function Portugal() {
         <h2>Popular Courses in Portugal</h2>
         <div className="course-grid">
           {[
-            { name: "Business Administration and Management", img: "/assets/portugal/courses/business.jpg" },
-            { name: "Computer Science and Data Science", img: "/assets/portugal/courses/computer.jpg" },
-            { name: "Engineering (Civil, Mechanical, Electrical, Software)", img: "/assets/portugal/courses/engineering.jpg" },
-            { name: "Hospitality and Tourism Management", img: "/assets/portugal/courses/hospitality.jpg" },
-            { name: "Finance and Accounting", img: "/assets/portugal/courses/finance.jpg" },
-            { name: "Arts, Design, and Architecture", img: "/assets/portugal/courses/arts.jpg" },
-            { name: "International Relations and Political Science", img: "/assets/portugal/courses/politics.jpg" },
-            { name: "Life Sciences and Biotechnology", img: "/assets/portugal/courses/biotech.jpg" },
+           { name: "Business & Management", img: "/assets/portugal/courses/business-administration.jpg" },
+// { name: "Management", img: "/assets/portugal/courses/management.jpg" },
+{ name: "Computer Science", img: "/assets/portugal/courses/computer-science.jpg" },
+{ name: "Data Science", img: "/assets/portugal/courses/data-science.jpg" },
+{ name: "Civil Engineering", img: "/assets/portugal/courses/civil.jpg" },
+{ name: "Mechanical Engineering", img: "/assets/portugal/courses/mechanical.jpg" },
+{ name: "Electrical Engineering", img: "/assets/portugal/courses/electrical.jpg" },
+{ name: "IT", img: "/assets/portugal/courses/software.jpg" },
+{ name: "Hospitality Management", img: "/assets/portugal/courses/hospitality.jpg" },
+{ name: "Tourism Management", img: "/assets/portugal/courses/tourism.jpg" },
+{ name: "Finance", img: "/assets/portugal/courses/finance.jpg" },
+{ name: "Accounting", img: "/assets/portugal/courses/accounting.jpg" },
+{ name: "Arts", img: "/assets/portugal/courses/arts.jpg" },
+{ name: "Design", img: "/assets/portugal/courses/design.jpg" },
+{ name: "Architecture", img: "/assets/portugal/courses/architecture.jpg" },
+{ name: "International Relations", img: "/assets/portugal/courses/international-relations.jpg" },
+{ name: "Political Science", img: "/assets/portugal/courses/political-science.jpg" },
+{ name: "Life Sciences", img: "/assets/portugal/courses/life-sciences.jpg" },
+{ name: "Biotechnology", img: "/assets/portugal/courses/biotechnology.jpg" },
+
           ].map((course, i) => (
-            <div className="course-card" key={i}>
-              <img src={course.img} alt={course.name} />
-              <p>{course.name}</p>
-            </div>
-          ))}
+                    <Link
+                      to={`/courses/Portugal/${course.name.toLowerCase().replace(/\s+/g, " ").trim()}`}
+                      key={i}
+                      className="course-card"
+                    >
+                      <img src={course.img} alt={course.name} />
+                      <p>{course.name}</p>
+                    </Link>
+                  ))}
         </div>
       </section>
 

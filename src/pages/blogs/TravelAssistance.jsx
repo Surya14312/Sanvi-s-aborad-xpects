@@ -1,5 +1,6 @@
 // src/pages/TravelAssistance.jsx
 import React from "react";
+import { Link } from "react-router-dom";
 
 const TravelAssistance = () => {
   return (
@@ -80,6 +81,26 @@ const TravelAssistance = () => {
         <blockquote>
           “Traveling abroad shouldn’t be stressful. Let us guide you from booking flights to settling safely at your university — ensuring your journey begins on the right note.”
         </blockquote>
+         <div style={{ textAlign: "center", marginTop: "25px" }}>
+        <Link to="/contact">
+          <button
+            style={{
+              backgroundColor: "#f95738",
+              color: "#fff",
+              border: "none",
+              padding: "12px 28px",
+              borderRadius: "8px",
+              fontSize: "1rem",
+              cursor: "pointer",
+              transition: "0.3s",
+            }}
+            onMouseOver={(e) => (e.currentTarget.style.backgroundColor = "#e04325")}
+            onMouseOut={(e) => (e.currentTarget.style.backgroundColor = "#f95738")}
+          >
+            Apply Now
+          </button>
+        </Link>
+      </div>
       </section>
     </div>
   );

@@ -93,20 +93,35 @@ function France() {
   <h2>Popular Courses in France</h2>
   <div className="course-grid">
     {[
-      { name: "Business & Management", img: "/assets/france/courses/c1.jpg" },
-      { name: "Engineering (Aerospace, Civil, Mechanical, IT)", img: "/assets/france/courses/c2.jpg" },
-      { name: "Fashion & Luxury Brand Management", img: "/assets/france/courses/c3.jpg" },
-      { name: "Culinary Arts & Hospitality", img: "/assets/france/courses/c4.jpg" },
-      { name: "International Relations & Political Science", img: "/assets/france/courses/c5.jpg" },
-      { name: "Data Science & Artificial Intelligence", img: "/assets/france/courses/c6.jpg" },
-      { name: "Environmental Studies & Sustainability", img: "/assets/france/courses/c7.jpg" },
-      { name: "Medicine & Healthcare", img: "/assets/france/courses/c8.jpg" },
+      { name: "Business & Management", img: "/assets/france/courses/business.jpg" },
+// { name: "Management", img: "/assets/france/courses/management.jpg" },
+{ name: "Aerospace Engineering", img: "/assets/france/courses/aerospace.jpg" },
+{ name: "Civil Engineering", img: "/assets/france/courses/civil.jpg" },
+{ name: "Mechanical Engineering", img: "/assets/france/courses/mechanical.jpg" },
+{ name: "IT Engineering", img: "/assets/france/courses/it.jpg" },
+{ name: "Fashion", img: "/assets/france/courses/fashion.jpg" },
+{ name: "Luxury Brand Management", img: "/assets/france/courses/luxury-brand.jpg" },
+{ name: "Culinary Arts", img: "/assets/france/courses/culinary.jpg" },
+{ name: "Hospitality", img: "/assets/france/courses/hospitality.jpg" },
+{ name: "International Relations", img: "/assets/france/courses/international-relations.jpg" },
+{ name: "Political Science", img: "/assets/france/courses/political-science.jpg" },
+{ name: "Data Science", img: "/assets/france/courses/data-science.jpg" },
+{ name: "Artificial Intelligence", img: "/assets/france/courses/ai.jpg" },
+{ name: "Environmental Studies", img: "/assets/france/courses/environmental-studies.jpg" },
+{ name: "Sustainability", img: "/assets/france/courses/sustainability.jpg" },
+{ name: "Medicine & Healthcare", img: "/assets/france/courses/medicine.jpg" },
+
+
     ].map((course, i) => (
-      <div className="course-card" key={i}>
-        <img src={course.img} alt={course.name} />
-        <p>{course.name}</p>
-      </div>
-    ))}
+              <Link
+                to={`/courses/France/${course.name.toLowerCase().replace(/\s+/g, " ").trim()}`}
+                key={i}
+                className="course-card"
+              >
+                <img src={course.img} alt={course.name} />
+                <p>{course.name}</p>
+              </Link>
+            ))}
   </div>
 </section>
 

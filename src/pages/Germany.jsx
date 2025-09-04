@@ -122,18 +122,40 @@ function Germany() {
         <h2>Popular Courses in Germany</h2>
         <div className="course-grid">
           {[
-            { name: "Engineering: Mechanical, Automotive, Electrical, Civil, Aerospace", img: "/assets/germany/courses/engineering.jpg" },
-            { name: "Computer & Data: CS, AI/ML, Data Science, Cybersecurity", img: "/assets/germany/courses/computer.jpg" },
-            { name: "Business & Analytics: MBA, Management, Supply Chain", img: "/assets/germany/courses/business.jpg" },
-            { name: "Energy & Sustainability: Renewable Energy, Environmental Engineering", img: "/assets/germany/courses/renewable.jpg" },
-            { name: "Design & Architecture", img: "/assets/germany/courses/design.jpg" },
-            { name: "Biotech/Pharma, Mathematics/Statistics", img: "/assets/germany/courses/biotech.jpg" },
+            { name: "Mechanical Engineering", img: "/assets/germany/courses/mechanical.jpg" },
+{ name: "Automotive Engineering", img: "/assets/germany/courses/automotive.jpg" },
+{ name: "Electrical Engineering", img: "/assets/germany/courses/electrical.jpg" },
+{ name: "Civil Engineering", img: "/assets/germany/courses/civil.jpg" },
+{ name: "Aerospace Engineering", img: "/assets/germany/courses/aerospace.jpg" },
+{ name: "Computer Science", img: "/assets/germany/courses/computer-science.jpg" },
+{ name: "Machine Learning", img: "/assets/germany/courses/ml.jpg" },
+{ name: "AI", img: "/assets/germany/courses/ai.jpg" },
+
+{ name: "Data Science", img: "/assets/germany/courses/data-science.jpg" },
+{ name: "Cybersecurity", img: "/assets/germany/courses/cybersecurity.jpg" },
+{ name: "Business Administration", img: "/assets/germany/courses/business-administration.jpg" },
+// { name: "Management", img: "/assets/germany/courses/management.jpg" },
+{ name: "MBA", img: "/assets/germany/courses/mba.jpg" },
+{ name: "Supply Chain", img: "/assets/germany/courses/supply-chain.jpg" },
+{ name: "Renewable Energy", img: "/assets/germany/courses/renewable-energy.jpg" },
+{ name: "Environmental Engineering", img: "/assets/germany/courses/environmental-engineering.jpg" },
+{ name: "Design", img: "/assets/germany/courses/design.jpg" },
+{ name: "Architecture", img: "/assets/germany/courses/architecture.jpg" },
+{ name: "Biotechnology", img: "/assets/germany/courses/biotechnology.jpg" },
+{ name: "Pharmaceuticals", img: "/assets/germany/courses/pharmaceuticals.jpg" },
+{ name: "Mathematics", img: "/assets/germany/courses/mathematics.jpg" },
+// { name: "Statistics", img: "/assets/germany/courses/statistics.jpg" },
+
           ].map((course, i) => (
-            <div className="course-card" key={i}>
-              <img src={course.img} alt={course.name} />
-              <p>{course.name}</p>
-            </div>
-          ))}
+                    <Link
+                      to={`/courses/Germany/${course.name.toLowerCase().replace(/\s+/g, " ").trim()}`}
+                      key={i}
+                      className="course-card"
+                    >
+                      <img src={course.img} alt={course.name} />
+                      <p>{course.name}</p>
+                    </Link>
+                  ))}
         </div>
       </section>
 

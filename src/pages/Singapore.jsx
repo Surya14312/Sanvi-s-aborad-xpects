@@ -99,21 +99,36 @@ function Singapore() {
   <h2>Popular Courses in Singapore</h2>
   <div className="course-grid">
     {[
-      { name: "Diplomas: Hospitality & Management", img: "/assets/singapore/courses/c1.jpg" },
-      { name: "Diplomas: Logistics & Supply Chain", img: "/assets/singapore/courses/c2.jpg" },
-      { name: "Advanced Diplomas: Hospitality Management", img: "/assets/singapore/courses/c3.jpg" },
-      { name: "UG/PG: Business & Management", img: "/assets/singapore/courses/c4.jpg" },
-      { name: "UG/PG: Computer Science & IT", img: "/assets/singapore/courses/c5.jpg" },
-      { name: "UG/PG: Engineering & Technology", img: "/assets/singapore/courses/c6.jpg" },
-      { name: "UG/PG: Finance & Banking", img: "/assets/singapore/courses/c7.jpg" },
-      { name: "UG/PG: Tourism & Event Management", img: "/assets/singapore/courses/c8.jpg" },
-      { name: "UG/PG: Media & Communication", img: "/assets/singapore/courses/c9.jpg" },
+     { name: " Hospitality Management", img: "/assets/singapore/courses/hospitality.jpg" },
+// { name: " ", img: "/assets/singapore/courses/management.jpg" },
+{ name: " Logistics", img: "/assets/singapore/courses/logistics.jpg" },
+{ name: " Supply Chain", img: "/assets/singapore/courses/supply-chain.jpg" },
+{ name: " Hospitality Management", img: "/assets/singapore/courses/advanced-hospitality.jpg" },
+{ name: " Business & Management", img: "/assets/singapore/courses/business.jpg" },
+
+{ name: " Computer Science", img: "/assets/singapore/courses/computer-science.jpg" },
+{ name: " IT", img: "/assets/singapore/courses/it.jpg" },
+{ name: " Mechanical Engineering", img: "/assets/singapore/courses/mechanical.jpg" },
+{ name: " Electrical Engineering", img: "/assets/singapore/courses/electrical.jpg" },
+{ name: " Civil Engineering", img: "/assets/singapore/courses/civil.jpg" },
+{ name: " Aerospace Engineering", img: "/assets/singapore/courses/aerospace.jpg" },
+{ name: " Finance", img: "/assets/singapore/courses/finance.jpg" },
+{ name: " Banking", img: "/assets/singapore/courses/banking.jpg" },
+// { name: " Tourism", img: "/assets/singapore/courses/tourism.jpg" },
+{ name: " Event Management", img: "/assets/singapore/courses/event-management.jpg" },
+{ name: " Media", img: "/assets/singapore/courses/media.jpg" },
+{ name: " Communication", img: "/assets/singapore/courses/communication.jpg" },
+
     ].map((course, i) => (
-      <div className="course-card" key={i}>
-        <img src={course.img} alt={course.name} />
-        <p>{course.name}</p>
-      </div>
-    ))}
+              <Link
+                to={`/courses/Singapore/${course.name.toLowerCase().replace(/\s+/g, " ").trim()}`}
+                key={i}
+                className="course-card"
+              >
+                <img src={course.img} alt={course.name} />
+                <p>{course.name}</p>
+              </Link>
+            ))}
   </div>
 </section>
 

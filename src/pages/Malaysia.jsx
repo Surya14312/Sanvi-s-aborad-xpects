@@ -92,18 +92,30 @@ function Malaysia() {
         <h2>Popular Courses in Malaysia</h2>
         <div className="course-grid">
           {[
-            { name: "Business & Accounting", img: "/assets/malaysia/courses/business.jpg" },
-            { name: "Engineering & Technology", img: "/assets/malaysia/courses/engineering.jpg" },
-            { name: "Computer Science & IT", img: "/assets/malaysia/courses/computer-science.jpg" },
-            { name: "Hospitality & Tourism", img: "/assets/malaysia/courses/hospitality.jpg" },
-            { name: "Medicine & Health Sciences", img: "/assets/malaysia/courses/medicine.jpg" },
-            { name: "Mass Communication", img: "/assets/malaysia/courses/communication.jpg" },
+            { name: "Business", img: "/assets/malaysia/courses/business.jpg" },
+{ name: "Accounting", img: "/assets/malaysia/courses/accounting.jpg" },
+{ name: "Mechanical Engineering", img: "/assets/malaysia/courses/mechanical.jpg" },
+{ name: "Civil Engineering", img: "/assets/malaysia/courses/civil.jpg" },
+{ name: "Electrical Engineering", img: "/assets/malaysia/courses/electrical.jpg" },
+{ name: "Software/IT Engineering", img: "/assets/malaysia/courses/software.jpg" },
+{ name: "Computer Science", img: "/assets/malaysia/courses/computer-science.jpg" },
+{ name: "IT", img: "/assets/malaysia/courses/it.jpg" },
+{ name: "Hospitality", img: "/assets/malaysia/courses/hospitality.jpg" },
+{ name: "Tourism", img: "/assets/malaysia/courses/tourism.jpg" },
+{ name: "Medicine", img: "/assets/malaysia/courses/medicine.jpg" },
+{ name: "Health Sciences", img: "/assets/malaysia/courses/health-sciences.jpg" },
+{ name: "Mass Communication", img: "/assets/malaysia/courses/communication.jpg" },
+
           ].map((course, i) => (
-            <div className="course-card" key={i}>
-              <img src={course.img} alt={course.name} />
-              <p>{course.name}</p>
-            </div>
-          ))}
+                    <Link
+                      to={`/courses/Malaysia/${course.name.toLowerCase().replace(/\s+/g, " ").trim()}`}
+                      key={i}
+                      className="course-card"
+                    >
+                      <img src={course.img} alt={course.name} />
+                      <p>{course.name}</p>
+                    </Link>
+                  ))}
         </div>
       </section>
 

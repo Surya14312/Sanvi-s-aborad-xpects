@@ -112,20 +112,35 @@ function Ireland() {
         <h2>Popular Courses in Ireland</h2>
         <div className="course-grid">
           {[
-            { name: "Business Administration & Management", img: "/assets/ireland/courses/c1.jpg" },
-            { name: "Computer Science & Data Science", img: "/assets/ireland/courses/c2.jpg" },
-            { name: "Engineering (Mechanical, Electrical, Civil)", img: "/assets/ireland/courses/c3.jpg" },
-            { name: "Life Sciences, Biotechnology & Pharmaceuticals", img: "/assets/ireland/courses/c4.jpg" },
-            { name: "Finance & Accounting", img: "/assets/ireland/courses/c5.jpg" },
-            { name: "Hospitality & Tourism Management", img: "/assets/ireland/courses/c6.jpg" },
-            { name: "Artificial Intelligence & Robotics", img: "/assets/ireland/courses/c7.jpg" },
-            { name: "Medicine & Healthcare", img: "/assets/ireland/courses/c8.jpg" },
+           { name: "Business Administration", img: "/assets/ireland/courses/business-administration.jpg" },
+// { name: "Management", img: "/assets/ireland/courses/management.jpg" },
+{ name: "Computer Science", img: "/assets/ireland/courses/computer-science.jpg" },
+{ name: "Data Science", img: "/assets/ireland/courses/data-science.jpg" },
+{ name: "Mechanical Engineering", img: "/assets/ireland/courses/mechanical.jpg" },
+{ name: "Electrical Engineering", img: "/assets/ireland/courses/electrical.jpg" },
+{ name: "Civil Engineering", img: "/assets/ireland/courses/civil.jpg" },
+{ name: "Life Sciences", img: "/assets/ireland/courses/life-sciences.jpg" },
+{ name: "Biotechnology", img: "/assets/ireland/courses/biotechnology.jpg" },
+{ name: "Pharmaceuticals", img: "/assets/ireland/courses/pharmaceuticals.jpg" },
+{ name: "Finance", img: "/assets/ireland/courses/finance.jpg" },
+{ name: "Accounting", img: "/assets/ireland/courses/accounting.jpg" },
+{ name: "Hospitality Management", img: "/assets/ireland/courses/hospitality.jpg" },
+{ name: "Tourism Management", img: "/assets/ireland/courses/tourism.jpg" },
+{ name: "Artificial Intelligence", img: "/assets/ireland/courses/ai.jpg" },
+{ name: "Robotics", img: "/assets/ireland/courses/robotics.jpg" },
+{ name: "Medicine", img: "/assets/ireland/courses/medicine.jpg" },
+{ name: "Healthcare", img: "/assets/ireland/courses/healthcare.jpg" },
+
           ].map((course, i) => (
-            <div className="course-card" key={i}>
-              <img src={course.img} alt={course.name} />
-              <p>{course.name}</p>
-            </div>
-          ))}
+                    <Link
+                      to={`/courses/Ireland/${course.name.toLowerCase().replace(/\s+/g, " ").trim()}`}
+                      key={i}
+                      className="course-card"
+                    >
+                      <img src={course.img} alt={course.name} />
+                      <p>{course.name}</p>
+                    </Link>
+                  ))}
         </div>
       </section>
 

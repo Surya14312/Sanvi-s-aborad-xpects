@@ -12,7 +12,7 @@ function GreGmat() {
 
       <div className="gre-gmat-intro">
         <img
-          src="/assets/gmat-banner.jpg"
+          src="/assets/gre-gmat-banner.jpg"
           alt="GRE/GMAT Banner"
           className="test-hero-img"
           style={{

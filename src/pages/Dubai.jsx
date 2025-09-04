@@ -118,20 +118,34 @@ function Dubai() {
   <h2>Popular Courses in Dubai</h2>
   <div className="course-grid">
     {[
-      { name: "Business & Management", img: "/assets/dubai/courses/c1.jpg" },
-      { name: "Computer Science & IT", img: "/assets/dubai/courses/c2.jpg" },
-      { name: "Engineering (Civil, Mechanical, Electrical)", img: "/assets/dubai/courses/c3.jpg" },
-      { name: "Architecture & Design", img: "/assets/dubai/courses/c4.jpg" },
-      { name: "International Business & Finance", img: "/assets/dubai/courses/c5.jpg" },
-      { name: "Media & Communication", img: "/assets/dubai/courses/c6.jpg" },
-      { name: "Hospitality & Tourism", img: "/assets/dubai/courses/c7.jpg" },
-      { name: "Health Sciences & Nursing", img: "/assets/dubai/courses/c8.jpg" },
+      { name: "Business & Management", img: "/assets/dubai/courses/business.jpg" },
+
+{ name: "Computer Science", img: "/assets/dubai/courses/computer-science.jpg" },
+{ name: "IT", img: "/assets/dubai/courses/it.jpg" },
+{ name: "Civil Engineering", img: "/assets/dubai/courses/civil.jpg" },
+{ name: "Mechanical Engineering", img: "/assets/dubai/courses/mechanical.jpg" },
+{ name: "Electrical Engineering", img: "/assets/dubai/courses/electrical.jpg" },
+{ name: "Architecture", img: "/assets/dubai/courses/architecture.jpg" },
+{ name: "Design", img: "/assets/dubai/courses/design.jpg" },
+{ name: "International Business", img: "/assets/dubai/courses/international-business.jpg" },
+{ name: "Finance", img: "/assets/dubai/courses/finance.jpg" },
+{ name: "Media", img: "/assets/dubai/courses/media.jpg" },
+{ name: "Communication", img: "/assets/dubai/courses/communication.jpg" },
+{ name: "Hospitality", img: "/assets/dubai/courses/hospitality.jpg" },
+{ name: "Tourism Management", img: "/assets/dubai/courses/tourism.jpg" },
+{ name: "Health Sciences", img: "/assets/dubai/courses/health-sciences.jpg" },
+{ name: "Nursing", img: "/assets/dubai/courses/nursing.jpg" },
+
     ].map((course, i) => (
-      <div className="course-card" key={i}>
-        <img src={course.img} alt={course.name} />
-        <p>{course.name}</p>
-      </div>
-    ))}
+              <Link
+                to={`/courses/Dubai/${course.name.toLowerCase().replace(/\s+/g, " ").trim()}`}
+                key={i}
+                className="course-card"
+              >
+                <img src={course.img} alt={course.name} />
+                <p>{course.name}</p>
+              </Link>
+            ))}
   </div>
 </section>
 

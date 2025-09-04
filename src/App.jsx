@@ -44,7 +44,7 @@ import USAPage from "./pages/USA";
 import MaltaPage from "./pages/Malta";
 import LithuaniaPage from "./pages/Lithuania";
 
-// MBBS Specific Pages
+// MBBS Pages
 import ChinaMBBS from "./pages/ChinaMBBS";
 import GeorgiaMBBS from "./pages/GeorgiaMBBS";
 import PhilippinesMBBS from "./pages/PhilippinesMBBS";
@@ -53,7 +53,7 @@ import BelarusMBBS from "./pages/BelarusMBBS";
 
 // Blogs & Insights
 import TrendingBlogs from "./components/TrendingBlogs";
-import BlogDetail from "./pages/blog/BlogDetail";
+import BlogDetail from "./pages/blog/BlogDetail"; // Make sure this file exists
 
 // Blog Static Pages
 import AffordableCountries from "./pages/blog/AffordableCountries";
@@ -68,15 +68,11 @@ import CommonApplicationMistakes from "./pages/blog/CommonApplicationMistakes";
 import CompareEducation from "./pages/blog/CompareEducation";
 import EnglishTaught from "./pages/blog/EnglishTaught";
 import ManagingFinances from "./pages/blog/ManagingFinances";
-import Budgeting from "./pages/blog/Budgeting";
+import CountrySelectionGuide from "./pages/blog/CountrySelectionGuide.jsx";
+import BudgetingTip from "./pages/blog/BudgetingTips.jsx";
 import PopularCourses2025 from "./pages/blog/PopularCourses2025";
-import ChooseCountry from "./pages/blog/ChooseCountry";
 
-// Special Programs
-import SpecialPathwayPrograms from "./pages/SpecialPathwayPrograms";
-import ProgramDetails from "./pages/ProgramDetails";
-
-// Blog & Services Pages
+// Services & Blogs Pages
 import AdmissionGuidance from "./pages/blogs/AdmissionGuidance";
 import CareerCounseling from "./pages/blogs/CareerCounseling";
 import CourseSelection from "./pages/blogs/CourseSelection";
@@ -86,11 +82,13 @@ import FinancialAssistance from "./pages/blogs/FinancialAssistance";
 import TravelAssistance from "./pages/blogs/TravelAssistance";
 import PostArrivalSupport from "./pages/blogs/PostArrivalSupport";
 import CountrySelection from "./pages/blogs/CountrySelection";
-import PreDepartureOrientation from "./pages/blogs/PreDepartureOrientation";
-import ContinuousCommunication from "./pages/blogs/ContinuousCommunication";
 import UniversitySelection from "./pages/UniversitySelection";
 import ScholarshipAssistanceForm from "./pages/ScholarshipAssistanceForm";
 import VisaAssistance from "./pages/VisaAssistance";
+import PreDepartureOrientation from "./pages/blogs/PreDepartureOrientation";
+import ContinuousCommunication from "./pages/blogs/ContinuousCommunication";
+
+// Test Preparation
 import TestPreparation from "./pages/TestPreparation";
 import IELTS from "./pages/IELTS";
 import TOEFL from "./pages/TOEFL";
@@ -98,8 +96,16 @@ import PTE from "./pages/PTE";
 import GRE from "./pages/GRE";
 import SAT from "./pages/SAT";
 import Duolingo from "./pages/Duolingo";
+
+// Language Courses
 import French from "./pages/French";
 import German from "./pages/German";
+
+// Special Programs
+import SpecialPathwayPrograms from "./pages/SpecialPathwayPrograms";
+import ProgramDetails from "./pages/ProgramDetails";
+
+// What We Do & Services
 import WhatWeDo from "./pages/WhatWeDo";
 import WorkWithUs from "./pages/WorkWithUs";
 import Events from "./pages/Events";
@@ -117,7 +123,7 @@ function App() {
         {/* Destinations */}
         <Route path="/destinations" element={<Destinations />} />
 
-        {/* Study Abroad Pages */}
+        {/* Study Abroad */}
         <Route path="/study-in/uk" element={<UKPage />} />
         <Route path="/study-in/canada" element={<CanadaPage />} />
         <Route path="/study-in/singapore" element={<SingaporePage />} />
@@ -129,11 +135,9 @@ function App() {
         <Route path="/study-in/spain" element={<SpainPage />} />
         <Route path="/study-in/malaysia" element={<MalaysiaPage />} />
         <Route path="/study-in/mauritius" element={<MauritiusPage />} />
-        <Route path="/study-in/newzeland" element={<NewZealandPage />} />
+        <Route path="/study-in/newzealand" element={<NewZealandPage />} />
         <Route path="/study-in/netherlands" element={<NetherlandsPage />} />
         <Route path="/study-in/italy" element={<ItalyPage />} />
-
-        {/* New Countries */}
         <Route path="/study-in/poland" element={<PolandPage />} />
         <Route path="/study-in/portugal" element={<PortugalPage />} />
         <Route path="/study-in/usa" element={<USAPage />} />
@@ -147,11 +151,9 @@ function App() {
         <Route path="/mbbs/vietnam" element={<VietnamMBBS />} />
         <Route path="/mbbs/belarus" element={<BelarusMBBS />} />
 
-        {/* Trending Blogs */}
+        {/* Blogs */}
         <Route path="/trending-blogs" element={<TrendingBlogs />} />
-        <Route path="/blog/:slug" element={<BlogDetail />} />
-
-        {/* Static Blog Pages */}
+        <Route path="/country-selection" element={<CountrySelectionGuide />} />
         <Route path="/blog/affordable-countries" element={<AffordableCountries />} />
         <Route path="/blog/best-countries" element={<BestCountriesStudies />} />
         <Route path="/blog/mbbs-abroad" element={<MBBSAbroad />} />
@@ -164,11 +166,11 @@ function App() {
         <Route path="/blog/compare-systems" element={<CompareEducation />} />
         <Route path="/blog/english-programs" element={<EnglishTaught />} />
         <Route path="/blog/managing-finances" element={<ManagingFinances />} />
-        <Route path="/blog/budgeting" element={<Budgeting />} />
+        <Route path="/country-selection-guide" element={<CountrySelectionGuide />} />
+        <Route path="/budgeting-tip" element={<BudgetingTip />} />
         <Route path="/blog/popular-courses-2025" element={<PopularCourses2025 />} />
-        <Route path="/blog/choose-country" element={<ChooseCountry />} />
 
-        {/* Services & Other Blogs */}
+        {/* Services & Forms */}
         <Route path="/blog/admission-guidance" element={<AdmissionGuidance />} />
         <Route path="/career-counseling" element={<CareerCounseling />} />
         <Route path="/course-selection" element={<CourseSelection />} />
@@ -182,7 +184,7 @@ function App() {
         <Route path="/pre-departure-orientation" element={<PreDepartureOrientation />} />
         <Route path="/continuous-communication" element={<ContinuousCommunication />} />
 
-        {/* Forms & Assistance */}
+        {/* Forms */}
         <Route path="/apply" element={<ApplicationForm />} />
         <Route path="/scholarship-assistance" element={<ScholarshipAssistanceForm />} />
         <Route path="/visa-assistance" element={<VisaAssistance />} />

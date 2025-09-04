@@ -97,20 +97,34 @@ function Poland() {
         <h2>Popular Courses in Poland</h2>
         <div className="course-grid">
           {[
-            { name: "MBBS / Medicine", img: "/assets/poland/courses/mbbs.jpg" },
-            { name: "Engineering (Mechanical, Civil, Electrical, IT)", img: "/assets/poland/courses/engineering.jpg" },
-            { name: "Computer Science and Data Science", img: "/assets/poland/courses/computer.jpg" },
-            { name: "Business Administration and Management", img: "/assets/poland/courses/business.jpg" },
-            { name: "Finance and Economics", img: "/assets/poland/courses/finance.jpg" },
-            { name: "International Relations and Law", img: "/assets/poland/courses/law.jpg" },
-            { name: "Biotechnology and Life Sciences", img: "/assets/poland/courses/biotech.jpg" },
-            { name: "Pharmacy", img: "/assets/poland/courses/pharmacy.jpg" },
+           { name: "MBBS", img: "/assets/poland/courses/mbbs.jpg" },
+{ name: "Medicine", img: "/assets/poland/courses/medicine.jpg" },
+{ name: "Mechanical Engineering", img: "/assets/poland/courses/mechanical.jpg" },
+{ name: "Civil Engineering", img: "/assets/poland/courses/civil.jpg" },
+{ name: "Electrical Engineering", img: "/assets/poland/courses/electrical.jpg" },
+{ name: "IT ", img: "/assets/poland/courses/it.jpg" },
+{ name: "Computer Science", img: "/assets/poland/courses/computer-science.jpg" },
+{ name: "Data Science", img: "/assets/poland/courses/data-science.jpg" },
+{ name: "Business & Management", img: "/assets/poland/courses/business-administration.jpg" },
+// { name: "Management", img: "/assets/poland/courses/management.jpg" },
+{ name: "Finance", img: "/assets/poland/courses/finance.jpg" },
+{ name: "Economics", img: "/assets/poland/courses/economics.jpg" },
+{ name: "International Relations", img: "/assets/poland/courses/international-relations.jpg" },
+{ name: "Law", img: "/assets/poland/courses/law.jpg" },
+{ name: "Biotechnology", img: "/assets/poland/courses/biotechnology.jpg" },
+{ name: "Life Sciences", img: "/assets/poland/courses/life-sciences.jpg" },
+{ name: "Pharmacy", img: "/assets/poland/courses/pharmacy.jpg" },
+
           ].map((course, i) => (
-            <div className="course-card" key={i}>
-              <img src={course.img} alt={course.name} />
-              <p>{course.name}</p>
-            </div>
-          ))}
+                    <Link
+                      to={`/courses/Poland/${course.name.toLowerCase().replace(/\s+/g, " ").trim()}`}
+                      key={i}
+                      className="course-card"
+                    >
+                      <img src={course.img} alt={course.name} />
+                      <p>{course.name}</p>
+                    </Link>
+                  ))}
         </div>
       </section>
 

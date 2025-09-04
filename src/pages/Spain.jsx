@@ -100,20 +100,35 @@ function Spain() {
   <h2>Popular Courses in Spain</h2>
   <div className="course-grid">
     {[
-      { name: "Business Administration & Management", img: "/assets/spain/courses/course1.jpg" },
-      { name: "Engineering (Mechanical, Civil, Industrial, CS)", img: "/assets/spain/courses/course2.jpg" },
-      { name: "Hospitality & Tourism Management", img: "/assets/spain/courses/course3.jpg" },
-      { name: "Finance & Accounting", img: "/assets/spain/courses/course4.jpg" },
-      { name: "International Relations & Political Science", img: "/assets/spain/courses/course5.jpg" },
-      { name: "Arts & Design", img: "/assets/spain/courses/course6.jpg" },
-      { name: "Data Science & AI", img: "/assets/spain/courses/course7.jpg" },
-      { name: "Medicine & Healthcare", img: "/assets/spain/courses/course8.jpg" },
+      { name: "Business Administration", img: "/assets/spain/courses/business-administration.jpg" },
+// { name: "Management", img: "/assets/spain/courses/management.jpg" },
+{ name: "Mechanical Engineering", img: "/assets/spain/courses/mechanical.jpg" },
+{ name: "Civil Engineering", img: "/assets/spain/courses/civil.jpg" },
+{ name: "Industrial Engineering", img: "/assets/spain/courses/industrial.jpg" },
+{ name: "Computer Science", img: "/assets/spain/courses/computer-science.jpg" },
+{ name: "Hospitality Management", img: "/assets/spain/courses/hospitality.jpg" },
+{ name: "Tourism Management", img: "/assets/spain/courses/tourism.jpg" },
+{ name: "Finance", img: "/assets/spain/courses/finance.jpg" },
+{ name: "Accounting", img: "/assets/spain/courses/accounting.jpg" },
+{ name: "International Relations", img: "/assets/spain/courses/international-relations.jpg" },
+{ name: "Political Science", img: "/assets/spain/courses/political-science.jpg" },
+{ name: "Arts", img: "/assets/spain/courses/arts.jpg" },
+{ name: "Design", img: "/assets/spain/courses/design.jpg" },
+{ name: "Data Science", img: "/assets/spain/courses/data-science.jpg" },
+{ name: "Artificial Intelligence", img: "/assets/spain/courses/ai.jpg" },
+{ name: "Medicine & Healthcare", img: "/assets/spain/courses/medicine.jpg" },
+// { name: "Healthcare", img: "/assets/spain/courses/healthcare.jpg" },
+
     ].map((course, i) => (
-      <div className="course-card" key={i}>
-        <img src={course.img} alt={course.name} />
-        <p>{course.name}</p>
-      </div>
-    ))}
+              <Link
+                to={`/courses/Spain/${course.name.toLowerCase().replace(/\s+/g, " ").trim()}`}
+                key={i}
+                className="course-card"
+              >
+                <img src={course.img} alt={course.name} />
+                <p>{course.name}</p>
+              </Link>
+            ))}
   </div>
 </section>
 

@@ -171,20 +171,35 @@ function Canada() {
   <h2>Popular Courses in Canada</h2>
   <div className="course-grid">
     {[
-      { name: "Engineering (Mechanical, Civil, Electrical, Software)", img: "/assets/canada/courses/engineering.jpg" },
-      { name: "Computer Science and Data Science", img: "/assets/canada/courses/computer-science.jpg" },
-      { name: "Business Administration and Management", img: "/assets/canada/courses/business.jpg" },
-      { name: "Finance and Accounting", img: "/assets/canada/courses/finance.jpg" },
-      { name: "Life Sciences and Healthcare", img: "/assets/canada/courses/life-sciences.jpg" },
-      { name: "Hospitality and Tourism Management", img: "/assets/canada/courses/hospitality.jpg" },
-      { name: "Artificial Intelligence and Robotics", img: "/assets/canada/courses/ai-robotics.jpg" },
-      { name: "Law and International Relations", img: "/assets/canada/courses/law.jpg" },
+     { name: "Mechanical Engineering", img: "/assets/canada/courses/mechanical.jpg" },
+{ name: "Civil Engineering", img: "/assets/canada/courses/civil.jpg" },
+{ name: "Electrical Engineering", img: "/assets/canada/courses/electrical.jpg" },
+{ name: "Software Engineering", img: "/assets/canada/courses/software.jpg" },
+{ name: "Computer Science", img: "/assets/canada/courses/computer-science.jpg" },
+{ name: "Data Science", img: "/assets/canada/courses/data-science.jpg" },
+{ name: "Business Administration Management", img: "/assets/canada/courses/business-administration.jpg" },
+// { name: "", img: "/assets/canada/courses/management.jpg" },
+{ name: "Finance", img: "/assets/canada/courses/finance.jpg" },
+{ name: "Accounting", img: "/assets/canada/courses/accounting.jpg" },
+{ name: "Life Sciences", img: "/assets/canada/courses/life-sciences.jpg" },
+{ name: "Healthcare", img: "/assets/canada/courses/healthcare.jpg" },
+{ name: "Hospitality Management", img: "/assets/canada/courses/hospitality.jpg" },
+{ name: "Tourism Management", img: "/assets/canada/courses/tourism.jpg" },
+{ name: "Artificial Intelligence", img: "/assets/canada/courses/ai.jpg" },
+{ name: "Robotics", img: "/assets/canada/courses/robotics.jpg" },
+{ name: "Law", img: "/assets/canada/courses/law.jpg" },
+{ name: "International Relations", img: "/assets/canada/courses/international-relations.jpg" },
+
     ].map((course, i) => (
-      <div className="course-card" key={i}>
-        <img src={course.img} alt={course.name} />
-        <p>{course.name}</p>
-      </div>
-    ))}
+              <Link
+                to={`/courses/Canada/${course.name.toLowerCase().replace(/\s+/g, " ").trim()}`}
+                key={i}
+                className="course-card"
+              >
+                <img src={course.img} alt={course.name} />
+                <p>{course.name}</p>
+              </Link>
+            ))}
   </div>
 </section>
 

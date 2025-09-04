@@ -88,29 +88,38 @@ function UK() {
 </section>
 
 
-     {/* Courses */}
+{/* Courses */}
 <section className="uk-courses">
   <h2>Popular Courses in UK</h2>
   <div className="course-grid">
     {[
-      { name: "Business & Management", img: "/assets/uk/courses/business.jpg" },
-      { name: "Law", img: "/assets/uk/courses/law.jpg" },
-      { name: "Medicine & Healthcare", img: "/assets/uk/courses/medicine.jpg" },
-      { name: "Computer Science & Data Science", img: "/assets/uk/courses/computer.jpg" },
-      { name: "Engineering", img: "/assets/uk/courses/engineering.jpg" },
-      { name: "Finance & Accounting", img: "/assets/uk/courses/finance.jpg" },
-      { name: "Artificial Intelligence & Robotics", img: "/assets/uk/courses/ai.jpg" },
-      { name: "International Relations", img: "/assets/uk/courses/international.jpg" },
-      { name: "Hospitality & Tourism", img: "/assets/uk/courses/hospitality.jpg" },
+       { name: "Business & Management", img: "/assets/uk/courses/business.jpg" },
+{ name: "Law", img: "/assets/uk/courses/law.jpg" },
+{ name: "Medicine & Healthcare", img: "/assets/uk/courses/medicine.jpg" },
+{ name: "Computer Science", img: "/assets/uk/courses/computer.jpg" },
+{ name: "Data Science", img: "/assets/uk/courses/data-science.jpg" },
+{ name: "Mechanical Engineering", img: "/assets/uk/courses/mechanical.jpg" },
+{ name: "Electrical Engineering", img: "/assets/uk/courses/electrical.jpg" },
+{ name: "Civil Engineering", img: "/assets/uk/courses/civil.jpg" },
+{ name: "Aerospace Engineering", img: "/assets/uk/courses/aerospace.jpg" },
+{ name: "Finance", img: "/assets/uk/courses/finance.jpg" },
+{ name: "Accounting", img: "/assets/uk/courses/accounting.jpg" },
+
+{ name: "Artificial Intelligence", img: "/assets/uk/courses/ai.jpg" },
+{ name: "Robotics", img: "/assets/uk/courses/robotics.jpg" },
+{ name: "International Relations", img: "/assets/uk/courses/international.jpg" },
+{ name: "Hospitality", img: "/assets/uk/courses/hospitality.jpg" },
+{ name: "Tourism Management", img: "/assets/uk/courses/tourism.jpg" },
+
     ].map((course, i) => (
-      <div className="course-card" key={i}>
-        <img
-          src={course.img}
-          alt={course.name}
-          
-        />
-        <p >{course.name}</p>
-      </div>
+      <Link
+        to={`/courses/UK/${course.name.toLowerCase().replace(/\s+/g, " ").trim()}`}
+        key={i}
+        className="course-card"
+      >
+        <img src={course.img} alt={course.name} />
+        <p>{course.name}</p>
+      </Link>
     ))}
   </div>
 </section>

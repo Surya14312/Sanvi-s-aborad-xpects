@@ -5,7 +5,8 @@ const blogs = [
   { title: "Why Study in Europe", path: "/blog/why-europe", image: "/assets/blogs/europe-hero.jpg" },
   { title: "Why Study in Dubai", path: "/blog/why-dubai", image: "/assets/blogs/dubai-hero.jpg" },
   { title: "MBBS Abroad", path: "/blog/mbbs-abroad", image: "/assets/blogs/mbbs-hero.jpg" },
-  { title: "How to Choose the Right Country", path: "/blog/choose-country", image: "/assets/blogs/choose-country-hero.jpg" },
+  { title: "How to Choose the Right Country", path: "/country-selection", image: "/assets/blogs/choose-country-hero.jpg" },
+
   { title: "Comparing Education Systems", path: "/blog/compare-systems", image: "/assets/blogs/compare-systems-hero.jpg" },
   { title: "English-Taught Programs in Non-English Speaking Countries", path: "/blog/english-programs", image: "/assets/blogs/english-programs-hero.jpg" },
   { title: "Myths vs. Facts About Studying Abroad", path: "/blog/myths-vs-facts", image: "/assets/blogs/myths-facts-hero.jpg" },
@@ -14,7 +15,7 @@ const blogs = [
   { title: "Common Mistakes Students Make", path: "/blog/common-mistakes", image: "/assets/blogs/common-mistakes-hero.jpg" },
   { title: "Visa Interview Tips", path: "/blog/visa-interview", image: "/assets/blogs/visa-hero.jpg" },
   { title: "Managing Finances Abroad", path: "/blog/managing-finances", image: "/assets/blogs/herofinances.jpg" },
-  { title: "How to Budget as an International Student", path: "/blog/budgeting", image: "/assets/blogs/budget-hero.jpg" },
+  { title: "How to Budget as an International Student", path: "/budgeting-tip", image: "/assets/blogs/budget-hero.jpg" },
   { title: "Affordable Countries to Study In", path: "/blog/affordable-countries", image: "/assets/blogs/affordable-countries-hero.jpg" },
   { title: "Most Popular Courses in 2025 & Beyond", path: "/blog/popular-courses-2025", image: "/assets/blogs/popular-courses-hero.jpg" },
 ];

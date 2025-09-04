@@ -113,21 +113,36 @@ function Netherlands() {
   <h2>Popular Courses in Netherlands</h2>
   <div className="course-grid">
     {[
-      { name: "Business Administration & Management", img: "/assets/netherlands/courses/c1.jpg" },
-      { name: "Engineering (Civil, Mechanical, Electrical, Aerospace)", img: "/assets/netherlands/courses/c2.jpg" },
-      { name: "Computer Science & Data Science", img: "/assets/netherlands/courses/c3.jpg" },
-      { name: "Logistics & Supply Chain Management", img: "/assets/netherlands/courses/c4.jpg" },
-      { name: "Environmental Science & Sustainability", img: "/assets/netherlands/courses/c5.jpg" },
-      { name: "Agriculture & Food Technology", img: "/assets/netherlands/courses/c6.jpg" },
-      { name: "Finance & Economics", img: "/assets/netherlands/courses/c7.jpg" },
-      { name: "Artificial Intelligence", img: "/assets/netherlands/courses/c8.jpg" },
-      { name: "Law & International Relations", img: "/assets/netherlands/courses/c9.jpg" },
+      { name: "Business Administration", img: "/assets/netherlands/courses/business-administration.jpg" },
+// { name: "Management", img: "/assets/netherlands/courses/management.jpg" },
+{ name: "Civil Engineering", img: "/assets/netherlands/courses/civil.jpg" },
+{ name: "Mechanical Engineering", img: "/assets/netherlands/courses/mechanical.jpg" },
+{ name: "Electrical Engineering", img: "/assets/netherlands/courses/electrical.jpg" },
+{ name: "Aerospace Engineering", img: "/assets/netherlands/courses/aerospace.jpg" },
+{ name: "Computer Science", img: "/assets/netherlands/courses/computer-science.jpg" },
+{ name: "Data Science", img: "/assets/netherlands/courses/data-science.jpg" },
+{ name: "Logistics", img: "/assets/netherlands/courses/logistics.jpg" },
+{ name: "Supply Chain Management", img: "/assets/netherlands/courses/supply-chain.jpg" },
+{ name: "Environmental Science", img: "/assets/netherlands/courses/environmental-science.jpg" },
+{ name: "Sustainability", img: "/assets/netherlands/courses/sustainability.jpg" },
+{ name: "Agriculture", img: "/assets/netherlands/courses/agriculture.jpg" },
+{ name: "Food Technology", img: "/assets/netherlands/courses/food-technology.jpg" },
+{ name: "Finance", img: "/assets/netherlands/courses/finance.jpg" },
+{ name: "Economics", img: "/assets/netherlands/courses/economics.jpg" },
+{ name: "Artificial Intelligence", img: "/assets/netherlands/courses/ai.jpg" },
+{ name: "Law", img: "/assets/netherlands/courses/law.jpg" },
+{ name: "International Relations", img: "/assets/netherlands/courses/international-relations.jpg" },
+
     ].map((course, i) => (
-      <div className="course-card" key={i}>
-        <img src={course.img} alt={course.name} />
-        <p>{course.name}</p>
-      </div>
-    ))}
+              <Link
+                to={`/courses/Netherlands/${course.name.toLowerCase().replace(/\s+/g, " ").trim()}`}
+                key={i}
+                className="course-card"
+              >
+                <img src={course.img} alt={course.name} />
+                <p>{course.name}</p>
+              </Link>
+            ))}
   </div>
 </section>
 

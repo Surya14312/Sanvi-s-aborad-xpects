@@ -95,7 +95,7 @@ const CommonApplicationMistakes = () => {
         <p>
           Applying to universities abroad is competitive, and even small mistakes can reduce your chances
           of admission. Awareness of common pitfalls helps students submit strong, error-free applications
-          and stand out in the selection process.
+          and stand out in the selection process.. This guide highlights the most frequent mistakes and actionable tips to avoid them.
         </p>
       </section>
 

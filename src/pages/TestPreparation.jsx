@@ -48,15 +48,15 @@ const TestPreparations = () => {
       <section className="test-list">
         <h2>Tests We Cover</h2>
         <ul>
-          <li><Link to="/test-prep/ielts">IELTS – Academic and General Training modules</Link></li>
-          <li><Link to="/test-prep/toefl">TOEFL – Internet-based test for English proficiency</Link></li>
-          <li><Link to="/test-prep/pte">PTE Academic – Computer-based test focusing on practical English skills</Link></li>
-          <li><Link to="/test-prep/duolingo">Duolingo English Test – Affordable, fast, and widely accepted by universities</Link></li>
-          <li><Link to="/test-prep/gre">GRE – Required for master’s and PhD programs, measuring verbal, quantitative, and analytical writing</Link></li>
-          <li><Link to="/test-prep/gmat">GMAT – Focused on business and management programs worldwide</Link></li>
-          <li><Link to="/test-prep/sat">SAT – For undergraduate admissions in the USA and other countries</Link></li>
-          <li><Link to="/test-prep/german">German Language Courses (A1 to C1) – For study and career opportunities in Germany</Link></li>
-          <li><Link to="/test-prep/french">French Language Courses (A1 to C1) – For study opportunities in France, Canada, Switzerland, and Africa</Link></li>
+          <li><Link to="/ielts">IELTS – Academic and General Training modules</Link></li>
+          <li><Link to="/toefl">TOEFL – Internet-based test for English proficiency</Link></li>
+          <li><Link to="/pte">PTE Academic – Computer-based test focusing on practical English skills</Link></li>
+          <li><Link to="/duolingo">Duolingo English Test – Affordable, fast, and widely accepted by universities</Link></li>
+          <li><Link to="/gre">GRE & GMAT– Required for master’s and PhD programs, measuring verbal, quantitative, and analytical writing</Link></li>
+          {/* <li><Link to="/gmat">GMAT – Focused on business and management programs worldwide</Link></li> */}
+          <li><Link to="/sat">SAT – For undergraduate admissions in the USA and other countries</Link></li>
+          <li><Link to="/german">German Language Courses (A1 to C1) – For study and career opportunities in Germany</Link></li>
+          <li><Link to="/french">French Language Courses (A1 to C1) – For study opportunities in France, Canada, Switzerland, and Africa</Link></li>
         </ul>
       </section>
 
@@ -100,6 +100,26 @@ const TestPreparations = () => {
         <blockquote>
           “Maximize your chances of admission and scholarships with top test scores. Enroll in our expert-led test preparation programs today.”
         </blockquote>
+         <div style={{ textAlign: "center", marginTop: "25px" }}>
+        <Link to="/contact">
+          <button
+            style={{
+              backgroundColor: "#f95738",
+              color: "#fff",
+              border: "none",
+              padding: "12px 28px",
+              borderRadius: "8px",
+              fontSize: "1rem",
+              cursor: "pointer",
+              transition: "0.3s",
+            }}
+            onMouseOver={(e) => (e.currentTarget.style.backgroundColor = "#e04325")}
+            onMouseOut={(e) => (e.currentTarget.style.backgroundColor = "#f95738")}
+          >
+            Apply Now
+          </button>
+        </Link>
+      </div>
       </section>
     </div>
   );

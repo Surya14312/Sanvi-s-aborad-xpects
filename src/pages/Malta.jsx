@@ -87,20 +87,33 @@ function Malta() {
   <h2>Popular Courses in Malta</h2>
   <div className="course-grid">
     {[
-      { name: "Business Administration and Management", img: "/assets/malta/courses/business.jpg" },
-      { name: "Hospitality and Tourism Management", img: "/assets/malta/courses/hospitality.jpg" },
-      { name: "Law and International Relations", img: "/assets/malta/courses/law.jpg" },
-      { name: "Computer Science and IT", img: "/assets/malta/courses/computer-science.jpg" },
-      { name: "Finance and Accounting", img: "/assets/malta/courses/finance.jpg" },
-      { name: "Arts, Design, and Communication", img: "/assets/malta/courses/arts.jpg" },
-      { name: "Health Sciences and Nursing", img: "/assets/malta/courses/health.jpg" },
-      { name: "Maritime Studies", img: "/assets/malta/courses/maritime.jpg" },
+    { name: "Business & Management", img: "/assets/malta/courses/business-administration.jpg" },
+// { name: "", img: "/assets/malta/courses/management.jpg" },
+{ name: "Hospitality Management", img: "/assets/malta/courses/hospitality.jpg" },
+{ name: "Tourism Management", img: "/assets/malta/courses/tourism.jpg" },
+{ name: "Law", img: "/assets/malta/courses/law.jpg" },
+{ name: "International Relations", img: "/assets/malta/courses/international-relations.jpg" },
+{ name: "Computer Science", img: "/assets/malta/courses/computer-science.jpg" },
+{ name: "IT", img: "/assets/malta/courses/it.jpg" },
+{ name: "Finance", img: "/assets/malta/courses/finance.jpg" },
+{ name: "Accounting", img: "/assets/malta/courses/accounting.jpg" },
+{ name: "Arts", img: "/assets/malta/courses/arts.jpg" },
+{ name: "Design", img: "/assets/malta/courses/design.jpg" },
+{ name: "Communication", img: "/assets/malta/courses/communication.jpg" },
+{ name: "Health Sciences", img: "/assets/malta/courses/health-sciences.jpg" },
+{ name: "Nursing", img: "/assets/malta/courses/nursing.jpg" },
+{ name: "Maritime Studies", img: "/assets/malta/courses/maritime.jpg" },
+
     ].map((course, i) => (
-      <div className="course-card" key={i}>
-        <img src={course.img} alt={course.name} />
-        <p>{course.name}</p>
-      </div>
-    ))}
+              <Link
+                to={`/courses/Malta/${course.name.toLowerCase().replace(/\s+/g, " ").trim()}`}
+                key={i}
+                className="course-card"
+              >
+                <img src={course.img} alt={course.name} />
+                <p>{course.name}</p>
+              </Link>
+            ))}
   </div>
 </section>
 

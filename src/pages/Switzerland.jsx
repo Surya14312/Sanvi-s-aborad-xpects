@@ -98,20 +98,36 @@ function Switzerland() {
   <h2>Popular Courses in Switzerland</h2>
   <div className="course-grid">
     {[
-      { name: "Engineering & Technology", img: "/assets/switzerland/courses/c1.jpg" },
-      { name: "Computer Science & Data Science", img: "/assets/switzerland/courses/c2.jpg" },
-      { name: "Finance, Banking & Business", img: "/assets/switzerland/courses/c3.jpg" },
-      { name: "Hospitality & Tourism Management", img: "/assets/switzerland/courses/c4.jpg" },
-      { name: "Life Sciences & Biotechnology", img: "/assets/switzerland/courses/c5.jpg" },
-      { name: "International Relations & Law", img: "/assets/switzerland/courses/c6.jpg" },
-      { name: "Medicine & Healthcare", img: "/assets/switzerland/courses/c7.jpg" },
-      { name: "Environmental Sciences & Sustainability", img: "/assets/switzerland/courses/c8.jpg" },
+     { name: "Mechanical Engineering", img: "/assets/switzerland/courses/mechanical.jpg" },
+{ name: "Electrical Engineering", img: "/assets/switzerland/courses/electrical.jpg" },
+{ name: "Civil Engineering", img: "/assets/switzerland/courses/civil.jpg" },
+{ name: "Aerospace Engineering", img: "/assets/switzerland/courses/aerospace.jpg" },
+{ name: "Computer Science", img: "/assets/switzerland/courses/computer.jpg" },
+{ name: "Data Science", img: "/assets/switzerland/courses/data-science.jpg" },
+{ name: "Finance", img: "/assets/switzerland/courses/finance.jpg" },
+{ name: "Banking", img: "/assets/switzerland/courses/banking.jpg" },
+{ name: "Business & Management", img: "/assets/switzerland/courses/business.jpg" },
+{ name: "Hospitality Management", img: "/assets/switzerland/courses/hospitality.jpg" },
+{ name: "Tourism Management", img: "/assets/switzerland/courses/tourism.jpg" },
+{ name: "Life Sciences", img: "/assets/switzerland/courses/life-sciences.jpg" },
+{ name: "Biotechnology", img: "/assets/switzerland/courses/biotech.jpg" },
+{ name: "International Relations", img: "/assets/switzerland/courses/international-relations.jpg" },
+{ name: "Law", img: "/assets/switzerland/courses/law.jpg" },
+{ name: "Medicine & Healthcare", img: "/assets/switzerland/courses/medicine.jpg" },
+// { name: "Healthcare", img: "/assets/switzerland/courses/healthcare.jpg" },
+{ name: "Environmental Sciences", img: "/assets/switzerland/courses/environmental.jpg" },
+{ name: "Sustainability", img: "/assets/switzerland/courses/sustainability.jpg" },
+
     ].map((course, i) => (
-      <div className="course-card" key={i}>
-        <img src={course.img} alt={course.name} />
-        <p>{course.name}</p>
-      </div>
-    ))}
+              <Link
+                to={`/courses/Switzerland/${course.name.toLowerCase().replace(/\s+/g, " ").trim()}`}
+                key={i}
+                className="course-card"
+              >
+                <img src={course.img} alt={course.name} />
+                <p>{course.name}</p>
+              </Link>
+            ))}
   </div>
 </section>
 

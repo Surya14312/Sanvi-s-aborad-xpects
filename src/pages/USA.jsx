@@ -95,21 +95,32 @@ function USA() {
   <h2>Popular Courses in USA</h2>
   <div className="course-grid">
     {[
-      { name: "Business Administration and Management", img: "/assets/usa/courses/business.jpg" },
-      { name: "Computer Science and Data Science", img: "/assets/usa/courses/computer.jpg" },
-      { name: "Engineering (Mechanical, Electrical, Civil, Aerospace)", img: "/assets/usa/courses/engineering.jpg" },
-      { name: "Medicine and Healthcare", img: "/assets/usa/courses/medicine.jpg" },
-      { name: "Finance and Economics", img: "/assets/usa/courses/finance.jpg" },
-      { name: "Hospitality and Tourism Management", img: "/assets/usa/courses/hospitality.jpg" },
-      { name: "Arts, Design, and Communication", img: "/assets/usa/courses/arts.jpg" },
-      { name: "Law and International Relations", img: "/assets/usa/courses/law.jpg" },
-      { name: "Artificial Intelligence and Robotics", img: "/assets/usa/courses/ai.jpg" },
+    { name: "Business Administration and Management", img: "/assets/usa/courses/business.jpg" },
+{ name: "Computer Science", img: "/assets/usa/courses/computer.jpg" },
+{ name: "Data Science", img: "/assets/usa/courses/data-science.jpg" },
+{ name: "Mechanical Engineering", img: "/assets/usa/courses/mechanical.jpg" },
+{ name: "Electrical Engineering", img: "/assets/usa/courses/electrical.jpg" },
+{ name: "Civil Engineering", img: "/assets/usa/courses/civil.jpg" },
+{ name: "Aerospace Engineering", img: "/assets/usa/courses/aerospace.jpg" },
+{ name: "Medicine and Healthcare", img: "/assets/usa/courses/medicine.jpg" },
+{ name: "Finance and Economics", img: "/assets/usa/courses/finance.jpg" },
+{ name: "Hospitality and Tourism Management", img: "/assets/usa/courses/hospitality.jpg" },
+{ name: "Arts, Design, and Communication", img: "/assets/usa/courses/arts.jpg" },
+{ name: "Law", img: "/assets/usa/courses/law.jpg" },
+{ name: "International Relations", img: "/assets/usa/courses/international-relations.jpg" },
+{ name: "Artificial Intelligence", img: "/assets/usa/courses/ai.jpg" },
+{ name: "Robotics", img: "/assets/usa/courses/robotics.jpg" },
+
     ].map((course, i) => (
-      <div className="course-card" key={i}>
-        <img src={course.img} alt={course.name} />
-        <p>{course.name}</p>
-      </div>
-    ))}
+          <Link
+            to={`/courses/USA/${course.name.toLowerCase().replace(/\s+/g, " ").trim()}`}
+            key={i}
+            className="course-card"
+          >
+            <img src={course.img} alt={course.name} />
+            <p>{course.name}</p>
+          </Link>
+        ))}
   </div>
 </section>
 

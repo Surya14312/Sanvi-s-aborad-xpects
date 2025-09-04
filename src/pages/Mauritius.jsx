@@ -92,18 +92,30 @@ function Mauritius() {
         <h2>Popular Courses in Mauritius</h2>
         <div className="course-grid">
           {[
-            { name: "Business & Accounting", img: "/assets/mauritius/courses/business.jpg" },
-            { name: "Engineering & Technology", img: "/assets/mauritius/courses/engineering.jpg" },
-            { name: "Computer Science & IT", img: "/assets/mauritius/courses/computer-science.jpg" },
-            { name: "Hospitality & Tourism", img: "/assets/mauritius/courses/hospitality.jpg" },
-            { name: "Medicine & Health Sciences", img: "/assets/mauritius/courses/medicine.jpg" },
-            { name: "Environmental Science", img: "/assets//mauritius/courses/environment.jpg" },
+          { name: "Business", img: "/assets/mauritius/courses/business.jpg" },
+{ name: "Accounting", img: "/assets/mauritius/courses/accounting.jpg" },
+{ name: "Mechanical Engineering", img: "/assets/mauritius/courses/mechanical.jpg" },
+{ name: "Civil Engineering", img: "/assets/mauritius/courses/civil.jpg" },
+{ name: "Electrical Engineering", img: "/assets/mauritius/courses/electrical.jpg" },
+{ name: "Software/IT Engineering", img: "/assets/mauritius/courses/software.jpg" },
+{ name: "Computer Science", img: "/assets/mauritius/courses/computer-science.jpg" },
+{ name: "IT", img: "/assets/mauritius/courses/it.jpg" },
+{ name: "Hospitality", img: "/assets/mauritius/courses/hospitality.jpg" },
+{ name: "Tourism", img: "/assets/mauritius/courses/tourism.jpg" },
+{ name: "Medicine", img: "/assets/mauritius/courses/medicine.jpg" },
+{ name: "Health Sciences", img: "/assets/mauritius/courses/health-sciences.jpg" },
+{ name: "Environmental Science", img: "/assets/mauritius/courses/environment.jpg" },
+
           ].map((course, i) => (
-            <div className="course-card" key={i}>
-              <img src={course.img} alt={course.name} />
-              <p>{course.name}</p>
-            </div>
-          ))}
+                    <Link
+                      to={`/courses/Mauritius/${course.name.toLowerCase().replace(/\s+/g, " ").trim()}`}
+                      key={i}
+                      className="course-card"
+                    >
+                      <img src={course.img} alt={course.name} />
+                      <p>{course.name}</p>
+                    </Link>
+                  ))}
         </div>
       </section>
 
