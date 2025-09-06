@@ -8111,44 +8111,52 @@ body {
     padding: 20px;
   }
 }
+
 /* country selection */
 /* ===== Global Container ===== */
 /* Page Container */
+/* =====================
+   Country Selection Styling
+===================== */
+
+/* ===== Global Styles ===== */
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #222;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+/* ===== Container ===== */
 .country-selection-container {
-  padding: 30px 20px;
+  padding: 40px 20px;
+  /* max-width: 900px; */
+  margin: 0 auto;
   font-family: "Poppins", "Segoe UI", sans-serif;
   color: #222;
-  background: linear-gradient(135deg, #f9fbff, #eef3f9);
   line-height: 1.7;
 }
 
-/* ===== Section Card Styling ===== */
-.country-selection-container section {
-  margin-bottom: 50px;
-  background: #fff;
-  padding: 25px 30px;
-  border-radius: 12px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+/* ===== Section Animation ===== */
+.country-selection-container section,
+.country-selection-container ul,
+.country-selection-container .cs-faq,
+.country-selection-container .cs-cta {
   opacity: 0;
   transform: translateY(40px);
   animation: slideUp 0.9s forwards;
   transition: transform 0.4s, box-shadow 0.4s;
 }
 
-.country-selection-container section:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
-}
-
-/* Staggered animation */
 .country-selection-container section:nth-child(1) { animation-delay: 0.2s; }
 .country-selection-container section:nth-child(2) { animation-delay: 0.4s; }
 .country-selection-container section:nth-child(3) { animation-delay: 0.6s; }
 .country-selection-container section:nth-child(4) { animation-delay: 0.8s; }
-.country-selection-container section:nth-child(5) { animation-delay: 1s; }
 
-/* ===== Headings ===== */
-.country-selection-container h1 {
+/* ===== Heading ===== */
+.cs-heading {
   font-size: 2.8rem;
   margin-bottom: 25px;
   text-align: center;
@@ -8158,7 +8166,8 @@ body {
   letter-spacing: 1px;
 }
 
-.country-selection-container h2 {
+/* ===== Subheadings ===== */
+.cs-subheading {
   font-size: 1.8rem;
   color: #0d3b66;
   margin-bottom: 18px;
@@ -8166,7 +8175,7 @@ body {
   padding-left: 15px;
 }
 
-.country-selection-container h2::before {
+.cs-subheading::before {
   content: "";
   position: absolute;
   left: 0;
@@ -8178,19 +8187,20 @@ body {
 }
 
 /* ===== Paragraphs ===== */
-.country-selection-container p {
+.cs-intro, 
+.cs-faq p {
   font-size: 1.05rem;
   color: #444;
   margin-bottom: 15px;
 }
 
-/* ===== Lists with Check Marks ===== */
-.country-selection-container ul {
+/* ===== Lists ===== */
+.cs-list {
   list-style: none;
   padding-left: 0;
 }
 
-.country-selection-container ul li {
+.cs-list li {
   margin-bottom: 12px;
   padding-left: 28px;
   font-size: 1.05rem;
@@ -8198,7 +8208,7 @@ body {
   transition: color 0.3s;
 }
 
-.country-selection-container ul li::before {
+.cs-list li::before {
   content: "✔";
   position: absolute;
   left: 0;
@@ -8206,12 +8216,12 @@ body {
   font-weight: bold;
 }
 
-.country-selection-container ul li:hover {
+.cs-list li:hover {
   color: #f95738;
 }
 
 /* ===== FAQs ===== */
-.country-selection-container .faq-item {
+.cs-faq {
   background: #ffffff;
   border: 1px solid #e2e6ee;
   border-left: 6px solid #f95738;
@@ -8221,19 +8231,19 @@ body {
   transition: all 0.3s;
 }
 
-.country-selection-container .faq-item:hover {
+.cs-faq:hover {
   transform: scale(1.02);
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.07);
 }
 
-.country-selection-container strong {
+.cs-faq strong {
   display: block;
   margin-bottom: 8px;
   color: #0d3b66;
 }
 
-/* ===== Blockquote Highlight ===== */
-.country-selection-container blockquote {
+/* ===== Call to Action ===== */
+.cs-cta {
   background: #0d3b66;
   color: white;
   padding: 25px 35px;
@@ -8245,19 +8255,19 @@ body {
   transition: transform 0.3s;
 }
 
-.country-selection-container blockquote:hover {
+.cs-cta:hover {
   transform: scale(1.04);
 }
 
 /* ===== Divider ===== */
-.country-selection-container hr {
+.cs-divider {
   border: none;
   height: 2px;
   background: linear-gradient(90deg, transparent, #ddd, transparent);
   margin: 50px 0;
 }
 
-/* ===== Animation ===== */
+/* ===== Animations ===== */
 @keyframes slideUp {
   to {
     opacity: 1;
@@ -8268,18 +8278,18 @@ body {
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
   .country-selection-container {
-    padding: 0 15px;
+    padding: 20px 15px;
   }
 
-  .country-selection-container h1 {
+  .cs-heading {
     font-size: 2.2rem;
   }
 
-  .country-selection-container h2 {
+  .cs-subheading {
     font-size: 1.5rem;
   }
 
-  .country-selection-container blockquote {
+  .cs-cta {
     font-size: 1rem;
     padding: 20px;
   }

@@ -25,7 +25,8 @@ import { mediaData } from "../data/mediaData";
 import { fashionData } from "../data/fashionData";
 import { politicalScienceData } from "../data/politicalScienceData";
 
-const normalizeTitle = (title) => title.toLowerCase().replace(/\s+/g, " ").trim();
+const normalizeTitle = (title) =>
+  title.toLowerCase().replace(/\s+/g, " ").trim();
 
 function CourseDetails() {
   const { country, courseTitle } = useParams();
@@ -112,7 +113,6 @@ function CourseDetails() {
   return (
     <div className="course-details">
       <h1>{dynamicData ? dynamicData.title : course.title}</h1>
-      <h3>{country}</h3>
 
       {dynamicData ? (
         dynamicData.sections.map((section, idx) => (
